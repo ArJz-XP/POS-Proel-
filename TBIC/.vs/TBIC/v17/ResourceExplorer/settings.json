@@ -1,0 +1,29 @@
+{
+  "ShowEmptyProjects": false,
+  "SelectedGroups": [
+    "C:\\Users\\Personal\\Documents\\School\\PROEL2D\\TBIC\\TBIC\\TBIC\\Loading_Screen.resx",
+    "C:\\Users\\Personal\\Documents\\School\\PROEL2D\\TBIC\\TBIC\\TBIC\\Payment.resx",
+    "C:\\Users\\Personal\\Documents\\School\\PROEL2D\\TBIC\\TBIC\\TBIC\\LandingPage.resx",
+    "C:\\Users\\Personal\\Documents\\School\\PROEL2D\\TBIC\\TBIC\\TBIC\\DontDeleteForSuprise.resx",
+    "C:\\Users\\Personal\\Documents\\School\\PROEL2D\\TBIC\\TBIC\\TBIC\\LimitedEdition.resx",
+    "C:\\Users\\Personal\\Documents\\School\\PROEL2D\\TBIC\\TBIC\\TBIC\\Admin_Dashboard.resx",
+    "C:\\Users\\Personal\\Documents\\School\\PROEL2D\\TBIC\\TBIC\\TBIC\\Properties\\Resources.resx",
+    "C:\\Users\\Personal\\Documents\\School\\PROEL2D\\TBIC\\TBIC\\TBIC\\Acc_Management.resx"
+  ],
+  "ExpandedProjects": [],
+  "EnableSpellChecker": true,
+  "ColumnOrder": [
+    "name",
+    "type",
+    "neutral-value",
+    "neutral-comment",
+    "file-path",
+    "file-name"
+  ],
+  "VisibleColumnKeys": [
+    "name",
+    "neutral-comment",
+    "type",
+    "neutral-value"
+  ]
+}
