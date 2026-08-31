@@ -1,10 +1,12 @@
-﻿using System;
+﻿using Microsoft.IdentityModel.Tokens;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -26,65 +28,86 @@ namespace TBIC
         {
             txtUser.Font = new Font("FredokaSummer", 9, FontStyle.Bold);
             txtPass.Font = new Font("FredokaSummer", 9, FontStyle.Bold);
-            btnLogin.Font = new Font("FredokaSummer", 9, FontStyle.Bold);
+
+            txtPass.UseSystemPasswordChar = false;
+
+            InputReload();
         }
 
-        // Reuse a single instance or create a new one when needed
-        Loading_Screen Loading_;
+        public void InputReload()
+        {
+            txtUser.Text = null;
+            txtPass.Text = null;
+
+            txtUser.SetPlaceholder("Username");
+            txtPass.SetPlaceholder("Password");
+        }
+
+        #region Login Process
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string User = txtUser.Text;
-            string Pass = txtPass.Text;
-
-            TBICDataContext db = new TBICDataContext();
-
-            var login = db.STAFFs.Where(x => x.USERNAME == User && x.PASSWORD == Pass).FirstOrDefault();
-
-            if (login != null)
+            try
             {
-                // Capture staff info immediately upon valid login
-                StaffName = login.STAFF_NAME;
-                StaffID = login.STAFF_ID;
+                string User = (txtUser.Text == "Username") ? "" : txtUser.Text;
+                string Pass = (txtPass.Text == "Password") ? "" : txtPass.Text;
 
-                // Fetch the specific department info for THIS logged-in staff member
-                var staffInfo = db.STAFFINFOs.Where(x => x.STAFF_ID == StaffID).FirstOrDefault();
+                TBICDataContext db = new TBICDataContext();
 
-                // Common loading screen for everyone logging in successfully
-                Loading_ = new Loading_Screen();
-                Loading_.PreviousForm("Landing");
-                Loading_.ShowDialog();
+                var login = db.STAFFs.Where(x => x.USERNAME == User && x.PASSWORD == Pass).FirstOrDefault();
 
-                MessageBox.Show($"Login Successful\nWelcome {login.USERNAME}", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                this.Hide();
-
-                // Check their specific department ID safely
-                if (staffInfo != null && staffInfo.DEPARTMENT_ID == 1)
+                if (login != null)
                 {
-                    // Department 1: Cashier / Limited Edition flow
-                    Loading_Screen loadingLimited = new Loading_Screen();
-                    loadingLimited.PreviousForm("Limited");
-                    loadingLimited.StaffName = StaffName;
-                    loadingLimited.StaffID = StaffID;
-                    loadingLimited.ShowDialog();
-                }
-                else if (staffInfo != null && staffInfo.DEPARTMENT_ID == 2)
-                {
-                    // Department 2: Management / Admin Dashboard flow
-                    Admin_Dashboard admin_ = new Admin_Dashboard();
-                    admin_.ShowDialog();
+                    // Capture staff info immediately upon valid login
+                    StaffName = login.STAFF_NAME;
+                    StaffID = login.STAFF_ID;
+
+                    // Fetch the specific department info for THIS logged-in staff member
+                    var staffInfo = db.STAFFs.Where(x => x.STAFF_ID == StaffID).FirstOrDefault();
+
+                    // Common loading screen for everyone logging in successfully
+                    Form_Instances._load.StaffInfo(StaffName, StaffID);
+                    Form_Instances._load.PreviousForm("Landing");
+                    Form_Instances._load.ShowDialog();
+
+                    MessageBox.Show($"Login Successful\nWelcome {login.USERNAME}", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    this.Hide();
+
+                    // Check their specific department ID safely
+                    if (staffInfo != null && staffInfo.ROLE == "Cashier")
+                    {
+                        // Department 1: Cashier / Limited Edition flow
+                        Form_Instances._load.StaffInfo(StaffName, StaffID);
+                        Form_Instances._load.PreviousForm("Limited");
+                        Form_Instances._load.ShowDialog();
+                    }
+                    else if (staffInfo != null && staffInfo.ROLE == "Manager")
+                    {
+                        // Department 2: Management / Admin Dashboard flow
+                        Form_Instances._load.StaffInfo(StaffName, StaffID);
+                        Form_Instances._load.PreviousForm("Admin");
+                        Form_Instances._load.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Account found, but no department assigned.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Account found, but no department assigned.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Troll();
                 }
             }
-            else
+            catch (Exception ex)
             {
-                Troll();
+                MessageBox.Show($"Something Went Wrong!\n{ex.Message}", "Error Type: Database Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        #endregion
+
+        #region UI Enhancements
 
         public async Task Troll()
         {
@@ -95,7 +118,7 @@ namespace TBIC
                 var x = R.Next(0, 1500);
                 var y = R.Next(0, 500);
 
-                DontDeleteForSuprise d = new DontDeleteForSuprise(this);
+                DontDeleteForSuprise d = new DontDeleteForSuprise();
                 d.Location = new Point(x, y);
                 d.Show();
 
@@ -123,5 +146,56 @@ namespace TBIC
                 }
             }
         }
+
+        #endregion
+
+        public void Logout_Confirmation()
+        {
+            if (MessageBox.Show("Are you sure you want to log out?", "Logout Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+                Form_Instances._lan.InputReload();
+                Form_Instances._lan.Show();
+                this.Hide();
+            }
+        }
     }
+
+    #region Secret Sauce
+
+    public static class TextBoxPlaceholderExtensions
+    {
+        public static void SetPlaceholder(this TextBox textBox, string placeholderText, Color? placeholderColor = null)
+        {
+            Color normalColor = textBox.ForeColor;
+            Color placeholderTextColor = placeholderColor ?? Color.Gray;
+
+            void ShowPlaceholder()
+            {
+                if (string.IsNullOrEmpty(textBox.Text))
+                {
+                    textBox.Text = placeholderText;
+                    textBox.ForeColor = placeholderTextColor;
+                    textBox.UseSystemPasswordChar = true;
+                }
+            }
+
+            void HidePlaceholder()
+            {
+                if (textBox.Text == placeholderText && textBox.ForeColor == placeholderTextColor)
+                {
+                    textBox.Text = "";
+                    textBox.ForeColor = normalColor;
+                    textBox.UseSystemPasswordChar = false;
+                }
+            }
+
+            textBox.Enter += (s, e) => HidePlaceholder();
+            textBox.Leave += (s, e) => ShowPlaceholder();
+
+            // Show it immediately on setup
+            ShowPlaceholder();
+        }
+    }
+
+    #endregion
 }

@@ -2,6 +2,7 @@
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -14,11 +15,17 @@ namespace TBIC
             InitializeComponent();
         }
 
+        public void StaffInfo(string staffName, int staffID)
+        {
+            StaffName = staffName;
+            StaffID = staffID;
+        }
+
         string formname_;
 
         // Add public properties to catch the logged-in user data
-        public string StaffName { get; set; }
-        public int StaffID { get; set; }
+        public string StaffName;
+        public int StaffID;
 
         public void PreviousForm(string FormName)
         {
@@ -105,9 +112,8 @@ namespace TBIC
 
                     this.Hide();
 
-                    // Open LimitedEdition using the actual passed staff variables
-                    LimitedEdition limitedForm = new LimitedEdition(StaffName, StaffID);
-                    limitedForm.Show();
+                    Form_Instances._lim.StaffInfo(StaffName, StaffID);
+                    Form_Instances._lim.Show();
 
                     this.Close();
                 }
@@ -127,7 +133,7 @@ namespace TBIC
                     {
                         using (TBICDataContext db = new TBICDataContext())
                         {
-                            var test = db.STAFFINFOs.Count();
+                            var test = db.STAFFs.Count();
                         }
                     });
                     pBLoading.Value = 60;
@@ -140,10 +146,13 @@ namespace TBIC
                     lblProgressMessage.Text = "Ready!";
                     pBLoading.Value = 100;
                     await Task.Delay(200);
+
                     this.Hide();
-                    // Open AdminPanel using the actual passed staff variables
-                    Admin_Dashboard adminForm = new Admin_Dashboard();
-                    adminForm.Show();
+
+                    Form_Instances._dash.StaffInfo(StaffName, StaffID);
+                    Form_Instances._dash.inputReload();
+                    Form_Instances._dash.Show();
+
                     this.Close();
                 }
                 catch (Exception ex)

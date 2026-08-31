@@ -189,6 +189,7 @@
     <Compile Include="DontDeleteForSuprise.Designer.cs">
       <DependentUpon>DontDeleteForSuprise.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Instances.cs" />
     <Compile Include="LandingPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -215,6 +216,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Receipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Receipt.Designer.cs">
+      <DependentUpon>Receipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TBCI_ServerDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TBCI_ServerDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="TBIC.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -251,6 +263,20 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Receipt.resx">
+      <DependentUpon>Receipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="TBCI_ServerDataSet.xsc">
+      <DependentUpon>TBCI_ServerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TBCI_ServerDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TBCI_ServerDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TBCI_ServerDataSet.xss">
+      <DependentUpon>TBCI_ServerDataSet.xsd</DependentUpon>
+    </None>
     <None Include="TBIC.dbml.layout">
       <DependentUpon>TBIC.dbml</DependentUpon>
     </None>
@@ -402,6 +428,7 @@
     <Content Include="Resources\ADMIN User Management.png" />
     <None Include="Resources\Configure.png" />
     <None Include="Resources\ADMIN User Management1.png" />
+    <None Include="Resources\Logo.png" />
     <Content Include="Resources\PROEL2D UI5.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

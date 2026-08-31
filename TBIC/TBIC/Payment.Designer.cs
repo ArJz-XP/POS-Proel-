@@ -44,7 +44,7 @@
             this.seniorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.studentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pWDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnNewTable = new System.Windows.Forms.Button();
+            this.btnNewPurchase = new System.Windows.Forms.Button();
             this.btnPlace = new System.Windows.Forms.Button();
             this.txtOrderId = new System.Windows.Forms.TextBox();
             this.txtMOP = new System.Windows.Forms.TextBox();
@@ -67,7 +67,6 @@
             this.cashToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eWalletToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnGoToDashBoard = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblIDs = new System.Windows.Forms.Label();
             this.lblUsernameNumba = new System.Windows.Forms.Label();
@@ -86,11 +85,10 @@
             // txtSearchBox
             // 
             this.txtSearchBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSearchBox.Location = new System.Drawing.Point(296, 132);
-            this.txtSearchBox.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearchBox.Location = new System.Drawing.Point(222, 107);
             this.txtSearchBox.Multiline = true;
             this.txtSearchBox.Name = "txtSearchBox";
-            this.txtSearchBox.Size = new System.Drawing.Size(265, 32);
+            this.txtSearchBox.Size = new System.Drawing.Size(199, 26);
             this.txtSearchBox.TabIndex = 0;
             this.txtSearchBox.Text = "Search The Cream";
             // 
@@ -112,12 +110,11 @@
             this.dvgPrice,
             this.dvgDiscount});
             this.dvgPOS.GridColor = System.Drawing.Color.White;
-            this.dvgPOS.Location = new System.Drawing.Point(27, 63);
-            this.dvgPOS.Margin = new System.Windows.Forms.Padding(4);
+            this.dvgPOS.Location = new System.Drawing.Point(20, 51);
             this.dvgPOS.Name = "dvgPOS";
             this.dvgPOS.RowHeadersWidth = 51;
             this.dvgPOS.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.dvgPOS.Size = new System.Drawing.Size(1281, 361);
+            this.dvgPOS.Size = new System.Drawing.Size(961, 293);
             this.dvgPOS.TabIndex = 1;
             this.dvgPOS.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgPOS_CellContentClick);
             this.dvgPOS.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgPOS_CellValueChanged);
@@ -219,49 +216,49 @@
             this.studentToolStripMenuItem,
             this.pWDToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(130, 100);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(116, 92);
             // 
             // noneToolStripMenuItem
             // 
             this.noneToolStripMenuItem.Name = "noneToolStripMenuItem";
-            this.noneToolStripMenuItem.Size = new System.Drawing.Size(129, 24);
+            this.noneToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.noneToolStripMenuItem.Text = "None";
             this.noneToolStripMenuItem.Click += new System.EventHandler(this.noneToolStripMenuItem_Click);
             // 
             // seniorToolStripMenuItem
             // 
             this.seniorToolStripMenuItem.Name = "seniorToolStripMenuItem";
-            this.seniorToolStripMenuItem.Size = new System.Drawing.Size(129, 24);
+            this.seniorToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.seniorToolStripMenuItem.Text = "Senior";
             this.seniorToolStripMenuItem.Click += new System.EventHandler(this.seniorToolStripMenuItem_Click);
             // 
             // studentToolStripMenuItem
             // 
             this.studentToolStripMenuItem.Name = "studentToolStripMenuItem";
-            this.studentToolStripMenuItem.Size = new System.Drawing.Size(129, 24);
+            this.studentToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.studentToolStripMenuItem.Text = "Student";
             this.studentToolStripMenuItem.Click += new System.EventHandler(this.studentToolStripMenuItem_Click);
             // 
             // pWDToolStripMenuItem
             // 
             this.pWDToolStripMenuItem.Name = "pWDToolStripMenuItem";
-            this.pWDToolStripMenuItem.Size = new System.Drawing.Size(129, 24);
+            this.pWDToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.pWDToolStripMenuItem.Text = "PWD";
             this.pWDToolStripMenuItem.Click += new System.EventHandler(this.pWDToolStripMenuItem_Click);
             // 
-            // btnNewTable
+            // btnNewPurchase
             // 
-            this.btnNewTable.BackColor = System.Drawing.Color.Transparent;
-            this.btnNewTable.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnNewTable.FlatAppearance.BorderSize = 0;
-            this.btnNewTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNewTable.Location = new System.Drawing.Point(1403, 138);
-            this.btnNewTable.Margin = new System.Windows.Forms.Padding(4);
-            this.btnNewTable.Name = "btnNewTable";
-            this.btnNewTable.Size = new System.Drawing.Size(285, 32);
-            this.btnNewTable.TabIndex = 2;
-            this.btnNewTable.Text = "New Table";
-            this.btnNewTable.UseVisualStyleBackColor = false;
+            this.btnNewPurchase.BackColor = System.Drawing.Color.Transparent;
+            this.btnNewPurchase.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnNewPurchase.FlatAppearance.BorderSize = 0;
+            this.btnNewPurchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNewPurchase.Location = new System.Drawing.Point(1052, 112);
+            this.btnNewPurchase.Name = "btnNewPurchase";
+            this.btnNewPurchase.Size = new System.Drawing.Size(214, 26);
+            this.btnNewPurchase.TabIndex = 2;
+            this.btnNewPurchase.Text = "New Purchase";
+            this.btnNewPurchase.UseVisualStyleBackColor = false;
+            this.btnNewPurchase.Click += new System.EventHandler(this.btnNewPurchase_Click);
             // 
             // btnPlace
             // 
@@ -269,10 +266,9 @@
             this.btnPlace.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPlace.FlatAppearance.BorderSize = 0;
             this.btnPlace.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPlace.Location = new System.Drawing.Point(1403, 193);
-            this.btnPlace.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPlace.Location = new System.Drawing.Point(1052, 157);
             this.btnPlace.Name = "btnPlace";
-            this.btnPlace.Size = new System.Drawing.Size(285, 37);
+            this.btnPlace.Size = new System.Drawing.Size(214, 30);
             this.btnPlace.TabIndex = 3;
             this.btnPlace.Text = "IDK";
             this.btnPlace.UseVisualStyleBackColor = false;
@@ -280,22 +276,20 @@
             // txtOrderId
             // 
             this.txtOrderId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtOrderId.Location = new System.Drawing.Point(108, 23);
-            this.txtOrderId.Margin = new System.Windows.Forms.Padding(4);
+            this.txtOrderId.Location = new System.Drawing.Point(81, 19);
             this.txtOrderId.Multiline = true;
             this.txtOrderId.Name = "txtOrderId";
-            this.txtOrderId.Size = new System.Drawing.Size(265, 32);
+            this.txtOrderId.Size = new System.Drawing.Size(199, 26);
             this.txtOrderId.TabIndex = 4;
             this.txtOrderId.Text = "#123456789";
             // 
             // txtMOP
             // 
             this.txtMOP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMOP.Location = new System.Drawing.Point(391, 23);
-            this.txtMOP.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMOP.Location = new System.Drawing.Point(293, 19);
             this.txtMOP.Multiline = true;
             this.txtMOP.Name = "txtMOP";
-            this.txtMOP.Size = new System.Drawing.Size(265, 32);
+            this.txtMOP.Size = new System.Drawing.Size(199, 26);
             this.txtMOP.TabIndex = 5;
             this.txtMOP.Text = "Cash";
             // 
@@ -312,10 +306,9 @@
             this.pnlBackground.Controls.Add(this.dvgPOS);
             this.pnlBackground.Controls.Add(this.txtMOP);
             this.pnlBackground.Controls.Add(this.txtOrderId);
-            this.pnlBackground.Location = new System.Drawing.Point(21, 181);
-            this.pnlBackground.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlBackground.Location = new System.Drawing.Point(16, 147);
             this.pnlBackground.Name = "pnlBackground";
-            this.pnlBackground.Size = new System.Drawing.Size(1333, 529);
+            this.pnlBackground.Size = new System.Drawing.Size(1000, 430);
             this.pnlBackground.TabIndex = 6;
             // 
             // panel2
@@ -326,49 +319,44 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.rtxtDiscount);
             this.panel2.Controls.Add(this.rtxtTotalPrice);
-            this.panel2.Location = new System.Drawing.Point(900, 431);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Location = new System.Drawing.Point(675, 350);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(407, 89);
+            this.panel2.Size = new System.Drawing.Size(306, 73);
             this.panel2.TabIndex = 15;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(212, 10);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(159, 8);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 16);
+            this.label2.Size = new System.Drawing.Size(70, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "DISCOUNTS";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(5, 10);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(4, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 16);
+            this.label1.Size = new System.Drawing.Size(77, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "TOTAL PRICE";
             // 
             // rtxtDiscount
             // 
             this.rtxtDiscount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rtxtDiscount.Location = new System.Drawing.Point(216, 33);
-            this.rtxtDiscount.Margin = new System.Windows.Forms.Padding(4);
+            this.rtxtDiscount.Location = new System.Drawing.Point(162, 27);
             this.rtxtDiscount.Name = "rtxtDiscount";
-            this.rtxtDiscount.Size = new System.Drawing.Size(184, 50);
+            this.rtxtDiscount.Size = new System.Drawing.Size(139, 41);
             this.rtxtDiscount.TabIndex = 1;
             this.rtxtDiscount.Text = "";
             // 
             // rtxtTotalPrice
             // 
             this.rtxtTotalPrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rtxtTotalPrice.Location = new System.Drawing.Point(4, 33);
-            this.rtxtTotalPrice.Margin = new System.Windows.Forms.Padding(4);
+            this.rtxtTotalPrice.Location = new System.Drawing.Point(3, 27);
             this.rtxtTotalPrice.Name = "rtxtTotalPrice";
-            this.rtxtTotalPrice.Size = new System.Drawing.Size(208, 50);
+            this.rtxtTotalPrice.Size = new System.Drawing.Size(157, 41);
             this.rtxtTotalPrice.TabIndex = 0;
             this.rtxtTotalPrice.Text = "";
             // 
@@ -376,10 +364,9 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Location = new System.Drawing.Point(27, 431);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(20, 350);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(865, 89);
+            this.panel1.Size = new System.Drawing.Size(649, 73);
             this.panel1.TabIndex = 14;
             // 
             // btnMOP
@@ -390,10 +377,10 @@
             this.btnMOP.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnMOP.FlatAppearance.BorderSize = 0;
             this.btnMOP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMOP.Location = new System.Drawing.Point(625, 27);
-            this.btnMOP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnMOP.Location = new System.Drawing.Point(469, 22);
+            this.btnMOP.Margin = new System.Windows.Forms.Padding(2);
             this.btnMOP.Name = "btnMOP";
-            this.btnMOP.Size = new System.Drawing.Size(27, 25);
+            this.btnMOP.Size = new System.Drawing.Size(20, 20);
             this.btnMOP.TabIndex = 13;
             this.btnMOP.UseVisualStyleBackColor = false;
             this.btnMOP.Click += new System.EventHandler(this.btnMOP_Click);
@@ -406,10 +393,10 @@
             this.btnCopy.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnCopy.FlatAppearance.BorderSize = 0;
             this.btnCopy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCopy.Location = new System.Drawing.Point(340, 27);
-            this.btnCopy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCopy.Location = new System.Drawing.Point(255, 22);
+            this.btnCopy.Margin = new System.Windows.Forms.Padding(2);
             this.btnCopy.Name = "btnCopy";
-            this.btnCopy.Size = new System.Drawing.Size(28, 25);
+            this.btnCopy.Size = new System.Drawing.Size(21, 20);
             this.btnCopy.TabIndex = 12;
             this.btnCopy.UseVisualStyleBackColor = false;
             // 
@@ -418,10 +405,10 @@
             this.picIDK.BackColor = System.Drawing.Color.Transparent;
             this.picIDK.BackgroundImage = global::TBIC.Properties.Resources.PROEL2D_UI__4_;
             this.picIDK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picIDK.Location = new System.Drawing.Point(27, 12);
-            this.picIDK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picIDK.Location = new System.Drawing.Point(20, 10);
+            this.picIDK.Margin = new System.Windows.Forms.Padding(2);
             this.picIDK.Name = "picIDK";
-            this.picIDK.Size = new System.Drawing.Size(45, 43);
+            this.picIDK.Size = new System.Drawing.Size(34, 35);
             this.picIDK.TabIndex = 10;
             this.picIDK.TabStop = false;
             // 
@@ -433,10 +420,10 @@
             this.btnPrevious.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnPrevious.FlatAppearance.BorderSize = 0;
             this.btnPrevious.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnPrevious.Location = new System.Drawing.Point(1225, 27);
-            this.btnPrevious.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPrevious.Location = new System.Drawing.Point(919, 22);
+            this.btnPrevious.Margin = new System.Windows.Forms.Padding(2);
             this.btnPrevious.Name = "btnPrevious";
-            this.btnPrevious.Size = new System.Drawing.Size(37, 30);
+            this.btnPrevious.Size = new System.Drawing.Size(28, 24);
             this.btnPrevious.TabIndex = 9;
             this.btnPrevious.UseVisualStyleBackColor = false;
             // 
@@ -448,10 +435,10 @@
             this.btnNext.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnNext.FlatAppearance.BorderSize = 0;
             this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnNext.Location = new System.Drawing.Point(1269, 27);
-            this.btnNext.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnNext.Location = new System.Drawing.Point(952, 22);
+            this.btnNext.Margin = new System.Windows.Forms.Padding(2);
             this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(37, 30);
+            this.btnNext.Size = new System.Drawing.Size(28, 24);
             this.btnNext.TabIndex = 8;
             this.btnNext.UseVisualStyleBackColor = false;
             // 
@@ -463,10 +450,10 @@
             this.btnConfirmPrint.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnConfirmPrint.FlatAppearance.BorderSize = 0;
             this.btnConfirmPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfirmPrint.Location = new System.Drawing.Point(1039, 716);
-            this.btnConfirmPrint.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnConfirmPrint.Location = new System.Drawing.Point(779, 582);
+            this.btnConfirmPrint.Margin = new System.Windows.Forms.Padding(2);
             this.btnConfirmPrint.Name = "btnConfirmPrint";
-            this.btnConfirmPrint.Size = new System.Drawing.Size(316, 59);
+            this.btnConfirmPrint.Size = new System.Drawing.Size(237, 48);
             this.btnConfirmPrint.TabIndex = 7;
             this.btnConfirmPrint.UseVisualStyleBackColor = false;
             this.btnConfirmPrint.Click += new System.EventHandler(this.btnConfirmPrint_Click);
@@ -476,10 +463,10 @@
             this.picMaybedropbox.BackColor = System.Drawing.Color.Transparent;
             this.picMaybedropbox.BackgroundImage = global::TBIC.Properties.Resources.PROEL2D_UI;
             this.picMaybedropbox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picMaybedropbox.Location = new System.Drawing.Point(568, 132);
-            this.picMaybedropbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picMaybedropbox.Location = new System.Drawing.Point(426, 107);
+            this.picMaybedropbox.Margin = new System.Windows.Forms.Padding(2);
             this.picMaybedropbox.Name = "picMaybedropbox";
-            this.picMaybedropbox.Size = new System.Drawing.Size(37, 33);
+            this.picMaybedropbox.Size = new System.Drawing.Size(28, 27);
             this.picMaybedropbox.TabIndex = 11;
             this.picMaybedropbox.TabStop = false;
             // 
@@ -492,10 +479,9 @@
             this.btnLogout.FlatAppearance.BorderSize = 0;
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.Location = new System.Drawing.Point(1520, 726);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLogout.Location = new System.Drawing.Point(1140, 590);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(149, 42);
+            this.btnLogout.Size = new System.Drawing.Size(112, 34);
             this.btnLogout.TabIndex = 12;
             this.btnLogout.Text = "LOGOUT";
             this.btnLogout.UseVisualStyleBackColor = false;
@@ -509,43 +495,28 @@
             this.cardToolStripMenuItem,
             this.eWalletToolStripMenuItem});
             this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(135, 76);
+            this.contextMenuStrip2.Size = new System.Drawing.Size(119, 70);
             // 
             // cashToolStripMenuItem
             // 
             this.cashToolStripMenuItem.Name = "cashToolStripMenuItem";
-            this.cashToolStripMenuItem.Size = new System.Drawing.Size(134, 24);
+            this.cashToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.cashToolStripMenuItem.Text = "Cash";
             this.cashToolStripMenuItem.Click += new System.EventHandler(this.cashToolStripMenuItem_Click);
             // 
             // cardToolStripMenuItem
             // 
             this.cardToolStripMenuItem.Name = "cardToolStripMenuItem";
-            this.cardToolStripMenuItem.Size = new System.Drawing.Size(134, 24);
+            this.cardToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.cardToolStripMenuItem.Text = "Card";
             this.cardToolStripMenuItem.Click += new System.EventHandler(this.cardToolStripMenuItem_Click);
             // 
             // eWalletToolStripMenuItem
             // 
             this.eWalletToolStripMenuItem.Name = "eWalletToolStripMenuItem";
-            this.eWalletToolStripMenuItem.Size = new System.Drawing.Size(134, 24);
+            this.eWalletToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.eWalletToolStripMenuItem.Text = "E-Wallet";
             this.eWalletToolStripMenuItem.Click += new System.EventHandler(this.eWalletToolStripMenuItem_Click);
-            // 
-            // btnGoToDashBoard
-            // 
-            this.btnGoToDashBoard.BackColor = System.Drawing.Color.Transparent;
-            this.btnGoToDashBoard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnGoToDashBoard.FlatAppearance.BorderSize = 0;
-            this.btnGoToDashBoard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGoToDashBoard.Location = new System.Drawing.Point(1403, 324);
-            this.btnGoToDashBoard.Margin = new System.Windows.Forms.Padding(4);
-            this.btnGoToDashBoard.Name = "btnGoToDashBoard";
-            this.btnGoToDashBoard.Size = new System.Drawing.Size(285, 32);
-            this.btnGoToDashBoard.TabIndex = 13;
-            this.btnGoToDashBoard.Text = "DASHBOARD";
-            this.btnGoToDashBoard.UseVisualStyleBackColor = false;
-            this.btnGoToDashBoard.Click += new System.EventHandler(this.btnGoToDashBoard_Click);
             // 
             // panel3
             // 
@@ -554,69 +525,62 @@
             this.panel3.Controls.Add(this.lblUsernameNumba);
             this.panel3.Controls.Add(this.lblUserID);
             this.panel3.Controls.Add(this.lblUsername);
-            this.panel3.Location = new System.Drawing.Point(1496, 19);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Location = new System.Drawing.Point(1122, 15);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(157, 34);
+            this.panel3.Size = new System.Drawing.Size(118, 28);
             this.panel3.TabIndex = 25;
             // 
             // lblIDs
             // 
             this.lblIDs.AutoSize = true;
-            this.lblIDs.Location = new System.Drawing.Point(13, 17);
-            this.lblIDs.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIDs.Location = new System.Drawing.Point(20, 14);
             this.lblIDs.Name = "lblIDs";
-            this.lblIDs.Size = new System.Drawing.Size(23, 16);
+            this.lblIDs.Size = new System.Drawing.Size(21, 13);
             this.lblIDs.TabIndex = 14;
             this.lblIDs.Text = "ID:";
             // 
             // lblUsernameNumba
             // 
             this.lblUsernameNumba.AutoSize = true;
-            this.lblUsernameNumba.Location = new System.Drawing.Point(12, 2);
-            this.lblUsernameNumba.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblUsernameNumba.Location = new System.Drawing.Point(9, 2);
             this.lblUsernameNumba.Name = "lblUsernameNumba";
-            this.lblUsernameNumba.Size = new System.Drawing.Size(39, 16);
+            this.lblUsernameNumba.Size = new System.Drawing.Size(32, 13);
             this.lblUsernameNumba.TabIndex = 13;
             this.lblUsernameNumba.Text = "User:";
             // 
             // lblUserID
             // 
             this.lblUserID.AutoSize = true;
-            this.lblUserID.Location = new System.Drawing.Point(40, 17);
-            this.lblUserID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblUserID.Location = new System.Drawing.Point(41, 14);
             this.lblUserID.Name = "lblUserID";
-            this.lblUserID.Size = new System.Drawing.Size(21, 16);
+            this.lblUserID.Size = new System.Drawing.Size(19, 13);
             this.lblUserID.TabIndex = 12;
             this.lblUserID.Text = "69";
             // 
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
-            this.lblUsername.Location = new System.Drawing.Point(55, 2);
-            this.lblUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblUsername.Location = new System.Drawing.Point(41, 2);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(26, 16);
+            this.lblUsername.Size = new System.Drawing.Size(22, 13);
             this.lblUsername.TabIndex = 11;
             this.lblUsername.Text = "Me";
             // 
             // Payment
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::TBIC.Properties.Resources.POS_Payment_Reyal1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1685, 789);
+            this.ClientSize = new System.Drawing.Size(1264, 641);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.btnGoToDashBoard);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.picMaybedropbox);
             this.Controls.Add(this.btnConfirmPrint);
             this.Controls.Add(this.pnlBackground);
             this.Controls.Add(this.btnPlace);
-            this.Controls.Add(this.btnNewTable);
+            this.Controls.Add(this.btnNewPurchase);
             this.Controls.Add(this.txtSearchBox);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Payment";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Payment";
@@ -640,7 +604,7 @@
         #endregion
 
         private System.Windows.Forms.TextBox txtSearchBox;
-        private System.Windows.Forms.Button btnNewTable;
+        private System.Windows.Forms.Button btnNewPurchase;
         private System.Windows.Forms.Button btnPlace;
         private System.Windows.Forms.TextBox txtOrderId;
         private System.Windows.Forms.TextBox txtMOP;
@@ -658,8 +622,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RichTextBox rtxtDiscount;
-        private System.Windows.Forms.RichTextBox rtxtTotalPrice;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem noneToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem seniorToolStripMenuItem;
@@ -677,11 +639,12 @@
         private System.Windows.Forms.ToolStripMenuItem cashToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cardToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eWalletToolStripMenuItem;
-        private System.Windows.Forms.Button btnGoToDashBoard;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lblIDs;
         private System.Windows.Forms.Label lblUsernameNumba;
-        private System.Windows.Forms.Label lblUserID;
-        private System.Windows.Forms.Label lblUsername;
+        public System.Windows.Forms.Label lblUserID;
+        public System.Windows.Forms.Label lblUsername;
+        public System.Windows.Forms.RichTextBox rtxtDiscount;
+        public System.Windows.Forms.RichTextBox rtxtTotalPrice;
     }
 }

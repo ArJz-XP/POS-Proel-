@@ -62,7 +62,6 @@
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(182, 24);
             this.txtUser.TabIndex = 2;
-            this.txtUser.Text = "Magno";
             // 
             // txtPass
             // 
@@ -72,9 +71,9 @@
             this.txtPass.Location = new System.Drawing.Point(173, 316);
             this.txtPass.Multiline = true;
             this.txtPass.Name = "txtPass";
+            this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(182, 23);
             this.txtPass.TabIndex = 3;
-            this.txtPass.Text = "Cream";
             // 
             // picLandingpage
             // 
