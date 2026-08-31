@@ -36,15 +36,15 @@ namespace TBIC
     partial void InsertPRODUCT(PRODUCT instance);
     partial void UpdatePRODUCT(PRODUCT instance);
     partial void DeletePRODUCT(PRODUCT instance);
-    partial void InsertSALE_DETAIL(SALE_DETAIL instance);
-    partial void UpdateSALE_DETAIL(SALE_DETAIL instance);
-    partial void DeleteSALE_DETAIL(SALE_DETAIL instance);
     partial void InsertSALE(SALE instance);
     partial void UpdateSALE(SALE instance);
     partial void DeleteSALE(SALE instance);
-    partial void InsertSTAFFINFO(STAFFINFO instance);
-    partial void UpdateSTAFFINFO(STAFFINFO instance);
-    partial void DeleteSTAFFINFO(STAFFINFO instance);
+    partial void InsertSALE_DETAIL(SALE_DETAIL instance);
+    partial void UpdateSALE_DETAIL(SALE_DETAIL instance);
+    partial void DeleteSALE_DETAIL(SALE_DETAIL instance);
+    partial void InsertSTAFF(STAFF instance);
+    partial void UpdateSTAFF(STAFF instance);
+    partial void DeleteSTAFF(STAFF instance);
     #endregion
 		
 		public TBICDataContext() : 
@@ -93,14 +93,6 @@ namespace TBIC
 			}
 		}
 		
-		public System.Data.Linq.Table<SALE_DETAIL> SALE_DETAILs
-		{
-			get
-			{
-				return this.GetTable<SALE_DETAIL>();
-			}
-		}
-		
 		public System.Data.Linq.Table<SALE> SALEs
 		{
 			get
@@ -109,19 +101,19 @@ namespace TBIC
 			}
 		}
 		
+		public System.Data.Linq.Table<SALE_DETAIL> SALE_DETAILs
+		{
+			get
+			{
+				return this.GetTable<SALE_DETAIL>();
+			}
+		}
+		
 		public System.Data.Linq.Table<STAFF> STAFFs
 		{
 			get
 			{
 				return this.GetTable<STAFF>();
-			}
-		}
-		
-		public System.Data.Linq.Table<STAFFINFO> STAFFINFOs
-		{
-			get
-			{
-				return this.GetTable<STAFFINFO>();
 			}
 		}
 		
@@ -134,9 +126,9 @@ namespace TBIC
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ADD_STAFF")]
-		public int ADD_STAFF([global::System.Data.Linq.Mapping.ParameterAttribute(Name="STAFF_NAME", DbType="NVarChar(100)")] string sTAFF_NAME, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="USERNAME", DbType="NVarChar(50)")] string uSERNAME, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PASSWORD", DbType="NVarChar(100)")] string pASSWORD)
+		public int ADD_STAFF([global::System.Data.Linq.Mapping.ParameterAttribute(Name="STAFF_NAME", DbType="NVarChar(100)")] string sTAFF_NAME, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="USERNAME", DbType="NVarChar(50)")] string uSERNAME, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PASSWORD", DbType="NVarChar(100)")] string pASSWORD, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DEPARTMENT_ID", DbType="Int")] System.Nullable<int> dEPARTMENT_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ROLE", DbType="NVarChar(20)")] string rOLE)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), sTAFF_NAME, uSERNAME, pASSWORD);
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), sTAFF_NAME, uSERNAME, pASSWORD, dEPARTMENT_ID, rOLE);
 			return ((int)(result.ReturnValue));
 		}
 		
@@ -179,7 +171,7 @@ namespace TBIC
 		
 		private string _DEPARTMENT_NAME;
 		
-		private EntitySet<STAFFINFO> _STAFFINFOs;
+		private EntitySet<STAFF> _STAFFs;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -193,7 +185,7 @@ namespace TBIC
 		
 		public DEPARTMENT()
 		{
-			this._STAFFINFOs = new EntitySet<STAFFINFO>(new Action<STAFFINFO>(this.attach_STAFFINFOs), new Action<STAFFINFO>(this.detach_STAFFINFOs));
+			this._STAFFs = new EntitySet<STAFF>(new Action<STAFF>(this.attach_STAFFs), new Action<STAFF>(this.detach_STAFFs));
 			OnCreated();
 		}
 		
@@ -217,7 +209,7 @@ namespace TBIC
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DEPARTMENT_NAME", DbType="NVarChar(100)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DEPARTMENT_NAME", DbType="VarChar(100)")]
 		public string DEPARTMENT_NAME
 		{
 			get
@@ -237,16 +229,16 @@ namespace TBIC
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DEPARTMENT_STAFFINFO", Storage="_STAFFINFOs", ThisKey="DEPARTMENT_ID", OtherKey="DEPARTMENT_ID")]
-		public EntitySet<STAFFINFO> STAFFINFOs
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DEPARTMENT_STAFF", Storage="_STAFFs", ThisKey="DEPARTMENT_ID", OtherKey="DEPARTMENT_ID")]
+		public EntitySet<STAFF> STAFFs
 		{
 			get
 			{
-				return this._STAFFINFOs;
+				return this._STAFFs;
 			}
 			set
 			{
-				this._STAFFINFOs.Assign(value);
+				this._STAFFs.Assign(value);
 			}
 		}
 		
@@ -270,20 +262,20 @@ namespace TBIC
 			}
 		}
 		
-		private void attach_STAFFINFOs(STAFFINFO entity)
+		private void attach_STAFFs(STAFF entity)
 		{
 			this.SendPropertyChanging();
 			entity.DEPARTMENT = this;
 		}
 		
-		private void detach_STAFFINFOs(STAFFINFO entity)
+		private void detach_STAFFs(STAFF entity)
 		{
 			this.SendPropertyChanging();
 			entity.DEPARTMENT = null;
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.PRODUCTS")]
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.PRODUCT")]
 	public partial class PRODUCT : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
@@ -298,6 +290,8 @@ namespace TBIC
 		private System.Nullable<decimal> _PRICE;
 		
 		private string _STATUS;
+		
+		private System.Nullable<int> _STOCK;
 		
 		private EntitySet<SALE_DETAIL> _SALE_DETAILs;
 		
@@ -315,6 +309,8 @@ namespace TBIC
     partial void OnPRICEChanged();
     partial void OnSTATUSChanging(string value);
     partial void OnSTATUSChanged();
+    partial void OnSTOCKChanging(System.Nullable<int> value);
+    partial void OnSTOCKChanged();
     #endregion
 		
 		public PRODUCT()
@@ -343,7 +339,7 @@ namespace TBIC
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PRODUCT_NAME", DbType="NVarChar(100)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PRODUCT_NAME", DbType="VarChar(100)")]
 		public string PRODUCT_NAME
 		{
 			get
@@ -363,7 +359,7 @@ namespace TBIC
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FLAVOR", DbType="NVarChar(50)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FLAVOR", DbType="VarChar(50)")]
 		public string FLAVOR
 		{
 			get
@@ -403,7 +399,7 @@ namespace TBIC
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_STATUS", DbType="NVarChar(20)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_STATUS", DbType="VarChar(20)")]
 		public string STATUS
 		{
 			get
@@ -419,6 +415,26 @@ namespace TBIC
 					this._STATUS = value;
 					this.SendPropertyChanged("STATUS");
 					this.OnSTATUSChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_STOCK", DbType="Int")]
+		public System.Nullable<int> STOCK
+		{
+			get
+			{
+				return this._STOCK;
+			}
+			set
+			{
+				if ((this._STOCK != value))
+				{
+					this.OnSTOCKChanging(value);
+					this.SendPropertyChanging();
+					this._STOCK = value;
+					this.SendPropertyChanged("STOCK");
+					this.OnSTOCKChanged();
 				}
 			}
 		}
@@ -469,7 +485,282 @@ namespace TBIC
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.SALE_DETAILS")]
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.SALE")]
+	public partial class SALE : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _SALES_ID;
+		
+		private System.Nullable<int> _STAFF_ID;
+		
+		private System.Nullable<System.DateTime> _SALES_DATE;
+		
+		private System.Nullable<decimal> _TOTAL_AMOUNT;
+		
+		private string _PAYMENT_METHOD;
+		
+		private System.Nullable<decimal> _AMOUNT_PAID;
+		
+		private System.Nullable<decimal> _CHANGE_AMOUNT;
+		
+		private EntitySet<SALE_DETAIL> _SALE_DETAILs;
+		
+		private EntityRef<STAFF> _STAFF;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnSALES_IDChanging(int value);
+    partial void OnSALES_IDChanged();
+    partial void OnSTAFF_IDChanging(System.Nullable<int> value);
+    partial void OnSTAFF_IDChanged();
+    partial void OnSALES_DATEChanging(System.Nullable<System.DateTime> value);
+    partial void OnSALES_DATEChanged();
+    partial void OnTOTAL_AMOUNTChanging(System.Nullable<decimal> value);
+    partial void OnTOTAL_AMOUNTChanged();
+    partial void OnPAYMENT_METHODChanging(string value);
+    partial void OnPAYMENT_METHODChanged();
+    partial void OnAMOUNT_PAIDChanging(System.Nullable<decimal> value);
+    partial void OnAMOUNT_PAIDChanged();
+    partial void OnCHANGE_AMOUNTChanging(System.Nullable<decimal> value);
+    partial void OnCHANGE_AMOUNTChanged();
+    #endregion
+		
+		public SALE()
+		{
+			this._SALE_DETAILs = new EntitySet<SALE_DETAIL>(new Action<SALE_DETAIL>(this.attach_SALE_DETAILs), new Action<SALE_DETAIL>(this.detach_SALE_DETAILs));
+			this._STAFF = default(EntityRef<STAFF>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SALES_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int SALES_ID
+		{
+			get
+			{
+				return this._SALES_ID;
+			}
+			set
+			{
+				if ((this._SALES_ID != value))
+				{
+					this.OnSALES_IDChanging(value);
+					this.SendPropertyChanging();
+					this._SALES_ID = value;
+					this.SendPropertyChanged("SALES_ID");
+					this.OnSALES_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_STAFF_ID", DbType="Int")]
+		public System.Nullable<int> STAFF_ID
+		{
+			get
+			{
+				return this._STAFF_ID;
+			}
+			set
+			{
+				if ((this._STAFF_ID != value))
+				{
+					if (this._STAFF.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnSTAFF_IDChanging(value);
+					this.SendPropertyChanging();
+					this._STAFF_ID = value;
+					this.SendPropertyChanged("STAFF_ID");
+					this.OnSTAFF_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SALES_DATE", DbType="DateTime")]
+		public System.Nullable<System.DateTime> SALES_DATE
+		{
+			get
+			{
+				return this._SALES_DATE;
+			}
+			set
+			{
+				if ((this._SALES_DATE != value))
+				{
+					this.OnSALES_DATEChanging(value);
+					this.SendPropertyChanging();
+					this._SALES_DATE = value;
+					this.SendPropertyChanged("SALES_DATE");
+					this.OnSALES_DATEChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TOTAL_AMOUNT", DbType="Decimal(10,2)")]
+		public System.Nullable<decimal> TOTAL_AMOUNT
+		{
+			get
+			{
+				return this._TOTAL_AMOUNT;
+			}
+			set
+			{
+				if ((this._TOTAL_AMOUNT != value))
+				{
+					this.OnTOTAL_AMOUNTChanging(value);
+					this.SendPropertyChanging();
+					this._TOTAL_AMOUNT = value;
+					this.SendPropertyChanged("TOTAL_AMOUNT");
+					this.OnTOTAL_AMOUNTChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PAYMENT_METHOD", DbType="VarChar(50)")]
+		public string PAYMENT_METHOD
+		{
+			get
+			{
+				return this._PAYMENT_METHOD;
+			}
+			set
+			{
+				if ((this._PAYMENT_METHOD != value))
+				{
+					this.OnPAYMENT_METHODChanging(value);
+					this.SendPropertyChanging();
+					this._PAYMENT_METHOD = value;
+					this.SendPropertyChanged("PAYMENT_METHOD");
+					this.OnPAYMENT_METHODChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AMOUNT_PAID", DbType="Decimal(10,2)")]
+		public System.Nullable<decimal> AMOUNT_PAID
+		{
+			get
+			{
+				return this._AMOUNT_PAID;
+			}
+			set
+			{
+				if ((this._AMOUNT_PAID != value))
+				{
+					this.OnAMOUNT_PAIDChanging(value);
+					this.SendPropertyChanging();
+					this._AMOUNT_PAID = value;
+					this.SendPropertyChanged("AMOUNT_PAID");
+					this.OnAMOUNT_PAIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CHANGE_AMOUNT", DbType="Decimal(10,2)")]
+		public System.Nullable<decimal> CHANGE_AMOUNT
+		{
+			get
+			{
+				return this._CHANGE_AMOUNT;
+			}
+			set
+			{
+				if ((this._CHANGE_AMOUNT != value))
+				{
+					this.OnCHANGE_AMOUNTChanging(value);
+					this.SendPropertyChanging();
+					this._CHANGE_AMOUNT = value;
+					this.SendPropertyChanged("CHANGE_AMOUNT");
+					this.OnCHANGE_AMOUNTChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="SALE_SALE_DETAIL", Storage="_SALE_DETAILs", ThisKey="SALES_ID", OtherKey="SALE_ID")]
+		public EntitySet<SALE_DETAIL> SALE_DETAILs
+		{
+			get
+			{
+				return this._SALE_DETAILs;
+			}
+			set
+			{
+				this._SALE_DETAILs.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="STAFF_SALE", Storage="_STAFF", ThisKey="STAFF_ID", OtherKey="STAFF_ID", IsForeignKey=true)]
+		public STAFF STAFF
+		{
+			get
+			{
+				return this._STAFF.Entity;
+			}
+			set
+			{
+				STAFF previousValue = this._STAFF.Entity;
+				if (((previousValue != value) 
+							|| (this._STAFF.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._STAFF.Entity = null;
+						previousValue.SALEs.Remove(this);
+					}
+					this._STAFF.Entity = value;
+					if ((value != null))
+					{
+						value.SALEs.Add(this);
+						this._STAFF_ID = value.STAFF_ID;
+					}
+					else
+					{
+						this._STAFF_ID = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("STAFF");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_SALE_DETAILs(SALE_DETAIL entity)
+		{
+			this.SendPropertyChanging();
+			entity.SALE = this;
+		}
+		
+		private void detach_SALE_DETAILs(SALE_DETAIL entity)
+		{
+			this.SendPropertyChanging();
+			entity.SALE = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.SALE_DETAIL")]
 	public partial class SALE_DETAIL : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
@@ -477,15 +768,15 @@ namespace TBIC
 		
 		private int _SALE_DETAIL_ID;
 		
-		private int _SALE_ID;
+		private System.Nullable<int> _SALE_ID;
 		
-		private int _PRODUCT_ID;
+		private System.Nullable<int> _PRODUCT_ID;
 		
-		private int _QUANTITY;
+		private System.Nullable<int> _QUANTITY;
 		
-		private decimal _UNIT_PRICE;
+		private System.Nullable<decimal> _UNIT_PRICE;
 		
-		private decimal _SUBTOTAL;
+		private System.Nullable<decimal> _SUBTOTAL;
 		
 		private EntityRef<PRODUCT> _PRODUCT;
 		
@@ -497,15 +788,15 @@ namespace TBIC
     partial void OnCreated();
     partial void OnSALE_DETAIL_IDChanging(int value);
     partial void OnSALE_DETAIL_IDChanged();
-    partial void OnSALE_IDChanging(int value);
+    partial void OnSALE_IDChanging(System.Nullable<int> value);
     partial void OnSALE_IDChanged();
-    partial void OnPRODUCT_IDChanging(int value);
+    partial void OnPRODUCT_IDChanging(System.Nullable<int> value);
     partial void OnPRODUCT_IDChanged();
-    partial void OnQUANTITYChanging(int value);
+    partial void OnQUANTITYChanging(System.Nullable<int> value);
     partial void OnQUANTITYChanged();
-    partial void OnUNIT_PRICEChanging(decimal value);
+    partial void OnUNIT_PRICEChanging(System.Nullable<decimal> value);
     partial void OnUNIT_PRICEChanged();
-    partial void OnSUBTOTALChanging(decimal value);
+    partial void OnSUBTOTALChanging(System.Nullable<decimal> value);
     partial void OnSUBTOTALChanged();
     #endregion
 		
@@ -536,8 +827,8 @@ namespace TBIC
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SALE_ID", DbType="Int NOT NULL")]
-		public int SALE_ID
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SALE_ID", DbType="Int")]
+		public System.Nullable<int> SALE_ID
 		{
 			get
 			{
@@ -560,8 +851,8 @@ namespace TBIC
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PRODUCT_ID", DbType="Int NOT NULL")]
-		public int PRODUCT_ID
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PRODUCT_ID", DbType="Int")]
+		public System.Nullable<int> PRODUCT_ID
 		{
 			get
 			{
@@ -584,8 +875,8 @@ namespace TBIC
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QUANTITY", DbType="Int NOT NULL")]
-		public int QUANTITY
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QUANTITY", DbType="Int")]
+		public System.Nullable<int> QUANTITY
 		{
 			get
 			{
@@ -604,8 +895,8 @@ namespace TBIC
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UNIT_PRICE", DbType="Decimal(10,2) NOT NULL")]
-		public decimal UNIT_PRICE
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UNIT_PRICE", DbType="Decimal(10,2)")]
+		public System.Nullable<decimal> UNIT_PRICE
 		{
 			get
 			{
@@ -624,8 +915,8 @@ namespace TBIC
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SUBTOTAL", DbType="Decimal(10,2) NOT NULL")]
-		public decimal SUBTOTAL
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SUBTOTAL", DbType="Decimal(10,2)")]
+		public System.Nullable<decimal> SUBTOTAL
 		{
 			get
 			{
@@ -671,7 +962,7 @@ namespace TBIC
 					}
 					else
 					{
-						this._PRODUCT_ID = default(int);
+						this._PRODUCT_ID = default(Nullable<int>);
 					}
 					this.SendPropertyChanged("PRODUCT");
 				}
@@ -705,7 +996,7 @@ namespace TBIC
 					}
 					else
 					{
-						this._SALE_ID = default(int);
+						this._SALE_ID = default(Nullable<int>);
 					}
 					this.SendPropertyChanged("SALE");
 				}
@@ -733,323 +1024,8 @@ namespace TBIC
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.SALES")]
-	public partial class SALE : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _SALES_ID;
-		
-		private int _STAFF_ID;
-		
-		private System.DateTime _SALES_DATE;
-		
-		private decimal _TOTAL_AMOUNT;
-		
-		private string _PAYMENT_METHOD;
-		
-		private decimal _AMOUNT_PAID;
-		
-		private decimal _CHANGE_AMOUNT;
-		
-		private EntitySet<SALE_DETAIL> _SALE_DETAILs;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnSALES_IDChanging(int value);
-    partial void OnSALES_IDChanged();
-    partial void OnSTAFF_IDChanging(int value);
-    partial void OnSTAFF_IDChanged();
-    partial void OnSALES_DATEChanging(System.DateTime value);
-    partial void OnSALES_DATEChanged();
-    partial void OnTOTAL_AMOUNTChanging(decimal value);
-    partial void OnTOTAL_AMOUNTChanged();
-    partial void OnPAYMENT_METHODChanging(string value);
-    partial void OnPAYMENT_METHODChanged();
-    partial void OnAMOUNT_PAIDChanging(decimal value);
-    partial void OnAMOUNT_PAIDChanged();
-    partial void OnCHANGE_AMOUNTChanging(decimal value);
-    partial void OnCHANGE_AMOUNTChanged();
-    #endregion
-		
-		public SALE()
-		{
-			this._SALE_DETAILs = new EntitySet<SALE_DETAIL>(new Action<SALE_DETAIL>(this.attach_SALE_DETAILs), new Action<SALE_DETAIL>(this.detach_SALE_DETAILs));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SALES_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int SALES_ID
-		{
-			get
-			{
-				return this._SALES_ID;
-			}
-			set
-			{
-				if ((this._SALES_ID != value))
-				{
-					this.OnSALES_IDChanging(value);
-					this.SendPropertyChanging();
-					this._SALES_ID = value;
-					this.SendPropertyChanged("SALES_ID");
-					this.OnSALES_IDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_STAFF_ID", DbType="Int NOT NULL")]
-		public int STAFF_ID
-		{
-			get
-			{
-				return this._STAFF_ID;
-			}
-			set
-			{
-				if ((this._STAFF_ID != value))
-				{
-					this.OnSTAFF_IDChanging(value);
-					this.SendPropertyChanging();
-					this._STAFF_ID = value;
-					this.SendPropertyChanged("STAFF_ID");
-					this.OnSTAFF_IDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SALES_DATE", DbType="DateTime NOT NULL")]
-		public System.DateTime SALES_DATE
-		{
-			get
-			{
-				return this._SALES_DATE;
-			}
-			set
-			{
-				if ((this._SALES_DATE != value))
-				{
-					this.OnSALES_DATEChanging(value);
-					this.SendPropertyChanging();
-					this._SALES_DATE = value;
-					this.SendPropertyChanged("SALES_DATE");
-					this.OnSALES_DATEChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TOTAL_AMOUNT", DbType="Decimal(10,2) NOT NULL")]
-		public decimal TOTAL_AMOUNT
-		{
-			get
-			{
-				return this._TOTAL_AMOUNT;
-			}
-			set
-			{
-				if ((this._TOTAL_AMOUNT != value))
-				{
-					this.OnTOTAL_AMOUNTChanging(value);
-					this.SendPropertyChanging();
-					this._TOTAL_AMOUNT = value;
-					this.SendPropertyChanged("TOTAL_AMOUNT");
-					this.OnTOTAL_AMOUNTChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PAYMENT_METHOD", DbType="NVarChar(10) NOT NULL", CanBeNull=false)]
-		public string PAYMENT_METHOD
-		{
-			get
-			{
-				return this._PAYMENT_METHOD;
-			}
-			set
-			{
-				if ((this._PAYMENT_METHOD != value))
-				{
-					this.OnPAYMENT_METHODChanging(value);
-					this.SendPropertyChanging();
-					this._PAYMENT_METHOD = value;
-					this.SendPropertyChanged("PAYMENT_METHOD");
-					this.OnPAYMENT_METHODChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AMOUNT_PAID", DbType="Decimal(10,2) NOT NULL")]
-		public decimal AMOUNT_PAID
-		{
-			get
-			{
-				return this._AMOUNT_PAID;
-			}
-			set
-			{
-				if ((this._AMOUNT_PAID != value))
-				{
-					this.OnAMOUNT_PAIDChanging(value);
-					this.SendPropertyChanging();
-					this._AMOUNT_PAID = value;
-					this.SendPropertyChanged("AMOUNT_PAID");
-					this.OnAMOUNT_PAIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CHANGE_AMOUNT", DbType="Decimal(10,2) NOT NULL")]
-		public decimal CHANGE_AMOUNT
-		{
-			get
-			{
-				return this._CHANGE_AMOUNT;
-			}
-			set
-			{
-				if ((this._CHANGE_AMOUNT != value))
-				{
-					this.OnCHANGE_AMOUNTChanging(value);
-					this.SendPropertyChanging();
-					this._CHANGE_AMOUNT = value;
-					this.SendPropertyChanged("CHANGE_AMOUNT");
-					this.OnCHANGE_AMOUNTChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="SALE_SALE_DETAIL", Storage="_SALE_DETAILs", ThisKey="SALES_ID", OtherKey="SALE_ID")]
-		public EntitySet<SALE_DETAIL> SALE_DETAILs
-		{
-			get
-			{
-				return this._SALE_DETAILs;
-			}
-			set
-			{
-				this._SALE_DETAILs.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_SALE_DETAILs(SALE_DETAIL entity)
-		{
-			this.SendPropertyChanging();
-			entity.SALE = this;
-		}
-		
-		private void detach_SALE_DETAILs(SALE_DETAIL entity)
-		{
-			this.SendPropertyChanging();
-			entity.SALE = null;
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.STAFF")]
-	public partial class STAFF
-	{
-		
-		private int _STAFF_ID;
-		
-		private string _STAFF_NAME;
-		
-		private string _USERNAME;
-		
-		private string _PASSWORD;
-		
-		public STAFF()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_STAFF_ID", DbType="Int NOT NULL")]
-		public int STAFF_ID
-		{
-			get
-			{
-				return this._STAFF_ID;
-			}
-			set
-			{
-				if ((this._STAFF_ID != value))
-				{
-					this._STAFF_ID = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_STAFF_NAME", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
-		public string STAFF_NAME
-		{
-			get
-			{
-				return this._STAFF_NAME;
-			}
-			set
-			{
-				if ((this._STAFF_NAME != value))
-				{
-					this._STAFF_NAME = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_USERNAME", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
-		public string USERNAME
-		{
-			get
-			{
-				return this._USERNAME;
-			}
-			set
-			{
-				if ((this._USERNAME != value))
-				{
-					this._USERNAME = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PASSWORD", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
-		public string PASSWORD
-		{
-			get
-			{
-				return this._PASSWORD;
-			}
-			set
-			{
-				if ((this._PASSWORD != value))
-				{
-					this._PASSWORD = value;
-				}
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.STAFFINFO")]
-	public partial class STAFFINFO : INotifyPropertyChanging, INotifyPropertyChanged
+	public partial class STAFF : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
@@ -1065,6 +1041,8 @@ namespace TBIC
 		private System.Nullable<int> _DEPARTMENT_ID;
 		
 		private string _ROLE;
+		
+		private EntitySet<SALE> _SALEs;
 		
 		private EntityRef<DEPARTMENT> _DEPARTMENT;
 		
@@ -1086,8 +1064,9 @@ namespace TBIC
     partial void OnROLEChanged();
     #endregion
 		
-		public STAFFINFO()
+		public STAFF()
 		{
+			this._SALEs = new EntitySet<SALE>(new Action<SALE>(this.attach_SALEs), new Action<SALE>(this.detach_SALEs));
 			this._DEPARTMENT = default(EntityRef<DEPARTMENT>);
 			OnCreated();
 		}
@@ -1112,7 +1091,7 @@ namespace TBIC
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_STAFF_NAME", DbType="NVarChar(100)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_STAFF_NAME", DbType="VarChar(100)")]
 		public string STAFF_NAME
 		{
 			get
@@ -1132,7 +1111,7 @@ namespace TBIC
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_USERNAME", DbType="NVarChar(100)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_USERNAME", DbType="VarChar(50)")]
 		public string USERNAME
 		{
 			get
@@ -1152,7 +1131,7 @@ namespace TBIC
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PASSWORD", DbType="NVarChar(20)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PASSWORD", DbType="VarChar(50)")]
 		public string PASSWORD
 		{
 			get
@@ -1196,7 +1175,7 @@ namespace TBIC
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ROLE", DbType="NVarChar(100)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ROLE", DbType="VarChar(50)")]
 		public string ROLE
 		{
 			get
@@ -1216,7 +1195,20 @@ namespace TBIC
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DEPARTMENT_STAFFINFO", Storage="_DEPARTMENT", ThisKey="DEPARTMENT_ID", OtherKey="DEPARTMENT_ID", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="STAFF_SALE", Storage="_SALEs", ThisKey="STAFF_ID", OtherKey="STAFF_ID")]
+		public EntitySet<SALE> SALEs
+		{
+			get
+			{
+				return this._SALEs;
+			}
+			set
+			{
+				this._SALEs.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DEPARTMENT_STAFF", Storage="_DEPARTMENT", ThisKey="DEPARTMENT_ID", OtherKey="DEPARTMENT_ID", IsForeignKey=true)]
 		public DEPARTMENT DEPARTMENT
 		{
 			get
@@ -1233,12 +1225,12 @@ namespace TBIC
 					if ((previousValue != null))
 					{
 						this._DEPARTMENT.Entity = null;
-						previousValue.STAFFINFOs.Remove(this);
+						previousValue.STAFFs.Remove(this);
 					}
 					this._DEPARTMENT.Entity = value;
 					if ((value != null))
 					{
-						value.STAFFINFOs.Add(this);
+						value.STAFFs.Add(this);
 						this._DEPARTMENT_ID = value.DEPARTMENT_ID;
 					}
 					else
@@ -1268,6 +1260,18 @@ namespace TBIC
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+		
+		private void attach_SALEs(SALE entity)
+		{
+			this.SendPropertyChanging();
+			entity.STAFF = this;
+		}
+		
+		private void detach_SALEs(SALE entity)
+		{
+			this.SendPropertyChanging();
+			entity.STAFF = null;
 		}
 	}
 	
@@ -1307,7 +1311,7 @@ namespace TBIC
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_STAFF_NAME", DbType="NVarChar(100)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_STAFF_NAME", DbType="VarChar(100)")]
 		public string STAFF_NAME
 		{
 			get
@@ -1323,7 +1327,7 @@ namespace TBIC
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_USERNAME", DbType="NVarChar(100)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_USERNAME", DbType="VarChar(50)")]
 		public string USERNAME
 		{
 			get
@@ -1339,7 +1343,7 @@ namespace TBIC
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PASSWORD", DbType="NVarChar(20)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PASSWORD", DbType="VarChar(50)")]
 		public string PASSWORD
 		{
 			get
@@ -1355,7 +1359,7 @@ namespace TBIC
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ROLE", DbType="NVarChar(100)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ROLE", DbType="VarChar(50)")]
 		public string ROLE
 		{
 			get
@@ -1371,7 +1375,7 @@ namespace TBIC
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DEPARTMENT_NAME", DbType="NVarChar(100)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DEPARTMENT_NAME", DbType="VarChar(100)")]
 		public string DEPARTMENT_NAME
 		{
 			get

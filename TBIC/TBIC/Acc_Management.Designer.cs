@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtAddName = new System.Windows.Forms.TextBox();
             this.txtAddPassword = new System.Windows.Forms.TextBox();
-            this.cmbDepartment = new System.Windows.Forms.ComboBox();
             this.cmbRole = new System.Windows.Forms.ComboBox();
             this.txtSearchEmploys = new System.Windows.Forms.TextBox();
             this.btnCreate = new System.Windows.Forms.Button();
@@ -43,8 +43,18 @@
             this.lblUserID = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.picMaybedropboxManagement = new System.Windows.Forms.PictureBox();
+            this.dgvEmployeeEditor = new System.Windows.Forms.DataGridView();
+            this.vwRetrieveBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tBCI_ServerDataSet = new TBIC.TBCI_ServerDataSet();
+            this.vwRetrieveBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.txtDepartmentID = new System.Windows.Forms.TextBox();
+            this.vw_RetrieveTableAdapter = new TBIC.TBCI_ServerDataSetTableAdapters.vw_RetrieveTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMaybedropboxManagement)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmployeeEditor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwRetrieveBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBCI_ServerDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwRetrieveBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtAddName
@@ -69,27 +79,18 @@
             this.txtAddPassword.TabIndex = 15;
             this.txtAddPassword.Text = "PASSWORD";
             // 
-            // cmbDepartment
-            // 
-            this.cmbDepartment.FormattingEnabled = true;
-            this.cmbDepartment.Items.AddRange(new object[] {
-            "DEPARMENT"});
-            this.cmbDepartment.Location = new System.Drawing.Point(43, 511);
-            this.cmbDepartment.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cmbDepartment.Name = "cmbDepartment";
-            this.cmbDepartment.Size = new System.Drawing.Size(261, 24);
-            this.cmbDepartment.TabIndex = 16;
-            // 
             // cmbRole
             // 
             this.cmbRole.FormattingEnabled = true;
             this.cmbRole.Items.AddRange(new object[] {
-            "ROLES"});
-            this.cmbRole.Location = new System.Drawing.Point(43, 569);
+            "Cashier",
+            "Manager"});
+            this.cmbRole.Location = new System.Drawing.Point(41, 501);
             this.cmbRole.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbRole.Name = "cmbRole";
             this.cmbRole.Size = new System.Drawing.Size(261, 24);
             this.cmbRole.TabIndex = 17;
+            this.cmbRole.SelectedIndexChanged += new System.EventHandler(this.cmbRole_SelectedIndexChanged);
             // 
             // txtSearchEmploys
             // 
@@ -101,6 +102,7 @@
             this.txtSearchEmploys.Size = new System.Drawing.Size(261, 38);
             this.txtSearchEmploys.TabIndex = 18;
             this.txtSearchEmploys.Text = "Search Items";
+            this.txtSearchEmploys.TextChanged += new System.EventHandler(this.txtSearchEmploys_TextChanged);
             // 
             // btnCreate
             // 
@@ -114,6 +116,7 @@
             this.btnCreate.Size = new System.Drawing.Size(187, 37);
             this.btnCreate.TabIndex = 20;
             this.btnCreate.UseVisualStyleBackColor = false;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // btnConfigure
             // 
@@ -121,12 +124,13 @@
             this.btnConfigure.BackgroundImage = global::TBIC.Properties.Resources.Configure;
             this.btnConfigure.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnConfigure.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnConfigure.Location = new System.Drawing.Point(1147, 629);
+            this.btnConfigure.Location = new System.Drawing.Point(85, 693);
             this.btnConfigure.Margin = new System.Windows.Forms.Padding(4);
             this.btnConfigure.Name = "btnConfigure";
             this.btnConfigure.Size = new System.Drawing.Size(187, 37);
             this.btnConfigure.TabIndex = 21;
             this.btnConfigure.UseVisualStyleBackColor = false;
+            this.btnConfigure.Click += new System.EventHandler(this.btnConfigure_Click);
             // 
             // btnManageManage
             // 
@@ -176,7 +180,7 @@
             // lblIDs
             // 
             this.lblIDs.AutoSize = true;
-            this.lblIDs.Location = new System.Drawing.Point(13, 17);
+            this.lblIDs.Location = new System.Drawing.Point(27, 17);
             this.lblIDs.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIDs.Name = "lblIDs";
             this.lblIDs.Size = new System.Drawing.Size(23, 16);
@@ -196,7 +200,7 @@
             // lblUserID
             // 
             this.lblUserID.AutoSize = true;
-            this.lblUserID.Location = new System.Drawing.Point(40, 17);
+            this.lblUserID.Location = new System.Drawing.Point(55, 17);
             this.lblUserID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUserID.Name = "lblUserID";
             this.lblUserID.Size = new System.Drawing.Size(21, 16);
@@ -225,6 +229,56 @@
             this.picMaybedropboxManagement.TabIndex = 19;
             this.picMaybedropboxManagement.TabStop = false;
             // 
+            // dgvEmployeeEditor
+            // 
+            this.dgvEmployeeEditor.AllowUserToAddRows = false;
+            this.dgvEmployeeEditor.AllowUserToDeleteRows = false;
+            this.dgvEmployeeEditor.AllowUserToResizeColumns = false;
+            this.dgvEmployeeEditor.AllowUserToResizeRows = false;
+            this.dgvEmployeeEditor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dgvEmployeeEditor.BackgroundColor = System.Drawing.Color.White;
+            this.dgvEmployeeEditor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEmployeeEditor.Location = new System.Drawing.Point(371, 321);
+            this.dgvEmployeeEditor.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvEmployeeEditor.Name = "dgvEmployeeEditor";
+            this.dgvEmployeeEditor.ReadOnly = true;
+            this.dgvEmployeeEditor.RowHeadersWidth = 51;
+            this.dgvEmployeeEditor.Size = new System.Drawing.Size(963, 298);
+            this.dgvEmployeeEditor.TabIndex = 25;
+            this.dgvEmployeeEditor.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmployeeEditor_CellContentClick);
+            this.dgvEmployeeEditor.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvEmployeeEditor_CellFormatting);
+            // 
+            // vwRetrieveBindingSource
+            // 
+            this.vwRetrieveBindingSource.DataMember = "vw_Retrieve";
+            this.vwRetrieveBindingSource.DataSource = this.tBCI_ServerDataSet;
+            // 
+            // tBCI_ServerDataSet
+            // 
+            this.tBCI_ServerDataSet.DataSetName = "TBCI_ServerDataSet";
+            this.tBCI_ServerDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // vwRetrieveBindingSource1
+            // 
+            this.vwRetrieveBindingSource1.DataMember = "vw_Retrieve";
+            this.vwRetrieveBindingSource1.DataSource = this.tBCI_ServerDataSet;
+            // 
+            // txtDepartmentID
+            // 
+            this.txtDepartmentID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDepartmentID.Location = new System.Drawing.Point(43, 533);
+            this.txtDepartmentID.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDepartmentID.Multiline = true;
+            this.txtDepartmentID.Name = "txtDepartmentID";
+            this.txtDepartmentID.ReadOnly = true;
+            this.txtDepartmentID.Size = new System.Drawing.Size(261, 38);
+            this.txtDepartmentID.TabIndex = 26;
+            this.txtDepartmentID.Text = "DepID";
+            // 
+            // vw_RetrieveTableAdapter
+            // 
+            this.vw_RetrieveTableAdapter.ClearBeforeFill = true;
+            // 
             // Acc_Management
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -232,6 +286,8 @@
             this.BackgroundImage = global::TBIC.Properties.Resources.ADMIN_User_Management;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1688, 798);
+            this.Controls.Add(this.txtDepartmentID);
+            this.Controls.Add(this.dgvEmployeeEditor);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnDashBoardManage);
             this.Controls.Add(this.btnManageManage);
@@ -240,7 +296,6 @@
             this.Controls.Add(this.picMaybedropboxManagement);
             this.Controls.Add(this.txtSearchEmploys);
             this.Controls.Add(this.cmbRole);
-            this.Controls.Add(this.cmbDepartment);
             this.Controls.Add(this.txtAddPassword);
             this.Controls.Add(this.txtAddName);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -251,6 +306,10 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMaybedropboxManagement)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmployeeEditor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwRetrieveBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBCI_ServerDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwRetrieveBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -260,7 +319,6 @@
 
         private System.Windows.Forms.TextBox txtAddName;
         private System.Windows.Forms.TextBox txtAddPassword;
-        private System.Windows.Forms.ComboBox cmbDepartment;
         private System.Windows.Forms.ComboBox cmbRole;
         private System.Windows.Forms.TextBox txtSearchEmploys;
         private System.Windows.Forms.PictureBox picMaybedropboxManagement;
@@ -273,5 +331,11 @@
         private System.Windows.Forms.Label lblUsernameNumba;
         private System.Windows.Forms.Label lblUserID;
         private System.Windows.Forms.Label lblUsername;
+        private System.Windows.Forms.DataGridView dgvEmployeeEditor;
+        private System.Windows.Forms.TextBox txtDepartmentID;
+        private TBCI_ServerDataSet tBCI_ServerDataSet;
+        private System.Windows.Forms.BindingSource vwRetrieveBindingSource;
+        private TBCI_ServerDataSetTableAdapters.vw_RetrieveTableAdapter vw_RetrieveTableAdapter;
+        private System.Windows.Forms.BindingSource vwRetrieveBindingSource1;
     }
 }

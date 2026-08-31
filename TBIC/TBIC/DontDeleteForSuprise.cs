@@ -6,7 +6,7 @@ namespace TBIC
 {
     public partial class DontDeleteForSuprise : Form
     {
-        public DontDeleteForSuprise(Form previousForm)
+        public DontDeleteForSuprise()
         {
             InitializeComponent();
         }

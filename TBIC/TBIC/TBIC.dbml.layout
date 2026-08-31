@@ -1,75 +1,69 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.875, 8.5" name="TBIC">
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.25, 8.5" name="TBIC">
   <DataContextMoniker Name="/TBICDataContext" />
   <nestedChildShapes>
-    <classShape Id="13a98a78-4d3a-4e7d-ba10-50cd12bcd1a1" absoluteBounds="0.75, 0.75, 2, 1.1939925130208335">
+    <classShape Id="07c4ad14-4e8a-46d8-be80-9a62586f34bf" absoluteBounds="0.75, 1.375, 2, 1.1939925130208335">
       <DataClassMoniker Name="/TBICDataContext/DEPARTMENT" />
       <nestedChildShapes>
-        <elementListCompartment Id="31ed2ab7-bd6d-451f-ac62-35b9d4c41935" absoluteBounds="0.765, 1.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="4b582efe-3dc6-4c41-90eb-2b059b5ca5f7" absoluteBounds="0.765, 1.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="74b3fdc8-8b37-4eb0-9d4c-eedfda3a9eeb" absoluteBounds="6.625, 3.25, 2, 1.7708968098958326">
+    <classShape Id="f7be825f-65c2-437e-a173-39d0ba3fa789" absoluteBounds="6.25, 5, 2, 1.9631982421875005">
       <DataClassMoniker Name="/TBICDataContext/PRODUCT" />
       <nestedChildShapes>
-        <elementListCompartment Id="2977c259-3238-4dcc-8d9e-e31aa9e74a46" absoluteBounds="6.64, 3.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="9b71be13-a8d5-4d32-96bf-1f01a06dcc27" absoluteBounds="6.265, 5.46, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="a2d61339-3420-4857-a011-ff045274470c" absoluteBounds="9.25, 1, 2, 1.9631982421874998">
-      <DataClassMoniker Name="/TBICDataContext/SALE_DETAIL" />
-      <nestedChildShapes>
-        <elementListCompartment Id="7ce6479e-f629-40b0-9779-b91af25e6c5f" absoluteBounds="9.265, 1.46, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <classShape Id="f7b4db1e-a644-4a9a-936e-9f9fb90ee8cc" absoluteBounds="6.375, 0.5, 2, 2.1554996744791666">
+    <classShape Id="e6eb0fc7-d7ae-4eb8-ab25-de6786e264b3" absoluteBounds="6.25, 0.875, 2, 2.1554996744791666">
       <DataClassMoniker Name="/TBICDataContext/SALE" />
       <nestedChildShapes>
-        <elementListCompartment Id="ac14b6aa-5700-4c96-94aa-d774a92649f4" absoluteBounds="6.3900000000000006, 0.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="598e74cb-73bd-4175-88ac-a4b64fcd28a2" absoluteBounds="6.265, 1.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(8.625 : 3.25); (9.25 : 2.9631982421875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
-      <AssociationMoniker Name="/TBICDataContext/PRODUCT/PRODUCT_SALE_DETAIL" />
-      <nodes>
-        <classShapeMoniker Id="74b3fdc8-8b37-4eb0-9d4c-eedfda3a9eeb" />
-        <classShapeMoniker Id="a2d61339-3420-4857-a011-ff045274470c" />
-      </nodes>
-    </associationConnector>
-    <associationConnector edgePoints="[(8.375 : 1.82774983723958); (9.25 : 1.82774983723958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
-      <AssociationMoniker Name="/TBICDataContext/SALE/SALE_SALE_DETAIL" />
-      <nodes>
-        <classShapeMoniker Id="f7b4db1e-a644-4a9a-936e-9f9fb90ee8cc" />
-        <classShapeMoniker Id="a2d61339-3420-4857-a011-ff045274470c" />
-      </nodes>
-    </associationConnector>
-    <classShape Id="aa419c52-4ff2-4b04-9cdc-25b6eae602ea" absoluteBounds="3.375, 0.75, 2, 1.5785953776041666">
+    <classShape Id="26fd6803-86f6-49bc-a0a6-701b83118b89" absoluteBounds="9, 1, 2, 1.9631982421875003">
+      <DataClassMoniker Name="/TBICDataContext/SALE_DETAIL" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a4c0b571-ee56-415b-89f1-5fa57300744f" absoluteBounds="9.015, 1.46, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4d13e1f7-4bee-4541-a025-3b43986364a4" absoluteBounds="3.5, 1, 2, 1.9631982421875003">
       <DataClassMoniker Name="/TBICDataContext/STAFF" />
       <nestedChildShapes>
-        <elementListCompartment Id="82b2e0b8-ebd5-45ff-bdc4-9bf4d5c2393b" absoluteBounds="3.3899999999999997, 1.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="824eb787-15ea-4a6d-8fc0-bb01664b1f53" absoluteBounds="3.515, 1.46, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="e7e1493c-740a-4f88-9050-b337eb93594b" absoluteBounds="1, 2.875, 2, 1.9631982421875005">
-      <DataClassMoniker Name="/TBICDataContext/STAFFINFO" />
-      <nestedChildShapes>
-        <elementListCompartment Id="a8076d85-1e6d-4b79-b653-678607715ea6" absoluteBounds="1.0150000000000001, 3.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <associationConnector edgePoints="[(3 : 2.875); (3.375 : 2.32859537760417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
-      <AssociationMoniker Name="/TBICDataContext/STAFFINFO/STAFFINFO_STAFF" />
+    <associationConnector edgePoints="[(8.25 : 5.98159912109375); (10 : 5.98159912109375); (10 : 2.9631982421875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TBICDataContext/PRODUCT/PRODUCT_SALE_DETAIL" />
       <nodes>
-        <classShapeMoniker Id="e7e1493c-740a-4f88-9050-b337eb93594b" />
-        <classShapeMoniker Id="aa419c52-4ff2-4b04-9cdc-25b6eae602ea" />
+        <classShapeMoniker Id="f7be825f-65c2-437e-a173-39d0ba3fa789" />
+        <classShapeMoniker Id="26fd6803-86f6-49bc-a0a6-701b83118b89" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(1.875 : 1.94399251302083); (1.875 : 2.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
-      <AssociationMoniker Name="/TBICDataContext/DEPARTMENT/DEPARTMENT_STAFFINFO" />
+    <associationConnector edgePoints="[(8.25 : 1.98159912109375); (9 : 1.98159912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TBICDataContext/SALE/SALE_SALE_DETAIL" />
       <nodes>
-        <classShapeMoniker Id="13a98a78-4d3a-4e7d-ba10-50cd12bcd1a1" />
-        <classShapeMoniker Id="e7e1493c-740a-4f88-9050-b337eb93594b" />
+        <classShapeMoniker Id="e6eb0fc7-d7ae-4eb8-ab25-de6786e264b3" />
+        <classShapeMoniker Id="26fd6803-86f6-49bc-a0a6-701b83118b89" />
       </nodes>
     </associationConnector>
-    <classShape Id="2ec9d77c-5af9-47dc-86a0-e480453d8497" absoluteBounds="9.625, 4.875, 2, 1.9631982421875">
+    <associationConnector edgePoints="[(5.5 : 1.98159912109375); (6.25 : 1.98159912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TBICDataContext/STAFF/STAFF_SALE" />
+      <nodes>
+        <classShapeMoniker Id="4d13e1f7-4bee-4541-a025-3b43986364a4" />
+        <classShapeMoniker Id="e6eb0fc7-d7ae-4eb8-ab25-de6786e264b3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 1.97199625651042); (3.5 : 1.97199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TBICDataContext/DEPARTMENT/DEPARTMENT_STAFF" />
+      <nodes>
+        <classShapeMoniker Id="07c4ad14-4e8a-46d8-be80-9a62586f34bf" />
+        <classShapeMoniker Id="4d13e1f7-4bee-4541-a025-3b43986364a4" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="d25846d5-1e31-468c-b60e-7ba1b83671af" absoluteBounds="3.125, 4.375, 2, 1.9631982421875">
       <DataClassMoniker Name="/TBICDataContext/vw_Retrieve" />
       <nestedChildShapes>
-        <elementListCompartment Id="3336affa-5250-49eb-8872-1328bfcd44ec" absoluteBounds="9.64, 5.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="31b84388-3d5e-4c0c-a25b-7eecd4433d93" absoluteBounds="3.1399999999999997, 4.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

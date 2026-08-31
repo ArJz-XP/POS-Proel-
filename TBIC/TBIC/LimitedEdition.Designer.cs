@@ -70,6 +70,8 @@
             this.btnSnowCone = new System.Windows.Forms.Button();
             this.lblUsername = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblID = new System.Windows.Forms.Label();
+            this.lblUser = new System.Windows.Forms.Label();
             this.lblUserID = new System.Windows.Forms.Label();
             this.lvProductView = new System.Windows.Forms.ListView();
             this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -77,8 +79,6 @@
             this.Flavour = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Price = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Quantity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.lblUser = new System.Windows.Forms.Label();
-            this.lblID = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picSortLE)).BeginInit();
             this.pnlHershey.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picHershey)).BeginInit();
@@ -100,10 +100,9 @@
             this.btnGotoLimted.BackColor = System.Drawing.Color.Transparent;
             this.btnGotoLimted.FlatAppearance.BorderSize = 0;
             this.btnGotoLimted.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGotoLimted.Location = new System.Drawing.Point(128, 62);
-            this.btnGotoLimted.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGotoLimted.Location = new System.Drawing.Point(96, 50);
             this.btnGotoLimted.Name = "btnGotoLimted";
-            this.btnGotoLimted.Size = new System.Drawing.Size(99, 34);
+            this.btnGotoLimted.Size = new System.Drawing.Size(74, 28);
             this.btnGotoLimted.TabIndex = 0;
             this.btnGotoLimted.Text = "LIMITED";
             this.btnGotoLimted.UseVisualStyleBackColor = false;
@@ -112,20 +111,18 @@
             // listView1
             // 
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(1360, 180);
-            this.listView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listView1.Location = new System.Drawing.Point(1020, 146);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(297, 528);
+            this.listView1.Size = new System.Drawing.Size(224, 430);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
             // txtSearchLE
             // 
-            this.txtSearchLE.Location = new System.Drawing.Point(129, 27);
-            this.txtSearchLE.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSearchLE.Location = new System.Drawing.Point(97, 22);
             this.txtSearchLE.Multiline = true;
             this.txtSearchLE.Name = "txtSearchLE";
-            this.txtSearchLE.Size = new System.Drawing.Size(256, 25);
+            this.txtSearchLE.Size = new System.Drawing.Size(193, 21);
             this.txtSearchLE.TabIndex = 2;
             this.txtSearchLE.Text = "ORDER 66";
             // 
@@ -133,10 +130,9 @@
             // 
             this.picSortLE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picSortLE.Image = global::TBIC.Properties.Resources.PROEL2D_UI1;
-            this.picSortLE.Location = new System.Drawing.Point(399, 20);
-            this.picSortLE.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picSortLE.Location = new System.Drawing.Point(299, 16);
             this.picSortLE.Name = "picSortLE";
-            this.picSortLE.Size = new System.Drawing.Size(40, 31);
+            this.picSortLE.Size = new System.Drawing.Size(30, 25);
             this.picSortLE.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picSortLE.TabIndex = 3;
             this.picSortLE.TabStop = false;
@@ -146,10 +142,9 @@
             this.btnGotoHershey.BackColor = System.Drawing.Color.Transparent;
             this.btnGotoHershey.FlatAppearance.BorderSize = 0;
             this.btnGotoHershey.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGotoHershey.Location = new System.Drawing.Point(235, 63);
-            this.btnGotoHershey.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGotoHershey.Location = new System.Drawing.Point(176, 51);
             this.btnGotoHershey.Name = "btnGotoHershey";
-            this.btnGotoHershey.Size = new System.Drawing.Size(99, 34);
+            this.btnGotoHershey.Size = new System.Drawing.Size(74, 28);
             this.btnGotoHershey.TabIndex = 4;
             this.btnGotoHershey.Text = "HERSHEYS";
             this.btnGotoHershey.UseVisualStyleBackColor = false;
@@ -160,10 +155,9 @@
             this.btnGotoManggo.BackColor = System.Drawing.Color.Transparent;
             this.btnGotoManggo.FlatAppearance.BorderSize = 0;
             this.btnGotoManggo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGotoManggo.Location = new System.Drawing.Point(341, 62);
-            this.btnGotoManggo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGotoManggo.Location = new System.Drawing.Point(256, 50);
             this.btnGotoManggo.Name = "btnGotoManggo";
-            this.btnGotoManggo.Size = new System.Drawing.Size(99, 34);
+            this.btnGotoManggo.Size = new System.Drawing.Size(74, 28);
             this.btnGotoManggo.TabIndex = 5;
             this.btnGotoManggo.Text = "MANGGO";
             this.btnGotoManggo.UseVisualStyleBackColor = false;
@@ -174,10 +168,9 @@
             this.btnGotoAvocado.BackColor = System.Drawing.Color.Transparent;
             this.btnGotoAvocado.FlatAppearance.BorderSize = 0;
             this.btnGotoAvocado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGotoAvocado.Location = new System.Drawing.Point(447, 62);
-            this.btnGotoAvocado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGotoAvocado.Location = new System.Drawing.Point(335, 50);
             this.btnGotoAvocado.Name = "btnGotoAvocado";
-            this.btnGotoAvocado.Size = new System.Drawing.Size(99, 34);
+            this.btnGotoAvocado.Size = new System.Drawing.Size(74, 28);
             this.btnGotoAvocado.TabIndex = 6;
             this.btnGotoAvocado.Text = "AVOCADO";
             this.btnGotoAvocado.UseVisualStyleBackColor = false;
@@ -188,10 +181,9 @@
             this.btnGotoUbe.BackColor = System.Drawing.Color.Transparent;
             this.btnGotoUbe.FlatAppearance.BorderSize = 0;
             this.btnGotoUbe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGotoUbe.Location = new System.Drawing.Point(553, 62);
-            this.btnGotoUbe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGotoUbe.Location = new System.Drawing.Point(415, 50);
             this.btnGotoUbe.Name = "btnGotoUbe";
-            this.btnGotoUbe.Size = new System.Drawing.Size(99, 34);
+            this.btnGotoUbe.Size = new System.Drawing.Size(74, 28);
             this.btnGotoUbe.TabIndex = 7;
             this.btnGotoUbe.Text = "UBE";
             this.btnGotoUbe.UseVisualStyleBackColor = false;
@@ -203,10 +195,9 @@
             this.btnGotoVanilla.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnGotoVanilla.FlatAppearance.BorderSize = 0;
             this.btnGotoVanilla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGotoVanilla.Location = new System.Drawing.Point(656, 62);
-            this.btnGotoVanilla.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGotoVanilla.Location = new System.Drawing.Point(492, 50);
             this.btnGotoVanilla.Name = "btnGotoVanilla";
-            this.btnGotoVanilla.Size = new System.Drawing.Size(99, 34);
+            this.btnGotoVanilla.Size = new System.Drawing.Size(74, 28);
             this.btnGotoVanilla.TabIndex = 8;
             this.btnGotoVanilla.Text = "VANILLA";
             this.btnGotoVanilla.UseVisualStyleBackColor = false;
@@ -218,10 +209,9 @@
             this.btnProceedLE.BackgroundImage = global::TBIC.Properties.Resources.Confirm;
             this.btnProceedLE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnProceedLE.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnProceedLE.Location = new System.Drawing.Point(1423, 716);
-            this.btnProceedLE.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnProceedLE.Location = new System.Drawing.Point(1067, 582);
             this.btnProceedLE.Name = "btnProceedLE";
-            this.btnProceedLE.Size = new System.Drawing.Size(187, 43);
+            this.btnProceedLE.Size = new System.Drawing.Size(140, 35);
             this.btnProceedLE.TabIndex = 9;
             this.btnProceedLE.UseVisualStyleBackColor = false;
             this.btnProceedLE.Click += new System.EventHandler(this.btnProceedLE_Click);
@@ -233,20 +223,18 @@
             this.pnlHershey.Controls.Add(this.btnCaramelKisses);
             this.pnlHershey.Controls.Add(this.btnChocoKiss);
             this.pnlHershey.Controls.Add(this.btnPureChoco);
-            this.pnlHershey.Location = new System.Drawing.Point(-11, 123);
-            this.pnlHershey.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlHershey.Location = new System.Drawing.Point(-8, 100);
             this.pnlHershey.Name = "pnlHershey";
-            this.pnlHershey.Size = new System.Drawing.Size(1305, 618);
+            this.pnlHershey.Size = new System.Drawing.Size(979, 502);
             this.pnlHershey.TabIndex = 10;
             // 
             // picHershey
             // 
             this.picHershey.BackgroundImage = global::TBIC.Properties.Resources.hersheykissis;
             this.picHershey.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picHershey.Location = new System.Drawing.Point(-15, 26);
-            this.picHershey.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picHershey.Location = new System.Drawing.Point(-11, 21);
             this.picHershey.Name = "picHershey";
-            this.picHershey.Size = new System.Drawing.Size(252, 44);
+            this.picHershey.Size = new System.Drawing.Size(189, 36);
             this.picHershey.TabIndex = 5;
             this.picHershey.TabStop = false;
             // 
@@ -257,10 +245,9 @@
             this.btnCaramelKisses.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCaramelKisses.FlatAppearance.BorderSize = 0;
             this.btnCaramelKisses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCaramelKisses.Location = new System.Drawing.Point(577, 95);
-            this.btnCaramelKisses.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCaramelKisses.Location = new System.Drawing.Point(433, 77);
             this.btnCaramelKisses.Name = "btnCaramelKisses";
-            this.btnCaramelKisses.Size = new System.Drawing.Size(239, 159);
+            this.btnCaramelKisses.Size = new System.Drawing.Size(179, 129);
             this.btnCaramelKisses.TabIndex = 4;
             this.btnCaramelKisses.UseVisualStyleBackColor = false;
             this.btnCaramelKisses.Click += new System.EventHandler(this.btnCaramelKisses_Click);
@@ -272,10 +259,9 @@
             this.btnChocoKiss.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnChocoKiss.FlatAppearance.BorderSize = 0;
             this.btnChocoKiss.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChocoKiss.Location = new System.Drawing.Point(305, 105);
-            this.btnChocoKiss.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnChocoKiss.Location = new System.Drawing.Point(229, 85);
             this.btnChocoKiss.Name = "btnChocoKiss";
-            this.btnChocoKiss.Size = new System.Drawing.Size(227, 148);
+            this.btnChocoKiss.Size = new System.Drawing.Size(170, 120);
             this.btnChocoKiss.TabIndex = 3;
             this.btnChocoKiss.UseVisualStyleBackColor = false;
             this.btnChocoKiss.Click += new System.EventHandler(this.btnChocoKiss_Click);
@@ -287,10 +273,9 @@
             this.btnPureChoco.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPureChoco.FlatAppearance.BorderSize = 0;
             this.btnPureChoco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPureChoco.Location = new System.Drawing.Point(33, 102);
-            this.btnPureChoco.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPureChoco.Location = new System.Drawing.Point(25, 83);
             this.btnPureChoco.Name = "btnPureChoco";
-            this.btnPureChoco.Size = new System.Drawing.Size(227, 148);
+            this.btnPureChoco.Size = new System.Drawing.Size(170, 120);
             this.btnPureChoco.TabIndex = 0;
             this.btnPureChoco.UseVisualStyleBackColor = false;
             this.btnPureChoco.Click += new System.EventHandler(this.btnPureChoco_Click);
@@ -302,20 +287,18 @@
             this.pnlManggo.Controls.Add(this.btnCookiesandChunks);
             this.pnlManggo.Controls.Add(this.btnTidbits);
             this.pnlManggo.Controls.Add(this.btnGraham);
-            this.pnlManggo.Location = new System.Drawing.Point(-11, 123);
-            this.pnlManggo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlManggo.Location = new System.Drawing.Point(-8, 100);
             this.pnlManggo.Name = "pnlManggo";
-            this.pnlManggo.Size = new System.Drawing.Size(1305, 618);
+            this.pnlManggo.Size = new System.Drawing.Size(979, 502);
             this.pnlManggo.TabIndex = 5;
             // 
             // picManggo
             // 
             this.picManggo.BackgroundImage = global::TBIC.Properties.Resources.manggo;
             this.picManggo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picManggo.Location = new System.Drawing.Point(-15, 26);
-            this.picManggo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picManggo.Location = new System.Drawing.Point(-11, 21);
             this.picManggo.Name = "picManggo";
-            this.picManggo.Size = new System.Drawing.Size(252, 44);
+            this.picManggo.Size = new System.Drawing.Size(189, 36);
             this.picManggo.TabIndex = 5;
             this.picManggo.TabStop = false;
             // 
@@ -326,10 +309,9 @@
             this.btnCookiesandChunks.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCookiesandChunks.FlatAppearance.BorderSize = 0;
             this.btnCookiesandChunks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCookiesandChunks.Location = new System.Drawing.Point(593, 110);
-            this.btnCookiesandChunks.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCookiesandChunks.Location = new System.Drawing.Point(445, 89);
             this.btnCookiesandChunks.Name = "btnCookiesandChunks";
-            this.btnCookiesandChunks.Size = new System.Drawing.Size(255, 155);
+            this.btnCookiesandChunks.Size = new System.Drawing.Size(191, 126);
             this.btnCookiesandChunks.TabIndex = 3;
             this.btnCookiesandChunks.UseVisualStyleBackColor = false;
             this.btnCookiesandChunks.Click += new System.EventHandler(this.btnCookiesandChunks_Click);
@@ -341,10 +323,9 @@
             this.btnTidbits.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnTidbits.FlatAppearance.BorderSize = 0;
             this.btnTidbits.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTidbits.Location = new System.Drawing.Point(305, 121);
-            this.btnTidbits.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTidbits.Location = new System.Drawing.Point(229, 98);
             this.btnTidbits.Name = "btnTidbits";
-            this.btnTidbits.Size = new System.Drawing.Size(241, 142);
+            this.btnTidbits.Size = new System.Drawing.Size(181, 115);
             this.btnTidbits.TabIndex = 2;
             this.btnTidbits.UseVisualStyleBackColor = false;
             this.btnTidbits.Click += new System.EventHandler(this.btnTidbits_Click);
@@ -356,10 +337,9 @@
             this.btnGraham.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnGraham.FlatAppearance.BorderSize = 0;
             this.btnGraham.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGraham.Location = new System.Drawing.Point(33, 110);
-            this.btnGraham.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGraham.Location = new System.Drawing.Point(25, 89);
             this.btnGraham.Name = "btnGraham";
-            this.btnGraham.Size = new System.Drawing.Size(227, 148);
+            this.btnGraham.Size = new System.Drawing.Size(170, 120);
             this.btnGraham.TabIndex = 1;
             this.btnGraham.UseVisualStyleBackColor = false;
             this.btnGraham.Click += new System.EventHandler(this.btnGraham_Click);
@@ -371,20 +351,18 @@
             this.pnlAvocado.Controls.Add(this.btnGreenAvalanche);
             this.pnlAvocado.Controls.Add(this.btnSweetandRipe);
             this.pnlAvocado.Controls.Add(this.btnLimaFest);
-            this.pnlAvocado.Location = new System.Drawing.Point(-11, 123);
-            this.pnlAvocado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlAvocado.Location = new System.Drawing.Point(-8, 100);
             this.pnlAvocado.Name = "pnlAvocado";
-            this.pnlAvocado.Size = new System.Drawing.Size(1305, 618);
+            this.pnlAvocado.Size = new System.Drawing.Size(979, 502);
             this.pnlAvocado.TabIndex = 6;
             // 
             // picAvocado
             // 
             this.picAvocado.BackgroundImage = global::TBIC.Properties.Resources.avocado;
             this.picAvocado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picAvocado.Location = new System.Drawing.Point(-15, 26);
-            this.picAvocado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picAvocado.Location = new System.Drawing.Point(-11, 21);
             this.picAvocado.Name = "picAvocado";
-            this.picAvocado.Size = new System.Drawing.Size(252, 44);
+            this.picAvocado.Size = new System.Drawing.Size(189, 36);
             this.picAvocado.TabIndex = 5;
             this.picAvocado.TabStop = false;
             // 
@@ -395,10 +373,9 @@
             this.btnGreenAvalanche.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnGreenAvalanche.FlatAppearance.BorderSize = 0;
             this.btnGreenAvalanche.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGreenAvalanche.Location = new System.Drawing.Point(607, 111);
-            this.btnGreenAvalanche.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGreenAvalanche.Location = new System.Drawing.Point(455, 90);
             this.btnGreenAvalanche.Name = "btnGreenAvalanche";
-            this.btnGreenAvalanche.Size = new System.Drawing.Size(241, 142);
+            this.btnGreenAvalanche.Size = new System.Drawing.Size(181, 115);
             this.btnGreenAvalanche.TabIndex = 3;
             this.btnGreenAvalanche.UseVisualStyleBackColor = false;
             this.btnGreenAvalanche.Click += new System.EventHandler(this.btnGreenAvalanche_Click);
@@ -410,10 +387,9 @@
             this.btnSweetandRipe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSweetandRipe.FlatAppearance.BorderSize = 0;
             this.btnSweetandRipe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSweetandRipe.Location = new System.Drawing.Point(305, 110);
-            this.btnSweetandRipe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSweetandRipe.Location = new System.Drawing.Point(229, 89);
             this.btnSweetandRipe.Name = "btnSweetandRipe";
-            this.btnSweetandRipe.Size = new System.Drawing.Size(241, 142);
+            this.btnSweetandRipe.Size = new System.Drawing.Size(181, 115);
             this.btnSweetandRipe.TabIndex = 2;
             this.btnSweetandRipe.UseVisualStyleBackColor = false;
             this.btnSweetandRipe.Click += new System.EventHandler(this.btnSweetandRipe_Click);
@@ -425,10 +401,9 @@
             this.btnLimaFest.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLimaFest.FlatAppearance.BorderSize = 0;
             this.btnLimaFest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimaFest.Location = new System.Drawing.Point(33, 98);
-            this.btnLimaFest.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLimaFest.Location = new System.Drawing.Point(25, 80);
             this.btnLimaFest.Name = "btnLimaFest";
-            this.btnLimaFest.Size = new System.Drawing.Size(227, 148);
+            this.btnLimaFest.Size = new System.Drawing.Size(170, 120);
             this.btnLimaFest.TabIndex = 1;
             this.btnLimaFest.UseVisualStyleBackColor = false;
             this.btnLimaFest.Click += new System.EventHandler(this.btnLimaFest_Click);
@@ -440,20 +415,18 @@
             this.pnlUbe.Controls.Add(this.btnUbe67);
             this.pnlUbe.Controls.Add(this.btnDuskGlaciers);
             this.pnlUbe.Controls.Add(this.btnMidnightFiest);
-            this.pnlUbe.Location = new System.Drawing.Point(-11, 123);
-            this.pnlUbe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlUbe.Location = new System.Drawing.Point(-8, 100);
             this.pnlUbe.Name = "pnlUbe";
-            this.pnlUbe.Size = new System.Drawing.Size(1305, 618);
+            this.pnlUbe.Size = new System.Drawing.Size(979, 502);
             this.pnlUbe.TabIndex = 7;
             // 
             // picUbe
             // 
             this.picUbe.BackgroundImage = global::TBIC.Properties.Resources.ube;
             this.picUbe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picUbe.Location = new System.Drawing.Point(-15, 26);
-            this.picUbe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picUbe.Location = new System.Drawing.Point(-11, 21);
             this.picUbe.Name = "picUbe";
-            this.picUbe.Size = new System.Drawing.Size(252, 44);
+            this.picUbe.Size = new System.Drawing.Size(189, 36);
             this.picUbe.TabIndex = 4;
             this.picUbe.TabStop = false;
             // 
@@ -464,10 +437,9 @@
             this.btnUbe67.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnUbe67.FlatAppearance.BorderSize = 0;
             this.btnUbe67.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUbe67.Location = new System.Drawing.Point(607, 90);
-            this.btnUbe67.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUbe67.Location = new System.Drawing.Point(455, 73);
             this.btnUbe67.Name = "btnUbe67";
-            this.btnUbe67.Size = new System.Drawing.Size(241, 162);
+            this.btnUbe67.Size = new System.Drawing.Size(181, 132);
             this.btnUbe67.TabIndex = 3;
             this.btnUbe67.UseVisualStyleBackColor = false;
             this.btnUbe67.Click += new System.EventHandler(this.btnUbe67_Click);
@@ -479,10 +451,9 @@
             this.btnDuskGlaciers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnDuskGlaciers.FlatAppearance.BorderSize = 0;
             this.btnDuskGlaciers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDuskGlaciers.Location = new System.Drawing.Point(305, 90);
-            this.btnDuskGlaciers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDuskGlaciers.Location = new System.Drawing.Point(229, 73);
             this.btnDuskGlaciers.Name = "btnDuskGlaciers";
-            this.btnDuskGlaciers.Size = new System.Drawing.Size(264, 161);
+            this.btnDuskGlaciers.Size = new System.Drawing.Size(198, 131);
             this.btnDuskGlaciers.TabIndex = 2;
             this.btnDuskGlaciers.UseVisualStyleBackColor = false;
             this.btnDuskGlaciers.Click += new System.EventHandler(this.btnDuskGlaciers_Click);
@@ -494,10 +465,9 @@
             this.btnMidnightFiest.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMidnightFiest.FlatAppearance.BorderSize = 0;
             this.btnMidnightFiest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMidnightFiest.Location = new System.Drawing.Point(33, 90);
-            this.btnMidnightFiest.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMidnightFiest.Location = new System.Drawing.Point(25, 73);
             this.btnMidnightFiest.Name = "btnMidnightFiest";
-            this.btnMidnightFiest.Size = new System.Drawing.Size(241, 156);
+            this.btnMidnightFiest.Size = new System.Drawing.Size(181, 127);
             this.btnMidnightFiest.TabIndex = 1;
             this.btnMidnightFiest.UseVisualStyleBackColor = false;
             this.btnMidnightFiest.Click += new System.EventHandler(this.btnMidnightFiest_Click);
@@ -509,20 +479,18 @@
             this.pnlLimited.Controls.Add(this.btnAlterEgo);
             this.pnlLimited.Controls.Add(this.btnDarkestRider);
             this.pnlLimited.Controls.Add(this.btnMiniMadness);
-            this.pnlLimited.Location = new System.Drawing.Point(-11, 123);
-            this.pnlLimited.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlLimited.Location = new System.Drawing.Point(-8, 100);
             this.pnlLimited.Name = "pnlLimited";
-            this.pnlLimited.Size = new System.Drawing.Size(1305, 618);
+            this.pnlLimited.Size = new System.Drawing.Size(979, 502);
             this.pnlLimited.TabIndex = 8;
             // 
             // picLimited
             // 
             this.picLimited.BackgroundImage = global::TBIC.Properties.Resources.magnospecial;
             this.picLimited.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picLimited.Location = new System.Drawing.Point(-15, 26);
-            this.picLimited.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picLimited.Location = new System.Drawing.Point(-11, 21);
             this.picLimited.Name = "picLimited";
-            this.picLimited.Size = new System.Drawing.Size(289, 49);
+            this.picLimited.Size = new System.Drawing.Size(217, 40);
             this.picLimited.TabIndex = 5;
             this.picLimited.TabStop = false;
             // 
@@ -533,10 +501,9 @@
             this.btnAlterEgo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAlterEgo.FlatAppearance.BorderSize = 0;
             this.btnAlterEgo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAlterEgo.Location = new System.Drawing.Point(607, 98);
-            this.btnAlterEgo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAlterEgo.Location = new System.Drawing.Point(455, 80);
             this.btnAlterEgo.Name = "btnAlterEgo";
-            this.btnAlterEgo.Size = new System.Drawing.Size(241, 167);
+            this.btnAlterEgo.Size = new System.Drawing.Size(181, 136);
             this.btnAlterEgo.TabIndex = 3;
             this.btnAlterEgo.UseVisualStyleBackColor = false;
             this.btnAlterEgo.Click += new System.EventHandler(this.btnAlterEgo_Click);
@@ -548,10 +515,9 @@
             this.btnDarkestRider.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnDarkestRider.FlatAppearance.BorderSize = 0;
             this.btnDarkestRider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDarkestRider.Location = new System.Drawing.Point(305, 111);
-            this.btnDarkestRider.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDarkestRider.Location = new System.Drawing.Point(229, 90);
             this.btnDarkestRider.Name = "btnDarkestRider";
-            this.btnDarkestRider.Size = new System.Drawing.Size(241, 151);
+            this.btnDarkestRider.Size = new System.Drawing.Size(181, 123);
             this.btnDarkestRider.TabIndex = 2;
             this.btnDarkestRider.UseVisualStyleBackColor = false;
             this.btnDarkestRider.Click += new System.EventHandler(this.btnDarkestRider_Click);
@@ -563,10 +529,9 @@
             this.btnMiniMadness.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMiniMadness.FlatAppearance.BorderSize = 0;
             this.btnMiniMadness.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMiniMadness.Location = new System.Drawing.Point(33, 103);
-            this.btnMiniMadness.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMiniMadness.Location = new System.Drawing.Point(25, 84);
             this.btnMiniMadness.Name = "btnMiniMadness";
-            this.btnMiniMadness.Size = new System.Drawing.Size(241, 156);
+            this.btnMiniMadness.Size = new System.Drawing.Size(181, 127);
             this.btnMiniMadness.TabIndex = 1;
             this.btnMiniMadness.UseVisualStyleBackColor = false;
             this.btnMiniMadness.Click += new System.EventHandler(this.btnMiniMadness_Click);
@@ -578,20 +543,18 @@
             this.pnlVanilla.Controls.Add(this.btnTasteofDark);
             this.pnlVanilla.Controls.Add(this.btnTheBeningging);
             this.pnlVanilla.Controls.Add(this.btnSnowCone);
-            this.pnlVanilla.Location = new System.Drawing.Point(-11, 123);
-            this.pnlVanilla.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlVanilla.Location = new System.Drawing.Point(-8, 100);
             this.pnlVanilla.Name = "pnlVanilla";
-            this.pnlVanilla.Size = new System.Drawing.Size(1305, 618);
+            this.pnlVanilla.Size = new System.Drawing.Size(979, 502);
             this.pnlVanilla.TabIndex = 9;
             // 
             // picVanilla
             // 
             this.picVanilla.BackgroundImage = global::TBIC.Properties.Resources.vanilla;
             this.picVanilla.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picVanilla.Location = new System.Drawing.Point(-15, 26);
-            this.picVanilla.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picVanilla.Location = new System.Drawing.Point(-11, 21);
             this.picVanilla.Name = "picVanilla";
-            this.picVanilla.Size = new System.Drawing.Size(252, 44);
+            this.picVanilla.Size = new System.Drawing.Size(189, 36);
             this.picVanilla.TabIndex = 5;
             this.picVanilla.TabStop = false;
             // 
@@ -602,10 +565,9 @@
             this.btnTasteofDark.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnTasteofDark.FlatAppearance.BorderSize = 0;
             this.btnTasteofDark.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTasteofDark.Location = new System.Drawing.Point(593, 107);
-            this.btnTasteofDark.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTasteofDark.Location = new System.Drawing.Point(445, 87);
             this.btnTasteofDark.Name = "btnTasteofDark";
-            this.btnTasteofDark.Size = new System.Drawing.Size(260, 154);
+            this.btnTasteofDark.Size = new System.Drawing.Size(195, 125);
             this.btnTasteofDark.TabIndex = 3;
             this.btnTasteofDark.UseVisualStyleBackColor = false;
             this.btnTasteofDark.Click += new System.EventHandler(this.btnTasteofDark_Click);
@@ -617,10 +579,9 @@
             this.btnTheBeningging.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnTheBeningging.FlatAppearance.BorderSize = 0;
             this.btnTheBeningging.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTheBeningging.Location = new System.Drawing.Point(328, 107);
-            this.btnTheBeningging.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTheBeningging.Location = new System.Drawing.Point(246, 87);
             this.btnTheBeningging.Name = "btnTheBeningging";
-            this.btnTheBeningging.Size = new System.Drawing.Size(241, 151);
+            this.btnTheBeningging.Size = new System.Drawing.Size(181, 123);
             this.btnTheBeningging.TabIndex = 2;
             this.btnTheBeningging.UseVisualStyleBackColor = false;
             this.btnTheBeningging.Click += new System.EventHandler(this.btnTheBeningging_Click);
@@ -632,10 +593,9 @@
             this.btnSnowCone.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSnowCone.FlatAppearance.BorderSize = 0;
             this.btnSnowCone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSnowCone.Location = new System.Drawing.Point(33, 107);
-            this.btnSnowCone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSnowCone.Location = new System.Drawing.Point(25, 87);
             this.btnSnowCone.Name = "btnSnowCone";
-            this.btnSnowCone.Size = new System.Drawing.Size(241, 150);
+            this.btnSnowCone.Size = new System.Drawing.Size(181, 122);
             this.btnSnowCone.TabIndex = 1;
             this.btnSnowCone.UseVisualStyleBackColor = false;
             this.btnSnowCone.Click += new System.EventHandler(this.btnSnowCone_Click);
@@ -643,10 +603,9 @@
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
-            this.lblUsername.Location = new System.Drawing.Point(38, 4);
-            this.lblUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblUsername.Location = new System.Drawing.Point(35, 3);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(70, 16);
+            this.lblUsername.Size = new System.Drawing.Size(55, 13);
             this.lblUsername.TabIndex = 11;
             this.lblUsername.Text = "Username";
             // 
@@ -657,19 +616,35 @@
             this.panel1.Controls.Add(this.lblUsername);
             this.panel1.Controls.Add(this.lblUser);
             this.panel1.Controls.Add(this.lblUserID);
-            this.panel1.Location = new System.Drawing.Point(1496, 16);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Location = new System.Drawing.Point(1122, 13);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(144, 39);
+            this.panel1.Size = new System.Drawing.Size(108, 32);
             this.panel1.TabIndex = 12;
+            // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.Location = new System.Drawing.Point(13, 15);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(21, 13);
+            this.lblID.TabIndex = 14;
+            this.lblID.Text = "ID:";
+            // 
+            // lblUser
+            // 
+            this.lblUser.AutoSize = true;
+            this.lblUser.Location = new System.Drawing.Point(2, 3);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(32, 13);
+            this.lblUser.TabIndex = 13;
+            this.lblUser.Text = "User:";
             // 
             // lblUserID
             // 
             this.lblUserID.AutoSize = true;
-            this.lblUserID.Location = new System.Drawing.Point(27, 19);
-            this.lblUserID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblUserID.Location = new System.Drawing.Point(35, 15);
             this.lblUserID.Name = "lblUserID";
-            this.lblUserID.Size = new System.Drawing.Size(20, 16);
+            this.lblUserID.Size = new System.Drawing.Size(18, 13);
             this.lblUserID.TabIndex = 12;
             this.lblUserID.Text = "ID";
             // 
@@ -683,10 +658,10 @@
             this.Quantity});
             this.lvProductView.GridLines = true;
             this.lvProductView.HideSelection = false;
-            this.lvProductView.Location = new System.Drawing.Point(1360, 180);
-            this.lvProductView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lvProductView.Location = new System.Drawing.Point(1020, 146);
             this.lvProductView.Name = "lvProductView";
-            this.lvProductView.Size = new System.Drawing.Size(297, 528);
+            this.lvProductView.Scrollable = false;
+            this.lvProductView.Size = new System.Drawing.Size(224, 430);
             this.lvProductView.TabIndex = 13;
             this.lvProductView.UseCompatibleStateImageBehavior = false;
             this.lvProductView.View = System.Windows.Forms.View.Details;
@@ -716,33 +691,13 @@
             this.Quantity.Text = "QTY.";
             this.Quantity.Width = 50;
             // 
-            // lblUser
-            // 
-            this.lblUser.AutoSize = true;
-            this.lblUser.Location = new System.Drawing.Point(2, 4);
-            this.lblUser.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(39, 16);
-            this.lblUser.TabIndex = 13;
-            this.lblUser.Text = "User:";
-            // 
-            // lblID
-            // 
-            this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(5, 19);
-            this.lblID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(23, 16);
-            this.lblID.TabIndex = 14;
-            this.lblID.Text = "ID:";
-            // 
             // LimitedEdition
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::TBIC.Properties.Resources.Limited_Edition;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1685, 789);
+            this.ClientSize = new System.Drawing.Size(1264, 641);
             this.Controls.Add(this.lvProductView);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnProceedLE);
@@ -761,7 +716,6 @@
             this.Controls.Add(this.pnlAvocado);
             this.Controls.Add(this.pnlHershey);
             this.Controls.Add(this.pnlManggo);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "LimitedEdition";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LimitedEdition";
@@ -831,7 +785,6 @@
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblUserID;
-        private System.Windows.Forms.ListView lvProductView;
         private System.Windows.Forms.ColumnHeader ID;
         private System.Windows.Forms.ColumnHeader Product_Name;
         private System.Windows.Forms.ColumnHeader Flavour;
@@ -839,5 +792,6 @@
         private System.Windows.Forms.ColumnHeader Quantity;
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Label lblUser;
+        public System.Windows.Forms.ListView lvProductView;
     }
 }

@@ -13,9 +13,21 @@ namespace TBIC
 {
     public partial class Payment : Form
     {
+        string UserName;
+        int StaffID;
+
         public Payment()
         {
             InitializeComponent();
+        }
+
+        public void StaffInfo(string staffName, int staffID)
+        {
+            UserName = staffName;
+            StaffID = staffID;
+
+            lblUsername.Text = UserName;
+            lblUserID.Text = StaffID.ToString();
         }
 
         private void Payment_Load(object sender, EventArgs e)
@@ -23,8 +35,6 @@ namespace TBIC
             txtSearchBox.Font = new Font("FredokaSummer", 10, FontStyle.Bold);
             txtOrderId.Font = new Font("FredokaSummer", 10, FontStyle.Bold);
             txtMOP.Font = new Font("FredokaSummer", 10, FontStyle.Bold);
-            btnGoToDashBoard.Font = new Font("FredokaSummer", 10, FontStyle.Bold);
-            btnLogout.Font = new Font("FredokaSummer", 10, FontStyle.Bold);
 
             rtxtTotalPrice.Text = $"₱{dvgPOS.Rows.Cast<DataGridViewRow>().Sum(r => Convert.ToDouble(r.Cells["dvgPrice"].Value?.ToString().Replace("₱", "").Trim() ?? "0")):F2}";
 
@@ -33,16 +43,38 @@ namespace TBIC
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            LandingPage landingPage = new LandingPage();
-            landingPage.Show();
+            if (dvgPOS.Rows.Count != 0)
+            {
+                if (MessageBox.Show("There are still Items that have not been processed,\n are you sure you want to Logout?", "Caution Type: Unsuccessful Transaction", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.Cancel)
+                {
+                    return;
+                }
+                else
+                {
+                    Form_Instances._lan.InputReload();
+                    Form_Instances._lan.Show();
+                    this.Hide();
+
+                    return;
+                }
+            }
+
+            Form_Instances._lan.Logout_Confirmation();
         }
 
         private void btnConfirmPrint_Click(object sender, EventArgs e)
         {
-            LandingPage landingPage = new LandingPage();
-            landingPage.Troll();
+            if (dvgPOS.Rows.Count == 0)
+            {
+                MessageBox.Show("There are no existing order to print", "Error Type: Invalid Items", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return;
+            }
+
+            Form_Instances._rep.Show();
         }
+
+        #region DataGridView Cell Click Handlers
 
         private void dvgPOS_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -76,16 +108,18 @@ namespace TBIC
                 }
                 else if (columnName == "Minus")
                 {
-                    if (currentQty > 1)
+                    double newQty = currentQty - 1;
+
+                    if (newQty > 0)
                     {
-                        double newQty = currentQty - 1;
+                        // Normal decrement if quantity is still above 0
                         qtyCell.Value = newQty;
                         priceCell.Value = $"₱{(unitPrice * newQty):F2}";
                     }
                     else
                     {
-                        MessageBox.Show("Quantity cannot be less than 1.");
-                        return; // Stop here so totals don't pointlessly recalculate
+                        // Quantity hit zero or less, remove the row entirely from the grid
+                        dvgPOS.Rows.RemoveAt(e.RowIndex);
                     }
                 }
 
@@ -149,6 +183,10 @@ namespace TBIC
             }
         }
 
+        #endregion
+
+        #region Discount Context Menu Handlers
+
         private void ApplyDiscountToSelected(string discountType)
         {
             // If you want it to apply to ALL rows when using the header:
@@ -204,11 +242,24 @@ namespace TBIC
             txtMOP.Text = "E-Wallet";
         }
 
-        private void btnGoToDashBoard_Click(object sender, EventArgs e)
+        #endregion
+
+        private void btnNewPurchase_Click(object sender, EventArgs e)
         {
+            if (dvgPOS.Rows.Count != 0)
+            {
+                if (MessageBox.Show("There are still Items that have not been processed,\n are you sure you want to return to the Ordering Menu?", "Caution Type: Unsuccessful Transaction", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.Cancel)
+                {
+                    return;
+                }
+            }
+
+            Form_Instances._lim.lvProductView.Items.Clear();
+            dvgPOS.Rows.Clear();
+
+            Form_Instances._lim.StaffInfo(UserName, StaffID);
+            Form_Instances._lim.Show();
             this.Hide();
-            Admin_Dashboard admin_Dashboard = new Admin_Dashboard();
-            admin_Dashboard.Show();
         }
     }
 }

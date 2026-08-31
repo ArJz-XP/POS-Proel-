@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TBCI_ServerDataSet2" targetNamespace="http://tempuri.org/TBCI_ServerDataSet2.xsd" xmlns:mstns="http://tempuri.org/TBCI_ServerDataSet2.xsd" xmlns="http://tempuri.org/TBCI_ServerDataSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="TBCI_ServerConnectionString2" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="TBCI_ServerConnectionString2 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.TBIC.Properties.Settings.GlobalReference.Default.TBCI_ServerConnectionString2" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vw_RetrieveTableAdapter" GeneratorDataComponentClassName="vw_RetrieveTableAdapter" Name="vw_Retrieve" UserDataComponentName="vw_RetrieveTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TBCI_ServerConnectionString2 (Settings)" DbObjectName="[TBCI Server].dbo.vw_Retrieve" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT STAFF_ID, STAFF_NAME, USERNAME, PASSWORD, ROLE, DEPARTMENT_NAME FROM dbo.vw_Retrieve</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="STAFF_ID" DataSetColumn="STAFF_ID" />
+              <Mapping SourceColumn="STAFF_NAME" DataSetColumn="STAFF_NAME" />
+              <Mapping SourceColumn="USERNAME" DataSetColumn="USERNAME" />
+              <Mapping SourceColumn="PASSWORD" DataSetColumn="PASSWORD" />
+              <Mapping SourceColumn="ROLE" DataSetColumn="ROLE" />
+              <Mapping SourceColumn="DEPARTMENT_NAME" DataSetColumn="DEPARTMENT_NAME" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TBCI_ServerDataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="TBCI_ServerDataSet2" msprop:Generator_DataSetName="TBCI_ServerDataSet2">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vw_Retrieve" msprop:Generator_RowEvHandlerName="vw_RetrieveRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_RetrieveRowDeleted" msprop:Generator_RowDeletingName="vw_RetrieveRowDeleting" msprop:Generator_RowEvArgName="vw_RetrieveRowChangeEvent" msprop:Generator_TablePropName="vw_Retrieve" msprop:Generator_RowChangedName="vw_RetrieveRowChanged" msprop:Generator_RowChangingName="vw_RetrieveRowChanging" msprop:Generator_TableClassName="vw_RetrieveDataTable" msprop:Generator_RowClassName="vw_RetrieveRow" msprop:Generator_TableVarName="tablevw_Retrieve" msprop:Generator_UserTableName="vw_Retrieve">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="STAFF_ID" msprop:Generator_ColumnPropNameInRow="STAFF_ID" msprop:Generator_ColumnPropNameInTable="STAFF_IDColumn" msprop:Generator_ColumnVarNameInTable="columnSTAFF_ID" msprop:Generator_UserColumnName="STAFF_ID" type="xs:int" />
+              <xs:element name="STAFF_NAME" msprop:Generator_ColumnPropNameInRow="STAFF_NAME" msprop:Generator_ColumnPropNameInTable="STAFF_NAMEColumn" msprop:Generator_ColumnVarNameInTable="columnSTAFF_NAME" msprop:Generator_UserColumnName="STAFF_NAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="USERNAME" msprop:Generator_ColumnPropNameInRow="USERNAME" msprop:Generator_ColumnPropNameInTable="USERNAMEColumn" msprop:Generator_ColumnVarNameInTable="columnUSERNAME" msprop:Generator_UserColumnName="USERNAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PASSWORD" msprop:Generator_ColumnPropNameInRow="PASSWORD" msprop:Generator_ColumnPropNameInTable="PASSWORDColumn" msprop:Generator_ColumnVarNameInTable="columnPASSWORD" msprop:Generator_UserColumnName="PASSWORD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ROLE" msprop:Generator_ColumnPropNameInRow="ROLE" msprop:Generator_ColumnPropNameInTable="ROLEColumn" msprop:Generator_ColumnVarNameInTable="columnROLE" msprop:Generator_UserColumnName="ROLE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DEPARTMENT_NAME" msprop:Generator_ColumnPropNameInRow="DEPARTMENT_NAME" msprop:Generator_ColumnPropNameInTable="DEPARTMENT_NAMEColumn" msprop:Generator_ColumnVarNameInTable="columnDEPARTMENT_NAME" msprop:Generator_UserColumnName="DEPARTMENT_NAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vw_Retrieve" />
+      <xs:field xpath="mstns:STAFF_ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -118,11 +118,11 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="POS Payment Reyal1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\POS Payment Reyal1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="magnospecial" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\magnospecial.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="wallet" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\wallet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PROEL2D UI (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PROEL2D UI (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,6 +145,9 @@
   <data name="Configure" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Configure.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ADMIN User Management" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ADMIN User Management1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="hersheykissis" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hersheykissis.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -153,6 +156,12 @@
   </data>
   <data name="limited1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\limited1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PROEL2D UI4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PROEL2D UI4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PROEL2D UI (2)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PROEL2D UI (2)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\copy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,20 +175,14 @@
   <data name="v3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\v3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="POS Payment Reyal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\POS Payment Reyal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="PROEL2D UI (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PROEL2D UI (1)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="POS Payment Reyal1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\POS Payment Reyal1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="wallet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wallet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="v2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\v2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="PROEL2D UI5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PROEL2D UI5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="v1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\v1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ube" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ube.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,9 +205,6 @@
   <data name="ADMIN Dashboard (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ADMIN Dashboard (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PROEL2D UI (6)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PROEL2D UI (6).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="limited2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\limited2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -213,6 +213,9 @@
   </data>
   <data name="PROEL2D UI" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PROEL2D UI.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PROEL2D UI (3)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PROEL2D UI (3)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="limited3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\limited3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -235,22 +238,22 @@
   <data name="PROEL2D UI3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PROEL2D UI3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="v1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\v1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="PROEL2D UI5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PROEL2D UI5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PROEL2D UI (3)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PROEL2D UI (3)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="POS Payment Reyal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\POS Payment Reyal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PROEL2D UI (2)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PROEL2D UI (2)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="PROEL2D UI (6)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PROEL2D UI (6).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PROEL2D UI4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PROEL2D UI4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="v2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\v2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PROEL2D UI (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PROEL2D UI (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ADMIN User Management" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ADMIN User Management1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

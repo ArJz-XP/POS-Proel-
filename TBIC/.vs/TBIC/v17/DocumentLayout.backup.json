@@ -1,62 +1,90 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ArJz\\Desktop\\TBIC\\",
+  "WorkspaceRootPath": "C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|C:\\Users\\ArJz\\Desktop\\TBIC\\tbic\\landingpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|solutionrelative:tbic\\landingpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\tbic\\acc_management.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|solutionrelative:tbic\\acc_management.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|c:\\users\\arjz\\desktop\\tbic\\tbic\\acc_management.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\tbic\\acc_management.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|solutionrelative:tbic\\acc_management.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|C:\\Users\\ArJz\\Desktop\\TBIC\\tbic\\admin_dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\tbic\\admin_dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|solutionrelative:tbic\\admin_dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|C:\\Users\\ArJz\\Desktop\\TBIC\\tbic\\dontdeleteforsuprise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|solutionrelative:tbic\\dontdeleteforsuprise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|c:\\users\\arjz\\downloads\\compressed\\tbic\\tbic\\tbci_serverdataset1.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}",
+      "RelativeMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|solutionrelative:tbic\\tbci_serverdataset1.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|C:\\Users\\ArJz\\Desktop\\TBIC\\tbic\\limitededition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|solutionrelative:tbic\\limitededition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|C:\\Users\\ArJz\\Desktop\\TBIC\\tbic\\tbic.dbml||{B465B5AD-8799-4507-B90A-EE29ACF36AF9}|",
-      "RelativeMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|solutionrelative:tbic\\tbic.dbml||{B465B5AD-8799-4507-B90A-EE29ACF36AF9}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|C:\\Users\\ArJz\\Desktop\\TBIC\\tbic\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|solutionrelative:tbic\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|C:\\Users\\ArJz\\Desktop\\TBIC\\tbic\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|solutionrelative:tbic\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|C:\\Users\\ArJz\\Desktop\\TBIC\\tbic\\landingpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|solutionrelative:tbic\\landingpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|C:\\Users\\ArJz\\Desktop\\TBIC\\tbic\\admin_dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\tbic\\admin_dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|solutionrelative:tbic\\admin_dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|C:\\Users\\ArJz\\Desktop\\TBIC\\tbic\\loading_screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|c:\\users\\arjz\\downloads\\compressed\\tbic\\tbic\\tbic.dbml||{B465B5AD-8799-4507-B90A-EE29ACF36AF9}|",
+      "RelativeMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|solutionrelative:tbic\\tbic.dbml||{B465B5AD-8799-4507-B90A-EE29ACF36AF9}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\tbic\\loading_screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|solutionrelative:tbic\\loading_screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|C:\\Users\\ArJz\\Desktop\\TBIC\\tbic\\loading_screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|solutionrelative:tbic\\loading_screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\tbic\\form_instances.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|solutionrelative:tbic\\form_instances.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|C:\\Users\\ArJz\\Desktop\\TBIC\\tbic\\limitededition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\tbic\\landingpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|solutionrelative:tbic\\landingpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\tbic\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|solutionrelative:tbic\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\tbic\\receipt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|solutionrelative:tbic\\receipt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\tbic\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|solutionrelative:tbic\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\tbic\\landingpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|solutionrelative:tbic\\landingpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\tbic\\limitededition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|solutionrelative:tbic\\limitededition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\tbic\\receipt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|solutionrelative:tbic\\receipt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\tbic\\limitededition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|solutionrelative:tbic\\limitededition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|C:\\Users\\ArJz\\Desktop\\TBIC\\tbic\\dontdeleteforsuprise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\tbic\\loading_screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|solutionrelative:tbic\\loading_screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\tbic\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|solutionrelative:tbic\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\tbic\\payment.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|solutionrelative:tbic\\payment.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\tbic\\dontdeleteforsuprise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|solutionrelative:tbic\\dontdeleteforsuprise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\tbic\\dontdeleteforsuprise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|solutionrelative:tbic\\dontdeleteforsuprise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,168 +94,254 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
+              "Title": "TBCI_ServerDataSet1.xsd",
+              "DocumentMoniker": "C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\TBIC\\TBCI_ServerDataSet1.xsd",
+              "RelativeDocumentMoniker": "TBIC\\TBCI_ServerDataSet1.xsd",
+              "ToolTip": "C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\TBIC\\TBCI_ServerDataSet1.xsd",
+              "RelativeToolTip": "TBIC\\TBCI_ServerDataSet1.xsd",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003579|",
+              "WhenOpened": "2026-08-31T09:49:04.828Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TBIC.dbml",
+              "DocumentMoniker": "C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\TBIC\\TBIC.dbml",
+              "RelativeDocumentMoniker": "TBIC\\TBIC.dbml",
+              "ToolTip": "C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\TBIC\\TBIC.dbml",
+              "RelativeToolTip": "TBIC\\TBIC.dbml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000834|",
+              "WhenOpened": "2026-08-31T03:15:41.402Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Receipt.cs",
+              "DocumentMoniker": "C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\TBIC\\Receipt.cs",
+              "RelativeDocumentMoniker": "TBIC\\Receipt.cs",
+              "ToolTip": "C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\TBIC\\Receipt.cs",
+              "RelativeToolTip": "TBIC\\Receipt.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAjwCwAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-29T09:56:25.777Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Receipt.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\TBIC\\Receipt.cs",
+              "RelativeDocumentMoniker": "TBIC\\Receipt.cs",
+              "ToolTip": "C:\\Users\\Personal\\Documents\\School\\PROEL2D\\TBIC Repos\\TBIC\\TBIC\\Receipt.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\Personal\\Documents\\School\\PROEL2D\\TBIC Repos\\TBIC\\TBIC\\Receipt.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-29T09:15:23.791Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\TBIC\\App.config",
+              "RelativeDocumentMoniker": "TBIC\\App.config",
+              "ToolTip": "C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\TBIC\\App.config",
+              "RelativeToolTip": "TBIC\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-08-29T08:57:44.475Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Payment.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\TBIC\\Payment.Designer.cs",
+              "RelativeDocumentMoniker": "TBIC\\Payment.Designer.cs",
+              "ToolTip": "C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\TBIC\\Payment.Designer.cs",
+              "RelativeToolTip": "TBIC\\Payment.Designer.cs",
+              "ViewState": "AgIAAP8BAAAAAAAAAAAuwAcCAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-29T08:49:32.534Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Form_Instances.cs",
+              "DocumentMoniker": "C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\TBIC\\Form_Instances.cs",
+              "RelativeDocumentMoniker": "TBIC\\Form_Instances.cs",
+              "ToolTip": "C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\TBIC\\Form_Instances.cs",
+              "RelativeToolTip": "TBIC\\Form_Instances.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAqwBIAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-29T08:43:10.13Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "LimitedEdition.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ArJz\\Desktop\\TBIC\\TBIC\\LimitedEdition.cs",
+              "DocumentMoniker": "C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\TBIC\\LimitedEdition.cs",
               "RelativeDocumentMoniker": "TBIC\\LimitedEdition.cs",
-              "ToolTip": "C:\\Users\\ArJz\\Desktop\\TBIC\\TBIC\\LimitedEdition.cs [Design]",
-              "RelativeToolTip": "TBIC\\LimitedEdition.cs [Design]",
+              "ToolTip": "C:\\Users\\Personal\\Documents\\School\\PROEL2D\\TBIC Repos\\TBIC\\TBIC\\LimitedEdition.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\Personal\\Documents\\School\\PROEL2D\\TBIC Repos\\TBIC\\TBIC\\LimitedEdition.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-25T19:23:47.099Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 4,
               "Title": "Admin_Dashboard.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ArJz\\Desktop\\TBIC\\TBIC\\Admin_Dashboard.cs",
+              "DocumentMoniker": "C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\TBIC\\Admin_Dashboard.cs",
               "RelativeDocumentMoniker": "TBIC\\Admin_Dashboard.cs",
-              "ToolTip": "C:\\Users\\ArJz\\Desktop\\TBIC\\TBIC\\Admin_Dashboard.cs [Design]",
-              "RelativeToolTip": "TBIC\\Admin_Dashboard.cs [Design]",
+              "ToolTip": "C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\TBIC\\Admin_Dashboard.cs [Design]*",
+              "RelativeToolTip": "TBIC\\Admin_Dashboard.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-25T16:09:51.105Z"
+              "WhenOpened": "2026-08-25T16:09:51.105Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Admin_Dashboard.cs",
-              "DocumentMoniker": "C:\\Users\\ArJz\\Desktop\\TBIC\\TBIC\\Admin_Dashboard.cs",
+              "DocumentMoniker": "C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\TBIC\\Admin_Dashboard.cs",
               "RelativeDocumentMoniker": "TBIC\\Admin_Dashboard.cs",
-              "ToolTip": "C:\\Users\\ArJz\\Desktop\\TBIC\\TBIC\\Admin_Dashboard.cs",
-              "RelativeToolTip": "TBIC\\Admin_Dashboard.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAlwBwAAAAaAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\TBIC\\Admin_Dashboard.cs*",
+              "RelativeToolTip": "TBIC\\Admin_Dashboard.cs*",
+              "ViewState": "AgIAABMAAAAAAAAAAIAwwCMAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-25T15:54:08.923Z"
+              "WhenOpened": "2026-08-25T15:54:08.923Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Acc_Management.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ArJz\\Desktop\\TBIC\\TBIC\\Acc_Management.cs",
+              "DocumentMoniker": "C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\TBIC\\Acc_Management.cs",
               "RelativeDocumentMoniker": "TBIC\\Acc_Management.cs",
-              "ToolTip": "C:\\Users\\ArJz\\Desktop\\TBIC\\TBIC\\Acc_Management.cs [Design]",
-              "RelativeToolTip": "TBIC\\Acc_Management.cs [Design]",
+              "ToolTip": "C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\TBIC\\Acc_Management.cs [Design]*",
+              "RelativeToolTip": "TBIC\\Acc_Management.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-25T16:03:13.485Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 0,
+              "Title": "Acc_Management.cs",
+              "DocumentMoniker": "C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\TBIC\\Acc_Management.cs",
+              "RelativeDocumentMoniker": "TBIC\\Acc_Management.cs",
+              "ToolTip": "C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\TBIC\\Acc_Management.cs*",
+              "RelativeToolTip": "TBIC\\Acc_Management.cs*",
+              "ViewState": "AgIAACEAAAAAAAAAAAA+wDMAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-29T08:45:55.813Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Loading_Screen.cs",
-              "DocumentMoniker": "C:\\Users\\ArJz\\Desktop\\TBIC\\TBIC\\Loading_Screen.cs",
+              "DocumentMoniker": "C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\TBIC\\Loading_Screen.cs",
               "RelativeDocumentMoniker": "TBIC\\Loading_Screen.cs",
-              "ToolTip": "C:\\Users\\ArJz\\Desktop\\TBIC\\TBIC\\Loading_Screen.cs",
+              "ToolTip": "C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\TBIC\\Loading_Screen.cs",
               "RelativeToolTip": "TBIC\\Loading_Screen.cs",
-              "ViewState": "AgIAAGMAAAAAAAAAAAAnwJkAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAcwIcAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-21T08:25:49.738Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
               "Title": "Loading_Screen.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ArJz\\Desktop\\TBIC\\TBIC\\Loading_Screen.cs",
+              "DocumentMoniker": "C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\TBIC\\Loading_Screen.cs",
               "RelativeDocumentMoniker": "TBIC\\Loading_Screen.cs",
-              "ToolTip": "C:\\Users\\ArJz\\Desktop\\TBIC\\TBIC\\Loading_Screen.cs [Design]",
+              "ToolTip": "C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\TBIC\\Loading_Screen.cs [Design]",
               "RelativeToolTip": "TBIC\\Loading_Screen.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-21T08:20:43.66Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "TBIC.dbml",
-              "DocumentMoniker": "C:\\Users\\ArJz\\Desktop\\TBIC\\TBIC\\TBIC.dbml",
-              "RelativeDocumentMoniker": "TBIC\\TBIC.dbml",
-              "ToolTip": "C:\\Users\\ArJz\\Desktop\\TBIC\\TBIC\\TBIC.dbml",
-              "RelativeToolTip": "TBIC\\TBIC.dbml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000834|",
-              "WhenOpened": "2026-08-17T17:24:36.107Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 19,
               "Title": "DontDeleteForSuprise.cs",
-              "DocumentMoniker": "C:\\Users\\ArJz\\Desktop\\TBIC\\TBIC\\DontDeleteForSuprise.cs",
+              "DocumentMoniker": "C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\TBIC\\DontDeleteForSuprise.cs",
               "RelativeDocumentMoniker": "TBIC\\DontDeleteForSuprise.cs",
-              "ToolTip": "C:\\Users\\ArJz\\Desktop\\TBIC\\TBIC\\DontDeleteForSuprise.cs",
+              "ToolTip": "C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\TBIC\\DontDeleteForSuprise.cs",
               "RelativeToolTip": "TBIC\\DontDeleteForSuprise.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-14T08:29:54.13Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 20,
               "Title": "DontDeleteForSuprise.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ArJz\\Desktop\\TBIC\\TBIC\\DontDeleteForSuprise.cs",
+              "DocumentMoniker": "C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\TBIC\\DontDeleteForSuprise.cs",
               "RelativeDocumentMoniker": "TBIC\\DontDeleteForSuprise.cs",
-              "ToolTip": "C:\\Users\\ArJz\\Desktop\\TBIC\\TBIC\\DontDeleteForSuprise.cs [Design]",
-              "RelativeToolTip": "TBIC\\DontDeleteForSuprise.cs [Design]",
+              "ToolTip": "C:\\Users\\Personal\\Documents\\School\\PROEL2D\\TBIC Repos\\TBIC\\TBIC\\DontDeleteForSuprise.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\Personal\\Documents\\School\\PROEL2D\\TBIC Repos\\TBIC\\TBIC\\DontDeleteForSuprise.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-14T08:29:52.246Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "LimitedEdition.cs",
-              "DocumentMoniker": "C:\\Users\\ArJz\\Desktop\\TBIC\\TBIC\\LimitedEdition.cs",
+              "DocumentMoniker": "C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\TBIC\\LimitedEdition.cs",
               "RelativeDocumentMoniker": "TBIC\\LimitedEdition.cs",
-              "ToolTip": "C:\\Users\\ArJz\\Desktop\\TBIC\\TBIC\\LimitedEdition.cs",
+              "ToolTip": "C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\TBIC\\LimitedEdition.cs",
               "RelativeToolTip": "TBIC\\LimitedEdition.cs",
-              "ViewState": "AgIAAC0BAAAAAAAAAAAswAsAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAHkAAAAAAAAAAAAcwC4AAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-13T13:00:29.857Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LandingPage.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ArJz\\Desktop\\TBIC\\TBIC\\LandingPage.cs",
-              "RelativeDocumentMoniker": "TBIC\\LandingPage.cs",
-              "ToolTip": "C:\\Users\\ArJz\\Desktop\\TBIC\\TBIC\\LandingPage.cs [Design]",
-              "RelativeToolTip": "TBIC\\LandingPage.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-07T10:13:19.205Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "LandingPage.cs",
-              "DocumentMoniker": "C:\\Users\\ArJz\\Desktop\\TBIC\\TBIC\\LandingPage.cs",
+              "Title": "LandingPage.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\TBIC\\LandingPage.cs",
               "RelativeDocumentMoniker": "TBIC\\LandingPage.cs",
-              "ToolTip": "C:\\Users\\ArJz\\Desktop\\TBIC\\TBIC\\LandingPage.cs",
-              "RelativeToolTip": "TBIC\\LandingPage.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAtwCkAAAAMAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Personal\\Documents\\School\\PROEL2D\\TBIC Repos\\TBIC\\TBIC\\LandingPage.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\Personal\\Documents\\School\\PROEL2D\\TBIC Repos\\TBIC\\TBIC\\LandingPage.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-07T10:15:56.183Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-07T10:13:19.205Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 12,
+              "Title": "LandingPage.cs",
+              "DocumentMoniker": "C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\TBIC\\LandingPage.cs",
+              "RelativeDocumentMoniker": "TBIC\\LandingPage.cs",
+              "ToolTip": "C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\TBIC\\LandingPage.cs",
+              "RelativeToolTip": "TBIC\\LandingPage.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAcwJsAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-07T10:15:56.183Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Payment.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ArJz\\Desktop\\TBIC\\TBIC\\Payment.cs",
+              "DocumentMoniker": "C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\TBIC\\Payment.cs",
               "RelativeDocumentMoniker": "TBIC\\Payment.cs",
-              "ToolTip": "C:\\Users\\ArJz\\Desktop\\TBIC\\TBIC\\Payment.cs [Design]",
-              "RelativeToolTip": "TBIC\\Payment.cs [Design]",
+              "ToolTip": "C:\\Users\\Personal\\Documents\\School\\PROEL2D\\TBIC Repos\\TBIC\\TBIC\\Payment.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\Personal\\Documents\\School\\PROEL2D\\TBIC Repos\\TBIC\\TBIC\\Payment.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-12T07:17:08.37Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "Payment.cs",
-              "DocumentMoniker": "C:\\Users\\ArJz\\Desktop\\TBIC\\TBIC\\Payment.cs",
+              "DocumentMoniker": "C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\TBIC\\Payment.cs",
               "RelativeDocumentMoniker": "TBIC\\Payment.cs",
-              "ToolTip": "C:\\Users\\ArJz\\Desktop\\TBIC\\TBIC\\Payment.cs",
+              "ToolTip": "C:\\Users\\ArJz\\Downloads\\Compressed\\TBIC\\TBIC\\Payment.cs",
               "RelativeToolTip": "TBIC\\Payment.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAASwA8AAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAADAAAAAAAAAAAAAWwDwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-12T07:25:02.882Z"
             }

@@ -15,16 +15,22 @@ namespace TBIC
         public string StaffName;
         public int StaffID;
 
-        public LimitedEdition(string staffName, int staffID)
+        public LimitedEdition()
         {
             InitializeComponent();
+        }
+
+        public void StaffInfo(string staffName, int staffID)
+        {
             StaffName = staffName;
             StaffID = staffID;
+
+            lblUsername.Text = StaffName;
+            lblUserID.Text = StaffID.ToString();
         }
 
         TBICDataContext db = new TBICDataContext();
-
-        Payment p = new Payment();
+        #region ListView and DataGridView Initialization
 
         public void ProductAdder(int ID)
         {
@@ -38,7 +44,7 @@ namespace TBIC
             double unitPrice = Convert.ToDouble(product.PRICE);
 
             // 1. Check if the product is already in the Payment Form's DataGridView (dvgPOS)
-            foreach (DataGridViewRow row in p.dvgPOS.Rows)
+            foreach (DataGridViewRow row in Form_Instances._pay.dvgPOS.Rows)
             {
                 // Assuming Column 0 = PRODUCT_ID, Column 3 = Quantity, Column 6 = Price
                 if (row.Cells[0].Value != null && Convert.ToInt32(row.Cells[0].Value) == ID)
@@ -81,7 +87,7 @@ namespace TBIC
                 }));
 
                 // Add to DataGridView (Quantity starts at 1, Total Price is pre-calculated)
-                p.dvgPOS.Rows.Add(
+                Form_Instances._pay.dvgPOS.Rows.Add(
                     product.PRODUCT_ID,
                     product.PRODUCT_NAME,
                     product.FLAVOR,
@@ -94,12 +100,15 @@ namespace TBIC
             }
 
             // 3. Immediately recalculate the grand total on the Payment form
-            p.CalculateTotals();
+            Form_Instances._pay.CalculateTotals();
         }
 
+        #endregion
+
         private void btnProceedLE_Click(object sender, EventArgs e)
-        { 
-            p.Show();
+        {
+            Form_Instances._pay.StaffInfo(StaffName, StaffID);
+            Form_Instances._pay.Show();
             this.Hide();
         }
 
@@ -112,9 +121,6 @@ namespace TBIC
             btnGotoUbe.Font = new Font("FredokaSummer", 8, FontStyle.Bold);
             btnGotoVanilla.Font = new Font("FredokaSummer", 8, FontStyle.Bold);
             txtSearchLE.Font = new Font("FredokaSummer", 9, FontStyle.Bold);
-
-            lblUsername.Text = StaffName;
-            lblUserID.Text = StaffID.ToString();
         }
 
         private void btnGotoLimted_Click(object sender, EventArgs e)
@@ -145,6 +151,8 @@ namespace TBIC
             pnlVanilla.Visible = false;
             pnlVanilla.Enabled = false;
         }
+
+        #region Button Clicks for Panel Navigation
 
         private void btnGotoHershey_Click(object sender, EventArgs e)
         {
@@ -311,5 +319,7 @@ namespace TBIC
 
             ProductAdder(ID);
         }
+
+        #endregion
     }
 }
