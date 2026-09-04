@@ -242,6 +242,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TBIC.dbml</DependentUpon>
     </Compile>
+    <Compile Include="TransactionHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransactionHistory.Designer.cs">
+      <DependentUpon>TransactionHistory.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Acc_Management.resx">
       <DependentUpon>Acc_Management.cs</DependentUpon>
     </EmbeddedResource>
@@ -275,6 +281,9 @@
     </Compile>
     <EmbeddedResource Include="Receipt.resx">
       <DependentUpon>Receipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransactionHistory.resx">
+      <DependentUpon>TransactionHistory.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="TBCI_ServerDataSet.xsc">
       <DependentUpon>TBCI_ServerDataSet.xsd</DependentUpon>
@@ -454,6 +463,10 @@
     <None Include="Resources\magnospecial.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\TransactionHistoryBtnUI1.png" />
+    <None Include="Resources\TransactionHistoryBtnUI.png" />
+    <None Include="Resources\TransactionHistoryBG.png" />
+    <None Include="Resources\AccManagementBtnFixed.png" />
     <Content Include="Resources\ADMIN Dashboard %281%29.png" />
     <Content Include="Resources\ADMIN Dashboard %282%29.png" />
     <Content Include="Resources\ADMIN Dashboard.png" />
@@ -461,6 +474,12 @@
     <None Include="Resources\Configure.png" />
     <None Include="Resources\ADMIN User Management1.png" />
     <None Include="Resources\Logo.png" />
+    <None Include="Resources\ADMINDashboardi3.png" />
+    <None Include="Resources\DashboardBtnFixed.png" />
+    <None Include="Resources\PointofSaleBtnUI.png" />
+    <None Include="Resources\NewPurchaseBtnUI.png" />
+    <None Include="Resources\POSPaymentReyal%28Updated%29.png" />
+    <None Include="Resources\NewPurchaseBtnUI1.png" />
     <Content Include="Resources\PROEL2D UI5.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

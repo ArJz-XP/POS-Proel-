@@ -19,7 +19,7 @@ namespace TBIC.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "18.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -73,6 +73,16 @@ namespace TBIC.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap AccManagementBtnFixed {
+            get {
+                object obj = ResourceManager.GetObject("AccManagementBtnFixed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ADMIN_Dashboard__1_ {
             get {
                 object obj = ResourceManager.GetObject("ADMIN Dashboard (1)", resourceCulture);
@@ -96,6 +106,16 @@ namespace TBIC.Properties {
         internal static System.Drawing.Bitmap ADMIN_User_Management {
             get {
                 object obj = ResourceManager.GetObject("ADMIN User Management", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ADMINDashboardi3 {
+            get {
+                object obj = ResourceManager.GetObject("ADMINDashboardi3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -136,6 +156,16 @@ namespace TBIC.Properties {
         internal static System.Drawing.Bitmap copy {
             get {
                 object obj = ResourceManager.GetObject("copy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DashboardBtnFixed {
+            get {
+                object obj = ResourceManager.GetObject("DashboardBtnFixed", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -243,6 +273,36 @@ namespace TBIC.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap NewPurchaseBtnUI {
+            get {
+                object obj = ResourceManager.GetObject("NewPurchaseBtnUI", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap NewPurchaseBtnUI1 {
+            get {
+                object obj = ResourceManager.GetObject("NewPurchaseBtnUI1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PointofSaleBtnUI {
+            get {
+                object obj = ResourceManager.GetObject("PointofSaleBtnUI", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap POS_Payment_Reyal {
             get {
                 object obj = ResourceManager.GetObject("POS Payment Reyal", resourceCulture);
@@ -256,6 +316,16 @@ namespace TBIC.Properties {
         internal static System.Drawing.Bitmap POS_Payment_Reyal1 {
             get {
                 object obj = ResourceManager.GetObject("POS Payment Reyal1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap POSPaymentReyal_Updated_ {
+            get {
+                object obj = ResourceManager.GetObject("POSPaymentReyal(Updated)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -426,6 +496,36 @@ namespace TBIC.Properties {
         internal static System.Drawing.Bitmap PROEL2D_UI5 {
             get {
                 object obj = ResourceManager.GetObject("PROEL2D UI5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TransactionHistoryBG {
+            get {
+                object obj = ResourceManager.GetObject("TransactionHistoryBG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TransactionHistoryBtnUI {
+            get {
+                object obj = ResourceManager.GetObject("TransactionHistoryBtnUI", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TransactionHistoryBtnUI1 {
+            get {
+                object obj = ResourceManager.GetObject("TransactionHistoryBtnUI1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

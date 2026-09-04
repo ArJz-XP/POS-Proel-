@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.txtSearchBox = new System.Windows.Forms.TextBox();
             this.dvgPOS = new System.Windows.Forms.DataGridView();
             this.dvgItemId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dvgItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,7 +44,7 @@
             this.studentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pWDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnNewPurchase = new System.Windows.Forms.Button();
-            this.btnPlace = new System.Windows.Forms.Button();
+            this.btnTransHistory = new System.Windows.Forms.Button();
             this.txtOrderId = new System.Windows.Forms.TextBox();
             this.txtMOP = new System.Windows.Forms.TextBox();
             this.pnlBackground = new System.Windows.Forms.Panel();
@@ -61,7 +60,6 @@
             this.btnPrevious = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
             this.btnConfirmPrint = new System.Windows.Forms.Button();
-            this.picMaybedropbox = new System.Windows.Forms.PictureBox();
             this.btnLogout = new System.Windows.Forms.Button();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cashToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -77,20 +75,9 @@
             this.pnlBackground.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIDK)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picMaybedropbox)).BeginInit();
             this.contextMenuStrip2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // txtSearchBox
-            // 
-            this.txtSearchBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSearchBox.Location = new System.Drawing.Point(222, 107);
-            this.txtSearchBox.Multiline = true;
-            this.txtSearchBox.Name = "txtSearchBox";
-            this.txtSearchBox.Size = new System.Drawing.Size(199, 26);
-            this.txtSearchBox.TabIndex = 0;
-            this.txtSearchBox.Text = "Search The Cream";
             // 
             // dvgPOS
             // 
@@ -252,26 +239,26 @@
             this.btnNewPurchase.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnNewPurchase.FlatAppearance.BorderSize = 0;
             this.btnNewPurchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNewPurchase.Location = new System.Drawing.Point(1052, 112);
+            this.btnNewPurchase.Image = global::TBIC.Properties.Resources.NewPurchaseBtnUI1;
+            this.btnNewPurchase.Location = new System.Drawing.Point(1069, 99);
             this.btnNewPurchase.Name = "btnNewPurchase";
-            this.btnNewPurchase.Size = new System.Drawing.Size(214, 26);
+            this.btnNewPurchase.Size = new System.Drawing.Size(214, 47);
             this.btnNewPurchase.TabIndex = 2;
-            this.btnNewPurchase.Text = "New Purchase";
             this.btnNewPurchase.UseVisualStyleBackColor = false;
             this.btnNewPurchase.Click += new System.EventHandler(this.btnNewPurchase_Click);
             // 
-            // btnPlace
+            // btnTransHistory
             // 
-            this.btnPlace.BackColor = System.Drawing.Color.Transparent;
-            this.btnPlace.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPlace.FlatAppearance.BorderSize = 0;
-            this.btnPlace.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPlace.Location = new System.Drawing.Point(1052, 157);
-            this.btnPlace.Name = "btnPlace";
-            this.btnPlace.Size = new System.Drawing.Size(214, 30);
-            this.btnPlace.TabIndex = 3;
-            this.btnPlace.Text = "IDK";
-            this.btnPlace.UseVisualStyleBackColor = false;
+            this.btnTransHistory.BackColor = System.Drawing.Color.Transparent;
+            this.btnTransHistory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTransHistory.FlatAppearance.BorderSize = 0;
+            this.btnTransHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTransHistory.Image = global::TBIC.Properties.Resources.TransactionHistoryBtnUI1;
+            this.btnTransHistory.Location = new System.Drawing.Point(1069, 165);
+            this.btnTransHistory.Name = "btnTransHistory";
+            this.btnTransHistory.Size = new System.Drawing.Size(217, 65);
+            this.btnTransHistory.TabIndex = 3;
+            this.btnTransHistory.UseVisualStyleBackColor = false;
             // 
             // txtOrderId
             // 
@@ -458,18 +445,6 @@
             this.btnConfirmPrint.UseVisualStyleBackColor = false;
             this.btnConfirmPrint.Click += new System.EventHandler(this.btnConfirmPrint_Click);
             // 
-            // picMaybedropbox
-            // 
-            this.picMaybedropbox.BackColor = System.Drawing.Color.Transparent;
-            this.picMaybedropbox.BackgroundImage = global::TBIC.Properties.Resources.PROEL2D_UI;
-            this.picMaybedropbox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picMaybedropbox.Location = new System.Drawing.Point(426, 107);
-            this.picMaybedropbox.Margin = new System.Windows.Forms.Padding(2);
-            this.picMaybedropbox.Name = "picMaybedropbox";
-            this.picMaybedropbox.Size = new System.Drawing.Size(28, 27);
-            this.picMaybedropbox.TabIndex = 11;
-            this.picMaybedropbox.TabStop = false;
-            // 
             // btnLogout
             // 
             this.btnLogout.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -570,17 +545,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::TBIC.Properties.Resources.POS_Payment_Reyal1;
+            this.BackgroundImage = global::TBIC.Properties.Resources.POSPaymentReyal_Updated_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1264, 641);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnLogout);
-            this.Controls.Add(this.picMaybedropbox);
             this.Controls.Add(this.btnConfirmPrint);
             this.Controls.Add(this.pnlBackground);
-            this.Controls.Add(this.btnPlace);
+            this.Controls.Add(this.btnTransHistory);
             this.Controls.Add(this.btnNewPurchase);
-            this.Controls.Add(this.txtSearchBox);
             this.Name = "Payment";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Payment";
@@ -592,20 +565,16 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIDK)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picMaybedropbox)).EndInit();
             this.contextMenuStrip2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtSearchBox;
         private System.Windows.Forms.Button btnNewPurchase;
-        private System.Windows.Forms.Button btnPlace;
+        private System.Windows.Forms.Button btnTransHistory;
         private System.Windows.Forms.TextBox txtOrderId;
         private System.Windows.Forms.TextBox txtMOP;
         private System.Windows.Forms.Panel pnlBackground;
@@ -613,7 +582,6 @@
         private System.Windows.Forms.Button btnPrevious;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.PictureBox picIDK;
-        private System.Windows.Forms.PictureBox picMaybedropbox;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnMOP;
         private System.Windows.Forms.Button btnCopy;
