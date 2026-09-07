@@ -48,7 +48,7 @@ namespace TBIC
     #endregion
 		
 		public TBICDataContext() : 
-				base(global::TBIC.Properties.Settings.Default.TBCI_ServerConnectionString2, mappingSource)
+				base(global::TBIC.Properties.Settings.Default.TBCI_ServerConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}

@@ -32,7 +32,6 @@ namespace TBIC
 
         private void Payment_Load(object sender, EventArgs e)
         {
-            txtSearchBox.Font = new Font("FredokaSummer", 10, FontStyle.Bold);
             txtOrderId.Font = new Font("FredokaSummer", 10, FontStyle.Bold);
             txtMOP.Font = new Font("FredokaSummer", 10, FontStyle.Bold);
 
@@ -59,7 +58,12 @@ namespace TBIC
                 }
             }
 
-            Form_Instances._lan.Logout_Confirmation();
+            if (MessageBox.Show("Are you sure you want to log out?", "Logout Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+                Form_Instances._lan.InputReload();
+                Form_Instances._lan.Show();
+                this.Hide();
+            }
         }
 
         private void btnConfirmPrint_Click(object sender, EventArgs e)
@@ -71,7 +75,8 @@ namespace TBIC
                 return;
             }
 
-            Form_Instances._rep.Show();
+            Receipt rep = new Receipt();
+            rep.Show();
         }
 
         #region DataGridView Cell Click Handlers
@@ -259,6 +264,13 @@ namespace TBIC
 
             Form_Instances._lim.StaffInfo(UserName, StaffID);
             Form_Instances._lim.Show();
+            this.Hide();
+        }
+
+        private void btnTransHistory_Click(object sender, EventArgs e)
+        {
+            Form_Instances._tran.StaffInfo(UserName, StaffID);
+            Form_Instances._tran.Show();
             this.Hide();
         }
     }

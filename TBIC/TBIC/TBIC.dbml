@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="TBCI Server" Class="TBICDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=NEKOARJZ\SQLEXPRESS;Initial Catalog=&quot;TBCI Server&quot;;Integrated Security=True;Encrypt=True;Trust Server Certificate=True" SettingsObjectName="TBIC.Properties.Settings" SettingsPropertyName="TBCI_ServerConnectionString2" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-MQMD640;Initial Catalog=&quot;TBCI Server&quot;;Integrated Security=True;Trust Server Certificate=True" SettingsObjectName="TBIC.Properties.Settings" SettingsPropertyName="TBCI_ServerConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.DEPARTMENT" Member="DEPARTMENTs">
     <Type Name="DEPARTMENT">
       <Column Name="DEPARTMENT_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />

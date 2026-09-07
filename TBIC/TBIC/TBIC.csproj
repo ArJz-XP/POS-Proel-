@@ -237,6 +237,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TBCI_ServerDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="TBCI_ServerDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TBCI_ServerDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TBCI_ServerDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TBCI_ServerDataSet4.xsd</DependentUpon>
+    </Compile>
     <Compile Include="TBIC.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -317,6 +327,28 @@
     </None>
     <None Include="TBCI_ServerDataSet2.xss">
       <DependentUpon>TBCI_ServerDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="TBCI_ServerDataSet3.xsc">
+      <DependentUpon>TBCI_ServerDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="TBCI_ServerDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TBCI_ServerDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TBCI_ServerDataSet3.xss">
+      <DependentUpon>TBCI_ServerDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="TBCI_ServerDataSet4.xsc">
+      <DependentUpon>TBCI_ServerDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="TBCI_ServerDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TBCI_ServerDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TBCI_ServerDataSet4.xss">
+      <DependentUpon>TBCI_ServerDataSet4.xsd</DependentUpon>
     </None>
     <None Include="TBIC.dbml.layout">
       <DependentUpon>TBIC.dbml</DependentUpon>

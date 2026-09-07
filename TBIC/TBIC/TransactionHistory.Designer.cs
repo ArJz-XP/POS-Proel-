@@ -28,28 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvTransactionHistory = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblIDs = new System.Windows.Forms.Label();
             this.lblUsernameNumba = new System.Windows.Forms.Label();
             this.lblUserID = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.txtSearchBoxSearchHistory = new System.Windows.Forms.TextBox();
-            this.btnTransactionHistory = new System.Windows.Forms.Button();
             this.btnNewPurchase = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTransactionHistory)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvTransactionHistory
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(28, 186);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(965, 372);
-            this.dataGridView1.TabIndex = 1;
+            this.dgvTransactionHistory.BackgroundColor = System.Drawing.Color.White;
+            this.dgvTransactionHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTransactionHistory.Location = new System.Drawing.Point(23, 173);
+            this.dgvTransactionHistory.Name = "dgvTransactionHistory";
+            this.dgvTransactionHistory.Size = new System.Drawing.Size(979, 390);
+            this.dgvTransactionHistory.TabIndex = 1;
             // 
             // panel3
             // 
@@ -109,19 +109,6 @@
             this.txtSearchBoxSearchHistory.TabIndex = 28;
             this.txtSearchBoxSearchHistory.Text = "Finding History";
             // 
-            // btnTransactionHistory
-            // 
-            this.btnTransactionHistory.BackColor = System.Drawing.Color.Transparent;
-            this.btnTransactionHistory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnTransactionHistory.FlatAppearance.BorderSize = 0;
-            this.btnTransactionHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTransactionHistory.Image = global::TBIC.Properties.Resources.TransactionHistoryBtnUI;
-            this.btnTransactionHistory.Location = new System.Drawing.Point(1068, 178);
-            this.btnTransactionHistory.Name = "btnTransactionHistory";
-            this.btnTransactionHistory.Size = new System.Drawing.Size(214, 59);
-            this.btnTransactionHistory.TabIndex = 30;
-            this.btnTransactionHistory.UseVisualStyleBackColor = false;
-            // 
             // btnNewPurchase
             // 
             this.btnNewPurchase.BackColor = System.Drawing.Color.Transparent;
@@ -129,11 +116,12 @@
             this.btnNewPurchase.FlatAppearance.BorderSize = 0;
             this.btnNewPurchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNewPurchase.Image = global::TBIC.Properties.Resources.NewPurchaseBtnUI;
-            this.btnNewPurchase.Location = new System.Drawing.Point(1068, 111);
+            this.btnNewPurchase.Location = new System.Drawing.Point(1068, 66);
             this.btnNewPurchase.Name = "btnNewPurchase";
             this.btnNewPurchase.Size = new System.Drawing.Size(214, 41);
             this.btnNewPurchase.TabIndex = 29;
             this.btnNewPurchase.UseVisualStyleBackColor = false;
+            this.btnNewPurchase.Click += new System.EventHandler(this.btnNewPurchase_Click);
             // 
             // pictureBox1
             // 
@@ -149,16 +137,18 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 641);
-            this.Controls.Add(this.btnTransactionHistory);
+            this.ClientSize = new System.Drawing.Size(1264, 674);
             this.Controls.Add(this.btnNewPurchase);
             this.Controls.Add(this.txtSearchBoxSearchHistory);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvTransactionHistory);
             this.Controls.Add(this.pictureBox1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "TransactionHistory";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TransactionHistory";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTransactionHistory)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -170,7 +160,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvTransactionHistory;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lblIDs;
         private System.Windows.Forms.Label lblUsernameNumba;
@@ -178,6 +168,5 @@
         public System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.TextBox txtSearchBoxSearchHistory;
         private System.Windows.Forms.Button btnNewPurchase;
-        private System.Windows.Forms.Button btnTransactionHistory;
     }
 }

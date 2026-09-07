@@ -148,16 +148,6 @@ namespace TBIC
         }
 
         #endregion
-
-        public void Logout_Confirmation()
-        {
-            if (MessageBox.Show("Are you sure you want to log out?", "Logout Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
-            {
-                Form_Instances._lan.InputReload();
-                Form_Instances._lan.Show();
-                this.Hide();
-            }
-        }
     }
 
     #region Secret Sauce

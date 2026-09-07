@@ -31,7 +31,6 @@
             this.btnGotoLimted = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
             this.txtSearchLE = new System.Windows.Forms.TextBox();
-            this.picSortLE = new System.Windows.Forms.PictureBox();
             this.btnGotoHershey = new System.Windows.Forms.Button();
             this.btnGotoManggo = new System.Windows.Forms.Button();
             this.btnGotoAvocado = new System.Windows.Forms.Button();
@@ -79,7 +78,6 @@
             this.Flavour = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Price = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Quantity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            ((System.ComponentModel.ISupportInitialize)(this.picSortLE)).BeginInit();
             this.pnlHershey.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picHershey)).BeginInit();
             this.pnlManggo.SuspendLayout();
@@ -125,17 +123,6 @@
             this.txtSearchLE.Size = new System.Drawing.Size(193, 21);
             this.txtSearchLE.TabIndex = 2;
             this.txtSearchLE.Text = "ORDER 66";
-            // 
-            // picSortLE
-            // 
-            this.picSortLE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picSortLE.Image = global::TBIC.Properties.Resources.PROEL2D_UI1;
-            this.picSortLE.Location = new System.Drawing.Point(299, 16);
-            this.picSortLE.Name = "picSortLE";
-            this.picSortLE.Size = new System.Drawing.Size(30, 25);
-            this.picSortLE.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picSortLE.TabIndex = 3;
-            this.picSortLE.TabStop = false;
             // 
             // btnGotoHershey
             // 
@@ -706,7 +693,6 @@
             this.Controls.Add(this.btnGotoAvocado);
             this.Controls.Add(this.btnGotoManggo);
             this.Controls.Add(this.btnGotoHershey);
-            this.Controls.Add(this.picSortLE);
             this.Controls.Add(this.txtSearchLE);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.btnGotoLimted);
@@ -720,7 +706,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LimitedEdition";
             this.Load += new System.EventHandler(this.LimitedEdition_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.picSortLE)).EndInit();
             this.pnlHershey.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picHershey)).EndInit();
             this.pnlManggo.ResumeLayout(false);
@@ -745,7 +730,6 @@
         private System.Windows.Forms.Button btnGotoLimted;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.TextBox txtSearchLE;
-        private System.Windows.Forms.PictureBox picSortLE;
         private System.Windows.Forms.Button btnGotoHershey;
         private System.Windows.Forms.Button btnGotoManggo;
         private System.Windows.Forms.Button btnGotoAvocado;

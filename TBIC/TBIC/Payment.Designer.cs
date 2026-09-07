@@ -259,6 +259,7 @@
             this.btnTransHistory.Size = new System.Drawing.Size(217, 65);
             this.btnTransHistory.TabIndex = 3;
             this.btnTransHistory.UseVisualStyleBackColor = false;
+            this.btnTransHistory.Click += new System.EventHandler(this.btnTransHistory_Click);
             // 
             // txtOrderId
             // 
@@ -576,7 +577,6 @@
         private System.Windows.Forms.Button btnNewPurchase;
         private System.Windows.Forms.Button btnTransHistory;
         private System.Windows.Forms.TextBox txtOrderId;
-        private System.Windows.Forms.TextBox txtMOP;
         private System.Windows.Forms.Panel pnlBackground;
         private System.Windows.Forms.Button btnConfirmPrint;
         private System.Windows.Forms.Button btnPrevious;
@@ -614,5 +614,6 @@
         public System.Windows.Forms.Label lblUsername;
         public System.Windows.Forms.RichTextBox rtxtDiscount;
         public System.Windows.Forms.RichTextBox rtxtTotalPrice;
+        public System.Windows.Forms.TextBox txtMOP;
     }
 }

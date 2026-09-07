@@ -52,6 +52,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.lblMOP = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -105,9 +107,9 @@
             this.lvPrice});
             this.lvReciept.GridLines = true;
             this.lvReciept.HideSelection = false;
-            this.lvReciept.Location = new System.Drawing.Point(13, 256);
+            this.lvReciept.Location = new System.Drawing.Point(13, 271);
             this.lvReciept.Name = "lvReciept";
-            this.lvReciept.Size = new System.Drawing.Size(287, 231);
+            this.lvReciept.Size = new System.Drawing.Size(287, 216);
             this.lvReciept.TabIndex = 4;
             this.lvReciept.UseCompatibleStateImageBehavior = false;
             this.lvReciept.View = System.Windows.Forms.View.Details;
@@ -297,11 +299,33 @@
             this.label2.TabIndex = 12;
             this.label2.Text = "TOTAL ITEMS:";
             // 
+            // lblMOP
+            // 
+            this.lblMOP.AutoSize = true;
+            this.lblMOP.Font = new System.Drawing.Font("MS PGothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMOP.Location = new System.Drawing.Point(120, 250);
+            this.lblMOP.Name = "lblMOP";
+            this.lblMOP.Size = new System.Drawing.Size(63, 13);
+            this.lblMOP.TabIndex = 13;
+            this.lblMOP.Text = "Payment";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("MS PGothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(73, 250);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(41, 13);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "MOP:";
+            // 
             // Receipt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(312, 698);
+            this.Controls.Add(this.lblMOP);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.lblCName);
@@ -356,5 +380,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblMOP;
+        private System.Windows.Forms.Label label8;
     }
 }

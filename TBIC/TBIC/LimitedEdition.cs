@@ -30,6 +30,7 @@ namespace TBIC
         }
 
         TBICDataContext db = new TBICDataContext();
+
         #region ListView and DataGridView Initialization
 
         public void ProductAdder(int ID)
@@ -112,6 +113,8 @@ namespace TBIC
             this.Hide();
         }
 
+        #region Load
+
         private void LimitedEdition_Load(object sender, EventArgs e)
         {
             btnGotoAvocado.Font = new Font("FredokaSummer", 8, FontStyle.Bold);
@@ -151,6 +154,8 @@ namespace TBIC
             pnlVanilla.Visible = false;
             pnlVanilla.Enabled = false;
         }
+
+        #endregion
 
         #region Button Clicks for Panel Navigation
 

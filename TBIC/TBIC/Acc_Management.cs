@@ -47,12 +47,14 @@ namespace TBIC
 
         private void Acc_Management_Load(object sender, EventArgs e)
         {
-
+            // TODO: This line of code loads data into the 'tBCI_ServerDataSet4.vw_Retrieve' table. You can move, or remove it, as needed.
+            this.vw_RetrieveTableAdapter1.Fill(this.tBCI_ServerDataSet4.vw_Retrieve);
             TBICDataContext db = new TBICDataContext();
             dgvEmployeeEditor.DataSource = db.vw_Retrieves;
             btnDashBoardManage.Font = new Font("FredokaSummer", 9, FontStyle.Bold);
             btnManageManage.Font = new Font("FredokaSummer", 9, FontStyle.Bold);
             txtAddName.Font = new Font("FredokaSummer", 9, FontStyle.Bold);
+            txtAddUsername.Font = new Font("FredokaSummer", 9, FontStyle.Bold);
             txtAddPassword.Font = new Font("FredokaSummer", 9, FontStyle.Bold);
             txtSearchEmploys.Font = new Font("FredokaSummer", 9, FontStyle.Bold);
 
@@ -62,12 +64,14 @@ namespace TBIC
         public void inputreload()
         {
             txtAddName.Text = null;
+            txtAddUsername.Text = null;
             txtAddPassword.Text = null;
             txtDepartmentID.Text = null;
             txtSearchEmploys.Text = null;
             cmbRole.SelectedIndex = -1;
 
-            txtAddName.SetPlaceholder("StaffName");
+            txtAddName.SetPlaceholder("Staffname");
+            txtAddUsername.SetPlaceholder("Username");
             txtAddPassword.SetPlaceholder("Password");
             txtDepartmentID.SetPlaceholder("Department ID");
             txtSearchEmploys.SetPlaceholder("Search Entry");
@@ -85,7 +89,7 @@ namespace TBIC
 
                 int Dep_ID = int.Parse(txtDepartmentID.Text);
 
-                db.ADD_STAFF(txtAddName.Text, txtAddName.Text, txtAddPassword.Text, Dep_ID, cmbRole.Text);
+                db.ADD_STAFF(txtAddName.Text, txtAddUsername.Text, txtAddPassword.Text, Dep_ID, cmbRole.Text);
 
                 dgvEmployeeEditor.CellFormatting += dgvEmployeeEditor_CellFormatting;
 
@@ -143,7 +147,11 @@ namespace TBIC
         {
             try
             {
-                if (dgvEmployeeEditor.SelectedRows.Count == 0) return;
+                if (dgvEmployeeEditor.SelectedRows.Count == 0)
+                {
+                    MessageBox.Show("Please select a staff entry to delete.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
 
                 var selectedRow = dgvEmployeeEditor.SelectedRows[0];
                 int staffId = Convert.ToInt32(selectedRow.Cells["sTAFFIDDataGridViewTextBoxColumn"].Value);
@@ -176,9 +184,40 @@ namespace TBIC
 
         #endregion
 
+        #region Sorting Functionality
+
         private void dgvEmployeeEditor_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
+
+        private void picMaybedropboxManagement_Click(object sender, EventArgs e)
+        {
+            contextMenuStrip1.Show(picMaybedropboxManagement, new Point(picMaybedropboxManagement.Width, 0));
+        }
+
+        private void ascendingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SortBothViews(ascending: true);
+        }
+
+        private void descendingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SortBothViews(ascending: false);
+        }
+
+        private void SortBothViews(bool ascending)
+        {
+            using (TBICDataContext db = new TBICDataContext())
+            {
+                var sorted = ascending
+                    ? db.vw_Retrieves.OrderBy(x => x.STAFF_NAME).ToList()
+                    : db.vw_Retrieves.OrderByDescending(x => x.STAFF_NAME).ToList();
+
+                dgvEmployeeEditor.DataSource = sorted;
+            }
+        }
+
+        #endregion
     }
 }

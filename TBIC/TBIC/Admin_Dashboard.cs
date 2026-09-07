@@ -31,10 +31,12 @@ namespace TBIC
 
         TBICDataContext db = new TBICDataContext();
 
+        #region Loading
+
         private void Admin_Dashboard_Load(object sender, EventArgs e)
         {
-            
-            this.vw_RetrieveTableAdapter1.Fill(this.tBCI_ServerDataSet1.vw_Retrieve);
+            // TODO: This line of code loads data into the 'tBCI_ServerDataSet3.vw_Retrieve' table. You can move, or remove it, as needed.
+            this.vw_RetrieveTableAdapter2.Fill(this.tBCI_ServerDataSet3.vw_Retrieve);
             txtSearchBoxAdmin.Font = new Font("FredokaSummer", 10, FontStyle.Bold);
             lblNumberOfEmployees.Font = new Font("FredokaSummer", 9, FontStyle.Bold);
             lblTotalEmployee.Font = new Font("FredokaSummer", 9, FontStyle.Bold);
@@ -45,7 +47,7 @@ namespace TBIC
 
             lblNumberOfEmployees.Text = db.vw_Retrieves.Count().ToString();
 
-            this.ActiveControl = dataGridView1;
+            this.ActiveControl = dgvRetrivalList;
         }
 
         public void inputReload()
@@ -54,10 +56,41 @@ namespace TBIC
 
             txtSearchBoxAdmin.SetPlaceholder("Search Employee");
 
-            dataGridView1.CellFormatting += dataGridView1_CellFormatting;
+            dgvRetrivalList.CellFormatting += dataGridView1_CellFormatting;
 
             lblNumberOfEmployees.Text = db.vw_Retrieves.Count().ToString();
+
+            #region Stocks
+
+            lblAtlerEgo.Text = db.PRODUCTs.Where(x => x.PRODUCT_ID == 3).Select(x => x.STOCK).FirstOrDefault().ToString();
+            lblDarkestRider.Text = db.PRODUCTs.Where(x => x.PRODUCT_ID == 2).Select(x => x.STOCK).FirstOrDefault().ToString();
+            lblMiniMadness.Text = db.PRODUCTs.Where(x => x.PRODUCT_ID == 1).Select(x => x.STOCK).FirstOrDefault().ToString();
+
+            lblSnowcone.Text = db.PRODUCTs.Where(x => x.PRODUCT_ID == 16).Select(x => x.STOCK).FirstOrDefault().ToString();
+            lblTheBiningging.Text = db.PRODUCTs.Where(x => x.PRODUCT_ID == 17).Select(x => x.STOCK).FirstOrDefault().ToString();
+            lblTasteofDnD.Text = db.PRODUCTs.Where(x => x.PRODUCT_ID == 18).Select(x => x.STOCK).FirstOrDefault().ToString();
+
+            lblPureChoco.Text = db.PRODUCTs.Where(x => x.PRODUCT_ID == 4).Select(x => x.STOCK).FirstOrDefault().ToString();
+            lblChocoKiss.Text = db.PRODUCTs.Where(x => x.PRODUCT_ID == 5).Select(x => x.STOCK).FirstOrDefault().ToString();
+            lblCaramelKiss.Text = db.PRODUCTs.Where(x => x.PRODUCT_ID == 6).Select(x => x.STOCK).FirstOrDefault().ToString();
+
+            lblGrahamMountain.Text = db.PRODUCTs.Where(x => x.PRODUCT_ID == 7).Select(x => x.STOCK).FirstOrDefault().ToString();
+            lblTidbitsGalore.Text = db.PRODUCTs.Where(x => x.PRODUCT_ID == 8).Select(x => x.STOCK).FirstOrDefault().ToString();
+            lblCookiesAndChunks.Text = db.PRODUCTs.Where(x => x.PRODUCT_ID == 9).Select(x => x.STOCK).FirstOrDefault().ToString();
+
+            lblLimeFestCombo.Text = db.PRODUCTs.Where(x => x.PRODUCT_ID == 10).Select(x => x.STOCK).FirstOrDefault().ToString();
+            lblSweetandRipeExpress.Text = db.PRODUCTs.Where(x => x.PRODUCT_ID == 11).Select(x => x.STOCK).FirstOrDefault().ToString();
+            lblGreenAvalanche.Text = db.PRODUCTs.Where(x => x.PRODUCT_ID == 12).Select(x => x.STOCK).FirstOrDefault().ToString();
+
+            lblMidnightFest.Text = db.PRODUCTs.Where(x => x.PRODUCT_ID == 13).Select(x => x.STOCK).FirstOrDefault().ToString();
+            lblDuskGlasiers.Text = db.PRODUCTs.Where(x => x.PRODUCT_ID == 14).Select(x => x.STOCK).FirstOrDefault().ToString();
+            lblTheBiteof67.Text = db.PRODUCTs.Where(x => x.PRODUCT_ID == 15).Select(x => x.STOCK).FirstOrDefault().ToString();
+
+            #endregion
+
         }
+
+        #endregion
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
@@ -90,16 +123,47 @@ namespace TBIC
             var searchResult = db.vw_Retrieves.Where(x => x.USERNAME.Contains(keyword) || x.STAFF_NAME.Contains(keyword)).ToList();
 
             // Bind the filtered list to your grid
-            dataGridView1.DataSource = searchResult;
+            dgvRetrivalList.DataSource = searchResult;
         }
 
         private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            if (dataGridView1.Columns[e.ColumnIndex].Name == "pASSWORDDataGridViewTextBoxColumn" && e.Value != null)
+            if (dgvRetrivalList.Columns[e.ColumnIndex].Name == "pASSWORDDataGridViewTextBoxColumn" && e.Value != null)
             {
                 e.Value = new string('*', e.Value.ToString().Length); // masks with same-length asterisks
                 e.FormattingApplied = true;
             }
         }
+
+        #region Sorting Functionality
+
+        private void picMaybedropboxAdmin_Click(object sender, EventArgs e)
+        {
+            contextMenuStrip1.Show(picMaybedropboxAdmin, new Point(picMaybedropboxAdmin.Width, 0));
+        }
+
+        private void ascendingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SortBothViews(ascending: true);
+        }
+
+        private void descendingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SortBothViews(ascending: false);
+        }
+
+        private void SortBothViews(bool ascending)
+        {
+            using (TBICDataContext db = new TBICDataContext())
+            {
+                var sorted = ascending
+                    ? db.vw_Retrieves.OrderBy(x => x.STAFF_NAME).ToList()
+                    : db.vw_Retrieves.OrderByDescending(x => x.STAFF_NAME).ToList();
+
+                dgvRetrivalList.DataSource = sorted;
+            }
+        }
+
+        #endregion
     }
 }

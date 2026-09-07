@@ -17,5 +17,6 @@ namespace TBIC
         public static Admin_Dashboard _dash { get; } = new Admin_Dashboard();
         public static Acc_Management _acc { get; } = new Acc_Management();
         public static Receipt _rep { get; } = new Receipt();
+        public static TransactionHistory _tran { get; } = new TransactionHistory();
     }
 }
