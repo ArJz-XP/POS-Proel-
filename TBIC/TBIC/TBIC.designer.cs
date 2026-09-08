@@ -48,7 +48,7 @@ namespace TBIC
     #endregion
 		
 		public TBICDataContext() : 
-				base(global::TBIC.Properties.Settings.Default.TBCI_ServerConnectionString1, mappingSource)
+				base(global::TBIC.Properties.Settings.Default.TBCI_ServerConnectionString2, mappingSource)
 		{
 			OnCreated();
 		}
@@ -158,6 +158,20 @@ namespace TBIC
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), sTAFF_ID, sTAFF_NAME, uSERNAME, pASSWORD);
 			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ADD_SALES_HISTORY")]
+		public int ADD_SALES_HISTORY([global::System.Data.Linq.Mapping.ParameterAttribute(Name="STAFF_ID", DbType="Int")] System.Nullable<int> sTAFF_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PRODUCT_ID", DbType="Int")] System.Nullable<int> pRODUCT_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="QUANTITY", DbType="Int")] System.Nullable<int> qUANTITY, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="UNIT_PRICE", DbType="Decimal(10,2)")] System.Nullable<decimal> uNIT_PRICE, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TOTAL_AMOUNT", DbType="Decimal(10,2)")] System.Nullable<decimal> tOTAL_AMOUNT, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PAYMENT_METHOD", DbType="VarChar(50)")] string pAYMENT_METHOD, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="AMOUNT_PAID", DbType="Decimal(10,2)")] System.Nullable<decimal> aMOUNT_PAID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="CHANGE_AMOUNT", DbType="Decimal(10,2)")] System.Nullable<decimal> cHANGE_AMOUNT)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), sTAFF_ID, pRODUCT_ID, qUANTITY, uNIT_PRICE, tOTAL_AMOUNT, pAYMENT_METHOD, aMOUNT_PAID, cHANGE_AMOUNT);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.RETRIEVE_SALES_HISTORY")]
+		public ISingleResult<RETRIEVE_SALES_HISTORYResult> RETRIEVE_SALES_HISTORY()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<RETRIEVE_SALES_HISTORYResult>)(result.ReturnValue));
 		}
 	}
 	
@@ -1387,6 +1401,266 @@ namespace TBIC
 				if ((this._DEPARTMENT_NAME != value))
 				{
 					this._DEPARTMENT_NAME = value;
+				}
+			}
+		}
+	}
+	
+	public partial class RETRIEVE_SALES_HISTORYResult
+	{
+		
+		private int _SALES_ID;
+		
+		private System.Nullable<int> _STAFF_ID;
+		
+		private string _STAFF_NAME;
+		
+		private System.Nullable<System.DateTime> _SALES_DATE;
+		
+		private System.Nullable<int> _PRODUCT_ID;
+		
+		private string _PRODUCT_NAME;
+		
+		private string _FLAVOR;
+		
+		private System.Nullable<int> _QUANTITY;
+		
+		private System.Nullable<decimal> _UNIT_PRICE;
+		
+		private System.Nullable<decimal> _SUBTOTAL;
+		
+		private System.Nullable<decimal> _TOTAL_AMOUNT;
+		
+		private string _PAYMENT_METHOD;
+		
+		private System.Nullable<decimal> _AMOUNT_PAID;
+		
+		private System.Nullable<decimal> _CHANGE_AMOUNT;
+		
+		public RETRIEVE_SALES_HISTORYResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SALES_ID", DbType="Int NOT NULL")]
+		public int SALES_ID
+		{
+			get
+			{
+				return this._SALES_ID;
+			}
+			set
+			{
+				if ((this._SALES_ID != value))
+				{
+					this._SALES_ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_STAFF_ID", DbType="Int")]
+		public System.Nullable<int> STAFF_ID
+		{
+			get
+			{
+				return this._STAFF_ID;
+			}
+			set
+			{
+				if ((this._STAFF_ID != value))
+				{
+					this._STAFF_ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_STAFF_NAME", DbType="VarChar(100)")]
+		public string STAFF_NAME
+		{
+			get
+			{
+				return this._STAFF_NAME;
+			}
+			set
+			{
+				if ((this._STAFF_NAME != value))
+				{
+					this._STAFF_NAME = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SALES_DATE", DbType="DateTime")]
+		public System.Nullable<System.DateTime> SALES_DATE
+		{
+			get
+			{
+				return this._SALES_DATE;
+			}
+			set
+			{
+				if ((this._SALES_DATE != value))
+				{
+					this._SALES_DATE = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PRODUCT_ID", DbType="Int")]
+		public System.Nullable<int> PRODUCT_ID
+		{
+			get
+			{
+				return this._PRODUCT_ID;
+			}
+			set
+			{
+				if ((this._PRODUCT_ID != value))
+				{
+					this._PRODUCT_ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PRODUCT_NAME", DbType="VarChar(100)")]
+		public string PRODUCT_NAME
+		{
+			get
+			{
+				return this._PRODUCT_NAME;
+			}
+			set
+			{
+				if ((this._PRODUCT_NAME != value))
+				{
+					this._PRODUCT_NAME = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FLAVOR", DbType="VarChar(50)")]
+		public string FLAVOR
+		{
+			get
+			{
+				return this._FLAVOR;
+			}
+			set
+			{
+				if ((this._FLAVOR != value))
+				{
+					this._FLAVOR = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QUANTITY", DbType="Int")]
+		public System.Nullable<int> QUANTITY
+		{
+			get
+			{
+				return this._QUANTITY;
+			}
+			set
+			{
+				if ((this._QUANTITY != value))
+				{
+					this._QUANTITY = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UNIT_PRICE", DbType="Decimal(10,2)")]
+		public System.Nullable<decimal> UNIT_PRICE
+		{
+			get
+			{
+				return this._UNIT_PRICE;
+			}
+			set
+			{
+				if ((this._UNIT_PRICE != value))
+				{
+					this._UNIT_PRICE = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SUBTOTAL", DbType="Decimal(10,2)")]
+		public System.Nullable<decimal> SUBTOTAL
+		{
+			get
+			{
+				return this._SUBTOTAL;
+			}
+			set
+			{
+				if ((this._SUBTOTAL != value))
+				{
+					this._SUBTOTAL = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TOTAL_AMOUNT", DbType="Decimal(10,2)")]
+		public System.Nullable<decimal> TOTAL_AMOUNT
+		{
+			get
+			{
+				return this._TOTAL_AMOUNT;
+			}
+			set
+			{
+				if ((this._TOTAL_AMOUNT != value))
+				{
+					this._TOTAL_AMOUNT = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PAYMENT_METHOD", DbType="VarChar(50)")]
+		public string PAYMENT_METHOD
+		{
+			get
+			{
+				return this._PAYMENT_METHOD;
+			}
+			set
+			{
+				if ((this._PAYMENT_METHOD != value))
+				{
+					this._PAYMENT_METHOD = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AMOUNT_PAID", DbType="Decimal(10,2)")]
+		public System.Nullable<decimal> AMOUNT_PAID
+		{
+			get
+			{
+				return this._AMOUNT_PAID;
+			}
+			set
+			{
+				if ((this._AMOUNT_PAID != value))
+				{
+					this._AMOUNT_PAID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CHANGE_AMOUNT", DbType="Decimal(10,2)")]
+		public System.Nullable<decimal> CHANGE_AMOUNT
+		{
+			get
+			{
+				return this._CHANGE_AMOUNT;
+			}
+			set
+			{
+				if ((this._CHANGE_AMOUNT != value))
+				{
+					this._CHANGE_AMOUNT = value;
 				}
 			}
 		}

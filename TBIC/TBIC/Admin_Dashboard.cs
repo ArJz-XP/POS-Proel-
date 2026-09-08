@@ -35,8 +35,7 @@ namespace TBIC
 
         private void Admin_Dashboard_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'tBCI_ServerDataSet3.vw_Retrieve' table. You can move, or remove it, as needed.
-            this.vw_RetrieveTableAdapter2.Fill(this.tBCI_ServerDataSet3.vw_Retrieve);
+            
             txtSearchBoxAdmin.Font = new Font("FredokaSummer", 10, FontStyle.Bold);
             lblNumberOfEmployees.Font = new Font("FredokaSummer", 9, FontStyle.Bold);
             lblTotalEmployee.Font = new Font("FredokaSummer", 9, FontStyle.Bold);

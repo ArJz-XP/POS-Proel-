@@ -247,6 +247,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TBCI_ServerDataSet4.xsd</DependentUpon>
     </Compile>
+    <Compile Include="TBCI_ServerDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TBCI_ServerDataSet5.xsd</DependentUpon>
+    </Compile>
     <Compile Include="TBIC.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -349,6 +354,17 @@
     </None>
     <None Include="TBCI_ServerDataSet4.xss">
       <DependentUpon>TBCI_ServerDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="TBCI_ServerDataSet5.xsc">
+      <DependentUpon>TBCI_ServerDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="TBCI_ServerDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TBCI_ServerDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TBCI_ServerDataSet5.xss">
+      <DependentUpon>TBCI_ServerDataSet5.xsd</DependentUpon>
     </None>
     <None Include="TBIC.dbml.layout">
       <DependentUpon>TBIC.dbml</DependentUpon>

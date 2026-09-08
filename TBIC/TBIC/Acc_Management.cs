@@ -47,8 +47,8 @@ namespace TBIC
 
         private void Acc_Management_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'tBCI_ServerDataSet4.vw_Retrieve' table. You can move, or remove it, as needed.
-            this.vw_RetrieveTableAdapter1.Fill(this.tBCI_ServerDataSet4.vw_Retrieve);
+            // TODO: This line of code loads data into the 'tBCI_ServerDataSet5.vw_Retrieve' table. You can move, or remove it, as needed.
+            this.vw_RetrieveTableAdapter2.Fill(this.tBCI_ServerDataSet5.vw_Retrieve);
             TBICDataContext db = new TBICDataContext();
             dgvEmployeeEditor.DataSource = db.vw_Retrieves;
             btnDashBoardManage.Font = new Font("FredokaSummer", 9, FontStyle.Bold);

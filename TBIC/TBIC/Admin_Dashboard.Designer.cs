@@ -32,16 +32,6 @@
             this.picMaybedropboxAdmin = new System.Windows.Forms.PictureBox();
             this.txtSearchBoxAdmin = new System.Windows.Forms.TextBox();
             this.dgvRetrivalList = new System.Windows.Forms.DataGridView();
-            this.sTAFFIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sTAFFNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.uSERNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pASSWORDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rOLEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dEPARTMENTNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vwRetrieveBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.tBCI_ServerDataSet3 = new TBIC.TBCI_ServerDataSet3();
-            this.tBCI_ServerDataSet = new TBIC.TBCI_ServerDataSet();
-            this.tBCI_ServerDataSet1 = new TBIC.TBCI_ServerDataSet1();
             this.lblTotalEmployee = new System.Windows.Forms.Label();
             this.lblNumberOfEmployees = new System.Windows.Forms.Label();
             this.btnAdminDashboard = new System.Windows.Forms.Button();
@@ -52,14 +42,19 @@
             this.lblUsernameNumba = new System.Windows.Forms.Label();
             this.lblUserID = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
-            this.vw_RetrieveTableAdapter = new TBIC.TBCI_ServerDataSetTableAdapters.vw_RetrieveTableAdapter();
-            this.vw_RetrieveTableAdapter1 = new TBIC.TBCI_ServerDataSet1TableAdapters.vw_RetrieveTableAdapter();
             this.cmbDisplayType = new System.Windows.Forms.ComboBox();
-            this.vw_RetrieveTableAdapter2 = new TBIC.TBCI_ServerDataSet3TableAdapters.vw_RetrieveTableAdapter();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.ascendingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.descendingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.lblTheBiteof67 = new System.Windows.Forms.Label();
+            this.lblDuskGlasiers = new System.Windows.Forms.Label();
+            this.lblMidnightFest = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblAtlerEgo = new System.Windows.Forms.Label();
             this.lblDarkestRider = new System.Windows.Forms.Label();
@@ -100,29 +95,17 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.lblTheBiteof67 = new System.Windows.Forms.Label();
-            this.lblDuskGlasiers = new System.Windows.Forms.Label();
-            this.lblMidnightFest = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picMaybedropboxAdmin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRetrivalList)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vwRetrieveBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tBCI_ServerDataSet3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tBCI_ServerDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tBCI_ServerDataSet1)).BeginInit();
             this.panel1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
-            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // picMaybedropboxAdmin
@@ -130,10 +113,10 @@
             this.picMaybedropboxAdmin.BackColor = System.Drawing.Color.Transparent;
             this.picMaybedropboxAdmin.BackgroundImage = global::TBIC.Properties.Resources.PROEL2D_UI;
             this.picMaybedropboxAdmin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picMaybedropboxAdmin.Location = new System.Drawing.Point(512, 105);
-            this.picMaybedropboxAdmin.Margin = new System.Windows.Forms.Padding(2);
+            this.picMaybedropboxAdmin.Location = new System.Drawing.Point(683, 129);
+            this.picMaybedropboxAdmin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picMaybedropboxAdmin.Name = "picMaybedropboxAdmin";
-            this.picMaybedropboxAdmin.Size = new System.Drawing.Size(35, 31);
+            this.picMaybedropboxAdmin.Size = new System.Drawing.Size(47, 38);
             this.picMaybedropboxAdmin.TabIndex = 12;
             this.picMaybedropboxAdmin.TabStop = false;
             this.picMaybedropboxAdmin.Click += new System.EventHandler(this.picMaybedropboxAdmin_Click);
@@ -141,10 +124,11 @@
             // txtSearchBoxAdmin
             // 
             this.txtSearchBoxAdmin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSearchBoxAdmin.Location = new System.Drawing.Point(233, 105);
+            this.txtSearchBoxAdmin.Location = new System.Drawing.Point(311, 129);
+            this.txtSearchBoxAdmin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSearchBoxAdmin.Multiline = true;
             this.txtSearchBoxAdmin.Name = "txtSearchBoxAdmin";
-            this.txtSearchBoxAdmin.Size = new System.Drawing.Size(274, 31);
+            this.txtSearchBoxAdmin.Size = new System.Drawing.Size(365, 38);
             this.txtSearchBoxAdmin.TabIndex = 13;
             this.txtSearchBoxAdmin.Text = "Finding Magno";
             this.txtSearchBoxAdmin.TextChanged += new System.EventHandler(this.txtSearchBoxAdmin_TextChanged);
@@ -155,107 +139,26 @@
             this.dgvRetrivalList.AllowUserToDeleteRows = false;
             this.dgvRetrivalList.AllowUserToResizeColumns = false;
             this.dgvRetrivalList.AllowUserToResizeRows = false;
-            this.dgvRetrivalList.AutoGenerateColumns = false;
             this.dgvRetrivalList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dgvRetrivalList.BackgroundColor = System.Drawing.Color.White;
             this.dgvRetrivalList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRetrivalList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.sTAFFIDDataGridViewTextBoxColumn,
-            this.sTAFFNAMEDataGridViewTextBoxColumn,
-            this.uSERNAMEDataGridViewTextBoxColumn,
-            this.pASSWORDDataGridViewTextBoxColumn,
-            this.rOLEDataGridViewTextBoxColumn,
-            this.dEPARTMENTNAMEDataGridViewTextBoxColumn});
-            this.dgvRetrivalList.DataSource = this.vwRetrieveBindingSource3;
-            this.dgvRetrivalList.Location = new System.Drawing.Point(27, 205);
+            this.dgvRetrivalList.Location = new System.Drawing.Point(36, 252);
+            this.dgvRetrivalList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvRetrivalList.Name = "dgvRetrivalList";
             this.dgvRetrivalList.ReadOnly = true;
             this.dgvRetrivalList.RowHeadersWidth = 51;
             this.dgvRetrivalList.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.dgvRetrivalList.Size = new System.Drawing.Size(658, 372);
+            this.dgvRetrivalList.Size = new System.Drawing.Size(877, 458);
             this.dgvRetrivalList.TabIndex = 14;
-            // 
-            // sTAFFIDDataGridViewTextBoxColumn
-            // 
-            this.sTAFFIDDataGridViewTextBoxColumn.DataPropertyName = "STAFF_ID";
-            this.sTAFFIDDataGridViewTextBoxColumn.HeaderText = "STAFF_ID";
-            this.sTAFFIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.sTAFFIDDataGridViewTextBoxColumn.Name = "sTAFFIDDataGridViewTextBoxColumn";
-            this.sTAFFIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.sTAFFIDDataGridViewTextBoxColumn.Width = 82;
-            // 
-            // sTAFFNAMEDataGridViewTextBoxColumn
-            // 
-            this.sTAFFNAMEDataGridViewTextBoxColumn.DataPropertyName = "STAFF_NAME";
-            this.sTAFFNAMEDataGridViewTextBoxColumn.HeaderText = "STAFF_NAME";
-            this.sTAFFNAMEDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.sTAFFNAMEDataGridViewTextBoxColumn.Name = "sTAFFNAMEDataGridViewTextBoxColumn";
-            this.sTAFFNAMEDataGridViewTextBoxColumn.ReadOnly = true;
-            this.sTAFFNAMEDataGridViewTextBoxColumn.Width = 102;
-            // 
-            // uSERNAMEDataGridViewTextBoxColumn
-            // 
-            this.uSERNAMEDataGridViewTextBoxColumn.DataPropertyName = "USERNAME";
-            this.uSERNAMEDataGridViewTextBoxColumn.HeaderText = "USERNAME";
-            this.uSERNAMEDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.uSERNAMEDataGridViewTextBoxColumn.Name = "uSERNAMEDataGridViewTextBoxColumn";
-            this.uSERNAMEDataGridViewTextBoxColumn.ReadOnly = true;
-            this.uSERNAMEDataGridViewTextBoxColumn.Width = 93;
-            // 
-            // pASSWORDDataGridViewTextBoxColumn
-            // 
-            this.pASSWORDDataGridViewTextBoxColumn.DataPropertyName = "PASSWORD";
-            this.pASSWORDDataGridViewTextBoxColumn.HeaderText = "PASSWORD";
-            this.pASSWORDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.pASSWORDDataGridViewTextBoxColumn.Name = "pASSWORDDataGridViewTextBoxColumn";
-            this.pASSWORDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.pASSWORDDataGridViewTextBoxColumn.Width = 95;
-            // 
-            // rOLEDataGridViewTextBoxColumn
-            // 
-            this.rOLEDataGridViewTextBoxColumn.DataPropertyName = "ROLE";
-            this.rOLEDataGridViewTextBoxColumn.HeaderText = "ROLE";
-            this.rOLEDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.rOLEDataGridViewTextBoxColumn.Name = "rOLEDataGridViewTextBoxColumn";
-            this.rOLEDataGridViewTextBoxColumn.ReadOnly = true;
-            this.rOLEDataGridViewTextBoxColumn.Width = 61;
-            // 
-            // dEPARTMENTNAMEDataGridViewTextBoxColumn
-            // 
-            this.dEPARTMENTNAMEDataGridViewTextBoxColumn.DataPropertyName = "DEPARTMENT_NAME";
-            this.dEPARTMENTNAMEDataGridViewTextBoxColumn.HeaderText = "DEPARTMENT_NAME";
-            this.dEPARTMENTNAMEDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dEPARTMENTNAMEDataGridViewTextBoxColumn.Name = "dEPARTMENTNAMEDataGridViewTextBoxColumn";
-            this.dEPARTMENTNAMEDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dEPARTMENTNAMEDataGridViewTextBoxColumn.Width = 144;
-            // 
-            // vwRetrieveBindingSource3
-            // 
-            this.vwRetrieveBindingSource3.DataMember = "vw_Retrieve";
-            this.vwRetrieveBindingSource3.DataSource = this.tBCI_ServerDataSet3;
-            // 
-            // tBCI_ServerDataSet3
-            // 
-            this.tBCI_ServerDataSet3.DataSetName = "TBCI_ServerDataSet3";
-            this.tBCI_ServerDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tBCI_ServerDataSet
-            // 
-            this.tBCI_ServerDataSet.DataSetName = "TBCI_ServerDataSet";
-            this.tBCI_ServerDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tBCI_ServerDataSet1
-            // 
-            this.tBCI_ServerDataSet1.DataSetName = "TBCI_ServerDataSet1";
-            this.tBCI_ServerDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lblTotalEmployee
             // 
             this.lblTotalEmployee.AutoSize = true;
             this.lblTotalEmployee.BackColor = System.Drawing.Color.Transparent;
-            this.lblTotalEmployee.Location = new System.Drawing.Point(27, 596);
+            this.lblTotalEmployee.Location = new System.Drawing.Point(36, 734);
+            this.lblTotalEmployee.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotalEmployee.Name = "lblTotalEmployee";
-            this.lblTotalEmployee.Size = new System.Drawing.Size(116, 13);
+            this.lblTotalEmployee.Size = new System.Drawing.Size(142, 16);
             this.lblTotalEmployee.TabIndex = 15;
             this.lblTotalEmployee.Text = "TOTAL EMPLOYEES: ";
             // 
@@ -263,9 +166,10 @@
             // 
             this.lblNumberOfEmployees.AutoSize = true;
             this.lblNumberOfEmployees.BackColor = System.Drawing.Color.Transparent;
-            this.lblNumberOfEmployees.Location = new System.Drawing.Point(162, 596);
+            this.lblNumberOfEmployees.Location = new System.Drawing.Point(216, 734);
+            this.lblNumberOfEmployees.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNumberOfEmployees.Name = "lblNumberOfEmployees";
-            this.lblNumberOfEmployees.Size = new System.Drawing.Size(19, 13);
+            this.lblNumberOfEmployees.Size = new System.Drawing.Size(21, 16);
             this.lblNumberOfEmployees.TabIndex = 16;
             this.lblNumberOfEmployees.Text = "67";
             // 
@@ -276,9 +180,10 @@
             this.btnAdminDashboard.FlatAppearance.BorderSize = 0;
             this.btnAdminDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdminDashboard.Image = global::TBIC.Properties.Resources.DashboardBtnFixed;
-            this.btnAdminDashboard.Location = new System.Drawing.Point(1054, 117);
+            this.btnAdminDashboard.Location = new System.Drawing.Point(1405, 144);
+            this.btnAdminDashboard.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAdminDashboard.Name = "btnAdminDashboard";
-            this.btnAdminDashboard.Size = new System.Drawing.Size(223, 43);
+            this.btnAdminDashboard.Size = new System.Drawing.Size(297, 53);
             this.btnAdminDashboard.TabIndex = 17;
             this.btnAdminDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAdminDashboard.UseVisualStyleBackColor = false;
@@ -291,9 +196,10 @@
             this.btnAccManage.FlatAppearance.BorderSize = 0;
             this.btnAccManage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAccManage.Image = global::TBIC.Properties.Resources.AccManagementBtnFixed;
-            this.btnAccManage.Location = new System.Drawing.Point(1054, 181);
+            this.btnAccManage.Location = new System.Drawing.Point(1405, 223);
+            this.btnAccManage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAccManage.Name = "btnAccManage";
-            this.btnAccManage.Size = new System.Drawing.Size(223, 43);
+            this.btnAccManage.Size = new System.Drawing.Size(297, 53);
             this.btnAccManage.TabIndex = 18;
             this.btnAccManage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAccManage.UseVisualStyleBackColor = false;
@@ -308,9 +214,10 @@
             this.btnGoBack.FlatAppearance.BorderSize = 0;
             this.btnGoBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGoBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGoBack.Location = new System.Drawing.Point(1142, 596);
+            this.btnGoBack.Location = new System.Drawing.Point(1523, 734);
+            this.btnGoBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGoBack.Name = "btnGoBack";
-            this.btnGoBack.Size = new System.Drawing.Size(112, 34);
+            this.btnGoBack.Size = new System.Drawing.Size(149, 42);
             this.btnGoBack.TabIndex = 19;
             this.btnGoBack.Text = "LOGOUT";
             this.btnGoBack.UseVisualStyleBackColor = false;
@@ -323,88 +230,83 @@
             this.panel1.Controls.Add(this.lblUsernameNumba);
             this.panel1.Controls.Add(this.lblUserID);
             this.panel1.Controls.Add(this.lblUsername);
-            this.panel1.Location = new System.Drawing.Point(1120, 15);
+            this.panel1.Location = new System.Drawing.Point(1493, 18);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(118, 28);
+            this.panel1.Size = new System.Drawing.Size(157, 34);
             this.panel1.TabIndex = 20;
             // 
             // lblIDs
             // 
             this.lblIDs.AutoSize = true;
-            this.lblIDs.Location = new System.Drawing.Point(20, 14);
+            this.lblIDs.Location = new System.Drawing.Point(27, 17);
+            this.lblIDs.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIDs.Name = "lblIDs";
-            this.lblIDs.Size = new System.Drawing.Size(21, 13);
+            this.lblIDs.Size = new System.Drawing.Size(23, 16);
             this.lblIDs.TabIndex = 14;
             this.lblIDs.Text = "ID:";
             // 
             // lblUsernameNumba
             // 
             this.lblUsernameNumba.AutoSize = true;
-            this.lblUsernameNumba.Location = new System.Drawing.Point(9, 2);
+            this.lblUsernameNumba.Location = new System.Drawing.Point(12, 2);
+            this.lblUsernameNumba.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUsernameNumba.Name = "lblUsernameNumba";
-            this.lblUsernameNumba.Size = new System.Drawing.Size(32, 13);
+            this.lblUsernameNumba.Size = new System.Drawing.Size(39, 16);
             this.lblUsernameNumba.TabIndex = 13;
             this.lblUsernameNumba.Text = "User:";
             // 
             // lblUserID
             // 
             this.lblUserID.AutoSize = true;
-            this.lblUserID.Location = new System.Drawing.Point(41, 14);
+            this.lblUserID.Location = new System.Drawing.Point(55, 17);
+            this.lblUserID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUserID.Name = "lblUserID";
-            this.lblUserID.Size = new System.Drawing.Size(19, 13);
+            this.lblUserID.Size = new System.Drawing.Size(21, 16);
             this.lblUserID.TabIndex = 12;
             this.lblUserID.Text = "69";
             // 
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
-            this.lblUsername.Location = new System.Drawing.Point(41, 2);
+            this.lblUsername.Location = new System.Drawing.Point(55, 2);
+            this.lblUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(22, 13);
+            this.lblUsername.Size = new System.Drawing.Size(26, 16);
             this.lblUsername.TabIndex = 11;
             this.lblUsername.Text = "Me";
-            // 
-            // vw_RetrieveTableAdapter
-            // 
-            this.vw_RetrieveTableAdapter.ClearBeforeFill = true;
-            // 
-            // vw_RetrieveTableAdapter1
-            // 
-            this.vw_RetrieveTableAdapter1.ClearBeforeFill = true;
             // 
             // cmbDisplayType
             // 
             this.cmbDisplayType.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbDisplayType.FormattingEnabled = true;
-            this.cmbDisplayType.Location = new System.Drawing.Point(710, 591);
+            this.cmbDisplayType.Location = new System.Drawing.Point(947, 727);
+            this.cmbDisplayType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbDisplayType.Name = "cmbDisplayType";
-            this.cmbDisplayType.Size = new System.Drawing.Size(154, 26);
+            this.cmbDisplayType.Size = new System.Drawing.Size(204, 32);
             this.cmbDisplayType.TabIndex = 22;
             this.cmbDisplayType.Text = "UNITS";
             // 
-            // vw_RetrieveTableAdapter2
-            // 
-            this.vw_RetrieveTableAdapter2.ClearBeforeFill = true;
-            // 
             // contextMenuStrip1
             // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ascendingToolStripMenuItem,
             this.descendingToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(137, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(157, 52);
             // 
             // ascendingToolStripMenuItem
             // 
             this.ascendingToolStripMenuItem.Name = "ascendingToolStripMenuItem";
-            this.ascendingToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.ascendingToolStripMenuItem.Size = new System.Drawing.Size(156, 24);
             this.ascendingToolStripMenuItem.Text = "Ascending";
             this.ascendingToolStripMenuItem.Click += new System.EventHandler(this.ascendingToolStripMenuItem_Click);
             // 
             // descendingToolStripMenuItem
             // 
             this.descendingToolStripMenuItem.Name = "descendingToolStripMenuItem";
-            this.descendingToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.descendingToolStripMenuItem.Size = new System.Drawing.Size(156, 24);
             this.descendingToolStripMenuItem.Text = "Descending";
             this.descendingToolStripMenuItem.Click += new System.EventHandler(this.descendingToolStripMenuItem_Click);
             // 
@@ -419,10 +321,104 @@
             this.flowLayoutPanel1.Controls.Add(this.panel4);
             this.flowLayoutPanel1.Controls.Add(this.panel5);
             this.flowLayoutPanel1.Controls.Add(this.panel6);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(715, 204);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(953, 251);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(294, 374);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(391, 460);
             this.flowLayoutPanel1.TabIndex = 23;
+            // 
+            // panel7
+            // 
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.lblTheBiteof67);
+            this.panel7.Controls.Add(this.lblDuskGlasiers);
+            this.panel7.Controls.Add(this.lblMidnightFest);
+            this.panel7.Controls.Add(this.label24);
+            this.panel7.Controls.Add(this.label25);
+            this.panel7.Controls.Add(this.label26);
+            this.panel7.Controls.Add(this.label27);
+            this.panel7.Location = new System.Drawing.Point(4, 4);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(367, 114);
+            this.panel7.TabIndex = 11;
+            // 
+            // lblTheBiteof67
+            // 
+            this.lblTheBiteof67.AutoSize = true;
+            this.lblTheBiteof67.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTheBiteof67.Location = new System.Drawing.Point(232, 80);
+            this.lblTheBiteof67.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTheBiteof67.Name = "lblTheBiteof67";
+            this.lblTheBiteof67.Size = new System.Drawing.Size(28, 17);
+            this.lblTheBiteof67.TabIndex = 6;
+            this.lblTheBiteof67.Text = "XX";
+            // 
+            // lblDuskGlasiers
+            // 
+            this.lblDuskGlasiers.AutoSize = true;
+            this.lblDuskGlasiers.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDuskGlasiers.Location = new System.Drawing.Point(232, 59);
+            this.lblDuskGlasiers.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDuskGlasiers.Name = "lblDuskGlasiers";
+            this.lblDuskGlasiers.Size = new System.Drawing.Size(28, 17);
+            this.lblDuskGlasiers.TabIndex = 5;
+            this.lblDuskGlasiers.Text = "XX";
+            // 
+            // lblMidnightFest
+            // 
+            this.lblMidnightFest.AutoSize = true;
+            this.lblMidnightFest.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMidnightFest.Location = new System.Drawing.Point(232, 37);
+            this.lblMidnightFest.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMidnightFest.Name = "lblMidnightFest";
+            this.lblMidnightFest.Size = new System.Drawing.Size(28, 17);
+            this.lblMidnightFest.TabIndex = 4;
+            this.lblMidnightFest.Text = "XX";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(96, 80);
+            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(132, 17);
+            this.label24.TabIndex = 3;
+            this.label24.Text = "THE BITE OF 67:";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(91, 59);
+            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(136, 17);
+            this.label25.TabIndex = 2;
+            this.label25.Text = "DUSK GLASIERS:";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(92, 37);
+            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(132, 17);
+            this.label26.TabIndex = 1;
+            this.label26.Text = "MIDNIGHT FEST:";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(4, 4);
+            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(47, 20);
+            this.label27.TabIndex = 0;
+            this.label27.Text = "UBE";
             // 
             // panel2
             // 
@@ -434,78 +430,86 @@
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(3, 102);
+            this.panel2.Location = new System.Drawing.Point(4, 126);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(276, 93);
+            this.panel2.Size = new System.Drawing.Size(367, 114);
             this.panel2.TabIndex = 0;
             // 
             // lblAtlerEgo
             // 
             this.lblAtlerEgo.AutoSize = true;
-            this.lblAtlerEgo.Font = new System.Drawing.Font("Montserrat Subrayada", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAtlerEgo.Location = new System.Drawing.Point(174, 65);
+            this.lblAtlerEgo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAtlerEgo.Location = new System.Drawing.Point(232, 80);
+            this.lblAtlerEgo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAtlerEgo.Name = "lblAtlerEgo";
-            this.lblAtlerEgo.Size = new System.Drawing.Size(23, 14);
+            this.lblAtlerEgo.Size = new System.Drawing.Size(28, 17);
             this.lblAtlerEgo.TabIndex = 6;
             this.lblAtlerEgo.Text = "XX";
             // 
             // lblDarkestRider
             // 
             this.lblDarkestRider.AutoSize = true;
-            this.lblDarkestRider.Font = new System.Drawing.Font("Montserrat Subrayada", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDarkestRider.Location = new System.Drawing.Point(174, 48);
+            this.lblDarkestRider.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDarkestRider.Location = new System.Drawing.Point(232, 59);
+            this.lblDarkestRider.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDarkestRider.Name = "lblDarkestRider";
-            this.lblDarkestRider.Size = new System.Drawing.Size(23, 14);
+            this.lblDarkestRider.Size = new System.Drawing.Size(28, 17);
             this.lblDarkestRider.TabIndex = 5;
             this.lblDarkestRider.Text = "XX";
             // 
             // lblMiniMadness
             // 
             this.lblMiniMadness.AutoSize = true;
-            this.lblMiniMadness.Font = new System.Drawing.Font("Montserrat Subrayada", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMiniMadness.Location = new System.Drawing.Point(174, 30);
+            this.lblMiniMadness.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMiniMadness.Location = new System.Drawing.Point(232, 37);
+            this.lblMiniMadness.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMiniMadness.Name = "lblMiniMadness";
-            this.lblMiniMadness.Size = new System.Drawing.Size(23, 14);
+            this.lblMiniMadness.Size = new System.Drawing.Size(28, 17);
             this.lblMiniMadness.TabIndex = 4;
             this.lblMiniMadness.Text = "XX";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Montserrat Subrayada", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(96, 65);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(128, 80);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 14);
+            this.label4.Size = new System.Drawing.Size(102, 17);
             this.label4.TabIndex = 3;
             this.label4.Text = "ALTER EGO:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Montserrat Subrayada", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(65, 48);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(87, 59);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 14);
+            this.label3.Size = new System.Drawing.Size(137, 17);
             this.label3.TabIndex = 2;
             this.label3.Text = "DARKEST RIDER:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Montserrat Subrayada", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(71, 30);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(95, 37);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 14);
+            this.label2.Size = new System.Drawing.Size(123, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "MINI MADNESS:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Montserrat Subrayada", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 3);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(4, 4);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 16);
+            this.label1.Size = new System.Drawing.Size(177, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "MAGNO\'S SPECIAL";
             // 
@@ -519,78 +523,86 @@
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.label11);
-            this.panel3.Location = new System.Drawing.Point(3, 201);
+            this.panel3.Location = new System.Drawing.Point(4, 248);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(276, 93);
+            this.panel3.Size = new System.Drawing.Size(367, 114);
             this.panel3.TabIndex = 7;
             // 
             // lblTasteofDnD
             // 
             this.lblTasteofDnD.AutoSize = true;
-            this.lblTasteofDnD.Font = new System.Drawing.Font("Montserrat Subrayada", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTasteofDnD.Location = new System.Drawing.Point(174, 65);
+            this.lblTasteofDnD.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTasteofDnD.Location = new System.Drawing.Point(232, 80);
+            this.lblTasteofDnD.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTasteofDnD.Name = "lblTasteofDnD";
-            this.lblTasteofDnD.Size = new System.Drawing.Size(23, 14);
+            this.lblTasteofDnD.Size = new System.Drawing.Size(28, 17);
             this.lblTasteofDnD.TabIndex = 6;
             this.lblTasteofDnD.Text = "XX";
             // 
             // lblTheBiningging
             // 
             this.lblTheBiningging.AutoSize = true;
-            this.lblTheBiningging.Font = new System.Drawing.Font("Montserrat Subrayada", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTheBiningging.Location = new System.Drawing.Point(174, 48);
+            this.lblTheBiningging.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTheBiningging.Location = new System.Drawing.Point(232, 59);
+            this.lblTheBiningging.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTheBiningging.Name = "lblTheBiningging";
-            this.lblTheBiningging.Size = new System.Drawing.Size(23, 14);
+            this.lblTheBiningging.Size = new System.Drawing.Size(28, 17);
             this.lblTheBiningging.TabIndex = 5;
             this.lblTheBiningging.Text = "XX";
             // 
             // lblSnowcone
             // 
             this.lblSnowcone.AutoSize = true;
-            this.lblSnowcone.Font = new System.Drawing.Font("Montserrat Subrayada", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSnowcone.Location = new System.Drawing.Point(174, 30);
+            this.lblSnowcone.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSnowcone.Location = new System.Drawing.Point(232, 37);
+            this.lblSnowcone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSnowcone.Name = "lblSnowcone";
-            this.lblSnowcone.Size = new System.Drawing.Size(23, 14);
+            this.lblSnowcone.Size = new System.Drawing.Size(28, 17);
             this.lblSnowcone.TabIndex = 4;
             this.lblSnowcone.Text = "XX";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Montserrat Subrayada", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(51, 65);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(68, 80);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(117, 14);
+            this.label8.Size = new System.Drawing.Size(153, 17);
             this.label8.TabIndex = 3;
             this.label8.Text = "TASTE OF D and D:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Montserrat Subrayada", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(62, 48);
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(83, 59);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(106, 14);
+            this.label9.Size = new System.Drawing.Size(140, 17);
             this.label9.TabIndex = 2;
             this.label9.Text = "THE BININGGING:";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Montserrat Subrayada", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(89, 30);
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(119, 37);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(79, 14);
+            this.label10.Size = new System.Drawing.Size(103, 17);
             this.label10.TabIndex = 1;
             this.label10.Text = "SNOWCONE:";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Montserrat Subrayada", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(3, 3);
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(4, 4);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(64, 16);
+            this.label11.Size = new System.Drawing.Size(85, 20);
             this.label11.TabIndex = 0;
             this.label11.Text = "VANILLA";
             // 
@@ -604,78 +616,86 @@
             this.panel4.Controls.Add(this.label13);
             this.panel4.Controls.Add(this.label14);
             this.panel4.Controls.Add(this.label15);
-            this.panel4.Location = new System.Drawing.Point(3, 300);
+            this.panel4.Location = new System.Drawing.Point(4, 370);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(276, 93);
+            this.panel4.Size = new System.Drawing.Size(367, 114);
             this.panel4.TabIndex = 8;
             // 
             // lblCaramelKiss
             // 
             this.lblCaramelKiss.AutoSize = true;
-            this.lblCaramelKiss.Font = new System.Drawing.Font("Montserrat Subrayada", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCaramelKiss.Location = new System.Drawing.Point(174, 65);
+            this.lblCaramelKiss.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCaramelKiss.Location = new System.Drawing.Point(232, 80);
+            this.lblCaramelKiss.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCaramelKiss.Name = "lblCaramelKiss";
-            this.lblCaramelKiss.Size = new System.Drawing.Size(23, 14);
+            this.lblCaramelKiss.Size = new System.Drawing.Size(28, 17);
             this.lblCaramelKiss.TabIndex = 6;
             this.lblCaramelKiss.Text = "XX";
             // 
             // lblChocoKiss
             // 
             this.lblChocoKiss.AutoSize = true;
-            this.lblChocoKiss.Font = new System.Drawing.Font("Montserrat Subrayada", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblChocoKiss.Location = new System.Drawing.Point(174, 48);
+            this.lblChocoKiss.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChocoKiss.Location = new System.Drawing.Point(232, 59);
+            this.lblChocoKiss.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblChocoKiss.Name = "lblChocoKiss";
-            this.lblChocoKiss.Size = new System.Drawing.Size(23, 14);
+            this.lblChocoKiss.Size = new System.Drawing.Size(28, 17);
             this.lblChocoKiss.TabIndex = 5;
             this.lblChocoKiss.Text = "XX";
             // 
             // lblPureChoco
             // 
             this.lblPureChoco.AutoSize = true;
-            this.lblPureChoco.Font = new System.Drawing.Font("Montserrat Subrayada", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPureChoco.Location = new System.Drawing.Point(174, 30);
+            this.lblPureChoco.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPureChoco.Location = new System.Drawing.Point(232, 37);
+            this.lblPureChoco.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPureChoco.Name = "lblPureChoco";
-            this.lblPureChoco.Size = new System.Drawing.Size(23, 14);
+            this.lblPureChoco.Size = new System.Drawing.Size(28, 17);
             this.lblPureChoco.TabIndex = 4;
             this.lblPureChoco.Text = "XX";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Montserrat Subrayada", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(74, 65);
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(99, 80);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(94, 14);
+            this.label12.Size = new System.Drawing.Size(124, 17);
             this.label12.TabIndex = 3;
             this.label12.Text = "CARAMEL KISS:";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Montserrat Subrayada", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(87, 48);
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(116, 59);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(81, 14);
+            this.label13.Size = new System.Drawing.Size(107, 17);
             this.label13.TabIndex = 2;
             this.label13.Text = "CHOCO KISS:";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Montserrat Subrayada", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(56, 30);
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(75, 37);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(112, 14);
+            this.label14.Size = new System.Drawing.Size(154, 17);
             this.label14.TabIndex = 1;
             this.label14.Text = "PURE CHOCOLATE:";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Montserrat Subrayada", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(3, 3);
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(4, 4);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(120, 16);
+            this.label15.Size = new System.Drawing.Size(171, 20);
             this.label15.TabIndex = 0;
             this.label15.Text = "HERSEY\'S KISSES";
             // 
@@ -689,78 +709,86 @@
             this.panel5.Controls.Add(this.label17);
             this.panel5.Controls.Add(this.label18);
             this.panel5.Controls.Add(this.label19);
-            this.panel5.Location = new System.Drawing.Point(3, 399);
+            this.panel5.Location = new System.Drawing.Point(4, 492);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(276, 93);
+            this.panel5.Size = new System.Drawing.Size(367, 114);
             this.panel5.TabIndex = 9;
             // 
             // lblCookiesAndChunks
             // 
             this.lblCookiesAndChunks.AutoSize = true;
-            this.lblCookiesAndChunks.Font = new System.Drawing.Font("Montserrat Subrayada", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCookiesAndChunks.Location = new System.Drawing.Point(174, 65);
+            this.lblCookiesAndChunks.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCookiesAndChunks.Location = new System.Drawing.Point(232, 80);
+            this.lblCookiesAndChunks.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCookiesAndChunks.Name = "lblCookiesAndChunks";
-            this.lblCookiesAndChunks.Size = new System.Drawing.Size(23, 14);
+            this.lblCookiesAndChunks.Size = new System.Drawing.Size(28, 17);
             this.lblCookiesAndChunks.TabIndex = 6;
             this.lblCookiesAndChunks.Text = "XX";
             // 
             // lblTidbitsGalore
             // 
             this.lblTidbitsGalore.AutoSize = true;
-            this.lblTidbitsGalore.Font = new System.Drawing.Font("Montserrat Subrayada", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTidbitsGalore.Location = new System.Drawing.Point(174, 48);
+            this.lblTidbitsGalore.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTidbitsGalore.Location = new System.Drawing.Point(232, 59);
+            this.lblTidbitsGalore.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTidbitsGalore.Name = "lblTidbitsGalore";
-            this.lblTidbitsGalore.Size = new System.Drawing.Size(23, 14);
+            this.lblTidbitsGalore.Size = new System.Drawing.Size(28, 17);
             this.lblTidbitsGalore.TabIndex = 5;
             this.lblTidbitsGalore.Text = "XX";
             // 
             // lblGrahamMountain
             // 
             this.lblGrahamMountain.AutoSize = true;
-            this.lblGrahamMountain.Font = new System.Drawing.Font("Montserrat Subrayada", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGrahamMountain.Location = new System.Drawing.Point(174, 30);
+            this.lblGrahamMountain.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGrahamMountain.Location = new System.Drawing.Point(232, 37);
+            this.lblGrahamMountain.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGrahamMountain.Name = "lblGrahamMountain";
-            this.lblGrahamMountain.Size = new System.Drawing.Size(23, 14);
+            this.lblGrahamMountain.Size = new System.Drawing.Size(28, 17);
             this.lblGrahamMountain.TabIndex = 4;
             this.lblGrahamMountain.Text = "XX";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Montserrat Subrayada", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(27, 65);
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(36, 80);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(142, 14);
+            this.label16.Size = new System.Drawing.Size(186, 17);
             this.label16.TabIndex = 3;
             this.label16.Text = "COOKIES AND CHUNKS:";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Montserrat Subrayada", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(64, 48);
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(85, 59);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(105, 14);
+            this.label17.Size = new System.Drawing.Size(141, 17);
             this.label17.TabIndex = 2;
             this.label17.Text = "TIDBITS GALORE:";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Montserrat Subrayada", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(42, 30);
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(56, 37);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(126, 14);
+            this.label18.Size = new System.Drawing.Size(165, 17);
             this.label18.TabIndex = 1;
             this.label18.Text = "GRAHAM MOUNTAIN:";
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Montserrat Subrayada", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(3, 3);
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(4, 4);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(61, 16);
+            this.label19.Size = new System.Drawing.Size(77, 20);
             this.label19.TabIndex = 0;
             this.label19.Text = "MANGO";
             // 
@@ -774,173 +802,96 @@
             this.panel6.Controls.Add(this.label21);
             this.panel6.Controls.Add(this.label22);
             this.panel6.Controls.Add(this.label23);
-            this.panel6.Location = new System.Drawing.Point(3, 498);
+            this.panel6.Location = new System.Drawing.Point(4, 614);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(276, 93);
+            this.panel6.Size = new System.Drawing.Size(367, 114);
             this.panel6.TabIndex = 10;
             // 
             // lblGreenAvalanche
             // 
             this.lblGreenAvalanche.AutoSize = true;
-            this.lblGreenAvalanche.Font = new System.Drawing.Font("Montserrat Subrayada", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGreenAvalanche.Location = new System.Drawing.Point(174, 65);
+            this.lblGreenAvalanche.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGreenAvalanche.Location = new System.Drawing.Point(232, 80);
+            this.lblGreenAvalanche.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGreenAvalanche.Name = "lblGreenAvalanche";
-            this.lblGreenAvalanche.Size = new System.Drawing.Size(23, 14);
+            this.lblGreenAvalanche.Size = new System.Drawing.Size(28, 17);
             this.lblGreenAvalanche.TabIndex = 6;
             this.lblGreenAvalanche.Text = "XX";
             // 
             // lblSweetandRipeExpress
             // 
             this.lblSweetandRipeExpress.AutoSize = true;
-            this.lblSweetandRipeExpress.Font = new System.Drawing.Font("Montserrat Subrayada", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSweetandRipeExpress.Location = new System.Drawing.Point(174, 48);
+            this.lblSweetandRipeExpress.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSweetandRipeExpress.Location = new System.Drawing.Point(232, 59);
+            this.lblSweetandRipeExpress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSweetandRipeExpress.Name = "lblSweetandRipeExpress";
-            this.lblSweetandRipeExpress.Size = new System.Drawing.Size(23, 14);
+            this.lblSweetandRipeExpress.Size = new System.Drawing.Size(28, 17);
             this.lblSweetandRipeExpress.TabIndex = 5;
             this.lblSweetandRipeExpress.Text = "XX";
             // 
             // lblLimeFestCombo
             // 
             this.lblLimeFestCombo.AutoSize = true;
-            this.lblLimeFestCombo.Font = new System.Drawing.Font("Montserrat Subrayada", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLimeFestCombo.Location = new System.Drawing.Point(174, 30);
+            this.lblLimeFestCombo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLimeFestCombo.Location = new System.Drawing.Point(232, 37);
+            this.lblLimeFestCombo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLimeFestCombo.Name = "lblLimeFestCombo";
-            this.lblLimeFestCombo.Size = new System.Drawing.Size(23, 14);
+            this.lblLimeFestCombo.Size = new System.Drawing.Size(28, 17);
             this.lblLimeFestCombo.TabIndex = 4;
             this.lblLimeFestCombo.Text = "XX";
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Montserrat Subrayada", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(47, 65);
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(63, 80);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(122, 14);
+            this.label20.Size = new System.Drawing.Size(163, 17);
             this.label20.TabIndex = 3;
             this.label20.Text = "GREEN AVALANCHE:";
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Montserrat Subrayada", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(8, 48);
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(11, 59);
+            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(161, 14);
+            this.label21.Size = new System.Drawing.Size(220, 17);
             this.label21.TabIndex = 2;
             this.label21.Text = "SWEET AND RIPE EXPRESS:";
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Montserrat Subrayada", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(53, 30);
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(71, 37);
+            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(116, 14);
+            this.label22.Size = new System.Drawing.Size(153, 17);
             this.label22.TabIndex = 1;
             this.label22.Text = "LIMA FEST COMBO:";
             // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Montserrat Subrayada", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(3, 3);
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(4, 4);
+            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(77, 16);
+            this.label23.Size = new System.Drawing.Size(100, 20);
             this.label23.TabIndex = 0;
             this.label23.Text = "AVODACO";
             // 
-            // panel7
-            // 
-            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Controls.Add(this.lblTheBiteof67);
-            this.panel7.Controls.Add(this.lblDuskGlasiers);
-            this.panel7.Controls.Add(this.lblMidnightFest);
-            this.panel7.Controls.Add(this.label24);
-            this.panel7.Controls.Add(this.label25);
-            this.panel7.Controls.Add(this.label26);
-            this.panel7.Controls.Add(this.label27);
-            this.panel7.Location = new System.Drawing.Point(3, 3);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(276, 93);
-            this.panel7.TabIndex = 11;
-            // 
-            // lblTheBiteof67
-            // 
-            this.lblTheBiteof67.AutoSize = true;
-            this.lblTheBiteof67.Font = new System.Drawing.Font("Montserrat Subrayada", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTheBiteof67.Location = new System.Drawing.Point(174, 65);
-            this.lblTheBiteof67.Name = "lblTheBiteof67";
-            this.lblTheBiteof67.Size = new System.Drawing.Size(23, 14);
-            this.lblTheBiteof67.TabIndex = 6;
-            this.lblTheBiteof67.Text = "XX";
-            // 
-            // lblDuskGlasiers
-            // 
-            this.lblDuskGlasiers.AutoSize = true;
-            this.lblDuskGlasiers.Font = new System.Drawing.Font("Montserrat Subrayada", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDuskGlasiers.Location = new System.Drawing.Point(174, 48);
-            this.lblDuskGlasiers.Name = "lblDuskGlasiers";
-            this.lblDuskGlasiers.Size = new System.Drawing.Size(23, 14);
-            this.lblDuskGlasiers.TabIndex = 5;
-            this.lblDuskGlasiers.Text = "XX";
-            // 
-            // lblMidnightFest
-            // 
-            this.lblMidnightFest.AutoSize = true;
-            this.lblMidnightFest.Font = new System.Drawing.Font("Montserrat Subrayada", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMidnightFest.Location = new System.Drawing.Point(174, 30);
-            this.lblMidnightFest.Name = "lblMidnightFest";
-            this.lblMidnightFest.Size = new System.Drawing.Size(23, 14);
-            this.lblMidnightFest.TabIndex = 4;
-            this.lblMidnightFest.Text = "XX";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Montserrat Subrayada", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(72, 65);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(96, 14);
-            this.label24.TabIndex = 3;
-            this.label24.Text = "THE BITE OF 67:";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Montserrat Subrayada", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(68, 48);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(100, 14);
-            this.label25.TabIndex = 2;
-            this.label25.Text = "DUSK GLASIERS:";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Montserrat Subrayada", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(69, 30);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(99, 14);
-            this.label26.TabIndex = 1;
-            this.label26.Text = "MIDNIGHT FEST:";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Montserrat Subrayada", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(3, 3);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(35, 16);
-            this.label27.TabIndex = 0;
-            this.label27.Text = "UBE";
-            // 
             // Admin_Dashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::TBIC.Properties.Resources.ADMINDashboardi3;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1264, 641);
+            this.ClientSize = new System.Drawing.Size(1685, 789);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.cmbDisplayType);
             this.Controls.Add(this.panel1);
@@ -952,20 +903,19 @@
             this.Controls.Add(this.dgvRetrivalList);
             this.Controls.Add(this.txtSearchBoxAdmin);
             this.Controls.Add(this.picMaybedropboxAdmin);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Admin_Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin_Dashboard";
             this.Load += new System.EventHandler(this.Admin_Dashboard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picMaybedropboxAdmin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRetrivalList)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vwRetrieveBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tBCI_ServerDataSet3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tBCI_ServerDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tBCI_ServerDataSet1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.contextMenuStrip1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -976,8 +926,6 @@
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -998,20 +946,7 @@
         private System.Windows.Forms.Label lblUsernameNumba;
         private System.Windows.Forms.Label lblUserID;
         private System.Windows.Forms.Label lblUsername;
-        private TBCI_ServerDataSet tBCI_ServerDataSet;
-        private TBCI_ServerDataSetTableAdapters.vw_RetrieveTableAdapter vw_RetrieveTableAdapter;
-        private TBCI_ServerDataSet1 tBCI_ServerDataSet1;
-        private TBCI_ServerDataSet1TableAdapters.vw_RetrieveTableAdapter vw_RetrieveTableAdapter1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sTAFFIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sTAFFNAMEDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn uSERNAMEDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pASSWORDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rOLEDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dEPARTMENTNAMEDataGridViewTextBoxColumn;
         private System.Windows.Forms.ComboBox cmbDisplayType;
-        private TBCI_ServerDataSet3 tBCI_ServerDataSet3;
-        private System.Windows.Forms.BindingSource vwRetrieveBindingSource3;
-        private TBCI_ServerDataSet3TableAdapters.vw_RetrieveTableAdapter vw_RetrieveTableAdapter2;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem ascendingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem descendingToolStripMenuItem;

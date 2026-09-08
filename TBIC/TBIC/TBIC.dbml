@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="TBCI Server" Class="TBICDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-MQMD640;Initial Catalog=&quot;TBCI Server&quot;;Integrated Security=True;Trust Server Certificate=True" SettingsObjectName="TBIC.Properties.Settings" SettingsPropertyName="TBCI_ServerConnectionString1" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=NEKOARJZ\SQLEXPRESS;Initial Catalog=&quot;TBCI Server&quot;;Integrated Security=True;Encrypt=True;Trust Server Certificate=True" SettingsObjectName="TBIC.Properties.Settings" SettingsPropertyName="TBCI_ServerConnectionString2" Provider="System.Data.SqlClient" />
   <Table Name="dbo.DEPARTMENT" Member="DEPARTMENTs">
     <Type Name="DEPARTMENT">
       <Column Name="DEPARTMENT_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -93,5 +93,34 @@
     <Parameter Name="USERNAME" Parameter="uSERNAME" Type="System.String" DbType="NVarChar(50)" />
     <Parameter Name="PASSWORD" Parameter="pASSWORD" Type="System.String" DbType="NVarChar(100)" />
     <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ADD_SALES_HISTORY" Method="ADD_SALES_HISTORY">
+    <Parameter Name="STAFF_ID" Parameter="sTAFF_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PRODUCT_ID" Parameter="pRODUCT_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="QUANTITY" Parameter="qUANTITY" Type="System.Int32" DbType="Int" />
+    <Parameter Name="UNIT_PRICE" Parameter="uNIT_PRICE" Type="System.Decimal" DbType="Decimal(10,2)" />
+    <Parameter Name="TOTAL_AMOUNT" Parameter="tOTAL_AMOUNT" Type="System.Decimal" DbType="Decimal(10,2)" />
+    <Parameter Name="PAYMENT_METHOD" Parameter="pAYMENT_METHOD" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="AMOUNT_PAID" Parameter="aMOUNT_PAID" Type="System.Decimal" DbType="Decimal(10,2)" />
+    <Parameter Name="CHANGE_AMOUNT" Parameter="cHANGE_AMOUNT" Type="System.Decimal" DbType="Decimal(10,2)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.RETRIEVE_SALES_HISTORY" Method="RETRIEVE_SALES_HISTORY">
+    <ElementType Name="RETRIEVE_SALES_HISTORYResult">
+      <Column Name="SALES_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="STAFF_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="STAFF_NAME" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="SALES_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PRODUCT_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PRODUCT_NAME" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="FLAVOR" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="QUANTITY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UNIT_PRICE" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="SUBTOTAL" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="TOTAL_AMOUNT" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="PAYMENT_METHOD" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="AMOUNT_PAID" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="CHANGE_AMOUNT" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+    </ElementType>
   </Function>
 </Database>
