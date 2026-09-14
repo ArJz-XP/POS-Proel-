@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\ArJz\\Desktop\\POS-Proel-\\TBIC\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|C:\\Users\\ArJz\\Desktop\\POS-Proel-\\TBIC\\tbic\\tbic.dbml||{B465B5AD-8799-4507-B90A-EE29ACF36AF9}|",
+      "AbsoluteMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|c:\\users\\arjz\\desktop\\pos-proel-\\tbic\\tbic\\tbic.dbml||{B465B5AD-8799-4507-B90A-EE29ACF36AF9}|",
       "RelativeMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|solutionrelative:tbic\\tbic.dbml||{B465B5AD-8799-4507-B90A-EE29ACF36AF9}|"
     },
     {
@@ -35,7 +35,7 @@
       "RelativeMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|solutionrelative:tbic\\loading_screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|c:\\users\\arjz\\desktop\\pos-proel-\\tbic\\tbic\\transactionhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|C:\\Users\\ArJz\\Desktop\\POS-Proel-\\TBIC\\tbic\\transactionhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|solutionrelative:tbic\\transactionhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -110,8 +110,7 @@
               "RelativeToolTip": "TBIC\\TransactionHistory.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAEwBwAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-07T13:52:55.101Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-07T13:52:55.101Z"
             },
             {
               "$type": "Document",
@@ -122,8 +121,7 @@
               "ToolTip": "C:\\Users\\ArJz\\Desktop\\POS-Proel-\\TBIC\\TBIC\\TransactionHistory.cs [Design]",
               "RelativeToolTip": "TBIC\\TransactionHistory.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-04T08:05:52.392Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-09-04T08:05:52.392Z"
             },
             {
               "$type": "Document",
@@ -170,8 +168,7 @@
               "RelativeToolTip": "TBIC\\App.config",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2026-08-29T08:57:44.475Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-29T08:57:44.475Z"
             },
             {
               "$type": "Document",
@@ -217,8 +214,7 @@
               "ToolTip": "C:\\Users\\ArJz\\Desktop\\POS-Proel-\\TBIC\\TBIC\\Admin_Dashboard.cs [Design]",
               "RelativeToolTip": "TBIC\\Admin_Dashboard.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-25T16:09:51.105Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-08-25T16:09:51.105Z"
             },
             {
               "$type": "Document",
@@ -230,8 +226,7 @@
               "RelativeToolTip": "TBIC\\Admin_Dashboard.cs",
               "ViewState": "AgIAABkAAAAAAAAAAAAAACUAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-25T15:54:08.923Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-25T15:54:08.923Z"
             },
             {
               "$type": "Document",
@@ -242,8 +237,7 @@
               "ToolTip": "C:\\Users\\ArJz\\Desktop\\POS-Proel-\\TBIC\\TBIC\\Acc_Management.cs [Design]",
               "RelativeToolTip": "TBIC\\Acc_Management.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-25T16:03:13.485Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-08-25T16:03:13.485Z"
             },
             {
               "$type": "Document",
@@ -255,8 +249,7 @@
               "RelativeToolTip": "TBIC\\Acc_Management.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAAAADAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-29T08:45:55.813Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-29T08:45:55.813Z"
             },
             {
               "$type": "Document",
@@ -268,8 +261,7 @@
               "RelativeToolTip": "TBIC\\Loading_Screen.cs",
               "ViewState": "AgIAAEgAAAAAAAAAAAAcwIcAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-21T08:25:49.738Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-21T08:25:49.738Z"
             },
             {
               "$type": "Document",
@@ -280,8 +272,7 @@
               "ToolTip": "C:\\Users\\ArJz\\Desktop\\POS-Proel-\\TBIC\\TBIC\\Loading_Screen.cs [Design]",
               "RelativeToolTip": "TBIC\\Loading_Screen.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-21T08:20:43.66Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-08-21T08:20:43.66Z"
             },
             {
               "$type": "Document",

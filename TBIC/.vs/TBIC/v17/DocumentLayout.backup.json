@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\ArJz\\Desktop\\POS-Proel-\\TBIC\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|C:\\Users\\ArJz\\Desktop\\POS-Proel-\\TBIC\\tbic\\tbic.dbml||{B465B5AD-8799-4507-B90A-EE29ACF36AF9}|",
+      "RelativeMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|solutionrelative:tbic\\tbic.dbml||{B465B5AD-8799-4507-B90A-EE29ACF36AF9}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|C:\\Users\\ArJz\\Desktop\\POS-Proel-\\TBIC\\tbic\\transactionhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|solutionrelative:tbic\\transactionhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|C:\\Users\\ArJz\\Desktop\\POS-Proel-\\TBIC\\tbic\\acc_management.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|solutionrelative:tbic\\acc_management.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -27,16 +35,8 @@
       "RelativeMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|solutionrelative:tbic\\loading_screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|C:\\Users\\ArJz\\Desktop\\POS-Proel-\\TBIC\\tbic\\tbic.dbml||{B465B5AD-8799-4507-B90A-EE29ACF36AF9}|",
-      "RelativeMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|solutionrelative:tbic\\tbic.dbml||{B465B5AD-8799-4507-B90A-EE29ACF36AF9}|"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|c:\\users\\arjz\\desktop\\pos-proel-\\tbic\\tbic\\transactionhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|solutionrelative:tbic\\transactionhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|C:\\Users\\ArJz\\Desktop\\POS-Proel-\\TBIC\\tbic\\transactionhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|solutionrelative:tbic\\transactionhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BDB75D5C-6FC0-4476-B266-0A39A6D9539B}|TBIC\\TBIC.csproj|C:\\Users\\ArJz\\Desktop\\POS-Proel-\\TBIC\\tbic\\receipt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -98,11 +98,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
               "Title": "TransactionHistory.cs",
               "DocumentMoniker": "C:\\Users\\ArJz\\Desktop\\POS-Proel-\\TBIC\\TBIC\\TransactionHistory.cs",
               "RelativeDocumentMoniker": "TBIC\\TransactionHistory.cs",
@@ -115,7 +115,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "TransactionHistory.cs [Design]",
               "DocumentMoniker": "C:\\Users\\ArJz\\Desktop\\POS-Proel-\\TBIC\\TBIC\\TransactionHistory.cs",
               "RelativeDocumentMoniker": "TBIC\\TransactionHistory.cs",
@@ -127,7 +127,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "TBIC.dbml",
               "DocumentMoniker": "C:\\Users\\ArJz\\Desktop\\POS-Proel-\\TBIC\\TBIC\\TBIC.dbml",
               "RelativeDocumentMoniker": "TBIC\\TBIC.dbml",
@@ -210,7 +210,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Admin_Dashboard.cs [Design]",
               "DocumentMoniker": "C:\\Users\\ArJz\\Desktop\\POS-Proel-\\TBIC\\TBIC\\Admin_Dashboard.cs",
               "RelativeDocumentMoniker": "TBIC\\Admin_Dashboard.cs",
@@ -222,7 +222,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Admin_Dashboard.cs",
               "DocumentMoniker": "C:\\Users\\ArJz\\Desktop\\POS-Proel-\\TBIC\\TBIC\\Admin_Dashboard.cs",
               "RelativeDocumentMoniker": "TBIC\\Admin_Dashboard.cs",
@@ -235,7 +235,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Acc_Management.cs [Design]",
               "DocumentMoniker": "C:\\Users\\ArJz\\Desktop\\POS-Proel-\\TBIC\\TBIC\\Acc_Management.cs",
               "RelativeDocumentMoniker": "TBIC\\Acc_Management.cs",
@@ -247,7 +247,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Acc_Management.cs",
               "DocumentMoniker": "C:\\Users\\ArJz\\Desktop\\POS-Proel-\\TBIC\\TBIC\\Acc_Management.cs",
               "RelativeDocumentMoniker": "TBIC\\Acc_Management.cs",
@@ -260,7 +260,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Loading_Screen.cs",
               "DocumentMoniker": "C:\\Users\\ArJz\\Desktop\\POS-Proel-\\TBIC\\TBIC\\Loading_Screen.cs",
               "RelativeDocumentMoniker": "TBIC\\Loading_Screen.cs",
@@ -273,7 +273,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Loading_Screen.cs [Design]",
               "DocumentMoniker": "C:\\Users\\ArJz\\Desktop\\POS-Proel-\\TBIC\\TBIC\\Loading_Screen.cs",
               "RelativeDocumentMoniker": "TBIC\\Loading_Screen.cs",
