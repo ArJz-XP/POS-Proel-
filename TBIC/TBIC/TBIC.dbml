@@ -1,10 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="TBCI Server" Class="TBICDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=NEKOARJZ\SQLEXPRESS;Initial Catalog=&quot;TBCI Server&quot;;Integrated Security=True;Encrypt=True;Trust Server Certificate=True" SettingsObjectName="TBIC.Properties.Settings" SettingsPropertyName="TBCI_ServerConnectionString2" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.DEPARTMENT" Member="DEPARTMENTs">
-    <Type Name="DEPARTMENT">
-      <Column Name="DEPARTMENT_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="DEPARTMENT_NAME" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-      <Association Name="DEPARTMENT_STAFF" Member="STAFFs" ThisKey="DEPARTMENT_ID" OtherKey="DEPARTMENT_ID" Type="STAFF" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-MQMD640;Initial Catalog=&quot;TBCI Server&quot;;Integrated Security=True;Trust Server Certificate=True" SettingsObjectName="TBIC.Properties.Settings" SettingsPropertyName="TBCI_ServerConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.STAFF" Member="STAFFs">
+    <Type Name="STAFF">
+      <Column Name="STAFF_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="STAFF_NAME" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="USERNAME" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PASSWORD" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="DEPARTMENT_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ROLE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IS_ACTIVE" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DELETED_AT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="STAFF_SALE" Member="SALEs" ThisKey="STAFF_ID" OtherKey="STAFF_ID" Type="SALE" />
+      <Association Name="DEPARTMENT_STAFF" Member="DEPARTMENT" ThisKey="DEPARTMENT_ID" OtherKey="DEPARTMENT_ID" Type="DEPARTMENT" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.PRODUCT" Member="PRODUCTs">
@@ -43,32 +50,32 @@
       <Association Name="SALE_SALE_DETAIL" Member="SALE" ThisKey="SALE_ID" OtherKey="SALES_ID" Type="SALE" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.STAFF" Member="STAFFs">
-    <Type Name="STAFF">
-      <Column Name="STAFF_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="STAFF_NAME" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-      <Column Name="USERNAME" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="PASSWORD" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="DEPARTMENT_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="ROLE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Association Name="STAFF_SALE" Member="SALEs" ThisKey="STAFF_ID" OtherKey="STAFF_ID" Type="SALE" />
-      <Association Name="DEPARTMENT_STAFF" Member="DEPARTMENT" ThisKey="DEPARTMENT_ID" OtherKey="DEPARTMENT_ID" Type="DEPARTMENT" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.vw_Retrieve" Member="vw_Retrieves">
-    <Type Name="vw_Retrieve">
-      <Column Name="STAFF_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="STAFF_NAME" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-      <Column Name="USERNAME" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="PASSWORD" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="ROLE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+  <Table Name="dbo.DEPARTMENT" Member="DEPARTMENTs">
+    <Type Name="DEPARTMENT">
+      <Column Name="DEPARTMENT_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="DEPARTMENT_NAME" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="DEPARTMENT_STAFF" Member="STAFFs" ThisKey="DEPARTMENT_ID" OtherKey="DEPARTMENT_ID" Type="STAFF" />
     </Type>
   </Table>
+  <Function Name="dbo.SOFT_DELETE_STAFF" Method="SOFT_DELETE_STAFF">
+    <Parameter Name="STAFF_ID" Parameter="sTAFF_ID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ADD_SALES_HISTORY" Method="ADD_SALES_HISTORY">
+    <Parameter Name="STAFF_ID" Parameter="sTAFF_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PRODUCT_ID" Parameter="pRODUCT_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="QUANTITY" Parameter="qUANTITY" Type="System.Int32" DbType="Int" />
+    <Parameter Name="UNIT_PRICE" Parameter="uNIT_PRICE" Type="System.Decimal" DbType="Decimal(10,2)" />
+    <Parameter Name="TOTAL_AMOUNT" Parameter="tOTAL_AMOUNT" Type="System.Decimal" DbType="Decimal(10,2)" />
+    <Parameter Name="PAYMENT_METHOD" Parameter="pAYMENT_METHOD" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="AMOUNT_PAID" Parameter="aMOUNT_PAID" Type="System.Decimal" DbType="Decimal(10,2)" />
+    <Parameter Name="CHANGE_AMOUNT" Parameter="cHANGE_AMOUNT" Type="System.Decimal" DbType="Decimal(10,2)" />
+    <Return Type="System.Int32" />
+  </Function>
   <Function Name="dbo.ADD_STAFF" Method="ADD_STAFF">
     <Parameter Name="STAFF_NAME" Parameter="sTAFF_NAME" Type="System.String" DbType="NVarChar(100)" />
     <Parameter Name="USERNAME" Parameter="uSERNAME" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="PASSWORD" Parameter="pASSWORD" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="PASSWORD" Parameter="pASSWORD" Type="System.String" DbType="NVarChar(255)" />
     <Parameter Name="DEPARTMENT_ID" Parameter="dEPARTMENT_ID" Type="System.Int32" DbType="Int" />
     <Parameter Name="ROLE" Parameter="rOLE" Type="System.String" DbType="NVarChar(20)" />
     <Return Type="System.Int32" />
@@ -83,26 +90,21 @@
     <Parameter Name="QUANTITY" Parameter="qUANTITY" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.DELETE_STAFF" Method="DELETE_STAFF">
-    <Parameter Name="STAFF_ID" Parameter="sTAFF_ID" Type="System.Int32" DbType="Int" />
-    <Return Type="System.Int32" />
-  </Function>
   <Function Name="dbo.EDIT_STAFF" Method="EDIT_STAFF">
     <Parameter Name="STAFF_ID" Parameter="sTAFF_ID" Type="System.Int32" DbType="Int" />
     <Parameter Name="STAFF_NAME" Parameter="sTAFF_NAME" Type="System.String" DbType="NVarChar(100)" />
     <Parameter Name="USERNAME" Parameter="uSERNAME" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="PASSWORD" Parameter="pASSWORD" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="PASSWORD" Parameter="pASSWORD" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="DEPARTMENT_ID" Parameter="dEPARTMENT_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ROLE" Parameter="rOLE" Type="System.String" DbType="NVarChar(50)" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.ADD_SALES_HISTORY" Method="ADD_SALES_HISTORY">
+  <Function Name="dbo.HARD_DELETE_STAFF" Method="HARD_DELETE_STAFF">
     <Parameter Name="STAFF_ID" Parameter="sTAFF_ID" Type="System.Int32" DbType="Int" />
-    <Parameter Name="PRODUCT_ID" Parameter="pRODUCT_ID" Type="System.Int32" DbType="Int" />
-    <Parameter Name="QUANTITY" Parameter="qUANTITY" Type="System.Int32" DbType="Int" />
-    <Parameter Name="UNIT_PRICE" Parameter="uNIT_PRICE" Type="System.Decimal" DbType="Decimal(10,2)" />
-    <Parameter Name="TOTAL_AMOUNT" Parameter="tOTAL_AMOUNT" Type="System.Decimal" DbType="Decimal(10,2)" />
-    <Parameter Name="PAYMENT_METHOD" Parameter="pAYMENT_METHOD" Type="System.String" DbType="VarChar(50)" />
-    <Parameter Name="AMOUNT_PAID" Parameter="aMOUNT_PAID" Type="System.Decimal" DbType="Decimal(10,2)" />
-    <Parameter Name="CHANGE_AMOUNT" Parameter="cHANGE_AMOUNT" Type="System.Decimal" DbType="Decimal(10,2)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.RESTORE_STAFF" Method="RESTORE_STAFF">
+    <Parameter Name="STAFF_ID" Parameter="sTAFF_ID" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.RETRIEVE_SALES_HISTORY" Method="RETRIEVE_SALES_HISTORY">
@@ -121,6 +123,38 @@
       <Column Name="PAYMENT_METHOD" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="AMOUNT_PAID" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
       <Column Name="CHANGE_AMOUNT" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.RETRIEVE_STAFF" Method="RETRIEVE_STAFF">
+    <ElementType Name="RETRIEVE_STAFFResult">
+      <Column Name="STAFF_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="STAFF_NAME" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="USERNAME" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DEPARTMENT_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ROLE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DEPARTMENT_NAME" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SEARCH_STAFF" Method="SEARCH_STAFF">
+    <Parameter Name="Search" Parameter="search" Type="System.String" DbType="VarChar(100)" />
+    <ElementType Name="SEARCH_STAFFResult">
+      <Column Name="STAFF_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="STAFF_NAME" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="USERNAME" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DEPARTMENT_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ROLE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DEPARTMENT_NAME" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.RETRIEVE_SOFT_DELETED_STAFF" Method="RETRIEVE_SOFT_DELETED_STAFF">
+    <ElementType Name="RETRIEVE_SOFT_DELETED_STAFFResult">
+      <Column Name="STAFF_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="STAFF_NAME" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="USERNAME" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DEPARTMENT_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ROLE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DEPARTMENT_NAME" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="DELETED_AT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
     </ElementType>
   </Function>
 </Database>

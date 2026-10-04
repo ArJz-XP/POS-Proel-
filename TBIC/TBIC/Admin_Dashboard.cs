@@ -35,7 +35,6 @@ namespace TBIC
 
         private void Admin_Dashboard_Load(object sender, EventArgs e)
         {
-            
             txtSearchBoxAdmin.Font = new Font("FredokaSummer", 10, FontStyle.Bold);
             lblNumberOfEmployees.Font = new Font("FredokaSummer", 9, FontStyle.Bold);
             lblTotalEmployee.Font = new Font("FredokaSummer", 9, FontStyle.Bold);
@@ -43,8 +42,6 @@ namespace TBIC
             btnAdminDashboard.Font = new Font("FredokaSummer", 9, FontStyle.Bold);
 
             inputReload();
-
-            lblNumberOfEmployees.Text = db.vw_Retrieves.Count().ToString();
 
             this.ActiveControl = dgvRetrivalList;
         }
@@ -57,7 +54,7 @@ namespace TBIC
 
             dgvRetrivalList.CellFormatting += dataGridView1_CellFormatting;
 
-            lblNumberOfEmployees.Text = db.vw_Retrieves.Count().ToString();
+            lblNumberOfEmployees.Text = db.RETRIEVE_STAFF().Count().ToString();
 
             #region Stocks
 
@@ -119,7 +116,7 @@ namespace TBIC
 
             // Filter your view/table based on the search keyword (e.g., matching a username or name column)
             // Replace 'USERNAME' with whatever column you actually want to search in your view/table
-            var searchResult = db.vw_Retrieves.Where(x => x.USERNAME.Contains(keyword) || x.STAFF_NAME.Contains(keyword)).ToList();
+            var searchResult = db.SEARCH_STAFF(keyword);
 
             // Bind the filtered list to your grid
             dgvRetrivalList.DataSource = searchResult;
@@ -156,8 +153,8 @@ namespace TBIC
             using (TBICDataContext db = new TBICDataContext())
             {
                 var sorted = ascending
-                    ? db.vw_Retrieves.OrderBy(x => x.STAFF_NAME).ToList()
-                    : db.vw_Retrieves.OrderByDescending(x => x.STAFF_NAME).ToList();
+                    ? db.RETRIEVE_STAFF().OrderBy(x => x.STAFF_NAME).ToList()
+                    : db.RETRIEVE_STAFF().OrderByDescending(x => x.STAFF_NAME).ToList();
 
                 dgvRetrivalList.DataSource = sorted;
             }

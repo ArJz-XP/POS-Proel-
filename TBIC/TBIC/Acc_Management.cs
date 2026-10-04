@@ -37,6 +37,8 @@ namespace TBIC
             Form_Instances._dash.inputReload();
             Form_Instances._dash.Show();
             this.Hide();
+
+            btnConfigure.Hide();
         }
 
         private void btnManageManage_Click(object sender, EventArgs e)
@@ -47,10 +49,8 @@ namespace TBIC
 
         private void Acc_Management_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'tBCI_ServerDataSet5.vw_Retrieve' table. You can move, or remove it, as needed.
-            this.vw_RetrieveTableAdapter2.Fill(this.tBCI_ServerDataSet5.vw_Retrieve);
             TBICDataContext db = new TBICDataContext();
-            dgvEmployeeEditor.DataSource = db.vw_Retrieves;
+            dgvEmployeeEditor.DataSource = db.RETRIEVE_STAFF();
             btnDashBoardManage.Font = new Font("FredokaSummer", 9, FontStyle.Bold);
             btnManageManage.Font = new Font("FredokaSummer", 9, FontStyle.Bold);
             txtAddName.Font = new Font("FredokaSummer", 9, FontStyle.Bold);
@@ -59,6 +59,20 @@ namespace TBIC
             txtSearchEmploys.Font = new Font("FredokaSummer", 9, FontStyle.Bold);
 
             inputreload();
+
+            btnConfigure.Hide();
+        }
+
+        private void btnBin_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Form_Instances._bin.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"There was an unexpected problem while opening the bin panel!\nReason: {ex.Message}", "Error Type: Bin Panel Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         public void inputreload()
@@ -89,11 +103,11 @@ namespace TBIC
 
                 int Dep_ID = int.Parse(txtDepartmentID.Text);
 
-                db.ADD_STAFF(txtAddName.Text, txtAddUsername.Text, txtAddPassword.Text, Dep_ID, cmbRole.Text);
+                string hash = BCrypt.Net.BCrypt.HashPassword(txtAddPassword.Text.Trim());
 
-                dgvEmployeeEditor.CellFormatting += dgvEmployeeEditor_CellFormatting;
+                db.ADD_STAFF(txtAddName.Text.Trim(), txtAddUsername.Text.Trim(), hash, Dep_ID, cmbRole.Text);
 
-                dgvEmployeeEditor.DataSource = db.vw_Retrieves;
+                dgvEmployeeEditor.DataSource = db.RETRIEVE_STAFF();
 
                 inputreload();
 
@@ -125,7 +139,7 @@ namespace TBIC
 
             string keyword = txtSearchEmploys.Text.Trim();
 
-            var Search = db.vw_Retrieves.Where(x => x.USERNAME.Contains(keyword) || x.STAFF_NAME.Contains(keyword)).ToList();
+            var Search = db.RETRIEVE_STAFF();
 
             dgvEmployeeEditor.DataSource = Search;
         }
@@ -139,9 +153,19 @@ namespace TBIC
             }
         }
 
+        private void dgvEmployeeEditor_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btnConfigure.Show();
+        }
+
+        private void dgvEmployeeEditor_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            btnConfigure.Hide();
+        }
+
         #endregion
 
-        #region Account Deletion
+        #region Account Modification
 
         private void btnConfigure_Click(object sender, EventArgs e)
         {
@@ -149,47 +173,37 @@ namespace TBIC
             {
                 if (dgvEmployeeEditor.SelectedRows.Count == 0)
                 {
-                    MessageBox.Show("Please select a staff entry to delete.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Please select a staff entry to modify.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
                 var selectedRow = dgvEmployeeEditor.SelectedRows[0];
-                int staffId = Convert.ToInt32(selectedRow.Cells["sTAFFIDDataGridViewTextBoxColumn"].Value);
-                var staffName = selectedRow.Cells["sTAFFNAMEDataGridViewTextBoxColumn"].Value;
-                var role = selectedRow.Cells["rOLEDataGridViewTextBoxColumn"].Value;
+                int staffId = Convert.ToInt32(selectedRow.Cells["STAFF_ID"].Value);
 
                 if (staffId.ToString() == lblUserID.Text)
                 {
-                    MessageBox.Show("Cannot Delete an Entry that is currently in use", "Error Type: Active Account Deletion Attempt", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                    MessageBox.Show("Cannot modify an Entry that is currently in use", "Error Type: Active Account Modification Attempt", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
-                if (MessageBox.Show($"Delete staff\nID: {staffId}\nName: {staffName}\nRole: {role}?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                {
-                    TBICDataContext db = new TBICDataContext();
+                Form_Instances._mod.lblStaffID.Text = staffId.ToString();
+                Form_Instances._mod.lblName.Text = selectedRow.Cells["STAFF_NAME"].Value.ToString();
+                Form_Instances._mod.lblRole.Text = selectedRow.Cells["ROLE"].Value.ToString();
+                Form_Instances._mod.DataLoad();
 
-                    db.DELETE_STAFF(staffId);
-
-                    dgvEmployeeEditor.DataSource = db.vw_Retrieves;
-
-                    MessageBox.Show("Staff Entry Successfully Deleted!", "Deletion Success");
-                }
+                Form_Instances._mod.Size = new Size(706, 121);
+                Form_Instances._mod.btnConfirm.Enabled = false;
+                Form_Instances._mod.ShowDialog();
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"There was an unexpected problem while removing your entry!\nReason: {ex.Message}", "Error Type: Account Deletion Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"There was an unexpected problem while opening the entry!\nReason: {ex.Message}", "Error Type: Account Modification Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         #endregion
 
         #region Sorting Functionality
-
-        private void dgvEmployeeEditor_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void picMaybedropboxManagement_Click(object sender, EventArgs e)
         {
@@ -211,13 +225,14 @@ namespace TBIC
             using (TBICDataContext db = new TBICDataContext())
             {
                 var sorted = ascending
-                    ? db.vw_Retrieves.OrderBy(x => x.STAFF_NAME).ToList()
-                    : db.vw_Retrieves.OrderByDescending(x => x.STAFF_NAME).ToList();
+                    ? db.RETRIEVE_STAFF().OrderBy(x => x.STAFF_NAME).ToList()
+                    : db.RETRIEVE_STAFF().OrderByDescending(x => x.STAFF_NAME).ToList();
 
                 dgvEmployeeEditor.DataSource = sorted;
             }
         }
 
         #endregion
+
     }
 }

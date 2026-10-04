@@ -556,6 +556,7 @@
             this.Controls.Add(this.btnTransHistory);
             this.Controls.Add(this.btnNewPurchase);
             this.Name = "Payment";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Payment";
             this.Load += new System.EventHandler(this.Payment_Load);

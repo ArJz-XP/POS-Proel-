@@ -703,6 +703,7 @@
             this.Controls.Add(this.pnlHershey);
             this.Controls.Add(this.pnlManggo);
             this.Name = "LimitedEdition";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LimitedEdition";
             this.Load += new System.EventHandler(this.LimitedEdition_Load);

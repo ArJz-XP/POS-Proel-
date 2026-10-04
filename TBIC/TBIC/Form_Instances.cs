@@ -18,5 +18,7 @@ namespace TBIC
         public static Acc_Management _acc { get; } = new Acc_Management();
         public static Receipt _rep { get; } = new Receipt();
         public static TransactionHistory _tran { get; } = new TransactionHistory();
+        public static Account_Modification_Panel _mod { get; } = new Account_Modification_Panel();
+        public static Bin_Panel _bin { get; } = new Bin_Panel();
     }
 }

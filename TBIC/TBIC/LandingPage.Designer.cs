@@ -32,6 +32,8 @@
             this.txtUser = new System.Windows.Forms.TextBox();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.picLandingpage = new System.Windows.Forms.PictureBox();
+            this.lblIncorrectUsername = new System.Windows.Forms.Label();
+            this.lblIncorrectPassword = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picLandingpage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,10 +71,9 @@
             this.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPass.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPass.Location = new System.Drawing.Point(173, 316);
-            this.txtPass.Multiline = true;
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
-            this.txtPass.Size = new System.Drawing.Size(182, 23);
+            this.txtPass.Size = new System.Drawing.Size(182, 14);
             this.txtPass.TabIndex = 3;
             // 
             // picLandingpage
@@ -86,17 +87,46 @@
             this.picLandingpage.TabIndex = 0;
             this.picLandingpage.TabStop = false;
             // 
+            // lblIncorrectUsername
+            // 
+            this.lblIncorrectUsername.AutoSize = true;
+            this.lblIncorrectUsername.BackColor = System.Drawing.Color.Transparent;
+            this.lblIncorrectUsername.ForeColor = System.Drawing.Color.Red;
+            this.lblIncorrectUsername.Location = new System.Drawing.Point(251, 289);
+            this.lblIncorrectUsername.Name = "lblIncorrectUsername";
+            this.lblIncorrectUsername.Size = new System.Drawing.Size(147, 13);
+            this.lblIncorrectUsername.TabIndex = 4;
+            this.lblIncorrectUsername.Text = "Incorrect username! try again.";
+            this.lblIncorrectUsername.Visible = false;
+            // 
+            // lblIncorrectPassword
+            // 
+            this.lblIncorrectPassword.AutoSize = true;
+            this.lblIncorrectPassword.BackColor = System.Drawing.Color.Transparent;
+            this.lblIncorrectPassword.ForeColor = System.Drawing.Color.Red;
+            this.lblIncorrectPassword.Location = new System.Drawing.Point(251, 343);
+            this.lblIncorrectPassword.Name = "lblIncorrectPassword";
+            this.lblIncorrectPassword.Size = new System.Drawing.Size(146, 13);
+            this.lblIncorrectPassword.TabIndex = 5;
+            this.lblIncorrectPassword.Text = "Incorrect password! try again.";
+            this.lblIncorrectPassword.Visible = false;
+            // 
             // LandingPage
             // 
+            this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1264, 641);
+            this.Controls.Add(this.lblIncorrectPassword);
+            this.Controls.Add(this.lblIncorrectUsername);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtUser);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.picLandingpage);
             this.Name = "LandingPage";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TBIC";
             this.Load += new System.EventHandler(this.LandingPage_Load);
@@ -112,6 +142,8 @@
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.TextBox txtPass;
+        private System.Windows.Forms.Label lblIncorrectUsername;
+        private System.Windows.Forms.Label lblIncorrectPassword;
     }
 }
 

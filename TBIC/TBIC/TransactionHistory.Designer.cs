@@ -146,6 +146,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "TransactionHistory";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TransactionHistory";
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransactionHistory)).EndInit();

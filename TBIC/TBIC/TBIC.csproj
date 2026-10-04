@@ -50,6 +50,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BCrypt-Net-Next, Version=4.2.0.0, Culture=neutral, PublicKeyToken=1e11be04b6288443, processorArchitecture=MSIL">
+      <HintPath>..\packages\BCrypt.Net-Next.4.2.0\lib\net48\BCrypt-Net-Next.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=10.0.0.3, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.10.0.3\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
@@ -170,6 +173,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account_Modification_Panel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Account_Modification_Panel.Designer.cs">
+      <DependentUpon>Account_Modification_Panel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Acc_Management.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,6 +190,12 @@
     </Compile>
     <Compile Include="Admin_Dashboard.Designer.cs">
       <DependentUpon>Admin_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bin_Panel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bin_Panel.Designer.cs">
+      <DependentUpon>Bin_Panel.cs</DependentUpon>
     </Compile>
     <Compile Include="form.cs" />
     <Compile Include="DontDeleteForSuprise.cs">
@@ -263,11 +278,17 @@
     <Compile Include="TransactionHistory.Designer.cs">
       <DependentUpon>TransactionHistory.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Account_Modification_Panel.resx">
+      <DependentUpon>Account_Modification_Panel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Acc_Management.resx">
       <DependentUpon>Acc_Management.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin_Dashboard.resx">
       <DependentUpon>Admin_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bin_Panel.resx">
+      <DependentUpon>Bin_Panel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DontDeleteForSuprise.resx">
       <DependentUpon>DontDeleteForSuprise.cs</DependentUpon>
