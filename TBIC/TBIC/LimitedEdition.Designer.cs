@@ -78,6 +78,7 @@
             this.Flavour = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Price = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Quantity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnGoBack = new System.Windows.Forms.Button();
             this.pnlHershey.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picHershey)).BeginInit();
             this.pnlManggo.SuspendLayout();
@@ -678,6 +679,22 @@
             this.Quantity.Text = "QTY.";
             this.Quantity.Width = 50;
             // 
+            // btnGoBack
+            // 
+            this.btnGoBack.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnGoBack.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnGoBack.BackColor = System.Drawing.Color.Transparent;
+            this.btnGoBack.BackgroundImage = global::TBIC.Properties.Resources.LogOutBluSmol;
+            this.btnGoBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnGoBack.FlatAppearance.BorderSize = 0;
+            this.btnGoBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGoBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGoBack.Location = new System.Drawing.Point(1101, 52);
+            this.btnGoBack.Name = "btnGoBack";
+            this.btnGoBack.Size = new System.Drawing.Size(141, 31);
+            this.btnGoBack.TabIndex = 31;
+            this.btnGoBack.UseVisualStyleBackColor = false;
+            // 
             // LimitedEdition
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -685,6 +702,7 @@
             this.BackgroundImage = global::TBIC.Properties.Resources.Limited_Edition;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1264, 641);
+            this.Controls.Add(this.btnGoBack);
             this.Controls.Add(this.lvProductView);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnProceedLE);
@@ -778,5 +796,6 @@
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Label lblUser;
         public System.Windows.Forms.ListView lvProductView;
+        private System.Windows.Forms.Button btnGoBack;
     }
 }

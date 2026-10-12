@@ -176,7 +176,7 @@
             this.btnAdminDashboard.FlatAppearance.BorderSize = 0;
             this.btnAdminDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdminDashboard.Image = global::TBIC.Properties.Resources.DashboardBtnFixed;
-            this.btnAdminDashboard.Location = new System.Drawing.Point(1054, 117);
+            this.btnAdminDashboard.Location = new System.Drawing.Point(1054, 155);
             this.btnAdminDashboard.Name = "btnAdminDashboard";
             this.btnAdminDashboard.Size = new System.Drawing.Size(223, 43);
             this.btnAdminDashboard.TabIndex = 17;
@@ -191,7 +191,7 @@
             this.btnAccManage.FlatAppearance.BorderSize = 0;
             this.btnAccManage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAccManage.Image = global::TBIC.Properties.Resources.AccManagementBtnFixed;
-            this.btnAccManage.Location = new System.Drawing.Point(1054, 181);
+            this.btnAccManage.Location = new System.Drawing.Point(1054, 219);
             this.btnAccManage.Name = "btnAccManage";
             this.btnAccManage.Size = new System.Drawing.Size(223, 43);
             this.btnAccManage.TabIndex = 18;
@@ -203,16 +203,16 @@
             // 
             this.btnGoBack.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnGoBack.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnGoBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(89)))));
+            this.btnGoBack.BackColor = System.Drawing.Color.Transparent;
+            this.btnGoBack.BackgroundImage = global::TBIC.Properties.Resources.LogOutPurpleSmol;
             this.btnGoBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnGoBack.FlatAppearance.BorderSize = 0;
             this.btnGoBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGoBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGoBack.Location = new System.Drawing.Point(1142, 596);
+            this.btnGoBack.Location = new System.Drawing.Point(1099, 50);
             this.btnGoBack.Name = "btnGoBack";
-            this.btnGoBack.Size = new System.Drawing.Size(112, 34);
+            this.btnGoBack.Size = new System.Drawing.Size(144, 32);
             this.btnGoBack.TabIndex = 19;
-            this.btnGoBack.Text = "LOGOUT";
             this.btnGoBack.UseVisualStyleBackColor = false;
             this.btnGoBack.Click += new System.EventHandler(this.btnOrder_Click);
             // 

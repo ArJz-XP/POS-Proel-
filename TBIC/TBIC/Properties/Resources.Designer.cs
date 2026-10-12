@@ -133,6 +133,16 @@ namespace TBIC.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BinPanelLaden {
+            get {
+                object obj = ResourceManager.GetObject("BinPanelLaden", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Configure {
             get {
                 object obj = ResourceManager.GetObject("Configure", resourceCulture);
@@ -246,6 +256,46 @@ namespace TBIC.Properties {
         internal static System.Drawing.Bitmap Logo {
             get {
                 object obj = ResourceManager.GetObject("Logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LogOutBlu {
+            get {
+                object obj = ResourceManager.GetObject("LogOutBlu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LogOutBluSmol {
+            get {
+                object obj = ResourceManager.GetObject("LogOutBluSmol", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LogOutPurple {
+            get {
+                object obj = ResourceManager.GetObject("LogOutPurple", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LogOutPurpleSmol {
+            get {
+                object obj = ResourceManager.GetObject("LogOutPurpleSmol", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

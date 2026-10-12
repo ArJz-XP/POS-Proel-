@@ -51,6 +51,7 @@
             this.txtAddName = new System.Windows.Forms.TextBox();
             this.vw_RetrieveTableAdapter2 = new TBIC.TBCI_ServerDataSet5TableAdapters.vw_RetrieveTableAdapter();
             this.btnBin = new System.Windows.Forms.Button();
+            this.btnGoBack = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMaybedropboxManagement)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployeeEditor)).BeginInit();
@@ -289,26 +290,44 @@
             // 
             // btnBin
             // 
-            this.btnBin.BackColor = System.Drawing.Color.Yellow;
+            this.btnBin.BackColor = System.Drawing.SystemColors.Control;
+            this.btnBin.BackgroundImage = global::TBIC.Properties.Resources.BinPanelLaden;
             this.btnBin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnBin.FlatAppearance.BorderSize = 0;
             this.btnBin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBin.Location = new System.Drawing.Point(1056, 208);
+            this.btnBin.Location = new System.Drawing.Point(810, 563);
             this.btnBin.Name = "btnBin";
-            this.btnBin.Size = new System.Drawing.Size(214, 30);
+            this.btnBin.Size = new System.Drawing.Size(204, 39);
             this.btnBin.TabIndex = 28;
-            this.btnBin.Text = "BIN PANEL";
             this.btnBin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBin.UseVisualStyleBackColor = false;
             this.btnBin.Click += new System.EventHandler(this.btnBin_Click);
+            // 
+            // btnGoBack
+            // 
+            this.btnGoBack.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnGoBack.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnGoBack.BackColor = System.Drawing.Color.Transparent;
+            this.btnGoBack.BackgroundImage = global::TBIC.Properties.Resources.LogOutPurpleSmol;
+            this.btnGoBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnGoBack.FlatAppearance.BorderSize = 0;
+            this.btnGoBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGoBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGoBack.Location = new System.Drawing.Point(1101, 52);
+            this.btnGoBack.Name = "btnGoBack";
+            this.btnGoBack.Size = new System.Drawing.Size(141, 31);
+            this.btnGoBack.TabIndex = 32;
+            this.btnGoBack.UseVisualStyleBackColor = false;
             // 
             // Acc_Management
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::TBIC.Properties.Resources.ADMIN_User_Management;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1266, 648);
+            this.Controls.Add(this.btnGoBack);
             this.Controls.Add(this.btnBin);
             this.Controls.Add(this.txtAddName);
             this.Controls.Add(this.txtDepartmentID);
@@ -363,5 +382,6 @@
         private System.Windows.Forms.TextBox txtAddName;
         private TBCI_ServerDataSet5TableAdapters.vw_RetrieveTableAdapter vw_RetrieveTableAdapter2;
         private System.Windows.Forms.Button btnBin;
+        private System.Windows.Forms.Button btnGoBack;
     }
 }

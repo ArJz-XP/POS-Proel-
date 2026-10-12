@@ -37,6 +37,7 @@
             this.txtSearchBoxSearchHistory = new System.Windows.Forms.TextBox();
             this.btnNewPurchase = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnLogout = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransactionHistory)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -116,7 +117,7 @@
             this.btnNewPurchase.FlatAppearance.BorderSize = 0;
             this.btnNewPurchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNewPurchase.Image = global::TBIC.Properties.Resources.NewPurchaseBtnUI;
-            this.btnNewPurchase.Location = new System.Drawing.Point(1068, 66);
+            this.btnNewPurchase.Location = new System.Drawing.Point(1068, 162);
             this.btnNewPurchase.Name = "btnNewPurchase";
             this.btnNewPurchase.Size = new System.Drawing.Size(214, 41);
             this.btnNewPurchase.TabIndex = 29;
@@ -133,11 +134,28 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // btnLogout
+            // 
+            this.btnLogout.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnLogout.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnLogout.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogout.BackgroundImage = global::TBIC.Properties.Resources.LogOutBluSmol;
+            this.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Location = new System.Drawing.Point(1098, 52);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(143, 31);
+            this.btnLogout.TabIndex = 30;
+            this.btnLogout.UseVisualStyleBackColor = false;
+            // 
             // TransactionHistory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 674);
+            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnNewPurchase);
             this.Controls.Add(this.txtSearchBoxSearchHistory);
             this.Controls.Add(this.panel3);
@@ -169,5 +187,6 @@
         public System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.TextBox txtSearchBoxSearchHistory;
         private System.Windows.Forms.Button btnNewPurchase;
+        private System.Windows.Forms.Button btnLogout;
     }
 }

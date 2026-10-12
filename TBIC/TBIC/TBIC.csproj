@@ -549,6 +549,11 @@
     <None Include="Resources\NewPurchaseBtnUI.png" />
     <None Include="Resources\POSPaymentReyal%28Updated%29.png" />
     <None Include="Resources\NewPurchaseBtnUI1.png" />
+    <None Include="Resources\BinPanelLaden.png" />
+    <None Include="Resources\LogOutPurple.png" />
+    <None Include="Resources\LogOutBlu.png" />
+    <None Include="Resources\LogOutBluSmol.png" />
+    <None Include="Resources\LogOutPurpleSmol.png" />
     <Content Include="Resources\PROEL2D UI5.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

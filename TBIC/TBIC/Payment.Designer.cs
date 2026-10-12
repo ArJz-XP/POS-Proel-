@@ -240,9 +240,9 @@
             this.btnNewPurchase.FlatAppearance.BorderSize = 0;
             this.btnNewPurchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNewPurchase.Image = global::TBIC.Properties.Resources.NewPurchaseBtnUI1;
-            this.btnNewPurchase.Location = new System.Drawing.Point(1069, 99);
+            this.btnNewPurchase.Location = new System.Drawing.Point(1069, 137);
             this.btnNewPurchase.Name = "btnNewPurchase";
-            this.btnNewPurchase.Size = new System.Drawing.Size(214, 47);
+            this.btnNewPurchase.Size = new System.Drawing.Size(214, 59);
             this.btnNewPurchase.TabIndex = 2;
             this.btnNewPurchase.UseVisualStyleBackColor = false;
             this.btnNewPurchase.Click += new System.EventHandler(this.btnNewPurchase_Click);
@@ -254,9 +254,9 @@
             this.btnTransHistory.FlatAppearance.BorderSize = 0;
             this.btnTransHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTransHistory.Image = global::TBIC.Properties.Resources.TransactionHistoryBtnUI1;
-            this.btnTransHistory.Location = new System.Drawing.Point(1069, 165);
+            this.btnTransHistory.Location = new System.Drawing.Point(1069, 203);
             this.btnTransHistory.Name = "btnTransHistory";
-            this.btnTransHistory.Size = new System.Drawing.Size(217, 65);
+            this.btnTransHistory.Size = new System.Drawing.Size(217, 77);
             this.btnTransHistory.TabIndex = 3;
             this.btnTransHistory.UseVisualStyleBackColor = false;
             this.btnTransHistory.Click += new System.EventHandler(this.btnTransHistory_Click);
@@ -450,16 +450,16 @@
             // 
             this.btnLogout.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnLogout.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(89)))));
+            this.btnLogout.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogout.BackgroundImage = global::TBIC.Properties.Resources.LogOutBluSmol;
             this.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnLogout.FlatAppearance.BorderSize = 0;
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.Location = new System.Drawing.Point(1140, 590);
+            this.btnLogout.Location = new System.Drawing.Point(1102, 52);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(112, 34);
+            this.btnLogout.Size = new System.Drawing.Size(143, 31);
             this.btnLogout.TabIndex = 12;
-            this.btnLogout.Text = "LOGOUT";
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
