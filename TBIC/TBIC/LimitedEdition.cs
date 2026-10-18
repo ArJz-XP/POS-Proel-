@@ -111,6 +111,7 @@ namespace TBIC
             Form_Instances._pay.StaffInfo(StaffName, StaffID);
             Form_Instances._pay.Show();
             this.Hide();
+            LogoutHider.hide();
         }
 
         #region Load
@@ -326,5 +327,20 @@ namespace TBIC
         }
 
         #endregion
+
+        private void btnGoBack_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to log out?", "Logout Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+                Form_Instances._lan.InputReload();
+                Form_Instances._lan.Show();
+                this.Hide();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            btnGoBack.Show();
+        }
     }
 }

@@ -35,9 +35,8 @@
             this.lblUserID = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.txtSearchBoxSearchHistory = new System.Windows.Forms.TextBox();
-            this.btnNewPurchase = new System.Windows.Forms.Button();
+            this.btnReturn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnLogout = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransactionHistory)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -45,10 +44,16 @@
             // 
             // dgvTransactionHistory
             // 
+            this.dgvTransactionHistory.AllowUserToAddRows = false;
+            this.dgvTransactionHistory.AllowUserToDeleteRows = false;
+            this.dgvTransactionHistory.AllowUserToResizeColumns = false;
+            this.dgvTransactionHistory.AllowUserToResizeRows = false;
+            this.dgvTransactionHistory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgvTransactionHistory.BackgroundColor = System.Drawing.Color.White;
             this.dgvTransactionHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTransactionHistory.Location = new System.Drawing.Point(23, 173);
             this.dgvTransactionHistory.Name = "dgvTransactionHistory";
+            this.dgvTransactionHistory.ReadOnly = true;
             this.dgvTransactionHistory.Size = new System.Drawing.Size(979, 390);
             this.dgvTransactionHistory.TabIndex = 1;
             // 
@@ -108,21 +113,20 @@
             this.txtSearchBoxSearchHistory.Name = "txtSearchBoxSearchHistory";
             this.txtSearchBoxSearchHistory.Size = new System.Drawing.Size(274, 31);
             this.txtSearchBoxSearchHistory.TabIndex = 28;
-            this.txtSearchBoxSearchHistory.Text = "Finding History";
             // 
-            // btnNewPurchase
+            // btnReturn
             // 
-            this.btnNewPurchase.BackColor = System.Drawing.Color.Transparent;
-            this.btnNewPurchase.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnNewPurchase.FlatAppearance.BorderSize = 0;
-            this.btnNewPurchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNewPurchase.Image = global::TBIC.Properties.Resources.NewPurchaseBtnUI;
-            this.btnNewPurchase.Location = new System.Drawing.Point(1068, 162);
-            this.btnNewPurchase.Name = "btnNewPurchase";
-            this.btnNewPurchase.Size = new System.Drawing.Size(214, 41);
-            this.btnNewPurchase.TabIndex = 29;
-            this.btnNewPurchase.UseVisualStyleBackColor = false;
-            this.btnNewPurchase.Click += new System.EventHandler(this.btnNewPurchase_Click);
+            this.btnReturn.BackColor = System.Drawing.Color.Transparent;
+            this.btnReturn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnReturn.FlatAppearance.BorderSize = 0;
+            this.btnReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReturn.Image = global::TBIC.Properties.Resources.NewPurchaseBtnUI;
+            this.btnReturn.Location = new System.Drawing.Point(1068, 162);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.Size = new System.Drawing.Size(214, 41);
+            this.btnReturn.TabIndex = 29;
+            this.btnReturn.UseVisualStyleBackColor = false;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // pictureBox1
             // 
@@ -134,29 +138,12 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // btnLogout
-            // 
-            this.btnLogout.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnLogout.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnLogout.BackColor = System.Drawing.Color.Transparent;
-            this.btnLogout.BackgroundImage = global::TBIC.Properties.Resources.LogOutBluSmol;
-            this.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnLogout.FlatAppearance.BorderSize = 0;
-            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.Location = new System.Drawing.Point(1098, 52);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(143, 31);
-            this.btnLogout.TabIndex = 30;
-            this.btnLogout.UseVisualStyleBackColor = false;
-            // 
             // TransactionHistory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 674);
-            this.Controls.Add(this.btnLogout);
-            this.Controls.Add(this.btnNewPurchase);
+            this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.txtSearchBoxSearchHistory);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.dgvTransactionHistory);
@@ -167,6 +154,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TransactionHistory";
+            this.Load += new System.EventHandler(this.TransactionHistory_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransactionHistory)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -179,14 +167,13 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.DataGridView dgvTransactionHistory;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lblIDs;
         private System.Windows.Forms.Label lblUsernameNumba;
         public System.Windows.Forms.Label lblUserID;
         public System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.TextBox txtSearchBoxSearchHistory;
-        private System.Windows.Forms.Button btnNewPurchase;
-        private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Button btnReturn;
+        public System.Windows.Forms.DataGridView dgvTransactionHistory;
     }
 }

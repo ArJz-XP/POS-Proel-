@@ -294,7 +294,7 @@
             this.Name = "Account_Modification_Panel";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "s";
+            this.Text = "Account_Modification";
             this.pnlNewDetailsArea.ResumeLayout(false);
             this.pnlNewDetailsArea.PerformLayout();
             this.ResumeLayout(false);

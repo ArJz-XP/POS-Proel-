@@ -52,6 +52,7 @@
             this.vw_RetrieveTableAdapter2 = new TBIC.TBCI_ServerDataSet5TableAdapters.vw_RetrieveTableAdapter();
             this.btnBin = new System.Windows.Forms.Button();
             this.btnGoBack = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMaybedropboxManagement)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployeeEditor)).BeginInit();
@@ -227,7 +228,7 @@
             this.dgvEmployeeEditor.AllowUserToDeleteRows = false;
             this.dgvEmployeeEditor.AllowUserToResizeColumns = false;
             this.dgvEmployeeEditor.AllowUserToResizeRows = false;
-            this.dgvEmployeeEditor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dgvEmployeeEditor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgvEmployeeEditor.BackgroundColor = System.Drawing.Color.White;
             this.dgvEmployeeEditor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEmployeeEditor.Location = new System.Drawing.Point(271, 251);
@@ -318,6 +319,17 @@
             this.btnGoBack.Size = new System.Drawing.Size(141, 31);
             this.btnGoBack.TabIndex = 32;
             this.btnGoBack.UseVisualStyleBackColor = false;
+            this.btnGoBack.Click += new System.EventHandler(this.btnGoBack_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.Location = new System.Drawing.Point(1047, 15);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(30, 29);
+            this.button1.TabIndex = 33;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Acc_Management
             // 
@@ -327,6 +339,7 @@
             this.BackgroundImage = global::TBIC.Properties.Resources.ADMIN_User_Management;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1266, 648);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnGoBack);
             this.Controls.Add(this.btnBin);
             this.Controls.Add(this.txtAddName);
@@ -382,6 +395,7 @@
         private System.Windows.Forms.TextBox txtAddName;
         private TBCI_ServerDataSet5TableAdapters.vw_RetrieveTableAdapter vw_RetrieveTableAdapter2;
         private System.Windows.Forms.Button btnBin;
-        private System.Windows.Forms.Button btnGoBack;
+        public System.Windows.Forms.Button btnGoBack;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace TBIC
 {
@@ -16,9 +17,16 @@ namespace TBIC
         string UserName;
         int StaffID;
 
+        // True on first launch and after every completed order, false while an order is still open
+        bool needNewOrderId = true;
+
+        private readonly Random random = new Random();
+
         public Payment()
         {
             InitializeComponent();
+
+            dvgPOS.RowsAdded += dvgPOS_RowsAdded;
         }
 
         public void StaffInfo(string staffName, int staffID)
@@ -34,6 +42,7 @@ namespace TBIC
         {
             txtOrderId.Font = new Font("FredokaSummer", 10, FontStyle.Bold);
             txtMOP.Font = new Font("FredokaSummer", 10, FontStyle.Bold);
+            rtxtAmountPaid.SetPlaceholder("0.00");
 
             rtxtTotalPrice.Text = $"₱{dvgPOS.Rows.Cast<DataGridViewRow>().Sum(r => Convert.ToDouble(r.Cells["dvgPrice"].Value?.ToString().Replace("₱", "").Trim() ?? "0")):F2}";
 
@@ -68,16 +77,110 @@ namespace TBIC
 
         private void btnConfirmPrint_Click(object sender, EventArgs e)
         {
+            // Stop here if the sale was not saved
+            if (!SalesRecord())
+                return;
+
+            // The order is finished, so the next batch of items gets a new ID
+            needNewOrderId = true;
+
+            // Disable the button so the same order can't be saved twice
+            btnConfirmPrint.Enabled = false;
+
+            Form_Instances._rep.Show();
+        }
+
+        #region SalesRecorder
+
+        public bool SalesRecord()
+        {
             if (dvgPOS.Rows.Count == 0)
             {
                 MessageBox.Show("There are no existing order to print", "Error Type: Invalid Items", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                return;
+                return false;
             }
 
-            Receipt rep = new Receipt();
-            rep.Show();
+            if (string.IsNullOrWhiteSpace(txtMOP.Text))
+            {
+                MessageBox.Show("Please select a mode of payment", "Error Type: Missing Payment Method", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return false;
+            }
+
+            // Strip the "₱" symbol and trim spaces before parsing
+            string cleanTotalString = rtxtTotalPrice.Text.Replace("₱", "").Replace(",", "").Trim();
+            string cleanPaidString = rtxtAmountPaid.Text.Replace("₱", "").Replace(",", "").Trim();
+
+            decimal totalAmount = Convert.ToDecimal(cleanTotalString);
+            decimal amountPaid = Convert.ToDecimal(cleanPaidString);
+
+            if (amountPaid < totalAmount)
+            {
+                MessageBox.Show("The amount paid is less than the total", "Error Type: Insufficient Payment", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return false;
+            }
+
+            try
+            {
+                using (var db = new TBICDataContext())
+                {
+                    // ==========================================
+                    // 1. CREATE THE SALE (ONE PER RECEIPT)
+                    // ==========================================
+                    var sale = new SALE
+                    {
+                        STAFF_ID = StaffID,
+                        SALES_DATE = DateTime.Now,
+                        TOTAL_AMOUNT = totalAmount,
+                        PAYMENT_METHOD = txtMOP.Text,
+                        AMOUNT_PAID = amountPaid,
+                        CHANGE_AMOUNT = amountPaid - totalAmount
+                    };
+
+                    // ==========================================
+                    // 2. ADD EVERY ROW OF THE GRID AS A SALE DETAIL
+                    // ==========================================
+                    foreach (DataGridViewRow row in dvgPOS.Rows)
+                    {
+                        if (row.IsNewRow) continue;
+
+                        int currentQty = Convert.ToInt32(row.Cells["dvgQuantity"].Value);
+
+                        // The price cell already holds unit price x quantity
+                        string cleanPriceString = row.Cells["dvgPrice"].Value?.ToString().Replace("₱", "").Replace(",", "").Trim() ?? "0";
+                        decimal rowPrice = Convert.ToDecimal(cleanPriceString);
+
+                        sale.SALE_DETAILs.Add(new SALE_DETAIL
+                        {
+                            PRODUCT_ID = Convert.ToInt32(row.Cells["dvgItemID"].Value),
+                            QUANTITY = currentQty,
+                            UNIT_PRICE = Math.Round(rowPrice / currentQty, 2),
+                            SUBTOTAL = rowPrice
+                        });
+                    }
+
+                    // ==========================================
+                    // 3. SAVE EVERYTHING AT ONCE
+                    // ==========================================
+                    db.SALEs.InsertOnSubmit(sale);
+                    db.SubmitChanges();
+
+                    txtOrderId.Text = sale.SALES_ID.ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error Type: Save Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return false;
+            }
+
+            return true;
         }
+
+        #endregion
 
         #region DataGridView Cell Click Handlers
 
@@ -130,6 +233,22 @@ namespace TBIC
 
                 CalculateTotals();
             }
+        }
+
+        private void dvgPOS_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            // Only roll a new ID for the first item of a new order
+            if (!needNewOrderId) return;
+
+            RandomizeOrderID();
+
+            needNewOrderId = false;
+        }
+
+        private void RandomizeOrderID()
+        {
+            int orderId = random.Next(100000, 999999); // Generates a random number between 100000 and 999999
+            txtOrderId.Text = orderId.ToString();
         }
 
         public void CalculateTotals()
@@ -259,6 +378,8 @@ namespace TBIC
                 }
             }
 
+            LogoutHider.hide();
+
             Form_Instances._lim.lvProductView.Items.Clear();
             dvgPOS.Rows.Clear();
 
@@ -272,6 +393,21 @@ namespace TBIC
             Form_Instances._tran.StaffInfo(UserName, StaffID);
             Form_Instances._tran.Show();
             this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            btnLogout.Show();
+        }
+
+        private void btnCopy_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtOrderId.Text))
+                return;
+
+            Clipboard.SetText(txtOrderId.Text);
+
+            MessageBox.Show("Order ID copied to clipboard!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

@@ -79,6 +79,7 @@
             this.Price = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Quantity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnGoBack = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.pnlHershey.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picHershey)).BeginInit();
             this.pnlManggo.SuspendLayout();
@@ -694,6 +695,17 @@
             this.btnGoBack.Size = new System.Drawing.Size(141, 31);
             this.btnGoBack.TabIndex = 31;
             this.btnGoBack.UseVisualStyleBackColor = false;
+            this.btnGoBack.Click += new System.EventHandler(this.btnGoBack_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.Location = new System.Drawing.Point(1050, 16);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(30, 29);
+            this.button1.TabIndex = 32;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // LimitedEdition
             // 
@@ -702,6 +714,7 @@
             this.BackgroundImage = global::TBIC.Properties.Resources.Limited_Edition;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1264, 641);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnGoBack);
             this.Controls.Add(this.lvProductView);
             this.Controls.Add(this.panel1);
@@ -796,6 +809,7 @@
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Label lblUser;
         public System.Windows.Forms.ListView lvProductView;
-        private System.Windows.Forms.Button btnGoBack;
+        private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Button btnGoBack;
     }
 }

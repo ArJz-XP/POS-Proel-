@@ -90,9 +90,12 @@ namespace TBIC
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Form_Instances._lan.InputReload();
-            Form_Instances._lan.Show();
+            if (MessageBox.Show("Are you sure you want to log out?", "Logout Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+                Form_Instances._lan.InputReload();
+                Form_Instances._lan.Show();
+                this.Hide();
+            }
         }
 
         private void btnAdminDashboard_Click(object sender, EventArgs e)
@@ -102,6 +105,8 @@ namespace TBIC
 
         private void btnAccManage_Click(object sender, EventArgs e)
         {
+            LogoutHider.hide();
+
             Form_Instances._acc.StaffInfo(StaffName, StaffID);
             Form_Instances._acc.inputreload();
             Form_Instances._acc.Show();
@@ -161,5 +166,17 @@ namespace TBIC
         }
 
         #endregion
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            btnGoBack.Show();
+        }
+
+        private void btnTransactionHistory_Click(object sender, EventArgs e)
+        {
+            Form_Instances._tran.StaffInfo(StaffName, StaffID);
+            Form_Instances._tran.Show();
+            this.Hide();
+        }
     }
 }

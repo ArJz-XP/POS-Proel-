@@ -111,6 +111,8 @@
                     {
                         MessageBox.Show("Account found, but no department assigned.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
+
+                    LogoutHider.hide();
                 }
                 catch (Exception ex)
                 {
@@ -199,36 +201,63 @@
 
         public static class TextBoxPlaceholderExtensions
         {
-            public static void SetPlaceholder(this TextBox textBox, string placeholderText, Color? placeholderColor = null)
+            public static void SetPlaceholder(this TextBoxBase textBox, string placeholderText, Color? placeholderColor = null)
             {
                 Color normalColor = textBox.ForeColor;
                 Color placeholderTextColor = placeholderColor ?? Color.Gray;
+                bool showingPlaceholder = false;
 
                 void ShowPlaceholder()
                 {
-                    if (string.IsNullOrEmpty(textBox.Text))
-                    {
-                        textBox.Text = placeholderText;
-                        textBox.ForeColor = placeholderTextColor;
-                        textBox.UseSystemPasswordChar = true;
-                    }
+                    if (!string.IsNullOrEmpty(textBox.Text)) return;
+
+                    showingPlaceholder = true;
+                    textBox.Text = placeholderText;
+                    textBox.ForeColor = placeholderTextColor;
+
+                    if (textBox is TextBox tb)
+                        tb.UseSystemPasswordChar = true;
                 }
 
                 void HidePlaceholder()
                 {
-                    if (textBox.Text == placeholderText && textBox.ForeColor == placeholderTextColor)
-                    {
-                        textBox.Text = "";
-                        textBox.ForeColor = normalColor;
-                        textBox.UseSystemPasswordChar = false;
-                    }
+                    if (!showingPlaceholder) return;
+
+                    showingPlaceholder = false;
+                    textBox.Text = "";
+                    textBox.ForeColor = normalColor;
+
+                    if (textBox is TextBox tb)
+                        tb.UseSystemPasswordChar = false;
                 }
 
                 textBox.Enter += (s, e) => HidePlaceholder();
                 textBox.Leave += (s, e) => ShowPlaceholder();
 
+                // If code sets real text while the placeholder is showing, switch back to the normal color
+                textBox.TextChanged += (s, e) =>
+                {
+                    if (showingPlaceholder && textBox.Text != placeholderText)
+                    {
+                        showingPlaceholder = false;
+                        textBox.ForeColor = normalColor;
+                    }
+                };
+
                 // Show it immediately on setup
                 ShowPlaceholder();
+            }
+        }
+    
+
+        public static class LogoutHider
+        {
+            public static void hide()
+            {
+                Form_Instances._lim.btnGoBack.Hide();
+                Form_Instances._pay.btnLogout.Hide();
+                Form_Instances._acc.btnGoBack.Hide();
+                Form_Instances._dash.btnGoBack.Hide();
             }
         }
 

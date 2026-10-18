@@ -54,6 +54,8 @@
             this.lblMOP = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblOrderID = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -96,9 +98,9 @@
             this.lvPrice});
             this.lvReciept.GridLines = true;
             this.lvReciept.HideSelection = false;
-            this.lvReciept.Location = new System.Drawing.Point(13, 247);
+            this.lvReciept.Location = new System.Drawing.Point(13, 273);
             this.lvReciept.Name = "lvReciept";
-            this.lvReciept.Size = new System.Drawing.Size(287, 264);
+            this.lvReciept.Size = new System.Drawing.Size(287, 293);
             this.lvReciept.TabIndex = 4;
             this.lvReciept.UseCompatibleStateImageBehavior = false;
             this.lvReciept.View = System.Windows.Forms.View.Details;
@@ -172,7 +174,7 @@
             // 
             // btnPrint
             // 
-            this.btnPrint.Location = new System.Drawing.Point(111, 662);
+            this.btnPrint.Location = new System.Drawing.Point(111, 717);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(75, 23);
             this.btnPrint.TabIndex = 10;
@@ -193,7 +195,7 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(13, 517);
+            this.panel1.Location = new System.Drawing.Point(13, 572);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(287, 139);
             this.panel1.TabIndex = 11;
@@ -319,11 +321,33 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // lblOrderID
+            // 
+            this.lblOrderID.AutoSize = true;
+            this.lblOrderID.Font = new System.Drawing.Font("MS PGothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOrderID.Location = new System.Drawing.Point(140, 249);
+            this.lblOrderID.Name = "lblOrderID";
+            this.lblOrderID.Size = new System.Drawing.Size(21, 13);
+            this.lblOrderID.TabIndex = 15;
+            this.lblOrderID.Text = "xx";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("MS PGothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(71, 249);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(61, 13);
+            this.label9.TabIndex = 14;
+            this.label9.Text = "OrderID:";
+            // 
             // Receipt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(312, 698);
+            this.ClientSize = new System.Drawing.Size(312, 744);
+            this.Controls.Add(this.lblOrderID);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.lblMOP);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.panel1);
@@ -383,5 +407,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblMOP;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblOrderID;
+        private System.Windows.Forms.Label label9;
     }
 }

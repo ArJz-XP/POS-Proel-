@@ -23,6 +23,7 @@ namespace TBIC
             lblDate.Text = DateTime.Now.ToString("dd/mm/yyyy");
             lblCName.Text = Form_Instances._pay.lblUsername.Text;
             lblMOP.Text = Form_Instances._pay.txtMOP.Text;
+            lblOrderID.Text = Form_Instances._pay.txtOrderId.Text;
 
             lvReciept.Items.Clear();
 
@@ -43,6 +44,8 @@ namespace TBIC
         private void btnPrint_Click(object sender, EventArgs e)
         {
             DeductStock();
+
+            Form_Instances._pay.SalesRecord();
 
             MessageBox.Show("Receipt has been printed successfully.", "Print Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Form_Instances._lim.lvProductView.Items.Clear();

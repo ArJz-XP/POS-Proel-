@@ -29,16 +29,22 @@ namespace TBIC
             lblUserID.Text = StaffID.ToString();
         }
 
-        private void btnNewPurchase_Click(object sender, EventArgs e)
+        private void TransactionHistory_Load(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Are you sure you want to start a new purchase?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                Form_Instances._lim.lvProductView.Items.Clear();
-                Form_Instances._pay.dvgPOS.Rows.Clear();
-                Form_Instances._lim.StaffInfo(StaffName, StaffID);
-                Form_Instances._lim.Show();
-                this.Hide();
-            }            
+            LoadContext();
+        }
+
+        private void LoadContext()
+        {
+            TBICDataContext db = new TBICDataContext();
+            dgvTransactionHistory.DataSource = db.RETRIEVE_SALES_HISTORY();
+        }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            Form_Instances._dash.StaffInfo(StaffName, StaffID);
+            Form_Instances._dash.Show();
+            this.Hide();
         }
     }
 }

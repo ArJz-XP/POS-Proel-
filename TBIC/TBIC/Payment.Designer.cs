@@ -44,7 +44,6 @@
             this.studentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pWDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnNewPurchase = new System.Windows.Forms.Button();
-            this.btnTransHistory = new System.Windows.Forms.Button();
             this.txtOrderId = new System.Windows.Forms.TextBox();
             this.txtMOP = new System.Windows.Forms.TextBox();
             this.pnlBackground = new System.Windows.Forms.Panel();
@@ -70,10 +69,16 @@
             this.lblUsernameNumba = new System.Windows.Forms.Label();
             this.lblUserID = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblAmountPaid = new System.Windows.Forms.Label();
+            this.rtxtAmountPaid = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dvgPOS)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.pnlBackground.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIDK)).BeginInit();
             this.contextMenuStrip2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -247,26 +252,13 @@
             this.btnNewPurchase.UseVisualStyleBackColor = false;
             this.btnNewPurchase.Click += new System.EventHandler(this.btnNewPurchase_Click);
             // 
-            // btnTransHistory
-            // 
-            this.btnTransHistory.BackColor = System.Drawing.Color.Transparent;
-            this.btnTransHistory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnTransHistory.FlatAppearance.BorderSize = 0;
-            this.btnTransHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTransHistory.Image = global::TBIC.Properties.Resources.TransactionHistoryBtnUI1;
-            this.btnTransHistory.Location = new System.Drawing.Point(1069, 203);
-            this.btnTransHistory.Name = "btnTransHistory";
-            this.btnTransHistory.Size = new System.Drawing.Size(217, 77);
-            this.btnTransHistory.TabIndex = 3;
-            this.btnTransHistory.UseVisualStyleBackColor = false;
-            this.btnTransHistory.Click += new System.EventHandler(this.btnTransHistory_Click);
-            // 
             // txtOrderId
             // 
             this.txtOrderId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtOrderId.Location = new System.Drawing.Point(81, 19);
             this.txtOrderId.Multiline = true;
             this.txtOrderId.Name = "txtOrderId";
+            this.txtOrderId.ReadOnly = true;
             this.txtOrderId.Size = new System.Drawing.Size(199, 26);
             this.txtOrderId.TabIndex = 4;
             this.txtOrderId.Text = "#123456789";
@@ -277,6 +269,7 @@
             this.txtMOP.Location = new System.Drawing.Point(293, 19);
             this.txtMOP.Multiline = true;
             this.txtMOP.Name = "txtMOP";
+            this.txtMOP.ReadOnly = true;
             this.txtMOP.Size = new System.Drawing.Size(199, 26);
             this.txtMOP.TabIndex = 5;
             this.txtMOP.Text = "Cash";
@@ -284,6 +277,8 @@
             // pnlBackground
             // 
             this.pnlBackground.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlBackground.Controls.Add(this.label4);
+            this.pnlBackground.Controls.Add(this.label3);
             this.pnlBackground.Controls.Add(this.panel2);
             this.pnlBackground.Controls.Add(this.panel1);
             this.pnlBackground.Controls.Add(this.btnMOP);
@@ -335,6 +330,7 @@
             this.rtxtDiscount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.rtxtDiscount.Location = new System.Drawing.Point(162, 27);
             this.rtxtDiscount.Name = "rtxtDiscount";
+            this.rtxtDiscount.ReadOnly = true;
             this.rtxtDiscount.Size = new System.Drawing.Size(139, 41);
             this.rtxtDiscount.TabIndex = 1;
             this.rtxtDiscount.Text = "";
@@ -344,6 +340,7 @@
             this.rtxtTotalPrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.rtxtTotalPrice.Location = new System.Drawing.Point(3, 27);
             this.rtxtTotalPrice.Name = "rtxtTotalPrice";
+            this.rtxtTotalPrice.ReadOnly = true;
             this.rtxtTotalPrice.Size = new System.Drawing.Size(157, 41);
             this.rtxtTotalPrice.TabIndex = 0;
             this.rtxtTotalPrice.Text = "";
@@ -352,6 +349,8 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.lblAmountPaid);
+            this.panel1.Controls.Add(this.rtxtAmountPaid);
             this.panel1.Location = new System.Drawing.Point(20, 350);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(649, 73);
@@ -387,6 +386,7 @@
             this.btnCopy.Size = new System.Drawing.Size(21, 20);
             this.btnCopy.TabIndex = 12;
             this.btnCopy.UseVisualStyleBackColor = false;
+            this.btnCopy.Click += new System.EventHandler(this.btnCopy_Click);
             // 
             // picIDK
             // 
@@ -542,6 +542,52 @@
             this.lblUsername.TabIndex = 11;
             this.lblUsername.Text = "Me";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.Location = new System.Drawing.Point(1052, 14);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(30, 29);
+            this.button1.TabIndex = 33;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(78, 4);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(44, 13);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "OrderID";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(290, 4);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(30, 13);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "MoD";
+            // 
+            // lblAmountPaid
+            // 
+            this.lblAmountPaid.AutoSize = true;
+            this.lblAmountPaid.Location = new System.Drawing.Point(4, 8);
+            this.lblAmountPaid.Name = "lblAmountPaid";
+            this.lblAmountPaid.Size = new System.Drawing.Size(82, 13);
+            this.lblAmountPaid.TabIndex = 5;
+            this.lblAmountPaid.Text = "AMOUNT PAID";
+            // 
+            // rtxtAmountPaid
+            // 
+            this.rtxtAmountPaid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.rtxtAmountPaid.Location = new System.Drawing.Point(3, 27);
+            this.rtxtAmountPaid.Name = "rtxtAmountPaid";
+            this.rtxtAmountPaid.Size = new System.Drawing.Size(157, 41);
+            this.rtxtAmountPaid.TabIndex = 4;
+            this.rtxtAmountPaid.Text = "";
+            // 
             // Payment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -549,11 +595,11 @@
             this.BackgroundImage = global::TBIC.Properties.Resources.POSPaymentReyal_Updated_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1264, 641);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnConfirmPrint);
             this.Controls.Add(this.pnlBackground);
-            this.Controls.Add(this.btnTransHistory);
             this.Controls.Add(this.btnNewPurchase);
             this.Name = "Payment";
             this.ShowIcon = false;
@@ -566,6 +612,8 @@
             this.pnlBackground.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIDK)).EndInit();
             this.contextMenuStrip2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -576,14 +624,11 @@
 
         #endregion
         private System.Windows.Forms.Button btnNewPurchase;
-        private System.Windows.Forms.Button btnTransHistory;
-        private System.Windows.Forms.TextBox txtOrderId;
         private System.Windows.Forms.Panel pnlBackground;
         private System.Windows.Forms.Button btnConfirmPrint;
         private System.Windows.Forms.Button btnPrevious;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.PictureBox picIDK;
-        private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnMOP;
         private System.Windows.Forms.Button btnCopy;
         public System.Windows.Forms.DataGridView dvgPOS;
@@ -616,5 +661,12 @@
         public System.Windows.Forms.RichTextBox rtxtDiscount;
         public System.Windows.Forms.RichTextBox rtxtTotalPrice;
         public System.Windows.Forms.TextBox txtMOP;
+        public System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.TextBox txtOrderId;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblAmountPaid;
+        public System.Windows.Forms.RichTextBox rtxtAmountPaid;
     }
 }

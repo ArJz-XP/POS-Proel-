@@ -95,6 +95,8 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnTransactionHistory = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picMaybedropboxAdmin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRetrivalList)).BeginInit();
             this.panel1.SuspendLayout();
@@ -138,7 +140,7 @@
             this.dgvRetrivalList.AllowUserToDeleteRows = false;
             this.dgvRetrivalList.AllowUserToResizeColumns = false;
             this.dgvRetrivalList.AllowUserToResizeRows = false;
-            this.dgvRetrivalList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dgvRetrivalList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgvRetrivalList.BackgroundColor = System.Drawing.Color.White;
             this.dgvRetrivalList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRetrivalList.Location = new System.Drawing.Point(27, 205);
@@ -823,6 +825,31 @@
             this.label23.TabIndex = 0;
             this.label23.Text = "AVODACO";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.Location = new System.Drawing.Point(1054, 15);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(30, 29);
+            this.button1.TabIndex = 33;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnTransactionHistory
+            // 
+            this.btnTransactionHistory.BackColor = System.Drawing.Color.Transparent;
+            this.btnTransactionHistory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnTransactionHistory.FlatAppearance.BorderSize = 0;
+            this.btnTransactionHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTransactionHistory.Image = global::TBIC.Properties.Resources.AccManagementBtnFixed;
+            this.btnTransactionHistory.Location = new System.Drawing.Point(1054, 284);
+            this.btnTransactionHistory.Name = "btnTransactionHistory";
+            this.btnTransactionHistory.Size = new System.Drawing.Size(223, 43);
+            this.btnTransactionHistory.TabIndex = 34;
+            this.btnTransactionHistory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTransactionHistory.UseVisualStyleBackColor = false;
+            this.btnTransactionHistory.Click += new System.EventHandler(this.btnTransactionHistory_Click);
+            // 
             // Admin_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -830,6 +857,8 @@
             this.BackgroundImage = global::TBIC.Properties.Resources.ADMINDashboardi3;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1264, 641);
+            this.Controls.Add(this.btnTransactionHistory);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.cmbDisplayType);
             this.Controls.Add(this.panel1);
@@ -878,7 +907,6 @@
         private System.Windows.Forms.Label lblNumberOfEmployees;
         private System.Windows.Forms.Button btnAdminDashboard;
         private System.Windows.Forms.Button btnAccManage;
-        private System.Windows.Forms.Button btnGoBack;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblIDs;
         private System.Windows.Forms.Label lblUsernameNumba;
@@ -937,5 +965,8 @@
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;
+        public System.Windows.Forms.Button btnGoBack;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnTransactionHistory;
     }
 }
