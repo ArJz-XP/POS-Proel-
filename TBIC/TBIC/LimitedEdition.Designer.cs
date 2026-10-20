@@ -100,11 +100,11 @@
             this.btnGotoLimted.BackColor = System.Drawing.Color.Transparent;
             this.btnGotoLimted.FlatAppearance.BorderSize = 0;
             this.btnGotoLimted.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGotoLimted.Location = new System.Drawing.Point(96, 50);
+            this.btnGotoLimted.Image = global::TBIC.Properties.Resources.limitedbtnui;
+            this.btnGotoLimted.Location = new System.Drawing.Point(96, 49);
             this.btnGotoLimted.Name = "btnGotoLimted";
             this.btnGotoLimted.Size = new System.Drawing.Size(74, 28);
             this.btnGotoLimted.TabIndex = 0;
-            this.btnGotoLimted.Text = "LIMITED";
             this.btnGotoLimted.UseVisualStyleBackColor = false;
             this.btnGotoLimted.Click += new System.EventHandler(this.btnGotoLimted_Click);
             // 
@@ -131,11 +131,11 @@
             this.btnGotoHershey.BackColor = System.Drawing.Color.Transparent;
             this.btnGotoHershey.FlatAppearance.BorderSize = 0;
             this.btnGotoHershey.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGotoHershey.Location = new System.Drawing.Point(176, 51);
+            this.btnGotoHershey.Image = global::TBIC.Properties.Resources.hersheysbutnui;
+            this.btnGotoHershey.Location = new System.Drawing.Point(175, 49);
             this.btnGotoHershey.Name = "btnGotoHershey";
             this.btnGotoHershey.Size = new System.Drawing.Size(74, 28);
             this.btnGotoHershey.TabIndex = 4;
-            this.btnGotoHershey.Text = "HERSHEYS";
             this.btnGotoHershey.UseVisualStyleBackColor = false;
             this.btnGotoHershey.Click += new System.EventHandler(this.btnGotoHershey_Click);
             // 
@@ -144,11 +144,11 @@
             this.btnGotoManggo.BackColor = System.Drawing.Color.Transparent;
             this.btnGotoManggo.FlatAppearance.BorderSize = 0;
             this.btnGotoManggo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGotoManggo.Location = new System.Drawing.Point(256, 50);
+            this.btnGotoManggo.Image = global::TBIC.Properties.Resources.manggobtnui;
+            this.btnGotoManggo.Location = new System.Drawing.Point(255, 50);
             this.btnGotoManggo.Name = "btnGotoManggo";
             this.btnGotoManggo.Size = new System.Drawing.Size(74, 28);
             this.btnGotoManggo.TabIndex = 5;
-            this.btnGotoManggo.Text = "MANGGO";
             this.btnGotoManggo.UseVisualStyleBackColor = false;
             this.btnGotoManggo.Click += new System.EventHandler(this.btnGotoManggo_Click);
             // 
@@ -157,11 +157,11 @@
             this.btnGotoAvocado.BackColor = System.Drawing.Color.Transparent;
             this.btnGotoAvocado.FlatAppearance.BorderSize = 0;
             this.btnGotoAvocado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGotoAvocado.Image = global::TBIC.Properties.Resources.avocadobtnui;
             this.btnGotoAvocado.Location = new System.Drawing.Point(335, 50);
             this.btnGotoAvocado.Name = "btnGotoAvocado";
             this.btnGotoAvocado.Size = new System.Drawing.Size(74, 28);
             this.btnGotoAvocado.TabIndex = 6;
-            this.btnGotoAvocado.Text = "AVOCADO";
             this.btnGotoAvocado.UseVisualStyleBackColor = false;
             this.btnGotoAvocado.Click += new System.EventHandler(this.btnGotoAvocado_Click);
             // 
@@ -170,11 +170,11 @@
             this.btnGotoUbe.BackColor = System.Drawing.Color.Transparent;
             this.btnGotoUbe.FlatAppearance.BorderSize = 0;
             this.btnGotoUbe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGotoUbe.Location = new System.Drawing.Point(415, 50);
+            this.btnGotoUbe.Image = global::TBIC.Properties.Resources.ubebtnui;
+            this.btnGotoUbe.Location = new System.Drawing.Point(414, 50);
             this.btnGotoUbe.Name = "btnGotoUbe";
             this.btnGotoUbe.Size = new System.Drawing.Size(74, 28);
             this.btnGotoUbe.TabIndex = 7;
-            this.btnGotoUbe.Text = "UBE";
             this.btnGotoUbe.UseVisualStyleBackColor = false;
             this.btnGotoUbe.Click += new System.EventHandler(this.btnGotoUbe_Click);
             // 
@@ -184,18 +184,18 @@
             this.btnGotoVanilla.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnGotoVanilla.FlatAppearance.BorderSize = 0;
             this.btnGotoVanilla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGotoVanilla.Image = global::TBIC.Properties.Resources.vanillabtnui;
             this.btnGotoVanilla.Location = new System.Drawing.Point(492, 50);
             this.btnGotoVanilla.Name = "btnGotoVanilla";
             this.btnGotoVanilla.Size = new System.Drawing.Size(74, 28);
             this.btnGotoVanilla.TabIndex = 8;
-            this.btnGotoVanilla.Text = "VANILLA";
             this.btnGotoVanilla.UseVisualStyleBackColor = false;
             this.btnGotoVanilla.Click += new System.EventHandler(this.btnGotoVanilla_Click);
             // 
             // btnProceedLE
             // 
             this.btnProceedLE.BackColor = System.Drawing.Color.Transparent;
-            this.btnProceedLE.BackgroundImage = global::TBIC.Properties.Resources.Confirm;
+            this.btnProceedLE.BackgroundImage = global::TBIC.Properties.Resources.proceedbtnuiupdate;
             this.btnProceedLE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnProceedLE.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnProceedLE.Location = new System.Drawing.Point(1067, 582);
@@ -685,7 +685,7 @@
             this.btnGoBack.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnGoBack.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnGoBack.BackColor = System.Drawing.Color.Transparent;
-            this.btnGoBack.BackgroundImage = global::TBIC.Properties.Resources.LogOutBluSmol;
+            this.btnGoBack.BackgroundImage = global::TBIC.Properties.Resources.logoutbtnuifixed;
             this.btnGoBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnGoBack.FlatAppearance.BorderSize = 0;
             this.btnGoBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -700,7 +700,8 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(1050, 16);
+            this.button1.Image = global::TBIC.Properties.Resources.optionsui;
+            this.button1.Location = new System.Drawing.Point(1049, 15);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(30, 29);
             this.button1.TabIndex = 32;

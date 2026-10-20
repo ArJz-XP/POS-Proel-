@@ -137,11 +137,11 @@
             this.btnManageManage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnManageManage.FlatAppearance.BorderSize = 0;
             this.btnManageManage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManageManage.Location = new System.Drawing.Point(1056, 161);
+            this.btnManageManage.Image = global::TBIC.Properties.Resources.AccManagementBtnFixed;
+            this.btnManageManage.Location = new System.Drawing.Point(1054, 219);
             this.btnManageManage.Name = "btnManageManage";
-            this.btnManageManage.Size = new System.Drawing.Size(214, 30);
+            this.btnManageManage.Size = new System.Drawing.Size(214, 56);
             this.btnManageManage.TabIndex = 22;
-            this.btnManageManage.Text = "ACC MANAGEMENT";
             this.btnManageManage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnManageManage.UseVisualStyleBackColor = false;
             this.btnManageManage.Click += new System.EventHandler(this.btnManageManage_Click);
@@ -152,11 +152,11 @@
             this.btnDashBoardManage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnDashBoardManage.FlatAppearance.BorderSize = 0;
             this.btnDashBoardManage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDashBoardManage.Location = new System.Drawing.Point(1056, 110);
+            this.btnDashBoardManage.Image = global::TBIC.Properties.Resources.DashboardBtnFixed;
+            this.btnDashBoardManage.Location = new System.Drawing.Point(1054, 155);
             this.btnDashBoardManage.Name = "btnDashBoardManage";
-            this.btnDashBoardManage.Size = new System.Drawing.Size(214, 28);
+            this.btnDashBoardManage.Size = new System.Drawing.Size(214, 56);
             this.btnDashBoardManage.TabIndex = 23;
-            this.btnDashBoardManage.Text = "DASHBOARD";
             this.btnDashBoardManage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDashBoardManage.UseVisualStyleBackColor = false;
             this.btnDashBoardManage.Click += new System.EventHandler(this.btnDashBoardManage_Click);
@@ -324,7 +324,8 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(1047, 15);
+            this.button1.Image = global::TBIC.Properties.Resources.optionsui;
+            this.button1.Location = new System.Drawing.Point(1050, 15);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(30, 29);
             this.button1.TabIndex = 33;
@@ -336,7 +337,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.BackgroundImage = global::TBIC.Properties.Resources.ADMIN_User_Management;
+            this.BackgroundImage = global::TBIC.Properties.Resources.accmanagementbgfixed;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1266, 648);
             this.Controls.Add(this.button1);

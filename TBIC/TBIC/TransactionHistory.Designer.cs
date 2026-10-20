@@ -37,6 +37,7 @@
             this.txtSearchBoxSearchHistory = new System.Windows.Forms.TextBox();
             this.btnReturn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransactionHistory)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -120,17 +121,17 @@
             this.btnReturn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnReturn.FlatAppearance.BorderSize = 0;
             this.btnReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReturn.Image = global::TBIC.Properties.Resources.NewPurchaseBtnUI;
-            this.btnReturn.Location = new System.Drawing.Point(1068, 162);
+            this.btnReturn.Image = global::TBIC.Properties.Resources.DashboardBtnFixed;
+            this.btnReturn.Location = new System.Drawing.Point(1068, 163);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(214, 41);
+            this.btnReturn.Size = new System.Drawing.Size(214, 40);
             this.btnReturn.TabIndex = 29;
             this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::TBIC.Properties.Resources.TransactionHistoryBG;
+            this.pictureBox1.Image = global::TBIC.Properties.Resources.transactionbgadmin;
             this.pictureBox1.Location = new System.Drawing.Point(-7, -3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1272, 680);
@@ -138,11 +139,22 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.Image = global::TBIC.Properties.Resources.optionsui;
+            this.button1.Location = new System.Drawing.Point(1049, 13);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(30, 29);
+            this.button1.TabIndex = 34;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // TransactionHistory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 674);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.txtSearchBoxSearchHistory);
             this.Controls.Add(this.panel3);
@@ -175,5 +187,6 @@
         private System.Windows.Forms.TextBox txtSearchBoxSearchHistory;
         private System.Windows.Forms.Button btnReturn;
         public System.Windows.Forms.DataGridView dgvTransactionHistory;
+        private System.Windows.Forms.Button button1;
     }
 }

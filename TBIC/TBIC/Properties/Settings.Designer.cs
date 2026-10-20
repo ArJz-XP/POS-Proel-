@@ -12,7 +12,7 @@ namespace TBIC.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.14.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "18.10.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -53,6 +53,17 @@ namespace TBIC.Properties {
         public string TBCI_ServerConnectionString2 {
             get {
                 return ((string)(this["TBCI_ServerConnectionString2"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-8E1Q9OF;Initial Catalog=\"TBCI Server\";Integrated Security=Tru" +
+            "e;Encrypt=True;TrustServerCertificate=True")]
+        public string TBCI_ServerConnectionString3 {
+            get {
+                return ((string)(this["TBCI_ServerConnectionString3"]));
             }
         }
     }

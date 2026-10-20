@@ -541,10 +541,16 @@
     <None Include="Resources\magnospecial.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\vanillabtnui.png" />
+    <None Include="Resources\ubebtnui.png" />
+    <None Include="Resources\transactionhistoryui.png" />
+    <None Include="Resources\transactionbgadmin.png" />
     <None Include="Resources\TransactionHistoryBtnUI1.png" />
     <None Include="Resources\TransactionHistoryBtnUI.png" />
     <None Include="Resources\TransactionHistoryBG.png" />
     <None Include="Resources\AccManagementBtnFixed.png" />
+    <None Include="Resources\addstocksbtnui.png" />
+    <None Include="Resources\accmanagementbgfixed.png" />
     <Content Include="Resources\ADMIN Dashboard %281%29.png" />
     <Content Include="Resources\ADMIN Dashboard %282%29.png" />
     <Content Include="Resources\ADMIN Dashboard.png" />
@@ -563,6 +569,14 @@
     <None Include="Resources\LogOutBlu.png" />
     <None Include="Resources\LogOutBluSmol.png" />
     <None Include="Resources\LogOutPurpleSmol.png" />
+    <None Include="Resources\logoutbtnuifixed.png" />
+    <None Include="Resources\optionsui.png" />
+    <None Include="Resources\proceedbtnuiupdate.png" />
+    <None Include="Resources\limitedbtnui.png" />
+    <None Include="Resources\hersheysbutnui.png" />
+    <None Include="Resources\manggobtnui.png" />
+    <None Include="Resources\avocadobtnui.png" />
+    <None Include="Resources\loginbtnui.png" />
     <Content Include="Resources\PROEL2D UI5.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

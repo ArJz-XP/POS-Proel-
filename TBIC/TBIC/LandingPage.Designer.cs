@@ -28,31 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnLogin = new System.Windows.Forms.Button();
             this.txtUser = new System.Windows.Forms.TextBox();
             this.txtPass = new System.Windows.Forms.TextBox();
-            this.picLandingpage = new System.Windows.Forms.PictureBox();
             this.lblIncorrectUsername = new System.Windows.Forms.Label();
             this.lblIncorrectPassword = new System.Windows.Forms.Label();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.picLandingpage = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picLandingpage)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnLogin.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(89)))));
-            this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnLogin.FlatAppearance.BorderSize = 0;
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(197, 377);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(135, 29);
-            this.btnLogin.TabIndex = 1;
-            this.btnLogin.Text = "LOGIN";
-            this.btnLogin.UseVisualStyleBackColor = false;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // txtUser
             // 
@@ -75,17 +58,6 @@
             this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(182, 14);
             this.txtPass.TabIndex = 3;
-            // 
-            // picLandingpage
-            // 
-            this.picLandingpage.BackgroundImage = global::TBIC.Properties.Resources.Landing_Page1;
-            this.picLandingpage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picLandingpage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picLandingpage.Location = new System.Drawing.Point(0, 0);
-            this.picLandingpage.Name = "picLandingpage";
-            this.picLandingpage.Size = new System.Drawing.Size(1264, 641);
-            this.picLandingpage.TabIndex = 0;
-            this.picLandingpage.TabStop = false;
             // 
             // lblIncorrectUsername
             // 
@@ -110,6 +82,34 @@
             this.lblIncorrectPassword.TabIndex = 5;
             this.lblIncorrectPassword.Text = "Incorrect password! try again.";
             this.lblIncorrectPassword.Visible = false;
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnLogin.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnLogin.BackColor = System.Drawing.Color.White;
+            this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnLogin.FlatAppearance.BorderSize = 0;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Image = global::TBIC.Properties.Resources.loginbtnui;
+            this.btnLogin.Location = new System.Drawing.Point(175, 374);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(176, 37);
+            this.btnLogin.TabIndex = 1;
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // picLandingpage
+            // 
+            this.picLandingpage.BackgroundImage = global::TBIC.Properties.Resources.Landing_Page1;
+            this.picLandingpage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picLandingpage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picLandingpage.Location = new System.Drawing.Point(0, 0);
+            this.picLandingpage.Name = "picLandingpage";
+            this.picLandingpage.Size = new System.Drawing.Size(1264, 641);
+            this.picLandingpage.TabIndex = 0;
+            this.picLandingpage.TabStop = false;
             // 
             // LandingPage
             // 

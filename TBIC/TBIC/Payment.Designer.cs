@@ -55,6 +55,7 @@
             this.rtxtDiscount = new System.Windows.Forms.RichTextBox();
             this.rtxtTotalPrice = new System.Windows.Forms.RichTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.lblAmountPaid = new System.Windows.Forms.Label();
             this.rtxtAmountPaid = new System.Windows.Forms.RichTextBox();
             this.btnMOP = new System.Windows.Forms.Button();
@@ -74,7 +75,6 @@
             this.lblUserID = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dvgPOS)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.pnlBackground.SuspendLayout();
@@ -376,6 +376,17 @@
             this.panel1.Size = new System.Drawing.Size(649, 73);
             this.panel1.TabIndex = 14;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(246, 5);
+            this.label5.Name = "label5";
+            this.label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label5.Size = new System.Drawing.Size(396, 26);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Please ensure the customer\'s change is correct before completing the transaction." +
+    " \r\nThank you for your service!";
+            // 
             // lblAmountPaid
             // 
             this.lblAmountPaid.AutoSize = true;
@@ -583,23 +594,13 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(1052, 14);
+            this.button1.Image = global::TBIC.Properties.Resources.optionsui;
+            this.button1.Location = new System.Drawing.Point(1049, 14);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(30, 29);
             this.button1.TabIndex = 33;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(246, 5);
-            this.label5.Name = "label5";
-            this.label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label5.Size = new System.Drawing.Size(396, 26);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Please ensure the customer\'s change is correct before completing the transaction." +
-    " \r\nThank you for your service!";
             // 
             // Payment
             // 

@@ -207,7 +207,7 @@
             this.btnGoBack.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnGoBack.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnGoBack.BackColor = System.Drawing.Color.Transparent;
-            this.btnGoBack.BackgroundImage = global::TBIC.Properties.Resources.LogOutPurpleSmol;
+            this.btnGoBack.BackgroundImage = global::TBIC.Properties.Resources.logoutbtnuifixed;
             this.btnGoBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnGoBack.FlatAppearance.BorderSize = 0;
             this.btnGoBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -829,7 +829,8 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(1054, 15);
+            this.button1.Image = global::TBIC.Properties.Resources.optionsui;
+            this.button1.Location = new System.Drawing.Point(1049, 15);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(30, 29);
             this.button1.TabIndex = 33;
@@ -842,8 +843,8 @@
             this.btnTransactionHistory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnTransactionHistory.FlatAppearance.BorderSize = 0;
             this.btnTransactionHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTransactionHistory.Image = global::TBIC.Properties.Resources.AccManagementBtnFixed;
-            this.btnTransactionHistory.Location = new System.Drawing.Point(1054, 284);
+            this.btnTransactionHistory.Image = global::TBIC.Properties.Resources.transactionhistoryui;
+            this.btnTransactionHistory.Location = new System.Drawing.Point(1054, 282);
             this.btnTransactionHistory.Name = "btnTransactionHistory";
             this.btnTransactionHistory.Size = new System.Drawing.Size(223, 43);
             this.btnTransactionHistory.TabIndex = 34;
@@ -857,8 +858,8 @@
             this.btnAddStock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnAddStock.FlatAppearance.BorderSize = 0;
             this.btnAddStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddStock.Image = global::TBIC.Properties.Resources.AccManagementBtnFixed;
-            this.btnAddStock.Location = new System.Drawing.Point(1054, 346);
+            this.btnAddStock.Image = global::TBIC.Properties.Resources.addstocksbtnui;
+            this.btnAddStock.Location = new System.Drawing.Point(1054, 343);
             this.btnAddStock.Name = "btnAddStock";
             this.btnAddStock.Size = new System.Drawing.Size(223, 43);
             this.btnAddStock.TabIndex = 35;
