@@ -178,5 +178,12 @@ namespace TBIC
             Form_Instances._tran.Show();
             this.Hide();
         }
+
+        private void btnAddStock_Click(object sender, EventArgs e)
+        {
+            Form_Instances._stock.cmbItemName.SelectedIndex = -1;
+            Form_Instances._stock.rtxtAmount.Text = "";
+            Form_Instances._stock.ShowDialog();
+        }
     }
 }

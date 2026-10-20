@@ -47,12 +47,16 @@
             this.txtOrderId = new System.Windows.Forms.TextBox();
             this.txtMOP = new System.Windows.Forms.TextBox();
             this.pnlBackground = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.rtxtDiscount = new System.Windows.Forms.RichTextBox();
             this.rtxtTotalPrice = new System.Windows.Forms.RichTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblAmountPaid = new System.Windows.Forms.Label();
+            this.rtxtAmountPaid = new System.Windows.Forms.RichTextBox();
             this.btnMOP = new System.Windows.Forms.Button();
             this.btnCopy = new System.Windows.Forms.Button();
             this.picIDK = new System.Windows.Forms.PictureBox();
@@ -70,10 +74,7 @@
             this.lblUserID = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lblAmountPaid = new System.Windows.Forms.Label();
-            this.rtxtAmountPaid = new System.Windows.Forms.RichTextBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dvgPOS)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.pnlBackground.SuspendLayout();
@@ -294,6 +295,24 @@
             this.pnlBackground.Size = new System.Drawing.Size(1000, 430);
             this.pnlBackground.TabIndex = 6;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(290, 4);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(30, 13);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "MoD";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(78, 4);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(44, 13);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "OrderID";
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
@@ -349,12 +368,31 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.lblAmountPaid);
             this.panel1.Controls.Add(this.rtxtAmountPaid);
             this.panel1.Location = new System.Drawing.Point(20, 350);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(649, 73);
             this.panel1.TabIndex = 14;
+            // 
+            // lblAmountPaid
+            // 
+            this.lblAmountPaid.AutoSize = true;
+            this.lblAmountPaid.Location = new System.Drawing.Point(4, 8);
+            this.lblAmountPaid.Name = "lblAmountPaid";
+            this.lblAmountPaid.Size = new System.Drawing.Size(82, 13);
+            this.lblAmountPaid.TabIndex = 5;
+            this.lblAmountPaid.Text = "AMOUNT PAID";
+            // 
+            // rtxtAmountPaid
+            // 
+            this.rtxtAmountPaid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.rtxtAmountPaid.Location = new System.Drawing.Point(3, 27);
+            this.rtxtAmountPaid.Name = "rtxtAmountPaid";
+            this.rtxtAmountPaid.Size = new System.Drawing.Size(157, 41);
+            this.rtxtAmountPaid.TabIndex = 4;
+            this.rtxtAmountPaid.Text = "";
             // 
             // btnMOP
             // 
@@ -552,41 +590,16 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label3
+            // label5
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(78, 4);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 13);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "OrderID";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(290, 4);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(30, 13);
-            this.label4.TabIndex = 17;
-            this.label4.Text = "MoD";
-            // 
-            // lblAmountPaid
-            // 
-            this.lblAmountPaid.AutoSize = true;
-            this.lblAmountPaid.Location = new System.Drawing.Point(4, 8);
-            this.lblAmountPaid.Name = "lblAmountPaid";
-            this.lblAmountPaid.Size = new System.Drawing.Size(82, 13);
-            this.lblAmountPaid.TabIndex = 5;
-            this.lblAmountPaid.Text = "AMOUNT PAID";
-            // 
-            // rtxtAmountPaid
-            // 
-            this.rtxtAmountPaid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rtxtAmountPaid.Location = new System.Drawing.Point(3, 27);
-            this.rtxtAmountPaid.Name = "rtxtAmountPaid";
-            this.rtxtAmountPaid.Size = new System.Drawing.Size(157, 41);
-            this.rtxtAmountPaid.TabIndex = 4;
-            this.rtxtAmountPaid.Text = "";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(246, 5);
+            this.label5.Name = "label5";
+            this.label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label5.Size = new System.Drawing.Size(396, 26);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Please ensure the customer\'s change is correct before completing the transaction." +
+    " \r\nThank you for your service!";
             // 
             // Payment
             // 
@@ -668,5 +681,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblAmountPaid;
         public System.Windows.Forms.RichTextBox rtxtAmountPaid;
+        private System.Windows.Forms.Label label5;
     }
 }

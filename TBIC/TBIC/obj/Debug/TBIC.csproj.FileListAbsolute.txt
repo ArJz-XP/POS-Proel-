@@ -189,3 +189,4 @@ C:\Users\Personal\Documents\School\PROEL2D\TBIC Repos\TBIC\TBIC\obj\Debug\TBIC.c
 C:\Users\Personal\Documents\School\PROEL2D\TBIC Repos\TBIC\TBIC\obj\Debug\TBIC.csproj.Up2Date
 C:\Users\Personal\Documents\School\PROEL2D\TBIC Repos\TBIC\TBIC\obj\Debug\TBIC.exe
 C:\Users\Personal\Documents\School\PROEL2D\TBIC Repos\TBIC\TBIC\obj\Debug\TBIC.pdb
+C:\Users\Personal\Documents\School\PROEL2D\TBIC Repos\TBIC\TBIC\obj\Debug\TBIC.AddStock.resources

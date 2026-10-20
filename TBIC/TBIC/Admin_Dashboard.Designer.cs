@@ -97,6 +97,7 @@
             this.label23 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.btnTransactionHistory = new System.Windows.Forms.Button();
+            this.btnAddStock = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picMaybedropboxAdmin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRetrivalList)).BeginInit();
             this.panel1.SuspendLayout();
@@ -147,7 +148,7 @@
             this.dgvRetrivalList.Name = "dgvRetrivalList";
             this.dgvRetrivalList.ReadOnly = true;
             this.dgvRetrivalList.RowHeadersWidth = 51;
-            this.dgvRetrivalList.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.dgvRetrivalList.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dgvRetrivalList.Size = new System.Drawing.Size(658, 372);
             this.dgvRetrivalList.TabIndex = 14;
             // 
@@ -327,7 +328,7 @@
             this.panel7.Controls.Add(this.label27);
             this.panel7.Location = new System.Drawing.Point(3, 3);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(276, 93);
+            this.panel7.Size = new System.Drawing.Size(265, 93);
             this.panel7.TabIndex = 11;
             // 
             // lblTheBiteof67
@@ -412,7 +413,7 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(3, 102);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(276, 93);
+            this.panel2.Size = new System.Drawing.Size(265, 93);
             this.panel2.TabIndex = 0;
             // 
             // lblAtlerEgo
@@ -497,7 +498,7 @@
             this.panel3.Controls.Add(this.label11);
             this.panel3.Location = new System.Drawing.Point(3, 201);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(276, 93);
+            this.panel3.Size = new System.Drawing.Size(265, 93);
             this.panel3.TabIndex = 7;
             // 
             // lblTasteofDnD
@@ -582,7 +583,7 @@
             this.panel4.Controls.Add(this.label15);
             this.panel4.Location = new System.Drawing.Point(3, 300);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(276, 93);
+            this.panel4.Size = new System.Drawing.Size(265, 93);
             this.panel4.TabIndex = 8;
             // 
             // lblCaramelKiss
@@ -667,7 +668,7 @@
             this.panel5.Controls.Add(this.label19);
             this.panel5.Location = new System.Drawing.Point(3, 399);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(276, 93);
+            this.panel5.Size = new System.Drawing.Size(265, 93);
             this.panel5.TabIndex = 9;
             // 
             // lblCookiesAndChunks
@@ -752,7 +753,7 @@
             this.panel6.Controls.Add(this.label23);
             this.panel6.Location = new System.Drawing.Point(3, 498);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(276, 93);
+            this.panel6.Size = new System.Drawing.Size(265, 93);
             this.panel6.TabIndex = 10;
             // 
             // lblGreenAvalanche
@@ -850,6 +851,21 @@
             this.btnTransactionHistory.UseVisualStyleBackColor = false;
             this.btnTransactionHistory.Click += new System.EventHandler(this.btnTransactionHistory_Click);
             // 
+            // btnAddStock
+            // 
+            this.btnAddStock.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddStock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAddStock.FlatAppearance.BorderSize = 0;
+            this.btnAddStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddStock.Image = global::TBIC.Properties.Resources.AccManagementBtnFixed;
+            this.btnAddStock.Location = new System.Drawing.Point(1054, 346);
+            this.btnAddStock.Name = "btnAddStock";
+            this.btnAddStock.Size = new System.Drawing.Size(223, 43);
+            this.btnAddStock.TabIndex = 35;
+            this.btnAddStock.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddStock.UseVisualStyleBackColor = false;
+            this.btnAddStock.Click += new System.EventHandler(this.btnAddStock_Click);
+            // 
             // Admin_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -857,6 +873,7 @@
             this.BackgroundImage = global::TBIC.Properties.Resources.ADMINDashboardi3;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1264, 641);
+            this.Controls.Add(this.btnAddStock);
             this.Controls.Add(this.btnTransactionHistory);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.flowLayoutPanel1);
@@ -968,5 +985,6 @@
         public System.Windows.Forms.Button btnGoBack;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnTransactionHistory;
+        private System.Windows.Forms.Button btnAddStock;
     }
 }

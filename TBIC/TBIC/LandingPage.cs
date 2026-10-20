@@ -63,7 +63,7 @@
                     TBICDataContext db = new TBICDataContext();
 
                     // 1. Does the username exist and belong to an active account?
-                    var account = db.STAFFs.FirstOrDefault(x => x.USERNAME == User && x.IS_ACTIVE);
+                    var account = db.LOGIN_STAFF(User).FirstOrDefault();
                     if (account == null)
                     {
                         lblIncorrectUsername.Visible = true;
@@ -72,7 +72,7 @@
                     }
 
                     // 2. Check the typed password against the stored hash
-                    if (!BCrypt.Net.BCrypt.Verify(Pass, account.PASSWORD))
+                    if (!BCrypt.Net.BCrypt.Verify(Pass, account.PasswordHash))
                     {
                         lblIncorrectPassword.Visible = true;
                         Troll();

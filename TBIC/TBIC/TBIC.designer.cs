@@ -132,7 +132,7 @@ namespace TBIC
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ADD_STAFF")]
-		public int ADD_STAFF([global::System.Data.Linq.Mapping.ParameterAttribute(Name="STAFF_NAME", DbType="NVarChar(100)")] string sTAFF_NAME, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="USERNAME", DbType="NVarChar(50)")] string uSERNAME, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PASSWORD", DbType="NVarChar(255)")] string pASSWORD, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DEPARTMENT_ID", DbType="Int")] System.Nullable<int> dEPARTMENT_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ROLE", DbType="NVarChar(20)")] string rOLE)
+		public int ADD_STAFF([global::System.Data.Linq.Mapping.ParameterAttribute(Name="STAFF_NAME", DbType="NVarChar(100)")] string sTAFF_NAME, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="USERNAME", DbType="NVarChar(50)")] string uSERNAME, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PASSWORD", DbType="NVarChar(255)")] string pASSWORD, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DEPARTMENT_ID", DbType="Int")] System.Nullable<int> dEPARTMENT_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ROLE", DbType="NVarChar(50)")] string rOLE)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), sTAFF_NAME, uSERNAME, pASSWORD, dEPARTMENT_ID, rOLE);
 			return ((int)(result.ReturnValue));
@@ -159,11 +159,25 @@ namespace TBIC
 			return ((int)(result.ReturnValue));
 		}
 		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GET_STAFF_PASSWORD_HASH")]
+		public ISingleResult<GET_STAFF_PASSWORD_HASHResult> GET_STAFF_PASSWORD_HASH([global::System.Data.Linq.Mapping.ParameterAttribute(Name="USERNAME", DbType="NVarChar(50)")] string uSERNAME)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), uSERNAME);
+			return ((ISingleResult<GET_STAFF_PASSWORD_HASHResult>)(result.ReturnValue));
+		}
+		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.HARD_DELETE_STAFF")]
 		public int HARD_DELETE_STAFF([global::System.Data.Linq.Mapping.ParameterAttribute(Name="STAFF_ID", DbType="Int")] System.Nullable<int> sTAFF_ID)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), sTAFF_ID);
 			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.LOGIN_STAFF")]
+		public ISingleResult<LOGIN_STAFFResult> LOGIN_STAFF([global::System.Data.Linq.Mapping.ParameterAttribute(Name="USERNAME", DbType="NVarChar(50)")] string uSERNAME)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), uSERNAME);
+			return ((ISingleResult<LOGIN_STAFFResult>)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.RESTORE_STAFF")]
@@ -180,6 +194,13 @@ namespace TBIC
 			return ((ISingleResult<RETRIEVE_SALES_HISTORYResult>)(result.ReturnValue));
 		}
 		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.RETRIEVE_SOFT_DELETED_STAFF")]
+		public ISingleResult<RETRIEVE_SOFT_DELETED_STAFFResult> RETRIEVE_SOFT_DELETED_STAFF()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<RETRIEVE_SOFT_DELETED_STAFFResult>)(result.ReturnValue));
+		}
+		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.RETRIEVE_STAFF")]
 		public ISingleResult<RETRIEVE_STAFFResult> RETRIEVE_STAFF()
 		{
@@ -188,17 +209,10 @@ namespace TBIC
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SEARCH_STAFF")]
-		public ISingleResult<SEARCH_STAFFResult> SEARCH_STAFF([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Search", DbType="VarChar(100)")] string search)
+		public ISingleResult<SEARCH_STAFFResult> SEARCH_STAFF([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Search", DbType="NVarChar(100)")] string search)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), search);
 			return ((ISingleResult<SEARCH_STAFFResult>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.RETRIEVE_SOFT_DELETED_STAFF")]
-		public ISingleResult<RETRIEVE_SOFT_DELETED_STAFFResult> RETRIEVE_SOFT_DELETED_STAFF()
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
-			return ((ISingleResult<RETRIEVE_SOFT_DELETED_STAFFResult>)(result.ReturnValue));
 		}
 	}
 	
@@ -1364,6 +1378,148 @@ namespace TBIC
 		}
 	}
 	
+	public partial class GET_STAFF_PASSWORD_HASHResult
+	{
+		
+		private string _PasswordHash;
+		
+		public GET_STAFF_PASSWORD_HASHResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PasswordHash", DbType="NVarChar(255)")]
+		public string PasswordHash
+		{
+			get
+			{
+				return this._PasswordHash;
+			}
+			set
+			{
+				if ((this._PasswordHash != value))
+				{
+					this._PasswordHash = value;
+				}
+			}
+		}
+	}
+	
+	public partial class LOGIN_STAFFResult
+	{
+		
+		private int _STAFF_ID;
+		
+		private string _STAFF_NAME;
+		
+		private string _USERNAME;
+		
+		private string _PasswordHash;
+		
+		private System.Nullable<int> _DEPARTMENT_ID;
+		
+		private string _ROLE;
+		
+		public LOGIN_STAFFResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_STAFF_ID", DbType="Int NOT NULL")]
+		public int STAFF_ID
+		{
+			get
+			{
+				return this._STAFF_ID;
+			}
+			set
+			{
+				if ((this._STAFF_ID != value))
+				{
+					this._STAFF_ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_STAFF_NAME", DbType="VarChar(100)")]
+		public string STAFF_NAME
+		{
+			get
+			{
+				return this._STAFF_NAME;
+			}
+			set
+			{
+				if ((this._STAFF_NAME != value))
+				{
+					this._STAFF_NAME = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_USERNAME", DbType="VarChar(50)")]
+		public string USERNAME
+		{
+			get
+			{
+				return this._USERNAME;
+			}
+			set
+			{
+				if ((this._USERNAME != value))
+				{
+					this._USERNAME = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PasswordHash", DbType="NVarChar(255)")]
+		public string PasswordHash
+		{
+			get
+			{
+				return this._PasswordHash;
+			}
+			set
+			{
+				if ((this._PasswordHash != value))
+				{
+					this._PasswordHash = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DEPARTMENT_ID", DbType="Int")]
+		public System.Nullable<int> DEPARTMENT_ID
+		{
+			get
+			{
+				return this._DEPARTMENT_ID;
+			}
+			set
+			{
+				if ((this._DEPARTMENT_ID != value))
+				{
+					this._DEPARTMENT_ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ROLE", DbType="VarChar(50)")]
+		public string ROLE
+		{
+			get
+			{
+				return this._ROLE;
+			}
+			set
+			{
+				if ((this._ROLE != value))
+				{
+					this._ROLE = value;
+				}
+			}
+		}
+	}
+	
 	public partial class RETRIEVE_SALES_HISTORYResult
 	{
 		
@@ -1624,6 +1780,122 @@ namespace TBIC
 		}
 	}
 	
+	public partial class RETRIEVE_SOFT_DELETED_STAFFResult
+	{
+		
+		private int _STAFF_ID;
+		
+		private string _STAFF_NAME;
+		
+		private string _USERNAME;
+		
+		private System.Nullable<int> _DEPARTMENT_ID;
+		
+		private string _ROLE;
+		
+		private string _DEPARTMENT_NAME;
+		
+		public RETRIEVE_SOFT_DELETED_STAFFResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_STAFF_ID", DbType="Int NOT NULL")]
+		public int STAFF_ID
+		{
+			get
+			{
+				return this._STAFF_ID;
+			}
+			set
+			{
+				if ((this._STAFF_ID != value))
+				{
+					this._STAFF_ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_STAFF_NAME", DbType="VarChar(100)")]
+		public string STAFF_NAME
+		{
+			get
+			{
+				return this._STAFF_NAME;
+			}
+			set
+			{
+				if ((this._STAFF_NAME != value))
+				{
+					this._STAFF_NAME = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_USERNAME", DbType="VarChar(50)")]
+		public string USERNAME
+		{
+			get
+			{
+				return this._USERNAME;
+			}
+			set
+			{
+				if ((this._USERNAME != value))
+				{
+					this._USERNAME = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DEPARTMENT_ID", DbType="Int")]
+		public System.Nullable<int> DEPARTMENT_ID
+		{
+			get
+			{
+				return this._DEPARTMENT_ID;
+			}
+			set
+			{
+				if ((this._DEPARTMENT_ID != value))
+				{
+					this._DEPARTMENT_ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ROLE", DbType="VarChar(50)")]
+		public string ROLE
+		{
+			get
+			{
+				return this._ROLE;
+			}
+			set
+			{
+				if ((this._ROLE != value))
+				{
+					this._ROLE = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DEPARTMENT_NAME", DbType="VarChar(100)")]
+		public string DEPARTMENT_NAME
+		{
+			get
+			{
+				return this._DEPARTMENT_NAME;
+			}
+			set
+			{
+				if ((this._DEPARTMENT_NAME != value))
+				{
+					this._DEPARTMENT_NAME = value;
+				}
+			}
+		}
+	}
+	
 	public partial class RETRIEVE_STAFFResult
 	{
 		
@@ -1851,140 +2123,6 @@ namespace TBIC
 				if ((this._DEPARTMENT_NAME != value))
 				{
 					this._DEPARTMENT_NAME = value;
-				}
-			}
-		}
-	}
-	
-	public partial class RETRIEVE_SOFT_DELETED_STAFFResult
-	{
-		
-		private int _STAFF_ID;
-		
-		private string _STAFF_NAME;
-		
-		private string _USERNAME;
-		
-		private System.Nullable<int> _DEPARTMENT_ID;
-		
-		private string _ROLE;
-		
-		private string _DEPARTMENT_NAME;
-		
-		private System.Nullable<System.DateTime> _DELETED_AT;
-		
-		public RETRIEVE_SOFT_DELETED_STAFFResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_STAFF_ID", DbType="Int NOT NULL")]
-		public int STAFF_ID
-		{
-			get
-			{
-				return this._STAFF_ID;
-			}
-			set
-			{
-				if ((this._STAFF_ID != value))
-				{
-					this._STAFF_ID = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_STAFF_NAME", DbType="VarChar(100)")]
-		public string STAFF_NAME
-		{
-			get
-			{
-				return this._STAFF_NAME;
-			}
-			set
-			{
-				if ((this._STAFF_NAME != value))
-				{
-					this._STAFF_NAME = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_USERNAME", DbType="VarChar(50)")]
-		public string USERNAME
-		{
-			get
-			{
-				return this._USERNAME;
-			}
-			set
-			{
-				if ((this._USERNAME != value))
-				{
-					this._USERNAME = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DEPARTMENT_ID", DbType="Int")]
-		public System.Nullable<int> DEPARTMENT_ID
-		{
-			get
-			{
-				return this._DEPARTMENT_ID;
-			}
-			set
-			{
-				if ((this._DEPARTMENT_ID != value))
-				{
-					this._DEPARTMENT_ID = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ROLE", DbType="VarChar(50)")]
-		public string ROLE
-		{
-			get
-			{
-				return this._ROLE;
-			}
-			set
-			{
-				if ((this._ROLE != value))
-				{
-					this._ROLE = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DEPARTMENT_NAME", DbType="VarChar(100)")]
-		public string DEPARTMENT_NAME
-		{
-			get
-			{
-				return this._DEPARTMENT_NAME;
-			}
-			set
-			{
-				if ((this._DEPARTMENT_NAME != value))
-				{
-					this._DEPARTMENT_NAME = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DELETED_AT", DbType="DateTime")]
-		public System.Nullable<System.DateTime> DELETED_AT
-		{
-			get
-			{
-				return this._DELETED_AT;
-			}
-			set
-			{
-				if ((this._DELETED_AT != value))
-				{
-					this._DELETED_AT = value;
 				}
 			}
 		}

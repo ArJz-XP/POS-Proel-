@@ -77,7 +77,7 @@
     <Parameter Name="USERNAME" Parameter="uSERNAME" Type="System.String" DbType="NVarChar(50)" />
     <Parameter Name="PASSWORD" Parameter="pASSWORD" Type="System.String" DbType="NVarChar(255)" />
     <Parameter Name="DEPARTMENT_ID" Parameter="dEPARTMENT_ID" Type="System.Int32" DbType="Int" />
-    <Parameter Name="ROLE" Parameter="rOLE" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="ROLE" Parameter="rOLE" Type="System.String" DbType="NVarChar(50)" />
     <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.ADD_STOCK" Method="ADD_STOCK">
@@ -99,9 +99,26 @@
     <Parameter Name="ROLE" Parameter="rOLE" Type="System.String" DbType="NVarChar(50)" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.GET_STAFF_PASSWORD_HASH" Method="GET_STAFF_PASSWORD_HASH">
+    <Parameter Name="USERNAME" Parameter="uSERNAME" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="GET_STAFF_PASSWORD_HASHResult">
+      <Column Name="PasswordHash" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
   <Function Name="dbo.HARD_DELETE_STAFF" Method="HARD_DELETE_STAFF">
     <Parameter Name="STAFF_ID" Parameter="sTAFF_ID" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.LOGIN_STAFF" Method="LOGIN_STAFF">
+    <Parameter Name="USERNAME" Parameter="uSERNAME" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="LOGIN_STAFFResult">
+      <Column Name="STAFF_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="STAFF_NAME" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="USERNAME" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PasswordHash" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="DEPARTMENT_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ROLE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
   </Function>
   <Function Name="dbo.RESTORE_STAFF" Method="RESTORE_STAFF">
     <Parameter Name="STAFF_ID" Parameter="sTAFF_ID" Type="System.Int32" DbType="Int" />
@@ -125,6 +142,16 @@
       <Column Name="CHANGE_AMOUNT" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.RETRIEVE_SOFT_DELETED_STAFF" Method="RETRIEVE_SOFT_DELETED_STAFF">
+    <ElementType Name="RETRIEVE_SOFT_DELETED_STAFFResult">
+      <Column Name="STAFF_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="STAFF_NAME" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="USERNAME" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DEPARTMENT_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ROLE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DEPARTMENT_NAME" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
   <Function Name="dbo.RETRIEVE_STAFF" Method="RETRIEVE_STAFF">
     <ElementType Name="RETRIEVE_STAFFResult">
       <Column Name="STAFF_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
@@ -136,7 +163,7 @@
     </ElementType>
   </Function>
   <Function Name="dbo.SEARCH_STAFF" Method="SEARCH_STAFF">
-    <Parameter Name="Search" Parameter="search" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="Search" Parameter="search" Type="System.String" DbType="NVarChar(100)" />
     <ElementType Name="SEARCH_STAFFResult">
       <Column Name="STAFF_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="STAFF_NAME" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
@@ -144,17 +171,6 @@
       <Column Name="DEPARTMENT_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="ROLE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="DEPARTMENT_NAME" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.RETRIEVE_SOFT_DELETED_STAFF" Method="RETRIEVE_SOFT_DELETED_STAFF">
-    <ElementType Name="RETRIEVE_SOFT_DELETED_STAFFResult">
-      <Column Name="STAFF_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="STAFF_NAME" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-      <Column Name="USERNAME" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="DEPARTMENT_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="ROLE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="DEPARTMENT_NAME" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-      <Column Name="DELETED_AT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
     </ElementType>
   </Function>
 </Database>
