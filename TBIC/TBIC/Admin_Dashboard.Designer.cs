@@ -98,6 +98,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnTransactionHistory = new System.Windows.Forms.Button();
             this.btnAddStock = new System.Windows.Forms.Button();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.lblTotalOrders = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.lblLOS = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picMaybedropboxAdmin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRetrivalList)).BeginInit();
             this.panel1.SuspendLayout();
@@ -109,6 +113,8 @@
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel9.SuspendLayout();
             this.SuspendLayout();
             // 
             // picMaybedropboxAdmin
@@ -122,6 +128,7 @@
             this.picMaybedropboxAdmin.Size = new System.Drawing.Size(35, 31);
             this.picMaybedropboxAdmin.TabIndex = 12;
             this.picMaybedropboxAdmin.TabStop = false;
+            this.picMaybedropboxAdmin.Visible = false;
             this.picMaybedropboxAdmin.Click += new System.EventHandler(this.picMaybedropboxAdmin_Click);
             // 
             // txtSearchBoxAdmin
@@ -133,6 +140,7 @@
             this.txtSearchBoxAdmin.Size = new System.Drawing.Size(274, 31);
             this.txtSearchBoxAdmin.TabIndex = 13;
             this.txtSearchBoxAdmin.Text = "Finding Magno";
+            this.txtSearchBoxAdmin.Visible = false;
             this.txtSearchBoxAdmin.TextChanged += new System.EventHandler(this.txtSearchBoxAdmin_TextChanged);
             // 
             // dgvRetrivalList
@@ -144,13 +152,14 @@
             this.dgvRetrivalList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgvRetrivalList.BackgroundColor = System.Drawing.Color.White;
             this.dgvRetrivalList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRetrivalList.Location = new System.Drawing.Point(27, 205);
+            this.dgvRetrivalList.Location = new System.Drawing.Point(670, 205);
             this.dgvRetrivalList.Name = "dgvRetrivalList";
             this.dgvRetrivalList.ReadOnly = true;
             this.dgvRetrivalList.RowHeadersWidth = 51;
             this.dgvRetrivalList.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.dgvRetrivalList.Size = new System.Drawing.Size(658, 372);
+            this.dgvRetrivalList.Size = new System.Drawing.Size(15, 372);
             this.dgvRetrivalList.TabIndex = 14;
+            this.dgvRetrivalList.Visible = false;
             // 
             // lblTotalEmployee
             // 
@@ -858,7 +867,7 @@
             this.btnAddStock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnAddStock.FlatAppearance.BorderSize = 0;
             this.btnAddStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddStock.Image = global::TBIC.Properties.Resources.addstocksbtnui;
+            this.btnAddStock.Image = global::TBIC.Properties.Resources.inventorybtnui;
             this.btnAddStock.Location = new System.Drawing.Point(1054, 343);
             this.btnAddStock.Name = "btnAddStock";
             this.btnAddStock.Size = new System.Drawing.Size(223, 43);
@@ -867,13 +876,55 @@
             this.btnAddStock.UseVisualStyleBackColor = false;
             this.btnAddStock.Click += new System.EventHandler(this.btnAddStock_Click);
             // 
+            // panel8
+            // 
+            this.panel8.BackgroundImage = global::TBIC.Properties.Resources.totalordersframe;
+            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel8.Controls.Add(this.lblTotalOrders);
+            this.panel8.Location = new System.Drawing.Point(61, 215);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(265, 93);
+            this.panel8.TabIndex = 37;
+            // 
+            // lblTotalOrders
+            // 
+            this.lblTotalOrders.AutoSize = true;
+            this.lblTotalOrders.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalOrders.Location = new System.Drawing.Point(14, 58);
+            this.lblTotalOrders.Name = "lblTotalOrders";
+            this.lblTotalOrders.Size = new System.Drawing.Size(42, 25);
+            this.lblTotalOrders.TabIndex = 6;
+            this.lblTotalOrders.Text = "XX";
+            // 
+            // panel9
+            // 
+            this.panel9.BackgroundImage = global::TBIC.Properties.Resources.lowonstockframe;
+            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel9.Controls.Add(this.lblLOS);
+            this.panel9.Location = new System.Drawing.Point(364, 215);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(265, 93);
+            this.panel9.TabIndex = 38;
+            // 
+            // lblLOS
+            // 
+            this.lblLOS.AutoSize = true;
+            this.lblLOS.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLOS.Location = new System.Drawing.Point(12, 58);
+            this.lblLOS.Name = "lblLOS";
+            this.lblLOS.Size = new System.Drawing.Size(42, 25);
+            this.lblLOS.TabIndex = 40;
+            this.lblLOS.Text = "XX";
+            // 
             // Admin_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::TBIC.Properties.Resources.ADMINDashboardi3;
+            this.BackgroundImage = global::TBIC.Properties.Resources.ADMINDashboard_LATEST_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1264, 641);
+            this.Controls.Add(this.panel9);
+            this.Controls.Add(this.panel8);
             this.Controls.Add(this.btnAddStock);
             this.Controls.Add(this.btnTransactionHistory);
             this.Controls.Add(this.button1);
@@ -911,6 +962,10 @@
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -987,5 +1042,9 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnTransactionHistory;
         private System.Windows.Forms.Button btnAddStock;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Label lblTotalOrders;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Label lblLOS;
     }
 }

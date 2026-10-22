@@ -243,6 +243,12 @@
     <Compile Include="Receipt.Designer.cs">
       <DependentUpon>Receipt.cs</DependentUpon>
     </Compile>
+    <Compile Include="StocksManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StocksManagement.Designer.cs">
+      <DependentUpon>StocksManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="TBCI_ServerDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -326,6 +332,9 @@
     </Compile>
     <EmbeddedResource Include="Receipt.resx">
       <DependentUpon>Receipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StocksManagement.resx">
+      <DependentUpon>StocksManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TransactionHistory.resx">
       <DependentUpon>TransactionHistory.cs</DependentUpon>
@@ -541,6 +550,7 @@
     <None Include="Resources\magnospecial.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\totalordersframe.png" />
     <None Include="Resources\vanillabtnui.png" />
     <None Include="Resources\ubebtnui.png" />
     <None Include="Resources\transactionhistoryui.png" />
@@ -551,6 +561,7 @@
     <None Include="Resources\AccManagementBtnFixed.png" />
     <None Include="Resources\addstocksbtnui.png" />
     <None Include="Resources\accmanagementbgfixed.png" />
+    <None Include="Resources\addstockssmaller.png" />
     <Content Include="Resources\ADMIN Dashboard %281%29.png" />
     <Content Include="Resources\ADMIN Dashboard %282%29.png" />
     <Content Include="Resources\ADMIN Dashboard.png" />
@@ -577,6 +588,11 @@
     <None Include="Resources\manggobtnui.png" />
     <None Include="Resources\avocadobtnui.png" />
     <None Include="Resources\loginbtnui.png" />
+    <None Include="Resources\lowonstockframe.png" />
+    <None Include="Resources\ADMINDashboard%28LATEST%29.png" />
+    <None Include="Resources\inventorybtnui.png" />
+    <None Include="Resources\closebtnsmol.png" />
+    <None Include="Resources\inventorybg.png" />
     <Content Include="Resources\PROEL2D UI5.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

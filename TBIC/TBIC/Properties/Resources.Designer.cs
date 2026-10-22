@@ -103,6 +103,16 @@ namespace TBIC.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap addstockssmaller {
+            get {
+                object obj = ResourceManager.GetObject("addstockssmaller", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ADMIN_Dashboard__1_ {
             get {
                 object obj = ResourceManager.GetObject("ADMIN Dashboard (1)", resourceCulture);
@@ -126,6 +136,16 @@ namespace TBIC.Properties {
         internal static System.Drawing.Bitmap ADMIN_User_Management {
             get {
                 object obj = ResourceManager.GetObject("ADMIN User Management", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ADMINDashboard_LATEST_ {
+            get {
+                object obj = ResourceManager.GetObject("ADMINDashboard(LATEST)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -166,6 +186,16 @@ namespace TBIC.Properties {
         internal static System.Drawing.Bitmap BinPanelLaden {
             get {
                 object obj = ResourceManager.GetObject("BinPanelLaden", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap closebtnsmol {
+            get {
+                object obj = ResourceManager.GetObject("closebtnsmol", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -226,6 +256,26 @@ namespace TBIC.Properties {
         internal static System.Drawing.Bitmap hersheysbutnui {
             get {
                 object obj = ResourceManager.GetObject("hersheysbutnui", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap inventorybg {
+            get {
+                object obj = ResourceManager.GetObject("inventorybg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap inventorybtnui {
+            get {
+                object obj = ResourceManager.GetObject("inventorybtnui", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -366,6 +416,16 @@ namespace TBIC.Properties {
         internal static System.Drawing.Bitmap LogOutPurpleSmol {
             get {
                 object obj = ResourceManager.GetObject("LogOutPurpleSmol", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lowonstockframe {
+            get {
+                object obj = ResourceManager.GetObject("lowonstockframe", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -646,6 +706,16 @@ namespace TBIC.Properties {
         internal static System.Drawing.Bitmap PROEL2D_UI5 {
             get {
                 object obj = ResourceManager.GetObject("PROEL2D UI5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap totalordersframe {
+            get {
+                object obj = ResourceManager.GetObject("totalordersframe", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
