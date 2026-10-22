@@ -43,7 +43,7 @@
             this.btnAddStocks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddStocks.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddStocks.Image = global::TBIC.Properties.Resources.addstockssmaller;
-            this.btnAddStocks.Location = new System.Drawing.Point(269, 250);
+            this.btnAddStocks.Location = new System.Drawing.Point(274, 293);
             this.btnAddStocks.Name = "btnAddStocks";
             this.btnAddStocks.Size = new System.Drawing.Size(176, 37);
             this.btnAddStocks.TabIndex = 2;
@@ -57,7 +57,7 @@
             this.dgvIngredients.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgvIngredients.BackgroundColor = System.Drawing.Color.White;
             this.dgvIngredients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvIngredients.Location = new System.Drawing.Point(96, 58);
+            this.dgvIngredients.Location = new System.Drawing.Point(107, 104);
             this.dgvIngredients.Name = "dgvIngredients";
             this.dgvIngredients.ReadOnly = true;
             this.dgvIngredients.Size = new System.Drawing.Size(529, 183);
@@ -67,9 +67,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::TBIC.Properties.Resources.inventorybg;
+            this.BackgroundImage = global::TBIC.Properties.Resources.Inventorybg_Updated_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(730, 299);
+            this.ClientSize = new System.Drawing.Size(730, 342);
             this.Controls.Add(this.dgvIngredients);
             this.Controls.Add(this.btnAddStocks);
             this.DoubleBuffered = true;

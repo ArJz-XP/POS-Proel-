@@ -44,42 +44,42 @@
         <elementListCompartment Id="2f8fdd97-ce11-4c56-bd31-78a36f024081" absoluteBounds="3.515, 1.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(2.625 : 14.25); (2.625 : 12.9728011067708)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.625 : 14.25); (2.625 : 12.9728011067708)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/TBICDataContext/DEPARTMENT/DEPARTMENT_STAFF" />
       <nodes>
         <classShapeMoniker Id="415a77f5-57bb-4ef5-9871-243d5833f57a" />
         <classShapeMoniker Id="e1ce6f74-1047-4581-9255-00df0671bc93" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 2.57859537760417); (3.125 : 2.95359537760417); (3.125 : 4.69314697265625); (3.5 : 4.69314697265625)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 2.57859537760417); (3.125 : 2.95359537760417); (3.125 : 4.69314697265625); (3.5 : 4.69314697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/TBICDataContext/INGREDIENT/INGREDIENT_PRODUCT_RECIPE" />
       <nodes>
         <classShapeMoniker Id="b1a6597a-2b03-4437-82ac-3b4f65ccd6ec" />
         <classShapeMoniker Id="e27b06d1-6342-419c-b72d-84e2f5c61017" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 4.28407348632813); (3.04166666666667 : 4.28407348632812 : JumpStart); (3.27083333333333 : 4.28407348632813 : JumpEnd); (3.5 : 4.28407348632813)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 4.28407348632813); (3.04166666666667 : 4.28407348632813 : JumpStart); (3.20833333333333 : 4.28407348632813 : JumpEnd); (3.5 : 4.28407348632813)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/TBICDataContext/PRODUCT/PRODUCT_PRODUCT_RECIPE" />
       <nodes>
         <classShapeMoniker Id="df0ea47a-7401-479c-b145-bcd4796f6296" />
         <classShapeMoniker Id="e27b06d1-6342-419c-b72d-84e2f5c61017" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.125 : 10.625); (2.125 : 8.90549967447917)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.125 : 10.625); (2.125 : 8.90549967447917)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/TBICDataContext/STAFF/STAFF_SALE" />
       <nodes>
         <classShapeMoniker Id="e1ce6f74-1047-4581-9255-00df0671bc93" />
         <classShapeMoniker Id="e919e4da-d9e2-40da-90c9-5ec46d118e25" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 3.68653746153846); (3.06607443490112 : 3.37046302663734 : JumpStart); (3.24642556509888 : 3.19011189643958 : JumpEnd); (3.3125 : 3.12403746153846); (3.3125 : 1.73159912109375); (3.5 : 1.73159912109375)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 3.68653746153846); (3.06607443490112 : 3.37046302663734 : JumpStart); (3.18392556509888 : 3.25261189643958 : JumpEnd); (3.3125 : 3.12403746153846); (3.3125 : 1.73159912109375); (3.5 : 1.73159912109375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/TBICDataContext/PRODUCT/PRODUCT_SALE_DETAIL" />
       <nodes>
         <classShapeMoniker Id="df0ea47a-7401-479c-b145-bcd4796f6296" />
         <classShapeMoniker Id="18b15db2-93e2-4352-a09a-5ece3586de81" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 6.81307592307692); (3.1875 : 6.37557592307692); (3.1875 : 2.25365068164062); (3.22916666666667 : 2.25365068164062 : JumpStart); (3.39583333333333 : 2.25365068164062 : JumpEnd); (3.5 : 2.25365068164062)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 6.81307592307692); (3.1875 : 6.37557592307692); (3.1875 : 2.25365068164062); (3.22916666666667 : 2.25365068164062 : JumpStart); (3.39583333333333 : 2.25365068164062 : JumpEnd); (3.5 : 2.25365068164062)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/TBICDataContext/SALE/SALE_SALE_DETAIL" />
       <nodes>
         <classShapeMoniker Id="e919e4da-d9e2-40da-90c9-5ec46d118e25" />

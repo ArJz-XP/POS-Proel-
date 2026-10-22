@@ -232,6 +232,7 @@
             this.cmbDisplayType.Size = new System.Drawing.Size(154, 26);
             this.cmbDisplayType.TabIndex = 22;
             this.cmbDisplayType.Text = "UNITS";
+            this.cmbDisplayType.Visible = false;
             // 
             // flowLayoutPanel1
             // 
@@ -823,7 +824,7 @@
             // 
             // panel9
             // 
-            this.panel9.BackgroundImage = global::TBIC.Properties.Resources.lowonstockframe;
+            this.panel9.BackgroundImage = global::TBIC.Properties.Resources.totalsale;
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel9.Controls.Add(this.lblTotalSales);
             this.panel9.Controls.Add(this.label5);
@@ -858,7 +859,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::TBIC.Properties.Resources.ADMINDashboard_LATEST_;
+            this.BackgroundImage = global::TBIC.Properties.Resources.ADMINDashboard_UPDATEi3_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1264, 641);
             this.Controls.Add(this.panel9);

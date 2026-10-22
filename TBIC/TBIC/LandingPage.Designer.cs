@@ -34,6 +34,7 @@
             this.lblIncorrectPassword = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.picLandingpage = new System.Windows.Forms.PictureBox();
+            this.lblVersionNum = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picLandingpage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -111,6 +112,17 @@
             this.picLandingpage.TabIndex = 0;
             this.picLandingpage.TabStop = false;
             // 
+            // lblVersionNum
+            // 
+            this.lblVersionNum.AutoSize = true;
+            this.lblVersionNum.BackColor = System.Drawing.Color.Transparent;
+            this.lblVersionNum.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVersionNum.Location = new System.Drawing.Point(12, 616);
+            this.lblVersionNum.Name = "lblVersionNum";
+            this.lblVersionNum.Size = new System.Drawing.Size(53, 16);
+            this.lblVersionNum.TabIndex = 6;
+            this.lblVersionNum.Text = "v.4.3.4.1";
+            // 
             // LandingPage
             // 
             this.AcceptButton = this.btnLogin;
@@ -119,6 +131,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1264, 641);
+            this.Controls.Add(this.lblVersionNum);
             this.Controls.Add(this.lblIncorrectPassword);
             this.Controls.Add(this.lblIncorrectUsername);
             this.Controls.Add(this.txtPass);
@@ -144,6 +157,7 @@
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Label lblIncorrectUsername;
         private System.Windows.Forms.Label lblIncorrectPassword;
+        private System.Windows.Forms.Label lblVersionNum;
     }
 }
 
