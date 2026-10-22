@@ -15,6 +15,21 @@ namespace TBIC
         public StocksManagement()
         {
             InitializeComponent();
+
+            Ingredient_Load();
+        }
+
+        public void Ingredient_Load()
+        {
+            TBICDataContext db = new TBICDataContext();
+            dgvIngredients.DataSource = db.RETRIEVE_INGREDIENTS();
+        }
+
+        private void btnAddStocks_Click(object sender, EventArgs e)
+        {
+            Form_Instances._addStock.cmbItemName.SelectedIndex = -1;
+            Form_Instances._addStock.rtxtAmount.Text = "";
+            Form_Instances._addStock.ShowDialog();
         }
     }
 }

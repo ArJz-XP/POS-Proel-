@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.rtxtAmount = new System.Windows.Forms.RichTextBox();
-            this.cmbItemName = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.rtxtAmount = new System.Windows.Forms.RichTextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cmbItemName = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnAddStock = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -51,61 +51,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(421, 145);
             this.panel1.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(5, 156);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(313, 26);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Please verify the product and quantity before adding new stocks.\r\n\r\n";
-            // 
-            // rtxtAmount
-            // 
-            this.rtxtAmount.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtxtAmount.Location = new System.Drawing.Point(0, 8);
-            this.rtxtAmount.Name = "rtxtAmount";
-            this.rtxtAmount.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.rtxtAmount.Size = new System.Drawing.Size(410, 80);
-            this.rtxtAmount.TabIndex = 0;
-            this.rtxtAmount.Text = "";
-            // 
-            // cmbItemName
-            // 
-            this.cmbItemName.FormattingEnabled = true;
-            this.cmbItemName.Items.AddRange(new object[] {
-            "MINI MADNESS",
-            "DARKEST RIDER",
-            "ALTER EGO",
-            "PURE CHOCOLATE",
-            "CHOCO KISS",
-            "CARAMEL KISSES",
-            "GRAHAM MOUNTAIN",
-            "TIDBITS GALORE",
-            "COOKIES AND CHUNKS",
-            "LIMA FEST COMBO",
-            "SWEET & RIPE EXPRESS",
-            "GREEN AVALANCHE",
-            "MIDNIGHT FIEST",
-            "DUSK GLACIERS",
-            "THE BITE OF 67",
-            "SNOWCONE",
-            "THE BEGINNING",
-            "TASTE OF DARK AND ..."});
-            this.cmbItemName.Location = new System.Drawing.Point(84, 8);
-            this.cmbItemName.Name = "cmbItemName";
-            this.cmbItemName.Size = new System.Drawing.Size(332, 21);
-            this.cmbItemName.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 12);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "ITEM NAME:";
             // 
             // label3
             // 
@@ -126,6 +71,50 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(413, 91);
             this.panel2.TabIndex = 4;
+            // 
+            // rtxtAmount
+            // 
+            this.rtxtAmount.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtxtAmount.Location = new System.Drawing.Point(0, 8);
+            this.rtxtAmount.Name = "rtxtAmount";
+            this.rtxtAmount.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.rtxtAmount.Size = new System.Drawing.Size(410, 80);
+            this.rtxtAmount.TabIndex = 0;
+            this.rtxtAmount.Text = "";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(8, 12);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(70, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "ITEM NAME:";
+            // 
+            // cmbItemName
+            // 
+            this.cmbItemName.FormattingEnabled = true;
+            this.cmbItemName.Items.AddRange(new object[] {
+            "CONE",
+            "VANILLA",
+            "AVOCADO",
+            "CHOCOLATE",
+            "UBE",
+            "SPECIAL",
+            "MANGGO"});
+            this.cmbItemName.Location = new System.Drawing.Point(84, 8);
+            this.cmbItemName.Name = "cmbItemName";
+            this.cmbItemName.Size = new System.Drawing.Size(332, 21);
+            this.cmbItemName.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(5, 156);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(313, 26);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Please verify the product and quantity before adding new stocks.\r\n\r\n";
             // 
             // btnAddStock
             // 

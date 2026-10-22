@@ -109,6 +109,8 @@ namespace TBIC
         private void btnProceedLE_Click(object sender, EventArgs e)
         {
             Form_Instances._pay.StaffInfo(StaffName, StaffID);
+            Form_Instances._pay.rtxtAmountPaid.Text = "";
+            Form_Instances._pay.rtxtAmountPaid.SetPlaceholder("0.00");
             Form_Instances._pay.Show();
             this.Hide();
             LogoutHider.hide();

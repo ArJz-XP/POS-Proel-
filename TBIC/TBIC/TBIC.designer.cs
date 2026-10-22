@@ -30,25 +30,31 @@ namespace TBIC
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
+    partial void InsertDEPARTMENT(DEPARTMENT instance);
+    partial void UpdateDEPARTMENT(DEPARTMENT instance);
+    partial void DeleteDEPARTMENT(DEPARTMENT instance);
     partial void InsertSTAFF(STAFF instance);
     partial void UpdateSTAFF(STAFF instance);
     partial void DeleteSTAFF(STAFF instance);
+    partial void InsertINGREDIENT(INGREDIENT instance);
+    partial void UpdateINGREDIENT(INGREDIENT instance);
+    partial void DeleteINGREDIENT(INGREDIENT instance);
     partial void InsertPRODUCT(PRODUCT instance);
     partial void UpdatePRODUCT(PRODUCT instance);
     partial void DeletePRODUCT(PRODUCT instance);
+    partial void InsertPRODUCT_RECIPE(PRODUCT_RECIPE instance);
+    partial void UpdatePRODUCT_RECIPE(PRODUCT_RECIPE instance);
+    partial void DeletePRODUCT_RECIPE(PRODUCT_RECIPE instance);
     partial void InsertSALE(SALE instance);
     partial void UpdateSALE(SALE instance);
     partial void DeleteSALE(SALE instance);
     partial void InsertSALE_DETAIL(SALE_DETAIL instance);
     partial void UpdateSALE_DETAIL(SALE_DETAIL instance);
     partial void DeleteSALE_DETAIL(SALE_DETAIL instance);
-    partial void InsertDEPARTMENT(DEPARTMENT instance);
-    partial void UpdateDEPARTMENT(DEPARTMENT instance);
-    partial void DeleteDEPARTMENT(DEPARTMENT instance);
     #endregion
 		
 		public TBICDataContext() : 
-				base(global::TBIC.Properties.Settings.Default.TBCI_ServerConnectionString3, mappingSource)
+				base(global::TBIC.Properties.Settings.Default.TBCI_ServerConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
@@ -77,6 +83,14 @@ namespace TBIC
 			OnCreated();
 		}
 		
+		public System.Data.Linq.Table<DEPARTMENT> DEPARTMENTs
+		{
+			get
+			{
+				return this.GetTable<DEPARTMENT>();
+			}
+		}
+		
 		public System.Data.Linq.Table<STAFF> STAFFs
 		{
 			get
@@ -85,11 +99,27 @@ namespace TBIC
 			}
 		}
 		
+		public System.Data.Linq.Table<INGREDIENT> INGREDIENTs
+		{
+			get
+			{
+				return this.GetTable<INGREDIENT>();
+			}
+		}
+		
 		public System.Data.Linq.Table<PRODUCT> PRODUCTs
 		{
 			get
 			{
 				return this.GetTable<PRODUCT>();
+			}
+		}
+		
+		public System.Data.Linq.Table<PRODUCT_RECIPE> PRODUCT_RECIPEs
+		{
+			get
+			{
+				return this.GetTable<PRODUCT_RECIPE>();
 			}
 		}
 		
@@ -109,18 +139,24 @@ namespace TBIC
 			}
 		}
 		
-		public System.Data.Linq.Table<DEPARTMENT> DEPARTMENTs
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ADD_INGREDIENT")]
+		public int ADD_INGREDIENT([global::System.Data.Linq.Mapping.ParameterAttribute(Name="INGREDIENT_NAME", DbType="VarChar(100)")] string iNGREDIENT_NAME, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="STOCK", DbType="Int")] System.Nullable<int> sTOCK)
 		{
-			get
-			{
-				return this.GetTable<DEPARTMENT>();
-			}
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iNGREDIENT_NAME, sTOCK);
+			return ((int)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SOFT_DELETE_STAFF")]
 		public int SOFT_DELETE_STAFF([global::System.Data.Linq.Mapping.ParameterAttribute(Name="STAFF_ID", DbType="Int")] System.Nullable<int> sTAFF_ID)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), sTAFF_ID);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ADD_INGREDIENT_STOCK")]
+		public int ADD_INGREDIENT_STOCK([global::System.Data.Linq.Mapping.ParameterAttribute(Name="INGREDIENT_ID", DbType="Int")] System.Nullable<int> iNGREDIENT_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="QUANTITY", DbType="Int")] System.Nullable<int> qUANTITY)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iNGREDIENT_ID, qUANTITY);
 			return ((int)(result.ReturnValue));
 		}
 		
@@ -138,15 +174,8 @@ namespace TBIC
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ADD_STOCK")]
-		public int ADD_STOCK([global::System.Data.Linq.Mapping.ParameterAttribute(Name="PRODUCT_ID", DbType="Int")] System.Nullable<int> pRODUCT_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="QUANTITY", DbType="Int")] System.Nullable<int> qUANTITY)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), pRODUCT_ID, qUANTITY);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.DEDUCT_STOCK")]
-		public int DEDUCT_STOCK([global::System.Data.Linq.Mapping.ParameterAttribute(Name="PRODUCT_ID", DbType="Int")] System.Nullable<int> pRODUCT_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="QUANTITY", DbType="Int")] System.Nullable<int> qUANTITY)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.DEDUCT_RECIPE_STOCK")]
+		public int DEDUCT_RECIPE_STOCK([global::System.Data.Linq.Mapping.ParameterAttribute(Name="PRODUCT_ID", DbType="Int")] System.Nullable<int> pRODUCT_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="QUANTITY", DbType="Int")] System.Nullable<int> qUANTITY)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), pRODUCT_ID, qUANTITY);
 			return ((int)(result.ReturnValue));
@@ -187,6 +216,20 @@ namespace TBIC
 			return ((int)(result.ReturnValue));
 		}
 		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.RETRIEVE_INGREDIENTS")]
+		public ISingleResult<RETRIEVE_INGREDIENTSResult> RETRIEVE_INGREDIENTS()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<RETRIEVE_INGREDIENTSResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.RETRIEVE_PRODUCT_STOCK")]
+		public ISingleResult<RETRIEVE_PRODUCT_STOCKResult> RETRIEVE_PRODUCT_STOCK()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<RETRIEVE_PRODUCT_STOCKResult>)(result.ReturnValue));
+		}
+		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.RETRIEVE_SALES_HISTORY")]
 		public ISingleResult<RETRIEVE_SALES_HISTORYResult> RETRIEVE_SALES_HISTORY()
 		{
@@ -213,6 +256,120 @@ namespace TBIC
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), search);
 			return ((ISingleResult<SEARCH_STAFFResult>)(result.ReturnValue));
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.DEPARTMENT")]
+	public partial class DEPARTMENT : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _DEPARTMENT_ID;
+		
+		private string _DEPARTMENT_NAME;
+		
+		private EntitySet<STAFF> _STAFFs;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnDEPARTMENT_IDChanging(int value);
+    partial void OnDEPARTMENT_IDChanged();
+    partial void OnDEPARTMENT_NAMEChanging(string value);
+    partial void OnDEPARTMENT_NAMEChanged();
+    #endregion
+		
+		public DEPARTMENT()
+		{
+			this._STAFFs = new EntitySet<STAFF>(new Action<STAFF>(this.attach_STAFFs), new Action<STAFF>(this.detach_STAFFs));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DEPARTMENT_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int DEPARTMENT_ID
+		{
+			get
+			{
+				return this._DEPARTMENT_ID;
+			}
+			set
+			{
+				if ((this._DEPARTMENT_ID != value))
+				{
+					this.OnDEPARTMENT_IDChanging(value);
+					this.SendPropertyChanging();
+					this._DEPARTMENT_ID = value;
+					this.SendPropertyChanged("DEPARTMENT_ID");
+					this.OnDEPARTMENT_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DEPARTMENT_NAME", DbType="VarChar(100)")]
+		public string DEPARTMENT_NAME
+		{
+			get
+			{
+				return this._DEPARTMENT_NAME;
+			}
+			set
+			{
+				if ((this._DEPARTMENT_NAME != value))
+				{
+					this.OnDEPARTMENT_NAMEChanging(value);
+					this.SendPropertyChanging();
+					this._DEPARTMENT_NAME = value;
+					this.SendPropertyChanged("DEPARTMENT_NAME");
+					this.OnDEPARTMENT_NAMEChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DEPARTMENT_STAFF", Storage="_STAFFs", ThisKey="DEPARTMENT_ID", OtherKey="DEPARTMENT_ID")]
+		public EntitySet<STAFF> STAFFs
+		{
+			get
+			{
+				return this._STAFFs;
+			}
+			set
+			{
+				this._STAFFs.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_STAFFs(STAFF entity)
+		{
+			this.SendPropertyChanging();
+			entity.DEPARTMENT = this;
+		}
+		
+		private void detach_STAFFs(STAFF entity)
+		{
+			this.SendPropertyChanging();
+			entity.DEPARTMENT = null;
 		}
 	}
 	
@@ -515,6 +672,168 @@ namespace TBIC
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.INGREDIENTS")]
+	public partial class INGREDIENT : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _INGREDIENT_ID;
+		
+		private string _INGREDIENT_NAME;
+		
+		private int _STOCK;
+		
+		private System.Nullable<System.DateTime> _STOCK_UPDATED_AT;
+		
+		private EntitySet<PRODUCT_RECIPE> _PRODUCT_RECIPEs;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnINGREDIENT_IDChanging(int value);
+    partial void OnINGREDIENT_IDChanged();
+    partial void OnINGREDIENT_NAMEChanging(string value);
+    partial void OnINGREDIENT_NAMEChanged();
+    partial void OnSTOCKChanging(int value);
+    partial void OnSTOCKChanged();
+    partial void OnSTOCK_UPDATED_ATChanging(System.Nullable<System.DateTime> value);
+    partial void OnSTOCK_UPDATED_ATChanged();
+    #endregion
+		
+		public INGREDIENT()
+		{
+			this._PRODUCT_RECIPEs = new EntitySet<PRODUCT_RECIPE>(new Action<PRODUCT_RECIPE>(this.attach_PRODUCT_RECIPEs), new Action<PRODUCT_RECIPE>(this.detach_PRODUCT_RECIPEs));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INGREDIENT_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int INGREDIENT_ID
+		{
+			get
+			{
+				return this._INGREDIENT_ID;
+			}
+			set
+			{
+				if ((this._INGREDIENT_ID != value))
+				{
+					this.OnINGREDIENT_IDChanging(value);
+					this.SendPropertyChanging();
+					this._INGREDIENT_ID = value;
+					this.SendPropertyChanged("INGREDIENT_ID");
+					this.OnINGREDIENT_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INGREDIENT_NAME", DbType="VarChar(100) NOT NULL", CanBeNull=false)]
+		public string INGREDIENT_NAME
+		{
+			get
+			{
+				return this._INGREDIENT_NAME;
+			}
+			set
+			{
+				if ((this._INGREDIENT_NAME != value))
+				{
+					this.OnINGREDIENT_NAMEChanging(value);
+					this.SendPropertyChanging();
+					this._INGREDIENT_NAME = value;
+					this.SendPropertyChanged("INGREDIENT_NAME");
+					this.OnINGREDIENT_NAMEChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_STOCK", DbType="Int NOT NULL")]
+		public int STOCK
+		{
+			get
+			{
+				return this._STOCK;
+			}
+			set
+			{
+				if ((this._STOCK != value))
+				{
+					this.OnSTOCKChanging(value);
+					this.SendPropertyChanging();
+					this._STOCK = value;
+					this.SendPropertyChanged("STOCK");
+					this.OnSTOCKChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_STOCK_UPDATED_AT", DbType="DateTime")]
+		public System.Nullable<System.DateTime> STOCK_UPDATED_AT
+		{
+			get
+			{
+				return this._STOCK_UPDATED_AT;
+			}
+			set
+			{
+				if ((this._STOCK_UPDATED_AT != value))
+				{
+					this.OnSTOCK_UPDATED_ATChanging(value);
+					this.SendPropertyChanging();
+					this._STOCK_UPDATED_AT = value;
+					this.SendPropertyChanged("STOCK_UPDATED_AT");
+					this.OnSTOCK_UPDATED_ATChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="INGREDIENT_PRODUCT_RECIPE", Storage="_PRODUCT_RECIPEs", ThisKey="INGREDIENT_ID", OtherKey="INGREDIENT_ID")]
+		public EntitySet<PRODUCT_RECIPE> PRODUCT_RECIPEs
+		{
+			get
+			{
+				return this._PRODUCT_RECIPEs;
+			}
+			set
+			{
+				this._PRODUCT_RECIPEs.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_PRODUCT_RECIPEs(PRODUCT_RECIPE entity)
+		{
+			this.SendPropertyChanging();
+			entity.INGREDIENT = this;
+		}
+		
+		private void detach_PRODUCT_RECIPEs(PRODUCT_RECIPE entity)
+		{
+			this.SendPropertyChanging();
+			entity.INGREDIENT = null;
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.PRODUCT")]
 	public partial class PRODUCT : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -532,6 +851,10 @@ namespace TBIC
 		private string _STATUS;
 		
 		private System.Nullable<int> _STOCK;
+		
+		private System.Nullable<System.DateTime> _STOCK_UPDATED_AT;
+		
+		private EntitySet<PRODUCT_RECIPE> _PRODUCT_RECIPEs;
 		
 		private EntitySet<SALE_DETAIL> _SALE_DETAILs;
 		
@@ -551,10 +874,13 @@ namespace TBIC
     partial void OnSTATUSChanged();
     partial void OnSTOCKChanging(System.Nullable<int> value);
     partial void OnSTOCKChanged();
+    partial void OnSTOCK_UPDATED_ATChanging(System.Nullable<System.DateTime> value);
+    partial void OnSTOCK_UPDATED_ATChanged();
     #endregion
 		
 		public PRODUCT()
 		{
+			this._PRODUCT_RECIPEs = new EntitySet<PRODUCT_RECIPE>(new Action<PRODUCT_RECIPE>(this.attach_PRODUCT_RECIPEs), new Action<PRODUCT_RECIPE>(this.detach_PRODUCT_RECIPEs));
 			this._SALE_DETAILs = new EntitySet<SALE_DETAIL>(new Action<SALE_DETAIL>(this.attach_SALE_DETAILs), new Action<SALE_DETAIL>(this.detach_SALE_DETAILs));
 			OnCreated();
 		}
@@ -679,6 +1005,39 @@ namespace TBIC
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_STOCK_UPDATED_AT", DbType="DateTime")]
+		public System.Nullable<System.DateTime> STOCK_UPDATED_AT
+		{
+			get
+			{
+				return this._STOCK_UPDATED_AT;
+			}
+			set
+			{
+				if ((this._STOCK_UPDATED_AT != value))
+				{
+					this.OnSTOCK_UPDATED_ATChanging(value);
+					this.SendPropertyChanging();
+					this._STOCK_UPDATED_AT = value;
+					this.SendPropertyChanged("STOCK_UPDATED_AT");
+					this.OnSTOCK_UPDATED_ATChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="PRODUCT_PRODUCT_RECIPE", Storage="_PRODUCT_RECIPEs", ThisKey="PRODUCT_ID", OtherKey="PRODUCT_ID")]
+		public EntitySet<PRODUCT_RECIPE> PRODUCT_RECIPEs
+		{
+			get
+			{
+				return this._PRODUCT_RECIPEs;
+			}
+			set
+			{
+				this._PRODUCT_RECIPEs.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="PRODUCT_SALE_DETAIL", Storage="_SALE_DETAILs", ThisKey="PRODUCT_ID", OtherKey="PRODUCT_ID")]
 		public EntitySet<SALE_DETAIL> SALE_DETAILs
 		{
@@ -712,6 +1071,18 @@ namespace TBIC
 			}
 		}
 		
+		private void attach_PRODUCT_RECIPEs(PRODUCT_RECIPE entity)
+		{
+			this.SendPropertyChanging();
+			entity.PRODUCT = this;
+		}
+		
+		private void detach_PRODUCT_RECIPEs(PRODUCT_RECIPE entity)
+		{
+			this.SendPropertyChanging();
+			entity.PRODUCT = null;
+		}
+		
 		private void attach_SALE_DETAILs(SALE_DETAIL entity)
 		{
 			this.SendPropertyChanging();
@@ -722,6 +1093,198 @@ namespace TBIC
 		{
 			this.SendPropertyChanging();
 			entity.PRODUCT = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.PRODUCT_RECIPE")]
+	public partial class PRODUCT_RECIPE : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _PRODUCT_ID;
+		
+		private int _INGREDIENT_ID;
+		
+		private int _QUANTITY_REQUIRED;
+		
+		private EntityRef<INGREDIENT> _INGREDIENT;
+		
+		private EntityRef<PRODUCT> _PRODUCT;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnPRODUCT_IDChanging(int value);
+    partial void OnPRODUCT_IDChanged();
+    partial void OnINGREDIENT_IDChanging(int value);
+    partial void OnINGREDIENT_IDChanged();
+    partial void OnQUANTITY_REQUIREDChanging(int value);
+    partial void OnQUANTITY_REQUIREDChanged();
+    #endregion
+		
+		public PRODUCT_RECIPE()
+		{
+			this._INGREDIENT = default(EntityRef<INGREDIENT>);
+			this._PRODUCT = default(EntityRef<PRODUCT>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PRODUCT_ID", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int PRODUCT_ID
+		{
+			get
+			{
+				return this._PRODUCT_ID;
+			}
+			set
+			{
+				if ((this._PRODUCT_ID != value))
+				{
+					if (this._PRODUCT.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnPRODUCT_IDChanging(value);
+					this.SendPropertyChanging();
+					this._PRODUCT_ID = value;
+					this.SendPropertyChanged("PRODUCT_ID");
+					this.OnPRODUCT_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INGREDIENT_ID", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int INGREDIENT_ID
+		{
+			get
+			{
+				return this._INGREDIENT_ID;
+			}
+			set
+			{
+				if ((this._INGREDIENT_ID != value))
+				{
+					if (this._INGREDIENT.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnINGREDIENT_IDChanging(value);
+					this.SendPropertyChanging();
+					this._INGREDIENT_ID = value;
+					this.SendPropertyChanged("INGREDIENT_ID");
+					this.OnINGREDIENT_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QUANTITY_REQUIRED", DbType="Int NOT NULL")]
+		public int QUANTITY_REQUIRED
+		{
+			get
+			{
+				return this._QUANTITY_REQUIRED;
+			}
+			set
+			{
+				if ((this._QUANTITY_REQUIRED != value))
+				{
+					this.OnQUANTITY_REQUIREDChanging(value);
+					this.SendPropertyChanging();
+					this._QUANTITY_REQUIRED = value;
+					this.SendPropertyChanged("QUANTITY_REQUIRED");
+					this.OnQUANTITY_REQUIREDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="INGREDIENT_PRODUCT_RECIPE", Storage="_INGREDIENT", ThisKey="INGREDIENT_ID", OtherKey="INGREDIENT_ID", IsForeignKey=true)]
+		public INGREDIENT INGREDIENT
+		{
+			get
+			{
+				return this._INGREDIENT.Entity;
+			}
+			set
+			{
+				INGREDIENT previousValue = this._INGREDIENT.Entity;
+				if (((previousValue != value) 
+							|| (this._INGREDIENT.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._INGREDIENT.Entity = null;
+						previousValue.PRODUCT_RECIPEs.Remove(this);
+					}
+					this._INGREDIENT.Entity = value;
+					if ((value != null))
+					{
+						value.PRODUCT_RECIPEs.Add(this);
+						this._INGREDIENT_ID = value.INGREDIENT_ID;
+					}
+					else
+					{
+						this._INGREDIENT_ID = default(int);
+					}
+					this.SendPropertyChanged("INGREDIENT");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="PRODUCT_PRODUCT_RECIPE", Storage="_PRODUCT", ThisKey="PRODUCT_ID", OtherKey="PRODUCT_ID", IsForeignKey=true)]
+		public PRODUCT PRODUCT
+		{
+			get
+			{
+				return this._PRODUCT.Entity;
+			}
+			set
+			{
+				PRODUCT previousValue = this._PRODUCT.Entity;
+				if (((previousValue != value) 
+							|| (this._PRODUCT.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._PRODUCT.Entity = null;
+						previousValue.PRODUCT_RECIPEs.Remove(this);
+					}
+					this._PRODUCT.Entity = value;
+					if ((value != null))
+					{
+						value.PRODUCT_RECIPEs.Add(this);
+						this._PRODUCT_ID = value.PRODUCT_ID;
+					}
+					else
+					{
+						this._PRODUCT_ID = default(int);
+					}
+					this.SendPropertyChanged("PRODUCT");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
 		}
 	}
 	
@@ -1264,120 +1827,6 @@ namespace TBIC
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.DEPARTMENT")]
-	public partial class DEPARTMENT : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _DEPARTMENT_ID;
-		
-		private string _DEPARTMENT_NAME;
-		
-		private EntitySet<STAFF> _STAFFs;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnDEPARTMENT_IDChanging(int value);
-    partial void OnDEPARTMENT_IDChanged();
-    partial void OnDEPARTMENT_NAMEChanging(string value);
-    partial void OnDEPARTMENT_NAMEChanged();
-    #endregion
-		
-		public DEPARTMENT()
-		{
-			this._STAFFs = new EntitySet<STAFF>(new Action<STAFF>(this.attach_STAFFs), new Action<STAFF>(this.detach_STAFFs));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DEPARTMENT_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int DEPARTMENT_ID
-		{
-			get
-			{
-				return this._DEPARTMENT_ID;
-			}
-			set
-			{
-				if ((this._DEPARTMENT_ID != value))
-				{
-					this.OnDEPARTMENT_IDChanging(value);
-					this.SendPropertyChanging();
-					this._DEPARTMENT_ID = value;
-					this.SendPropertyChanged("DEPARTMENT_ID");
-					this.OnDEPARTMENT_IDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DEPARTMENT_NAME", DbType="VarChar(100)")]
-		public string DEPARTMENT_NAME
-		{
-			get
-			{
-				return this._DEPARTMENT_NAME;
-			}
-			set
-			{
-				if ((this._DEPARTMENT_NAME != value))
-				{
-					this.OnDEPARTMENT_NAMEChanging(value);
-					this.SendPropertyChanging();
-					this._DEPARTMENT_NAME = value;
-					this.SendPropertyChanged("DEPARTMENT_NAME");
-					this.OnDEPARTMENT_NAMEChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DEPARTMENT_STAFF", Storage="_STAFFs", ThisKey="DEPARTMENT_ID", OtherKey="DEPARTMENT_ID")]
-		public EntitySet<STAFF> STAFFs
-		{
-			get
-			{
-				return this._STAFFs;
-			}
-			set
-			{
-				this._STAFFs.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_STAFFs(STAFF entity)
-		{
-			this.SendPropertyChanging();
-			entity.DEPARTMENT = this;
-		}
-		
-		private void detach_STAFFs(STAFF entity)
-		{
-			this.SendPropertyChanging();
-			entity.DEPARTMENT = null;
-		}
-	}
-	
 	public partial class GET_STAFF_PASSWORD_HASHResult
 	{
 		
@@ -1515,6 +1964,148 @@ namespace TBIC
 				if ((this._ROLE != value))
 				{
 					this._ROLE = value;
+				}
+			}
+		}
+	}
+	
+	public partial class RETRIEVE_INGREDIENTSResult
+	{
+		
+		private int _INGREDIENT_ID;
+		
+		private string _INGREDIENT_NAME;
+		
+		private int _STOCK;
+		
+		private System.Nullable<System.DateTime> _STOCK_UPDATED_AT;
+		
+		public RETRIEVE_INGREDIENTSResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INGREDIENT_ID", DbType="Int NOT NULL")]
+		public int INGREDIENT_ID
+		{
+			get
+			{
+				return this._INGREDIENT_ID;
+			}
+			set
+			{
+				if ((this._INGREDIENT_ID != value))
+				{
+					this._INGREDIENT_ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_INGREDIENT_NAME", DbType="VarChar(100) NOT NULL", CanBeNull=false)]
+		public string INGREDIENT_NAME
+		{
+			get
+			{
+				return this._INGREDIENT_NAME;
+			}
+			set
+			{
+				if ((this._INGREDIENT_NAME != value))
+				{
+					this._INGREDIENT_NAME = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_STOCK", DbType="Int NOT NULL")]
+		public int STOCK
+		{
+			get
+			{
+				return this._STOCK;
+			}
+			set
+			{
+				if ((this._STOCK != value))
+				{
+					this._STOCK = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_STOCK_UPDATED_AT", DbType="DateTime")]
+		public System.Nullable<System.DateTime> STOCK_UPDATED_AT
+		{
+			get
+			{
+				return this._STOCK_UPDATED_AT;
+			}
+			set
+			{
+				if ((this._STOCK_UPDATED_AT != value))
+				{
+					this._STOCK_UPDATED_AT = value;
+				}
+			}
+		}
+	}
+	
+	public partial class RETRIEVE_PRODUCT_STOCKResult
+	{
+		
+		private int _PRODUCT_ID;
+		
+		private string _PRODUCT_NAME;
+		
+		private System.Nullable<int> _STOCK;
+		
+		public RETRIEVE_PRODUCT_STOCKResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PRODUCT_ID", DbType="Int NOT NULL")]
+		public int PRODUCT_ID
+		{
+			get
+			{
+				return this._PRODUCT_ID;
+			}
+			set
+			{
+				if ((this._PRODUCT_ID != value))
+				{
+					this._PRODUCT_ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PRODUCT_NAME", DbType="VarChar(100)")]
+		public string PRODUCT_NAME
+		{
+			get
+			{
+				return this._PRODUCT_NAME;
+			}
+			set
+			{
+				if ((this._PRODUCT_NAME != value))
+				{
+					this._PRODUCT_NAME = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_STOCK", DbType="Int")]
+		public System.Nullable<int> STOCK
+		{
+			get
+			{
+				return this._STOCK;
+			}
+			set
+			{
+				if ((this._STOCK != value))
+				{
+					this._STOCK = value;
 				}
 			}
 		}

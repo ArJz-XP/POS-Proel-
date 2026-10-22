@@ -604,10 +604,12 @@
             // 
             // Payment
             // 
+            this.AcceptButton = this.btnConfirmPrint;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::TBIC.Properties.Resources.POSPaymentReyal_Updated_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CancelButton = this.btnLogout;
             this.ClientSize = new System.Drawing.Size(1264, 641);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel3);
@@ -639,7 +641,6 @@
         #endregion
         private System.Windows.Forms.Button btnNewPurchase;
         private System.Windows.Forms.Panel pnlBackground;
-        private System.Windows.Forms.Button btnConfirmPrint;
         private System.Windows.Forms.Button btnPrevious;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.PictureBox picIDK;
@@ -683,5 +684,6 @@
         private System.Windows.Forms.Label lblAmountPaid;
         public System.Windows.Forms.RichTextBox rtxtAmountPaid;
         private System.Windows.Forms.Label label5;
+        public System.Windows.Forms.Button btnConfirmPrint;
     }
 }

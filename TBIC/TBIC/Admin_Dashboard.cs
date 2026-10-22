@@ -35,55 +35,75 @@ namespace TBIC
 
         private void Admin_Dashboard_Load(object sender, EventArgs e)
         {
-            txtSearchBoxAdmin.Font = new Font("FredokaSummer", 10, FontStyle.Bold);
             lblNumberOfEmployees.Font = new Font("FredokaSummer", 9, FontStyle.Bold);
             lblTotalEmployee.Font = new Font("FredokaSummer", 9, FontStyle.Bold);
             btnAccManage.Font = new Font("FredokaSummer", 9, FontStyle.Bold);
             btnAdminDashboard.Font = new Font("FredokaSummer", 9, FontStyle.Bold);
 
             inputReload();
-
-            this.ActiveControl = dgvRetrivalList;
         }
 
         public void inputReload()
         {
-            txtSearchBoxAdmin.Text = null;
-
-            txtSearchBoxAdmin.SetPlaceholder("Search Employee");
-
-            dgvRetrivalList.CellFormatting += dataGridView1_CellFormatting;
-
             lblNumberOfEmployees.Text = db.RETRIEVE_STAFF().Count().ToString();
 
-            #region Stocks
+            LoadProductStock();
 
-            lblAtlerEgo.Text = db.PRODUCTs.Where(x => x.PRODUCT_ID == 3).Select(x => x.STOCK).FirstOrDefault().ToString();
-            lblDarkestRider.Text = db.PRODUCTs.Where(x => x.PRODUCT_ID == 2).Select(x => x.STOCK).FirstOrDefault().ToString();
-            lblMiniMadness.Text = db.PRODUCTs.Where(x => x.PRODUCT_ID == 1).Select(x => x.STOCK).FirstOrDefault().ToString();
+            lblTotalOrders.Text = db.RETRIEVE_SALES_HISTORY().Count().ToString();
 
-            lblSnowcone.Text = db.PRODUCTs.Where(x => x.PRODUCT_ID == 16).Select(x => x.STOCK).FirstOrDefault().ToString();
-            lblTheBiningging.Text = db.PRODUCTs.Where(x => x.PRODUCT_ID == 17).Select(x => x.STOCK).FirstOrDefault().ToString();
-            lblTasteofDnD.Text = db.PRODUCTs.Where(x => x.PRODUCT_ID == 18).Select(x => x.STOCK).FirstOrDefault().ToString();
+            lblTotalSales.Text = Convert.ToDecimal(db.RETRIEVE_SALES_HISTORY().Sum(s => s.TOTAL_AMOUNT)).ToString("N0");
+        }
 
-            lblPureChoco.Text = db.PRODUCTs.Where(x => x.PRODUCT_ID == 4).Select(x => x.STOCK).FirstOrDefault().ToString();
-            lblChocoKiss.Text = db.PRODUCTs.Where(x => x.PRODUCT_ID == 5).Select(x => x.STOCK).FirstOrDefault().ToString();
-            lblCaramelKiss.Text = db.PRODUCTs.Where(x => x.PRODUCT_ID == 6).Select(x => x.STOCK).FirstOrDefault().ToString();
+        private void LoadProductStock()
+        {
+            using (var db = new TBICDataContext())
+            {
+                var products = db.ExecuteQuery<ProductStockResult>(
+                    "EXEC dbo.RETRIEVE_PRODUCT_STOCK"
+                ).ToList();
 
-            lblGrahamMountain.Text = db.PRODUCTs.Where(x => x.PRODUCT_ID == 7).Select(x => x.STOCK).FirstOrDefault().ToString();
-            lblTidbitsGalore.Text = db.PRODUCTs.Where(x => x.PRODUCT_ID == 8).Select(x => x.STOCK).FirstOrDefault().ToString();
-            lblCookiesAndChunks.Text = db.PRODUCTs.Where(x => x.PRODUCT_ID == 9).Select(x => x.STOCK).FirstOrDefault().ToString();
+                lblAtlerEgo.Text = GetStock(products, 3);
+                lblDarkestRider.Text = GetStock(products, 2);
+                lblMiniMadness.Text = GetStock(products, 1);
 
-            lblLimeFestCombo.Text = db.PRODUCTs.Where(x => x.PRODUCT_ID == 10).Select(x => x.STOCK).FirstOrDefault().ToString();
-            lblSweetandRipeExpress.Text = db.PRODUCTs.Where(x => x.PRODUCT_ID == 11).Select(x => x.STOCK).FirstOrDefault().ToString();
-            lblGreenAvalanche.Text = db.PRODUCTs.Where(x => x.PRODUCT_ID == 12).Select(x => x.STOCK).FirstOrDefault().ToString();
+                lblSnowcone.Text = GetStock(products, 16);
+                lblTheBiningging.Text = GetStock(products, 17);
+                lblTasteofDnD.Text = GetStock(products, 18);
 
-            lblMidnightFest.Text = db.PRODUCTs.Where(x => x.PRODUCT_ID == 13).Select(x => x.STOCK).FirstOrDefault().ToString();
-            lblDuskGlasiers.Text = db.PRODUCTs.Where(x => x.PRODUCT_ID == 14).Select(x => x.STOCK).FirstOrDefault().ToString();
-            lblTheBiteof67.Text = db.PRODUCTs.Where(x => x.PRODUCT_ID == 15).Select(x => x.STOCK).FirstOrDefault().ToString();
+                lblPureChoco.Text = GetStock(products, 4);
+                lblChocoKiss.Text = GetStock(products, 5);
+                lblCaramelKiss.Text = GetStock(products, 6);
 
-            #endregion
+                lblGrahamMountain.Text = GetStock(products, 7);
+                lblTidbitsGalore.Text = GetStock(products, 8);
+                lblCookiesAndChunks.Text = GetStock(products, 9);
 
+                lblLimeFestCombo.Text = GetStock(products, 10);
+                lblSweetandRipeExpress.Text = GetStock(products, 11);
+                lblGreenAvalanche.Text = GetStock(products, 12);
+
+                lblMidnightFest.Text = GetStock(products, 13);
+                lblDuskGlasiers.Text = GetStock(products, 14);
+                lblTheBiteof67.Text = GetStock(products, 15);
+            }
+        }
+
+        private string GetStock(
+            List<ProductStockResult> products,
+            int productId)
+        {
+            var product = products.FirstOrDefault(
+                p => p.PRODUCT_ID == productId
+            );
+
+            return product?.STOCK.ToString() ?? "0";
+        }
+
+        public class ProductStockResult
+        {
+            public int PRODUCT_ID { get; set; }
+            public string PRODUCT_NAME { get; set; }
+            public int STOCK { get; set; }
         }
 
         #endregion
@@ -113,59 +133,6 @@ namespace TBIC
             this.Hide();
         }
 
-        private void txtSearchBoxAdmin_TextChanged(object sender, EventArgs e)
-        {
-            if (txtSearchBoxAdmin.Text == "Search Employee") return;
-
-            string keyword = txtSearchBoxAdmin.Text.Trim();
-
-            // Filter your view/table based on the search keyword (e.g., matching a username or name column)
-            // Replace 'USERNAME' with whatever column you actually want to search in your view/table
-            var searchResult = db.SEARCH_STAFF(keyword);
-
-            // Bind the filtered list to your grid
-            dgvRetrivalList.DataSource = searchResult;
-        }
-
-        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            if (dgvRetrivalList.Columns[e.ColumnIndex].Name == "pASSWORDDataGridViewTextBoxColumn" && e.Value != null)
-            {
-                e.Value = new string('*', e.Value.ToString().Length); // masks with same-length asterisks
-                e.FormattingApplied = true;
-            }
-        }
-
-        #region Sorting Functionality
-
-        private void picMaybedropboxAdmin_Click(object sender, EventArgs e)
-        {
-            contextMenuStrip1.Show(picMaybedropboxAdmin, new Point(picMaybedropboxAdmin.Width, 0));
-        }
-
-        private void ascendingToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            SortBothViews(ascending: true);
-        }
-
-        private void descendingToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            SortBothViews(ascending: false);
-        }
-
-        private void SortBothViews(bool ascending)
-        {
-            using (TBICDataContext db = new TBICDataContext())
-            {
-                var sorted = ascending
-                    ? db.RETRIEVE_STAFF().OrderBy(x => x.STAFF_NAME).ToList()
-                    : db.RETRIEVE_STAFF().OrderByDescending(x => x.STAFF_NAME).ToList();
-
-                dgvRetrivalList.DataSource = sorted;
-            }
-        }
-
-        #endregion
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -179,10 +146,8 @@ namespace TBIC
             this.Hide();
         }
 
-        private void btnAddStock_Click(object sender, EventArgs e)
+        private void btnStockManagement_Click(object sender, EventArgs e)
         {
-            Form_Instances._stock.cmbItemName.SelectedIndex = -1;
-            Form_Instances._stock.rtxtAmount.Text = "";
             Form_Instances._stock.ShowDialog();
         }
     }

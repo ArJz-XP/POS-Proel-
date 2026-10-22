@@ -710,10 +710,12 @@
             // 
             // LimitedEdition
             // 
+            this.AcceptButton = this.btnProceedLE;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::TBIC.Properties.Resources.Limited_Edition;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CancelButton = this.btnGoBack;
             this.ClientSize = new System.Drawing.Size(1264, 641);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnGoBack);

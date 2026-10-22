@@ -20,6 +20,11 @@ namespace TBIC
 
         private void Receipt_Load(object sender, EventArgs e)
         {
+            ReceiptReload();
+        }
+
+        public void ReceiptReload()
+        {
             lblDate.Text = DateTime.Now.ToString("dd/mm/yyyy");
             lblCName.Text = Form_Instances._pay.lblUsername.Text;
             lblMOP.Text = Form_Instances._pay.txtMOP.Text;
@@ -43,9 +48,7 @@ namespace TBIC
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            DeductStock();
-
-            Form_Instances._pay.SalesRecord();
+            Form_Instances._pay.btnConfirmPrint.Enabled = true;
 
             MessageBox.Show("Receipt has been printed successfully.", "Print Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Form_Instances._lim.lvProductView.Items.Clear();
@@ -77,6 +80,11 @@ namespace TBIC
 
             double finalSubtotal = baseTotal + vat - discount;
             lblSubtotal.Text = finalSubtotal.ToString("F2");
+
+            double.TryParse(CleanCurrency(Form_Instances._pay.rtxtAmountPaid.Text), out double paid);
+
+            lblPaidAmount.Text = paid.ToString("F2");
+            lblChange.Text = (paid - baseTotal).ToString("F2");
         }
 
         public double VATCalculation()
@@ -91,26 +99,6 @@ namespace TBIC
         private string CleanCurrency(string input)
         {
             return input.Replace("₱", "").Replace(",", "").Trim();
-        }
-
-        #endregion
-
-        #region Stock Calculation
-
-        public void DeductStock()
-        {
-            using (TBICDataContext db = new TBICDataContext())
-            {
-                foreach (DataGridViewRow row in Form_Instances._pay.dvgPOS.Rows)
-                {
-                    if (row.IsNewRow) continue;
-
-                    int productId = Convert.ToInt32(row.Cells[0].Value);   // PRODUCT_ID
-                    int quantity = Convert.ToInt32(row.Cells[3].Value);    // Quantity
-
-                    db.DEDUCT_STOCK(productId, quantity);
-                }
-            }
         }
 
         #endregion

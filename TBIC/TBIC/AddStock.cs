@@ -36,13 +36,14 @@ namespace TBIC
                 int ProductID = cmbItemName.SelectedIndex + 1;
 
                 TBICDataContext db = new TBICDataContext();
-                db.ADD_STOCK(ProductID, Quantity);
+                db.ADD_INGREDIENT_STOCK(ProductID, Quantity);
 
                 MessageBox.Show("Stock added successfully!");
 
                 this.Hide();
 
                 Form_Instances._dash.inputReload();
+                Form_Instances._stock.Ingredient_Load();
             }
             catch (Exception ex)
             {

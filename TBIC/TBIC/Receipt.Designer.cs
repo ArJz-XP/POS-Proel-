@@ -56,6 +56,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblOrderID = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.lblPaidAmount = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.lblChange = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -174,7 +178,7 @@
             // 
             // btnPrint
             // 
-            this.btnPrint.Location = new System.Drawing.Point(111, 717);
+            this.btnPrint.Location = new System.Drawing.Point(111, 759);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(75, 23);
             this.btnPrint.TabIndex = 10;
@@ -186,6 +190,10 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.lblChange);
+            this.panel1.Controls.Add(this.label12);
+            this.panel1.Controls.Add(this.lblPaidAmount);
+            this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.lblSubtotal);
             this.panel1.Controls.Add(this.lblDiscounts);
             this.panel1.Controls.Add(this.lblVat);
@@ -197,14 +205,14 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(13, 572);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(287, 139);
+            this.panel1.Size = new System.Drawing.Size(287, 179);
             this.panel1.TabIndex = 11;
             // 
             // lblSubtotal
             // 
             this.lblSubtotal.AutoSize = true;
             this.lblSubtotal.Font = new System.Drawing.Font("Noto Sans JP", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubtotal.Location = new System.Drawing.Point(118, 106);
+            this.lblSubtotal.Location = new System.Drawing.Point(118, 151);
             this.lblSubtotal.Name = "lblSubtotal";
             this.lblSubtotal.Size = new System.Drawing.Size(28, 21);
             this.lblSubtotal.TabIndex = 20;
@@ -264,7 +272,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Noto Sans JP", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(22, 106);
+            this.label4.Location = new System.Drawing.Point(22, 151);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(90, 21);
             this.label4.TabIndex = 14;
@@ -274,7 +282,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Noto Sans JP", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(8, 85);
+            this.label3.Location = new System.Drawing.Point(8, 130);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(274, 21);
             this.label3.TabIndex = 13;
@@ -341,11 +349,52 @@
             this.label9.TabIndex = 14;
             this.label9.Text = "OrderID:";
             // 
+            // lblPaidAmount
+            // 
+            this.lblPaidAmount.AutoSize = true;
+            this.lblPaidAmount.Font = new System.Drawing.Font("Noto Sans JP", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPaidAmount.Location = new System.Drawing.Point(118, 87);
+            this.lblPaidAmount.Name = "lblPaidAmount";
+            this.lblPaidAmount.Size = new System.Drawing.Size(28, 21);
+            this.lblPaidAmount.TabIndex = 22;
+            this.lblPaidAmount.Text = "XX";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Noto Sans JP", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(62, 87);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(50, 21);
+            this.label10.TabIndex = 21;
+            this.label10.Text = "PAID:";
+            // 
+            // lblChange
+            // 
+            this.lblChange.AutoSize = true;
+            this.lblChange.Font = new System.Drawing.Font("Noto Sans JP", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChange.Location = new System.Drawing.Point(118, 110);
+            this.lblChange.Name = "lblChange";
+            this.lblChange.Size = new System.Drawing.Size(28, 21);
+            this.lblChange.TabIndex = 24;
+            this.lblChange.Text = "XX";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Noto Sans JP", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(36, 110);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(77, 21);
+            this.label12.TabIndex = 23;
+            this.label12.Text = "CHANGE:";
+            // 
             // Receipt
             // 
+            this.AcceptButton = this.btnPrint;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(312, 744);
+            this.ClientSize = new System.Drawing.Size(312, 792);
             this.Controls.Add(this.lblOrderID);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.lblMOP);
@@ -369,7 +418,6 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Receipt";
-            this.TopMost = true;
             this.Load += new System.EventHandler(this.Receipt_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -409,5 +457,9 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label lblOrderID;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblChange;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblPaidAmount;
+        private System.Windows.Forms.Label label10;
     }
 }

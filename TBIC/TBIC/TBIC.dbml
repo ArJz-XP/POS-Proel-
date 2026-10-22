@@ -1,5 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="TBCI Server" Class="TBICDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-8E1Q9OF;Initial Catalog=&quot;TBCI Server&quot;;Integrated Security=True;Encrypt=True;Trust Server Certificate=True" SettingsObjectName="TBIC.Properties.Settings" SettingsPropertyName="TBCI_ServerConnectionString3" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-MQMD640;Initial Catalog=&quot;TBCI Server&quot;;Integrated Security=True;Trust Server Certificate=True" SettingsObjectName="TBIC.Properties.Settings" SettingsPropertyName="TBCI_ServerConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.DEPARTMENT" Member="DEPARTMENTs">
+    <Type Name="DEPARTMENT">
+      <Column Name="DEPARTMENT_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DEPARTMENT_NAME" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="DEPARTMENT_STAFF" Member="STAFFs" ThisKey="DEPARTMENT_ID" OtherKey="DEPARTMENT_ID" Type="STAFF" />
+    </Type>
+  </Table>
   <Table Name="dbo.STAFF" Member="STAFFs">
     <Type Name="STAFF">
       <Column Name="STAFF_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -14,6 +21,15 @@
       <Association Name="DEPARTMENT_STAFF" Member="DEPARTMENT" ThisKey="DEPARTMENT_ID" OtherKey="DEPARTMENT_ID" Type="DEPARTMENT" IsForeignKey="true" />
     </Type>
   </Table>
+  <Table Name="dbo.INGREDIENTS" Member="INGREDIENTs">
+    <Type Name="INGREDIENT">
+      <Column Name="INGREDIENT_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="INGREDIENT_NAME" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="STOCK" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="STOCK_UPDATED_AT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="INGREDIENT_PRODUCT_RECIPE" Member="PRODUCT_RECIPEs" ThisKey="INGREDIENT_ID" OtherKey="INGREDIENT_ID" Type="PRODUCT_RECIPE" />
+    </Type>
+  </Table>
   <Table Name="dbo.PRODUCT" Member="PRODUCTs">
     <Type Name="PRODUCT">
       <Column Name="PRODUCT_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -22,7 +38,18 @@
       <Column Name="PRICE" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
       <Column Name="STATUS" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
       <Column Name="STOCK" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="STOCK_UPDATED_AT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="PRODUCT_PRODUCT_RECIPE" Member="PRODUCT_RECIPEs" ThisKey="PRODUCT_ID" OtherKey="PRODUCT_ID" Type="PRODUCT_RECIPE" />
       <Association Name="PRODUCT_SALE_DETAIL" Member="SALE_DETAILs" ThisKey="PRODUCT_ID" OtherKey="PRODUCT_ID" Type="SALE_DETAIL" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PRODUCT_RECIPE" Member="PRODUCT_RECIPEs">
+    <Type Name="PRODUCT_RECIPE">
+      <Column Name="PRODUCT_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="INGREDIENT_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="QUANTITY_REQUIRED" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="INGREDIENT_PRODUCT_RECIPE" Member="INGREDIENT" ThisKey="INGREDIENT_ID" OtherKey="INGREDIENT_ID" Type="INGREDIENT" IsForeignKey="true" />
+      <Association Name="PRODUCT_PRODUCT_RECIPE" Member="PRODUCT" ThisKey="PRODUCT_ID" OtherKey="PRODUCT_ID" Type="PRODUCT" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.SALE" Member="SALEs">
@@ -50,15 +77,18 @@
       <Association Name="SALE_SALE_DETAIL" Member="SALE" ThisKey="SALE_ID" OtherKey="SALES_ID" Type="SALE" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.DEPARTMENT" Member="DEPARTMENTs">
-    <Type Name="DEPARTMENT">
-      <Column Name="DEPARTMENT_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="DEPARTMENT_NAME" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-      <Association Name="DEPARTMENT_STAFF" Member="STAFFs" ThisKey="DEPARTMENT_ID" OtherKey="DEPARTMENT_ID" Type="STAFF" />
-    </Type>
-  </Table>
+  <Function Name="dbo.ADD_INGREDIENT" Method="ADD_INGREDIENT">
+    <Parameter Name="INGREDIENT_NAME" Parameter="iNGREDIENT_NAME" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="STOCK" Parameter="sTOCK" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
   <Function Name="dbo.SOFT_DELETE_STAFF" Method="SOFT_DELETE_STAFF">
     <Parameter Name="STAFF_ID" Parameter="sTAFF_ID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ADD_INGREDIENT_STOCK" Method="ADD_INGREDIENT_STOCK">
+    <Parameter Name="INGREDIENT_ID" Parameter="iNGREDIENT_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="QUANTITY" Parameter="qUANTITY" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.ADD_SALES_HISTORY" Method="ADD_SALES_HISTORY">
@@ -80,12 +110,7 @@
     <Parameter Name="ROLE" Parameter="rOLE" Type="System.String" DbType="NVarChar(50)" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.ADD_STOCK" Method="ADD_STOCK">
-    <Parameter Name="PRODUCT_ID" Parameter="pRODUCT_ID" Type="System.Int32" DbType="Int" />
-    <Parameter Name="QUANTITY" Parameter="qUANTITY" Type="System.Int32" DbType="Int" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.DEDUCT_STOCK" Method="DEDUCT_STOCK">
+  <Function Name="dbo.DEDUCT_RECIPE_STOCK" Method="DEDUCT_RECIPE_STOCK">
     <Parameter Name="PRODUCT_ID" Parameter="pRODUCT_ID" Type="System.Int32" DbType="Int" />
     <Parameter Name="QUANTITY" Parameter="qUANTITY" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
@@ -123,6 +148,21 @@
   <Function Name="dbo.RESTORE_STAFF" Method="RESTORE_STAFF">
     <Parameter Name="STAFF_ID" Parameter="sTAFF_ID" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.RETRIEVE_INGREDIENTS" Method="RETRIEVE_INGREDIENTS">
+    <ElementType Name="RETRIEVE_INGREDIENTSResult">
+      <Column Name="INGREDIENT_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="INGREDIENT_NAME" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="STOCK" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="STOCK_UPDATED_AT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.RETRIEVE_PRODUCT_STOCK" Method="RETRIEVE_PRODUCT_STOCK">
+    <ElementType Name="RETRIEVE_PRODUCT_STOCKResult">
+      <Column Name="PRODUCT_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PRODUCT_NAME" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="STOCK" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
   </Function>
   <Function Name="dbo.RETRIEVE_SALES_HISTORY" Method="RETRIEVE_SALES_HISTORY">
     <ElementType Name="RETRIEVE_SALES_HISTORYResult">

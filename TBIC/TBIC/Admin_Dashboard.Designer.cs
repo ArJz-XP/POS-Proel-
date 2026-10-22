@@ -28,10 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.picMaybedropboxAdmin = new System.Windows.Forms.PictureBox();
-            this.txtSearchBoxAdmin = new System.Windows.Forms.TextBox();
-            this.dgvRetrivalList = new System.Windows.Forms.DataGridView();
             this.lblTotalEmployee = new System.Windows.Forms.Label();
             this.lblNumberOfEmployees = new System.Windows.Forms.Label();
             this.btnAdminDashboard = new System.Windows.Forms.Button();
@@ -43,9 +39,6 @@
             this.lblUserID = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.cmbDisplayType = new System.Windows.Forms.ComboBox();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.ascendingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.descendingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.lblTheBiteof67 = new System.Windows.Forms.Label();
@@ -97,15 +90,13 @@
             this.label23 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.btnTransactionHistory = new System.Windows.Forms.Button();
-            this.btnAddStock = new System.Windows.Forms.Button();
+            this.btnStockManagement = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.lblTotalOrders = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.lblLOS = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.picMaybedropboxAdmin)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRetrivalList)).BeginInit();
+            this.lblTotalSales = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.contextMenuStrip1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -116,50 +107,6 @@
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // picMaybedropboxAdmin
-            // 
-            this.picMaybedropboxAdmin.BackColor = System.Drawing.Color.Transparent;
-            this.picMaybedropboxAdmin.BackgroundImage = global::TBIC.Properties.Resources.PROEL2D_UI;
-            this.picMaybedropboxAdmin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picMaybedropboxAdmin.Location = new System.Drawing.Point(512, 105);
-            this.picMaybedropboxAdmin.Margin = new System.Windows.Forms.Padding(2);
-            this.picMaybedropboxAdmin.Name = "picMaybedropboxAdmin";
-            this.picMaybedropboxAdmin.Size = new System.Drawing.Size(35, 31);
-            this.picMaybedropboxAdmin.TabIndex = 12;
-            this.picMaybedropboxAdmin.TabStop = false;
-            this.picMaybedropboxAdmin.Visible = false;
-            this.picMaybedropboxAdmin.Click += new System.EventHandler(this.picMaybedropboxAdmin_Click);
-            // 
-            // txtSearchBoxAdmin
-            // 
-            this.txtSearchBoxAdmin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSearchBoxAdmin.Location = new System.Drawing.Point(233, 105);
-            this.txtSearchBoxAdmin.Multiline = true;
-            this.txtSearchBoxAdmin.Name = "txtSearchBoxAdmin";
-            this.txtSearchBoxAdmin.Size = new System.Drawing.Size(274, 31);
-            this.txtSearchBoxAdmin.TabIndex = 13;
-            this.txtSearchBoxAdmin.Text = "Finding Magno";
-            this.txtSearchBoxAdmin.Visible = false;
-            this.txtSearchBoxAdmin.TextChanged += new System.EventHandler(this.txtSearchBoxAdmin_TextChanged);
-            // 
-            // dgvRetrivalList
-            // 
-            this.dgvRetrivalList.AllowUserToAddRows = false;
-            this.dgvRetrivalList.AllowUserToDeleteRows = false;
-            this.dgvRetrivalList.AllowUserToResizeColumns = false;
-            this.dgvRetrivalList.AllowUserToResizeRows = false;
-            this.dgvRetrivalList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            this.dgvRetrivalList.BackgroundColor = System.Drawing.Color.White;
-            this.dgvRetrivalList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRetrivalList.Location = new System.Drawing.Point(670, 205);
-            this.dgvRetrivalList.Name = "dgvRetrivalList";
-            this.dgvRetrivalList.ReadOnly = true;
-            this.dgvRetrivalList.RowHeadersWidth = 51;
-            this.dgvRetrivalList.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.dgvRetrivalList.Size = new System.Drawing.Size(15, 372);
-            this.dgvRetrivalList.TabIndex = 14;
-            this.dgvRetrivalList.Visible = false;
             // 
             // lblTotalEmployee
             // 
@@ -285,29 +232,6 @@
             this.cmbDisplayType.Size = new System.Drawing.Size(154, 26);
             this.cmbDisplayType.TabIndex = 22;
             this.cmbDisplayType.Text = "UNITS";
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ascendingToolStripMenuItem,
-            this.descendingToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(137, 48);
-            // 
-            // ascendingToolStripMenuItem
-            // 
-            this.ascendingToolStripMenuItem.Name = "ascendingToolStripMenuItem";
-            this.ascendingToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
-            this.ascendingToolStripMenuItem.Text = "Ascending";
-            this.ascendingToolStripMenuItem.Click += new System.EventHandler(this.ascendingToolStripMenuItem_Click);
-            // 
-            // descendingToolStripMenuItem
-            // 
-            this.descendingToolStripMenuItem.Name = "descendingToolStripMenuItem";
-            this.descendingToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
-            this.descendingToolStripMenuItem.Text = "Descending";
-            this.descendingToolStripMenuItem.Click += new System.EventHandler(this.descendingToolStripMenuItem_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -861,20 +785,20 @@
             this.btnTransactionHistory.UseVisualStyleBackColor = false;
             this.btnTransactionHistory.Click += new System.EventHandler(this.btnTransactionHistory_Click);
             // 
-            // btnAddStock
+            // btnStockManagement
             // 
-            this.btnAddStock.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddStock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnAddStock.FlatAppearance.BorderSize = 0;
-            this.btnAddStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddStock.Image = global::TBIC.Properties.Resources.inventorybtnui;
-            this.btnAddStock.Location = new System.Drawing.Point(1054, 343);
-            this.btnAddStock.Name = "btnAddStock";
-            this.btnAddStock.Size = new System.Drawing.Size(223, 43);
-            this.btnAddStock.TabIndex = 35;
-            this.btnAddStock.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddStock.UseVisualStyleBackColor = false;
-            this.btnAddStock.Click += new System.EventHandler(this.btnAddStock_Click);
+            this.btnStockManagement.BackColor = System.Drawing.Color.Transparent;
+            this.btnStockManagement.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnStockManagement.FlatAppearance.BorderSize = 0;
+            this.btnStockManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStockManagement.Image = global::TBIC.Properties.Resources.inventorybtnui;
+            this.btnStockManagement.Location = new System.Drawing.Point(1054, 343);
+            this.btnStockManagement.Name = "btnStockManagement";
+            this.btnStockManagement.Size = new System.Drawing.Size(223, 43);
+            this.btnStockManagement.TabIndex = 35;
+            this.btnStockManagement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnStockManagement.UseVisualStyleBackColor = false;
+            this.btnStockManagement.Click += new System.EventHandler(this.btnStockManagement_Click);
             // 
             // panel8
             // 
@@ -889,6 +813,7 @@
             // lblTotalOrders
             // 
             this.lblTotalOrders.AutoSize = true;
+            this.lblTotalOrders.BackColor = System.Drawing.Color.Transparent;
             this.lblTotalOrders.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalOrders.Location = new System.Drawing.Point(14, 58);
             this.lblTotalOrders.Name = "lblTotalOrders";
@@ -900,21 +825,34 @@
             // 
             this.panel9.BackgroundImage = global::TBIC.Properties.Resources.lowonstockframe;
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel9.Controls.Add(this.lblLOS);
+            this.panel9.Controls.Add(this.lblTotalSales);
+            this.panel9.Controls.Add(this.label5);
             this.panel9.Location = new System.Drawing.Point(364, 215);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(265, 93);
             this.panel9.TabIndex = 38;
             // 
-            // lblLOS
+            // lblTotalSales
             // 
-            this.lblLOS.AutoSize = true;
-            this.lblLOS.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLOS.Location = new System.Drawing.Point(12, 58);
-            this.lblLOS.Name = "lblLOS";
-            this.lblLOS.Size = new System.Drawing.Size(42, 25);
-            this.lblLOS.TabIndex = 40;
-            this.lblLOS.Text = "XX";
+            this.lblTotalSales.AutoSize = true;
+            this.lblTotalSales.BackColor = System.Drawing.Color.Transparent;
+            this.lblTotalSales.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalSales.Location = new System.Drawing.Point(28, 58);
+            this.lblTotalSales.Name = "lblTotalSales";
+            this.lblTotalSales.Size = new System.Drawing.Size(42, 25);
+            this.lblTotalSales.TabIndex = 40;
+            this.lblTotalSales.Text = "XX";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(7, 58);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(27, 25);
+            this.label5.TabIndex = 41;
+            this.label5.Text = "₱";
             // 
             // Admin_Dashboard
             // 
@@ -925,7 +863,7 @@
             this.ClientSize = new System.Drawing.Size(1264, 641);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel8);
-            this.Controls.Add(this.btnAddStock);
+            this.Controls.Add(this.btnStockManagement);
             this.Controls.Add(this.btnTransactionHistory);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.flowLayoutPanel1);
@@ -936,19 +874,13 @@
             this.Controls.Add(this.btnAdminDashboard);
             this.Controls.Add(this.lblNumberOfEmployees);
             this.Controls.Add(this.lblTotalEmployee);
-            this.Controls.Add(this.dgvRetrivalList);
-            this.Controls.Add(this.txtSearchBoxAdmin);
-            this.Controls.Add(this.picMaybedropboxAdmin);
             this.Name = "Admin_Dashboard";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin_Dashboard";
             this.Load += new System.EventHandler(this.Admin_Dashboard_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.picMaybedropboxAdmin)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRetrivalList)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.contextMenuStrip1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
@@ -972,10 +904,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox picMaybedropboxAdmin;
-        private System.Windows.Forms.TextBox txtSearchBoxAdmin;
-        private System.Windows.Forms.DataGridView dgvRetrivalList;
         private System.Windows.Forms.Label lblTotalEmployee;
         private System.Windows.Forms.Label lblNumberOfEmployees;
         private System.Windows.Forms.Button btnAdminDashboard;
@@ -986,9 +914,6 @@
         private System.Windows.Forms.Label lblUserID;
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.ComboBox cmbDisplayType;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem ascendingToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem descendingToolStripMenuItem;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
@@ -1041,10 +966,11 @@
         public System.Windows.Forms.Button btnGoBack;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnTransactionHistory;
-        private System.Windows.Forms.Button btnAddStock;
+        private System.Windows.Forms.Button btnStockManagement;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label lblTotalOrders;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Label lblLOS;
+        private System.Windows.Forms.Label lblTotalSales;
+        private System.Windows.Forms.Label label5;
     }
 }

@@ -34,7 +34,6 @@
             this.lblUsernameNumba = new System.Windows.Forms.Label();
             this.lblUserID = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
-            this.txtSearchBoxSearchHistory = new System.Windows.Forms.TextBox();
             this.btnReturn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -106,15 +105,6 @@
             this.lblUsername.TabIndex = 11;
             this.lblUsername.Text = "Me";
             // 
-            // txtSearchBoxSearchHistory
-            // 
-            this.txtSearchBoxSearchHistory.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSearchBoxSearchHistory.Location = new System.Drawing.Point(264, 111);
-            this.txtSearchBoxSearchHistory.Multiline = true;
-            this.txtSearchBoxSearchHistory.Name = "txtSearchBoxSearchHistory";
-            this.txtSearchBoxSearchHistory.Size = new System.Drawing.Size(274, 31);
-            this.txtSearchBoxSearchHistory.TabIndex = 28;
-            // 
             // btnReturn
             // 
             this.btnReturn.BackColor = System.Drawing.Color.Transparent;
@@ -156,7 +146,6 @@
             this.ClientSize = new System.Drawing.Size(1264, 674);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnReturn);
-            this.Controls.Add(this.txtSearchBoxSearchHistory);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.dgvTransactionHistory);
             this.Controls.Add(this.pictureBox1);
@@ -172,7 +161,6 @@
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -184,7 +172,6 @@
         private System.Windows.Forms.Label lblUsernameNumba;
         public System.Windows.Forms.Label lblUserID;
         public System.Windows.Forms.Label lblUsername;
-        private System.Windows.Forms.TextBox txtSearchBoxSearchHistory;
         private System.Windows.Forms.Button btnReturn;
         public System.Windows.Forms.DataGridView dgvTransactionHistory;
         private System.Windows.Forms.Button button1;

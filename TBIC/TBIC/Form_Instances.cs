@@ -20,6 +20,7 @@ namespace TBIC
         public static TransactionHistory _tran { get; } = new TransactionHistory();
         public static Account_Modification_Panel _mod { get; } = new Account_Modification_Panel();
         public static Bin_Panel _bin { get; } = new Bin_Panel();
-        public static AddStock _stock { get; } = new AddStock();
+        public static AddStock _addStock { get; } = new AddStock();
+        public static StocksManagement _stock { get; } = new StocksManagement();
     }
 }
