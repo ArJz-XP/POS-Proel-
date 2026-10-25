@@ -85,6 +85,7 @@ C:\Users\Personal\Documents\School\PROEL2D\TBIC Repos\TBIC\TBIC\obj\Debug\TBIC.D
 C:\Users\Personal\Documents\School\PROEL2D\TBIC Repos\TBIC\TBIC\obj\Debug\TBIC.LandingPage.resources
 C:\Users\Personal\Documents\School\PROEL2D\TBIC Repos\TBIC\TBIC\obj\Debug\TBIC.LimitedEdition.resources
 C:\Users\Personal\Documents\School\PROEL2D\TBIC Repos\TBIC\TBIC\obj\Debug\TBIC.Loading_Screen.resources
+C:\Users\Personal\Documents\School\PROEL2D\TBIC Repos\TBIC\TBIC\obj\Debug\TBIC.AccountRecovery.resources
 C:\Users\Personal\Documents\School\PROEL2D\TBIC Repos\TBIC\TBIC\obj\Debug\TBIC.Payment.resources
 C:\Users\Personal\Documents\School\PROEL2D\TBIC Repos\TBIC\TBIC\obj\Debug\TBIC.Properties.Resources.resources
 C:\Users\Personal\Documents\School\PROEL2D\TBIC Repos\TBIC\TBIC\obj\Debug\TBIC.Receipt.resources
@@ -96,3 +97,13 @@ C:\Users\Personal\Documents\School\PROEL2D\TBIC Repos\TBIC\TBIC\obj\Debug\TBIC.c
 C:\Users\Personal\Documents\School\PROEL2D\TBIC Repos\TBIC\TBIC\obj\Debug\TBIC.exe
 C:\Users\Personal\Documents\School\PROEL2D\TBIC Repos\TBIC\TBIC\obj\Debug\TBIC.pdb
 C:\Users\Personal\Documents\School\PROEL2D\TBIC Repos\TBIC\TBIC\obj\Debug\TBIC.exe.config
+C:\Users\Personal\Documents\School\PROEL2D\TBIC Repos\TBIC\TBIC\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\Personal\Documents\School\PROEL2D\TBIC Repos\TBIC\TBIC\bin\Debug\MailKit.dll
+C:\Users\Personal\Documents\School\PROEL2D\TBIC Repos\TBIC\TBIC\bin\Debug\MimeKit.dll
+C:\Users\Personal\Documents\School\PROEL2D\TBIC Repos\TBIC\TBIC\bin\Debug\System.Formats.Asn1.dll
+C:\Users\Personal\Documents\School\PROEL2D\TBIC Repos\TBIC\TBIC\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\Personal\Documents\School\PROEL2D\TBIC Repos\TBIC\TBIC\bin\Debug\MailKit.pdb
+C:\Users\Personal\Documents\School\PROEL2D\TBIC Repos\TBIC\TBIC\bin\Debug\MailKit.xml
+C:\Users\Personal\Documents\School\PROEL2D\TBIC Repos\TBIC\TBIC\bin\Debug\MimeKit.pdb
+C:\Users\Personal\Documents\School\PROEL2D\TBIC Repos\TBIC\TBIC\bin\Debug\MimeKit.xml
+C:\Users\Personal\Documents\School\PROEL2D\TBIC Repos\TBIC\TBIC\bin\Debug\System.Formats.Asn1.xml

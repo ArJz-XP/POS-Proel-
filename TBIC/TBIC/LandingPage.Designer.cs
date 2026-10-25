@@ -32,6 +32,7 @@
             this.txtPass = new System.Windows.Forms.TextBox();
             this.lblIncorrectUsername = new System.Windows.Forms.Label();
             this.lblIncorrectPassword = new System.Windows.Forms.Label();
+            this.llForgotPassword = new System.Windows.Forms.LinkLabel();
             this.btnLogin = new System.Windows.Forms.Button();
             this.picLandingpage = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picLandingpage)).BeginInit();
@@ -83,6 +84,17 @@
             this.lblIncorrectPassword.Text = "Incorrect password! try again.";
             this.lblIncorrectPassword.Visible = false;
             // 
+            // llForgotPassword
+            // 
+            this.llForgotPassword.AutoSize = true;
+            this.llForgotPassword.Location = new System.Drawing.Point(222, 414);
+            this.llForgotPassword.Name = "llForgotPassword";
+            this.llForgotPassword.Size = new System.Drawing.Size(92, 13);
+            this.llForgotPassword.TabIndex = 6;
+            this.llForgotPassword.TabStop = true;
+            this.llForgotPassword.Text = "Forgot Password?";
+            this.llForgotPassword.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llForgotPassword_LinkClicked);
+            // 
             // btnLogin
             // 
             this.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -119,6 +131,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1264, 641);
+            this.Controls.Add(this.llForgotPassword);
             this.Controls.Add(this.lblIncorrectPassword);
             this.Controls.Add(this.lblIncorrectUsername);
             this.Controls.Add(this.txtPass);
@@ -130,6 +143,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TBIC";
             this.Load += new System.EventHandler(this.LandingPage_Load);
+            this.Shown += new System.EventHandler(this.LandingPage_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.picLandingpage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -144,6 +158,7 @@
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Label lblIncorrectUsername;
         private System.Windows.Forms.Label lblIncorrectPassword;
+        private System.Windows.Forms.LinkLabel llForgotPassword;
     }
 }
 

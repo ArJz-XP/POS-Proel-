@@ -22,6 +22,7 @@ namespace TBIC
             txtUsername.TextChanged += ButtonEnable;
             txtPassword.TextChanged += ButtonEnable;
             txtRole.TextChanged += ButtonEnable;
+            txtEmail.TextChanged += ButtonEnable;
         }
 
         private void TxtFullName_TextChanged(object sender, EventArgs e)
@@ -94,7 +95,8 @@ namespace TBIC
                     txtUsername.Text.Trim(),
                     passToSave,
                     departmentID,
-                    txtRole.Text.Trim()
+                    txtRole.Text.Trim(),
+                    txtEmail.Text.Trim()
                 );
 
                 MessageBox.Show("Staff information updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -123,6 +125,7 @@ namespace TBIC
             cmbDepartment.Text = s.DEPARTMENT_ID == 1 ? "CASHIER" :
                                  s.DEPARTMENT_ID == 2 ? "MANAGEMENT" : "";
             txtRole.Text = s.ROLE;
+            txtEmail.Text = s.EMAIL;
         }
 
         #endregion
@@ -142,7 +145,8 @@ namespace TBIC
                 s.USERNAME != txtUsername.Text.Trim() ||
                 s.PASSWORD != txtPassword.Text.Trim() ||
                 s.DEPARTMENT_ID != departmentID ||
-                s.ROLE != txtRole.Text.Trim();
+                s.ROLE != txtRole.Text.Trim() ||
+                s.EMAIL != txtEmail.Text.Trim();
         }
 
         #endregion

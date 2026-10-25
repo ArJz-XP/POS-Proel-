@@ -53,6 +53,7 @@
             this.btnBin = new System.Windows.Forms.Button();
             this.btnGoBack = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.txtAddEmail = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMaybedropboxManagement)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployeeEditor)).BeginInit();
@@ -62,22 +63,20 @@
             // txtAddUsername
             // 
             this.txtAddUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtAddUsername.Location = new System.Drawing.Point(32, 288);
+            this.txtAddUsername.Location = new System.Drawing.Point(32, 281);
             this.txtAddUsername.Multiline = true;
             this.txtAddUsername.Name = "txtAddUsername";
-            this.txtAddUsername.Size = new System.Drawing.Size(196, 31);
+            this.txtAddUsername.Size = new System.Drawing.Size(196, 24);
             this.txtAddUsername.TabIndex = 14;
-            this.txtAddUsername.Text = "USERNAME";
             // 
             // txtAddPassword
             // 
             this.txtAddPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtAddPassword.Location = new System.Drawing.Point(32, 323);
+            this.txtAddPassword.Location = new System.Drawing.Point(32, 311);
             this.txtAddPassword.Multiline = true;
             this.txtAddPassword.Name = "txtAddPassword";
-            this.txtAddPassword.Size = new System.Drawing.Size(196, 31);
+            this.txtAddPassword.Size = new System.Drawing.Size(196, 24);
             this.txtAddPassword.TabIndex = 15;
-            this.txtAddPassword.Text = "PASSWORD";
             // 
             // cmbRole
             // 
@@ -100,7 +99,6 @@
             this.txtSearchEmploys.Name = "txtSearchEmploys";
             this.txtSearchEmploys.Size = new System.Drawing.Size(196, 31);
             this.txtSearchEmploys.TabIndex = 18;
-            this.txtSearchEmploys.Text = "Search Items";
             this.txtSearchEmploys.TextChanged += new System.EventHandler(this.txtSearchEmploys_TextChanged);
             // 
             // btnCreate
@@ -250,7 +248,6 @@
             this.txtDepartmentID.ReadOnly = true;
             this.txtDepartmentID.Size = new System.Drawing.Size(196, 31);
             this.txtDepartmentID.TabIndex = 26;
-            this.txtDepartmentID.Text = "DepID";
             // 
             // contextMenuStrip1
             // 
@@ -281,9 +278,8 @@
             this.txtAddName.Location = new System.Drawing.Point(32, 251);
             this.txtAddName.Multiline = true;
             this.txtAddName.Name = "txtAddName";
-            this.txtAddName.Size = new System.Drawing.Size(196, 31);
+            this.txtAddName.Size = new System.Drawing.Size(196, 24);
             this.txtAddName.TabIndex = 27;
-            this.txtAddName.Text = "STAFFNAME";
             // 
             // vw_RetrieveTableAdapter2
             // 
@@ -332,6 +328,15 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // txtAddEmail
+            // 
+            this.txtAddEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtAddEmail.Location = new System.Drawing.Point(32, 341);
+            this.txtAddEmail.Multiline = true;
+            this.txtAddEmail.Name = "txtAddEmail";
+            this.txtAddEmail.Size = new System.Drawing.Size(196, 24);
+            this.txtAddEmail.TabIndex = 34;
+            // 
             // Acc_Management
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -340,6 +345,7 @@
             this.BackgroundImage = global::TBIC.Properties.Resources.accmanagementbgfixed;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1266, 648);
+            this.Controls.Add(this.txtAddEmail);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnGoBack);
             this.Controls.Add(this.btnBin);
@@ -362,6 +368,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Acc_Management";
             this.Load += new System.EventHandler(this.Acc_Management_Load);
+            this.Shown += new System.EventHandler(this.Acc_Management_Shown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMaybedropboxManagement)).EndInit();
@@ -398,5 +405,6 @@
         private System.Windows.Forms.Button btnBin;
         public System.Windows.Forms.Button btnGoBack;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtAddEmail;
     }
 }

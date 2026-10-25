@@ -19,6 +19,12 @@
             public LandingPage()
             {
                 InitializeComponent();
+                //llForgotPassword.Hide();
+            }
+
+            private void LandingPage_Shown(object sender, EventArgs e)
+            {
+                this.ActiveControl = txtUser;
             }
 
             public string StaffName;
@@ -50,6 +56,8 @@
 
             #region Login Process
 
+            int PassTries = 0;
+
             private void btnLogin_Click(object sender, EventArgs e)
             {
                 try
@@ -74,11 +82,19 @@
                     // 2. Check the typed password against the stored hash
                     if (!BCrypt.Net.BCrypt.Verify(Pass, account.PasswordHash))
                     {
+                        PassTries++;
+
+                        if (PassTries == 3)
+                        {
+                            llForgotPassword.Show();
+                            PassTries = 0;
+                        }
+
                         lblIncorrectPassword.Visible = true;
                         Troll();
                         return;
                     }
-
+                    
                     var login = account;
 
                     // Login succeeded
@@ -193,9 +209,17 @@
                 }
             }
 
-            #endregion
+        #endregion
 
+            private void llForgotPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+            {
+                if (new AccountRecovery(txtUser.Text.Trim()).ShowDialog() == DialogResult.OK)
+                {
+                    this.Hide();
+                }
+            }
         }
+    
 
         #region Secret Sauce
 

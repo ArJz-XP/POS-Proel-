@@ -1,12 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="TBCI Server" Class="TBICDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-MQMD640;Initial Catalog=&quot;TBCI Server&quot;;Integrated Security=True;Trust Server Certificate=True" SettingsObjectName="TBIC.Properties.Settings" SettingsPropertyName="TBCI_ServerConnectionString1" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.DEPARTMENT" Member="DEPARTMENTs">
-    <Type Name="DEPARTMENT">
-      <Column Name="DEPARTMENT_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="DEPARTMENT_NAME" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-      <Association Name="DEPARTMENT_STAFF" Member="STAFFs" ThisKey="DEPARTMENT_ID" OtherKey="DEPARTMENT_ID" Type="STAFF" />
-    </Type>
-  </Table>
   <Table Name="dbo.STAFF" Member="STAFFs">
     <Type Name="STAFF">
       <Column Name="STAFF_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -17,8 +10,16 @@
       <Column Name="ROLE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="IS_ACTIVE" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Column Name="DELETED_AT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EMAIL" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
       <Association Name="STAFF_SALE" Member="SALEs" ThisKey="STAFF_ID" OtherKey="STAFF_ID" Type="SALE" />
       <Association Name="DEPARTMENT_STAFF" Member="DEPARTMENT" ThisKey="DEPARTMENT_ID" OtherKey="DEPARTMENT_ID" Type="DEPARTMENT" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DEPARTMENT" Member="DEPARTMENTs">
+    <Type Name="DEPARTMENT">
+      <Column Name="DEPARTMENT_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DEPARTMENT_NAME" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="DEPARTMENT_STAFF" Member="STAFFs" ThisKey="DEPARTMENT_ID" OtherKey="DEPARTMENT_ID" Type="STAFF" />
     </Type>
   </Table>
   <Table Name="dbo.INGREDIENTS" Member="INGREDIENTs">
@@ -77,13 +78,13 @@
       <Association Name="SALE_SALE_DETAIL" Member="SALE" ThisKey="SALE_ID" OtherKey="SALES_ID" Type="SALE" IsForeignKey="true" />
     </Type>
   </Table>
+  <Function Name="dbo.SOFT_DELETE_STAFF" Method="SOFT_DELETE_STAFF">
+    <Parameter Name="STAFF_ID" Parameter="sTAFF_ID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
   <Function Name="dbo.ADD_INGREDIENT" Method="ADD_INGREDIENT">
     <Parameter Name="INGREDIENT_NAME" Parameter="iNGREDIENT_NAME" Type="System.String" DbType="VarChar(100)" />
     <Parameter Name="STOCK" Parameter="sTOCK" Type="System.Int32" DbType="Int" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.SOFT_DELETE_STAFF" Method="SOFT_DELETE_STAFF">
-    <Parameter Name="STAFF_ID" Parameter="sTAFF_ID" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.ADD_INGREDIENT_STOCK" Method="ADD_INGREDIENT_STOCK">
@@ -108,6 +109,7 @@
     <Parameter Name="PASSWORD" Parameter="pASSWORD" Type="System.String" DbType="NVarChar(255)" />
     <Parameter Name="DEPARTMENT_ID" Parameter="dEPARTMENT_ID" Type="System.Int32" DbType="Int" />
     <Parameter Name="ROLE" Parameter="rOLE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="EMAIL" Parameter="eMAIL" Type="System.String" DbType="NVarChar(255)" />
     <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.DEDUCT_RECIPE_STOCK" Method="DEDUCT_RECIPE_STOCK">
@@ -122,6 +124,7 @@
     <Parameter Name="PASSWORD" Parameter="pASSWORD" Type="System.String" DbType="NVarChar(255)" />
     <Parameter Name="DEPARTMENT_ID" Parameter="dEPARTMENT_ID" Type="System.Int32" DbType="Int" />
     <Parameter Name="ROLE" Parameter="rOLE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="EMAIL" Parameter="eMAIL" Type="System.String" DbType="NVarChar(255)" />
     <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.GET_STAFF_PASSWORD_HASH" Method="GET_STAFF_PASSWORD_HASH">
@@ -133,17 +136,6 @@
   <Function Name="dbo.HARD_DELETE_STAFF" Method="HARD_DELETE_STAFF">
     <Parameter Name="STAFF_ID" Parameter="sTAFF_ID" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.LOGIN_STAFF" Method="LOGIN_STAFF">
-    <Parameter Name="USERNAME" Parameter="uSERNAME" Type="System.String" DbType="NVarChar(50)" />
-    <ElementType Name="LOGIN_STAFFResult">
-      <Column Name="STAFF_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="STAFF_NAME" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-      <Column Name="USERNAME" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="PasswordHash" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="DEPARTMENT_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="ROLE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-    </ElementType>
   </Function>
   <Function Name="dbo.RESTORE_STAFF" Method="RESTORE_STAFF">
     <Parameter Name="STAFF_ID" Parameter="sTAFF_ID" Type="System.Int32" DbType="Int" />
@@ -197,6 +189,7 @@
       <Column Name="STAFF_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="STAFF_NAME" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
       <Column Name="USERNAME" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EMAIL" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
       <Column Name="DEPARTMENT_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="ROLE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="DEPARTMENT_NAME" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
@@ -208,9 +201,22 @@
       <Column Name="STAFF_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="STAFF_NAME" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
       <Column Name="USERNAME" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EMAIL" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
       <Column Name="DEPARTMENT_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="ROLE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="DEPARTMENT_NAME" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.LOGIN_STAFF" Method="LOGIN_STAFF">
+    <Parameter Name="USERNAME" Parameter="uSERNAME" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="LOGIN_STAFFResult">
+      <Column Name="STAFF_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="STAFF_NAME" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="USERNAME" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PasswordHash" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="EMAIL" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="DEPARTMENT_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ROLE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
     </ElementType>
   </Function>
 </Database>

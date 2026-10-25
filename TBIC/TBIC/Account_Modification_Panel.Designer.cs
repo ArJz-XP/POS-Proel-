@@ -51,6 +51,8 @@
             this.lblStaffID = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.lblRole = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.pnlNewDetailsArea.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -84,6 +86,8 @@
             // pnlNewDetailsArea
             // 
             this.pnlNewDetailsArea.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlNewDetailsArea.Controls.Add(this.label4);
+            this.pnlNewDetailsArea.Controls.Add(this.txtEmail);
             this.pnlNewDetailsArea.Controls.Add(this.cmbDepartment);
             this.pnlNewDetailsArea.Controls.Add(this.label10);
             this.pnlNewDetailsArea.Controls.Add(this.txtFullName);
@@ -275,6 +279,22 @@
             this.lblRole.TabIndex = 11;
             this.lblRole.Text = "ROLE";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(449, 73);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(42, 13);
+            this.label4.TabIndex = 24;
+            this.label4.Text = "EMAIL:";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(497, 70);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(157, 20);
+            this.txtEmail.TabIndex = 23;
+            // 
             // Account_Modification_Panel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -327,5 +347,7 @@
         public System.Windows.Forms.TextBox txtFullName;
         private System.Windows.Forms.ComboBox cmbDepartment;
         public System.Windows.Forms.Button btnConfirm;
+        private System.Windows.Forms.Label label4;
+        public System.Windows.Forms.TextBox txtEmail;
     }
 }

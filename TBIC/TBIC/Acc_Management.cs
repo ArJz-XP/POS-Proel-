@@ -22,6 +22,11 @@ namespace TBIC
             InitializeComponent();
         }
 
+        private void Acc_Management_Shown(object sender, EventArgs e)
+        {
+            this.ActiveControl = null;
+        }
+
         public void StaffInfo(string staffName, int staffID)
         {
             StaffName = staffName;
@@ -59,6 +64,9 @@ namespace TBIC
             txtAddUsername.Font = new Font("FredokaSummer", 9, FontStyle.Bold);
             txtAddPassword.Font = new Font("FredokaSummer", 9, FontStyle.Bold);
             txtSearchEmploys.Font = new Font("FredokaSummer", 9, FontStyle.Bold);
+            txtAddEmail.Font = new Font("FredokaSummer", 9, FontStyle.Bold);
+            txtDepartmentID.Font = new Font("FredokaSummer", 9, FontStyle.Bold);
+            cmbRole.Font = new Font("FredokaSummer", 9, FontStyle.Bold);
 
             inputreload();
 
@@ -89,6 +97,7 @@ namespace TBIC
             txtAddName.SetPlaceholder("Staffname");
             txtAddUsername.SetPlaceholder("Username");
             txtAddPassword.SetPlaceholder("Password");
+            txtAddEmail.SetPlaceholder("Email");
             txtDepartmentID.SetPlaceholder("Department ID");
             txtSearchEmploys.SetPlaceholder("Search Entry");
 
@@ -107,7 +116,7 @@ namespace TBIC
 
                 string hash = BCrypt.Net.BCrypt.HashPassword(txtAddPassword.Text.Trim());
 
-                db.ADD_STAFF(txtAddName.Text.Trim(), txtAddUsername.Text.Trim(), hash, Dep_ID, cmbRole.Text);
+                db.ADD_STAFF(txtAddName.Text.Trim(), txtAddUsername.Text.Trim(), hash, Dep_ID, cmbRole.Text, txtAddEmail.Text);
 
                 dgvEmployeeEditor.DataSource = db.RETRIEVE_STAFF();
 

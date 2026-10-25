@@ -37,9 +37,9 @@ namespace TBIC
             pBLoading.Value = 0;
             pBLoading.Maximum = 100;
 
-            if (formname_ == "Landing")
+            try
             {
-                try
+                if (formname_ == "Landing")
                 {
                     lblProgressMessage.Text = "Connecting to Database...";
                     pBLoading.Value = 10;
@@ -77,15 +77,7 @@ namespace TBIC
 
                     this.Close();
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Failed to connect to the database: {ex.Message}", "Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    Application.Exit();
-                }
-            }
-            else if (formname_ == "Limited")
-            {
-                try
+                else if (formname_ == "Limited")
                 {
                     lblProgressMessage.Text = "Loading Assets...";
                     pBLoading.Value = 25;
@@ -117,15 +109,7 @@ namespace TBIC
 
                     this.Close();
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Failed to load: {ex.Message}", "Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    Application.Exit();
-                }
-            }
-            else if (formname_ == "Admin")
-            {
-                try
+                else if (formname_ == "Admin")
                 {
                     lblProgressMessage.Text = "Loading Admin Panel...";
                     pBLoading.Value = 25;
@@ -155,12 +139,16 @@ namespace TBIC
 
                     this.Close();
                 }
-                catch (Exception ex)
+                else if (formname_ == "AccountRecovery")
                 {
-                    MessageBox.Show($"Failed to load: {ex.Message}", "Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    Application.Exit();
+
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Failed to connect to the database: {ex.Message}", "Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Application.Exit();
+            }            
         }
     }
 }

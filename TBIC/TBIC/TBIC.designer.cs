@@ -30,12 +30,12 @@ namespace TBIC
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
-    partial void InsertDEPARTMENT(DEPARTMENT instance);
-    partial void UpdateDEPARTMENT(DEPARTMENT instance);
-    partial void DeleteDEPARTMENT(DEPARTMENT instance);
     partial void InsertSTAFF(STAFF instance);
     partial void UpdateSTAFF(STAFF instance);
     partial void DeleteSTAFF(STAFF instance);
+    partial void InsertDEPARTMENT(DEPARTMENT instance);
+    partial void UpdateDEPARTMENT(DEPARTMENT instance);
+    partial void DeleteDEPARTMENT(DEPARTMENT instance);
     partial void InsertINGREDIENT(INGREDIENT instance);
     partial void UpdateINGREDIENT(INGREDIENT instance);
     partial void DeleteINGREDIENT(INGREDIENT instance);
@@ -83,19 +83,19 @@ namespace TBIC
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<DEPARTMENT> DEPARTMENTs
-		{
-			get
-			{
-				return this.GetTable<DEPARTMENT>();
-			}
-		}
-		
 		public System.Data.Linq.Table<STAFF> STAFFs
 		{
 			get
 			{
 				return this.GetTable<STAFF>();
+			}
+		}
+		
+		public System.Data.Linq.Table<DEPARTMENT> DEPARTMENTs
+		{
+			get
+			{
+				return this.GetTable<DEPARTMENT>();
 			}
 		}
 		
@@ -139,17 +139,17 @@ namespace TBIC
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ADD_INGREDIENT")]
-		public int ADD_INGREDIENT([global::System.Data.Linq.Mapping.ParameterAttribute(Name="INGREDIENT_NAME", DbType="VarChar(100)")] string iNGREDIENT_NAME, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="STOCK", DbType="Int")] System.Nullable<int> sTOCK)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iNGREDIENT_NAME, sTOCK);
-			return ((int)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SOFT_DELETE_STAFF")]
 		public int SOFT_DELETE_STAFF([global::System.Data.Linq.Mapping.ParameterAttribute(Name="STAFF_ID", DbType="Int")] System.Nullable<int> sTAFF_ID)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), sTAFF_ID);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ADD_INGREDIENT")]
+		public int ADD_INGREDIENT([global::System.Data.Linq.Mapping.ParameterAttribute(Name="INGREDIENT_NAME", DbType="VarChar(100)")] string iNGREDIENT_NAME, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="STOCK", DbType="Int")] System.Nullable<int> sTOCK)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iNGREDIENT_NAME, sTOCK);
 			return ((int)(result.ReturnValue));
 		}
 		
@@ -168,9 +168,9 @@ namespace TBIC
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ADD_STAFF")]
-		public int ADD_STAFF([global::System.Data.Linq.Mapping.ParameterAttribute(Name="STAFF_NAME", DbType="NVarChar(100)")] string sTAFF_NAME, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="USERNAME", DbType="NVarChar(50)")] string uSERNAME, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PASSWORD", DbType="NVarChar(255)")] string pASSWORD, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DEPARTMENT_ID", DbType="Int")] System.Nullable<int> dEPARTMENT_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ROLE", DbType="NVarChar(50)")] string rOLE)
+		public int ADD_STAFF([global::System.Data.Linq.Mapping.ParameterAttribute(Name="STAFF_NAME", DbType="NVarChar(100)")] string sTAFF_NAME, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="USERNAME", DbType="NVarChar(50)")] string uSERNAME, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PASSWORD", DbType="NVarChar(255)")] string pASSWORD, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DEPARTMENT_ID", DbType="Int")] System.Nullable<int> dEPARTMENT_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ROLE", DbType="NVarChar(50)")] string rOLE, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="EMAIL", DbType="NVarChar(255)")] string eMAIL)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), sTAFF_NAME, uSERNAME, pASSWORD, dEPARTMENT_ID, rOLE);
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), sTAFF_NAME, uSERNAME, pASSWORD, dEPARTMENT_ID, rOLE, eMAIL);
 			return ((int)(result.ReturnValue));
 		}
 		
@@ -182,9 +182,9 @@ namespace TBIC
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.EDIT_STAFF")]
-		public int EDIT_STAFF([global::System.Data.Linq.Mapping.ParameterAttribute(Name="STAFF_ID", DbType="Int")] System.Nullable<int> sTAFF_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="STAFF_NAME", DbType="NVarChar(100)")] string sTAFF_NAME, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="USERNAME", DbType="NVarChar(50)")] string uSERNAME, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PASSWORD", DbType="NVarChar(255)")] string pASSWORD, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DEPARTMENT_ID", DbType="Int")] System.Nullable<int> dEPARTMENT_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ROLE", DbType="NVarChar(50)")] string rOLE)
+		public int EDIT_STAFF([global::System.Data.Linq.Mapping.ParameterAttribute(Name="STAFF_ID", DbType="Int")] System.Nullable<int> sTAFF_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="STAFF_NAME", DbType="NVarChar(100)")] string sTAFF_NAME, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="USERNAME", DbType="NVarChar(50)")] string uSERNAME, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PASSWORD", DbType="NVarChar(255)")] string pASSWORD, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DEPARTMENT_ID", DbType="Int")] System.Nullable<int> dEPARTMENT_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ROLE", DbType="NVarChar(50)")] string rOLE, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="EMAIL", DbType="NVarChar(255)")] string eMAIL)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), sTAFF_ID, sTAFF_NAME, uSERNAME, pASSWORD, dEPARTMENT_ID, rOLE);
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), sTAFF_ID, sTAFF_NAME, uSERNAME, pASSWORD, dEPARTMENT_ID, rOLE, eMAIL);
 			return ((int)(result.ReturnValue));
 		}
 		
@@ -200,13 +200,6 @@ namespace TBIC
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), sTAFF_ID);
 			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.LOGIN_STAFF")]
-		public ISingleResult<LOGIN_STAFFResult> LOGIN_STAFF([global::System.Data.Linq.Mapping.ParameterAttribute(Name="USERNAME", DbType="NVarChar(50)")] string uSERNAME)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), uSERNAME);
-			return ((ISingleResult<LOGIN_STAFFResult>)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.RESTORE_STAFF")]
@@ -257,119 +250,12 @@ namespace TBIC
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), search);
 			return ((ISingleResult<SEARCH_STAFFResult>)(result.ReturnValue));
 		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.DEPARTMENT")]
-	public partial class DEPARTMENT : INotifyPropertyChanging, INotifyPropertyChanged
-	{
 		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _DEPARTMENT_ID;
-		
-		private string _DEPARTMENT_NAME;
-		
-		private EntitySet<STAFF> _STAFFs;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnDEPARTMENT_IDChanging(int value);
-    partial void OnDEPARTMENT_IDChanged();
-    partial void OnDEPARTMENT_NAMEChanging(string value);
-    partial void OnDEPARTMENT_NAMEChanged();
-    #endregion
-		
-		public DEPARTMENT()
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.LOGIN_STAFF")]
+		public ISingleResult<LOGIN_STAFFResult> LOGIN_STAFF([global::System.Data.Linq.Mapping.ParameterAttribute(Name="USERNAME", DbType="NVarChar(50)")] string uSERNAME)
 		{
-			this._STAFFs = new EntitySet<STAFF>(new Action<STAFF>(this.attach_STAFFs), new Action<STAFF>(this.detach_STAFFs));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DEPARTMENT_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int DEPARTMENT_ID
-		{
-			get
-			{
-				return this._DEPARTMENT_ID;
-			}
-			set
-			{
-				if ((this._DEPARTMENT_ID != value))
-				{
-					this.OnDEPARTMENT_IDChanging(value);
-					this.SendPropertyChanging();
-					this._DEPARTMENT_ID = value;
-					this.SendPropertyChanged("DEPARTMENT_ID");
-					this.OnDEPARTMENT_IDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DEPARTMENT_NAME", DbType="VarChar(100)")]
-		public string DEPARTMENT_NAME
-		{
-			get
-			{
-				return this._DEPARTMENT_NAME;
-			}
-			set
-			{
-				if ((this._DEPARTMENT_NAME != value))
-				{
-					this.OnDEPARTMENT_NAMEChanging(value);
-					this.SendPropertyChanging();
-					this._DEPARTMENT_NAME = value;
-					this.SendPropertyChanged("DEPARTMENT_NAME");
-					this.OnDEPARTMENT_NAMEChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DEPARTMENT_STAFF", Storage="_STAFFs", ThisKey="DEPARTMENT_ID", OtherKey="DEPARTMENT_ID")]
-		public EntitySet<STAFF> STAFFs
-		{
-			get
-			{
-				return this._STAFFs;
-			}
-			set
-			{
-				this._STAFFs.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_STAFFs(STAFF entity)
-		{
-			this.SendPropertyChanging();
-			entity.DEPARTMENT = this;
-		}
-		
-		private void detach_STAFFs(STAFF entity)
-		{
-			this.SendPropertyChanging();
-			entity.DEPARTMENT = null;
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), uSERNAME);
+			return ((ISingleResult<LOGIN_STAFFResult>)(result.ReturnValue));
 		}
 	}
 	
@@ -395,6 +281,8 @@ namespace TBIC
 		
 		private System.Nullable<System.DateTime> _DELETED_AT;
 		
+		private string _EMAIL;
+		
 		private EntitySet<SALE> _SALEs;
 		
 		private EntityRef<DEPARTMENT> _DEPARTMENT;
@@ -419,6 +307,8 @@ namespace TBIC
     partial void OnIS_ACTIVEChanged();
     partial void OnDELETED_ATChanging(System.Nullable<System.DateTime> value);
     partial void OnDELETED_ATChanged();
+    partial void OnEMAILChanging(string value);
+    partial void OnEMAILChanged();
     #endregion
 		
 		public STAFF()
@@ -592,6 +482,26 @@ namespace TBIC
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EMAIL", DbType="VarChar(255)")]
+		public string EMAIL
+		{
+			get
+			{
+				return this._EMAIL;
+			}
+			set
+			{
+				if ((this._EMAIL != value))
+				{
+					this.OnEMAILChanging(value);
+					this.SendPropertyChanging();
+					this._EMAIL = value;
+					this.SendPropertyChanged("EMAIL");
+					this.OnEMAILChanged();
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="STAFF_SALE", Storage="_SALEs", ThisKey="STAFF_ID", OtherKey="STAFF_ID")]
 		public EntitySet<SALE> SALEs
 		{
@@ -669,6 +579,120 @@ namespace TBIC
 		{
 			this.SendPropertyChanging();
 			entity.STAFF = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.DEPARTMENT")]
+	public partial class DEPARTMENT : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _DEPARTMENT_ID;
+		
+		private string _DEPARTMENT_NAME;
+		
+		private EntitySet<STAFF> _STAFFs;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnDEPARTMENT_IDChanging(int value);
+    partial void OnDEPARTMENT_IDChanged();
+    partial void OnDEPARTMENT_NAMEChanging(string value);
+    partial void OnDEPARTMENT_NAMEChanged();
+    #endregion
+		
+		public DEPARTMENT()
+		{
+			this._STAFFs = new EntitySet<STAFF>(new Action<STAFF>(this.attach_STAFFs), new Action<STAFF>(this.detach_STAFFs));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DEPARTMENT_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int DEPARTMENT_ID
+		{
+			get
+			{
+				return this._DEPARTMENT_ID;
+			}
+			set
+			{
+				if ((this._DEPARTMENT_ID != value))
+				{
+					this.OnDEPARTMENT_IDChanging(value);
+					this.SendPropertyChanging();
+					this._DEPARTMENT_ID = value;
+					this.SendPropertyChanged("DEPARTMENT_ID");
+					this.OnDEPARTMENT_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DEPARTMENT_NAME", DbType="VarChar(100)")]
+		public string DEPARTMENT_NAME
+		{
+			get
+			{
+				return this._DEPARTMENT_NAME;
+			}
+			set
+			{
+				if ((this._DEPARTMENT_NAME != value))
+				{
+					this.OnDEPARTMENT_NAMEChanging(value);
+					this.SendPropertyChanging();
+					this._DEPARTMENT_NAME = value;
+					this.SendPropertyChanged("DEPARTMENT_NAME");
+					this.OnDEPARTMENT_NAMEChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DEPARTMENT_STAFF", Storage="_STAFFs", ThisKey="DEPARTMENT_ID", OtherKey="DEPARTMENT_ID")]
+		public EntitySet<STAFF> STAFFs
+		{
+			get
+			{
+				return this._STAFFs;
+			}
+			set
+			{
+				this._STAFFs.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_STAFFs(STAFF entity)
+		{
+			this.SendPropertyChanging();
+			entity.DEPARTMENT = this;
+		}
+		
+		private void detach_STAFFs(STAFF entity)
+		{
+			this.SendPropertyChanging();
+			entity.DEPARTMENT = null;
 		}
 	}
 	
@@ -1853,122 +1877,6 @@ namespace TBIC
 		}
 	}
 	
-	public partial class LOGIN_STAFFResult
-	{
-		
-		private int _STAFF_ID;
-		
-		private string _STAFF_NAME;
-		
-		private string _USERNAME;
-		
-		private string _PasswordHash;
-		
-		private System.Nullable<int> _DEPARTMENT_ID;
-		
-		private string _ROLE;
-		
-		public LOGIN_STAFFResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_STAFF_ID", DbType="Int NOT NULL")]
-		public int STAFF_ID
-		{
-			get
-			{
-				return this._STAFF_ID;
-			}
-			set
-			{
-				if ((this._STAFF_ID != value))
-				{
-					this._STAFF_ID = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_STAFF_NAME", DbType="VarChar(100)")]
-		public string STAFF_NAME
-		{
-			get
-			{
-				return this._STAFF_NAME;
-			}
-			set
-			{
-				if ((this._STAFF_NAME != value))
-				{
-					this._STAFF_NAME = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_USERNAME", DbType="VarChar(50)")]
-		public string USERNAME
-		{
-			get
-			{
-				return this._USERNAME;
-			}
-			set
-			{
-				if ((this._USERNAME != value))
-				{
-					this._USERNAME = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PasswordHash", DbType="NVarChar(255)")]
-		public string PasswordHash
-		{
-			get
-			{
-				return this._PasswordHash;
-			}
-			set
-			{
-				if ((this._PasswordHash != value))
-				{
-					this._PasswordHash = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DEPARTMENT_ID", DbType="Int")]
-		public System.Nullable<int> DEPARTMENT_ID
-		{
-			get
-			{
-				return this._DEPARTMENT_ID;
-			}
-			set
-			{
-				if ((this._DEPARTMENT_ID != value))
-				{
-					this._DEPARTMENT_ID = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ROLE", DbType="VarChar(50)")]
-		public string ROLE
-		{
-			get
-			{
-				return this._ROLE;
-			}
-			set
-			{
-				if ((this._ROLE != value))
-				{
-					this._ROLE = value;
-				}
-			}
-		}
-	}
-	
 	public partial class RETRIEVE_INGREDIENTSResult
 	{
 		
@@ -2496,6 +2404,8 @@ namespace TBIC
 		
 		private string _USERNAME;
 		
+		private string _EMAIL;
+		
 		private System.Nullable<int> _DEPARTMENT_ID;
 		
 		private string _ROLE;
@@ -2550,6 +2460,22 @@ namespace TBIC
 				if ((this._USERNAME != value))
 				{
 					this._USERNAME = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EMAIL", DbType="VarChar(255)")]
+		public string EMAIL
+		{
+			get
+			{
+				return this._EMAIL;
+			}
+			set
+			{
+				if ((this._EMAIL != value))
+				{
+					this._EMAIL = value;
 				}
 			}
 		}
@@ -2612,6 +2538,8 @@ namespace TBIC
 		
 		private string _USERNAME;
 		
+		private string _EMAIL;
+		
 		private System.Nullable<int> _DEPARTMENT_ID;
 		
 		private string _ROLE;
@@ -2670,6 +2598,22 @@ namespace TBIC
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EMAIL", DbType="VarChar(255)")]
+		public string EMAIL
+		{
+			get
+			{
+				return this._EMAIL;
+			}
+			set
+			{
+				if ((this._EMAIL != value))
+				{
+					this._EMAIL = value;
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DEPARTMENT_ID", DbType="Int")]
 		public System.Nullable<int> DEPARTMENT_ID
 		{
@@ -2714,6 +2658,140 @@ namespace TBIC
 				if ((this._DEPARTMENT_NAME != value))
 				{
 					this._DEPARTMENT_NAME = value;
+				}
+			}
+		}
+	}
+	
+	public partial class LOGIN_STAFFResult
+	{
+		
+		private int _STAFF_ID;
+		
+		private string _STAFF_NAME;
+		
+		private string _USERNAME;
+		
+		private string _PasswordHash;
+		
+		private string _EMAIL;
+		
+		private System.Nullable<int> _DEPARTMENT_ID;
+		
+		private string _ROLE;
+		
+		public LOGIN_STAFFResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_STAFF_ID", DbType="Int NOT NULL")]
+		public int STAFF_ID
+		{
+			get
+			{
+				return this._STAFF_ID;
+			}
+			set
+			{
+				if ((this._STAFF_ID != value))
+				{
+					this._STAFF_ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_STAFF_NAME", DbType="VarChar(100)")]
+		public string STAFF_NAME
+		{
+			get
+			{
+				return this._STAFF_NAME;
+			}
+			set
+			{
+				if ((this._STAFF_NAME != value))
+				{
+					this._STAFF_NAME = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_USERNAME", DbType="VarChar(50)")]
+		public string USERNAME
+		{
+			get
+			{
+				return this._USERNAME;
+			}
+			set
+			{
+				if ((this._USERNAME != value))
+				{
+					this._USERNAME = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PasswordHash", DbType="NVarChar(255)")]
+		public string PasswordHash
+		{
+			get
+			{
+				return this._PasswordHash;
+			}
+			set
+			{
+				if ((this._PasswordHash != value))
+				{
+					this._PasswordHash = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EMAIL", DbType="VarChar(255)")]
+		public string EMAIL
+		{
+			get
+			{
+				return this._EMAIL;
+			}
+			set
+			{
+				if ((this._EMAIL != value))
+				{
+					this._EMAIL = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DEPARTMENT_ID", DbType="Int")]
+		public System.Nullable<int> DEPARTMENT_ID
+		{
+			get
+			{
+				return this._DEPARTMENT_ID;
+			}
+			set
+			{
+				if ((this._DEPARTMENT_ID != value))
+				{
+					this._DEPARTMENT_ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ROLE", DbType="VarChar(50)")]
+		public string ROLE
+		{
+			get
+			{
+				return this._ROLE;
+			}
+			set
+			{
+				if ((this._ROLE != value))
+				{
+					this._ROLE = value;
 				}
 			}
 		}
