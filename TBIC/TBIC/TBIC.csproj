@@ -615,6 +615,8 @@
     <None Include="Resources\inventorybtnui.png" />
     <None Include="Resources\closebtnsmol.png" />
     <None Include="Resources\inventorybg.png" />
+    <None Include="Resources\Inventorybg%28Updated%29.png" />
+    <None Include="Resources\ADMINDashboard%28UPDATEi3%29.png" />
     <Content Include="Resources\PROEL2D UI5.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

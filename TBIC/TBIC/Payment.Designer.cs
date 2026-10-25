@@ -502,6 +502,7 @@
             this.btnLogout.BackColor = System.Drawing.Color.Transparent;
             this.btnLogout.BackgroundImage = global::TBIC.Properties.Resources.LogOutBluSmol;
             this.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnLogout.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnLogout.FlatAppearance.BorderSize = 0;
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

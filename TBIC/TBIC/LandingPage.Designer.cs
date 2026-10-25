@@ -35,6 +35,7 @@
             this.llForgotPassword = new System.Windows.Forms.LinkLabel();
             this.btnLogin = new System.Windows.Forms.Button();
             this.picLandingpage = new System.Windows.Forms.PictureBox();
+            this.lblTotalOrders = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picLandingpage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -123,6 +124,17 @@
             this.picLandingpage.TabIndex = 0;
             this.picLandingpage.TabStop = false;
             // 
+            // lblTotalOrders
+            // 
+            this.lblTotalOrders.AutoSize = true;
+            this.lblTotalOrders.BackColor = System.Drawing.Color.Gold;
+            this.lblTotalOrders.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalOrders.Location = new System.Drawing.Point(12, 616);
+            this.lblTotalOrders.Name = "lblTotalOrders";
+            this.lblTotalOrders.Size = new System.Drawing.Size(50, 16);
+            this.lblTotalOrders.TabIndex = 7;
+            this.lblTotalOrders.Text = "v5.0.0.1";
+            // 
             // LandingPage
             // 
             this.AcceptButton = this.btnLogin;
@@ -131,6 +143,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1264, 641);
+            this.Controls.Add(this.lblTotalOrders);
             this.Controls.Add(this.llForgotPassword);
             this.Controls.Add(this.lblIncorrectPassword);
             this.Controls.Add(this.lblIncorrectUsername);
@@ -159,6 +172,7 @@
         private System.Windows.Forms.Label lblIncorrectUsername;
         private System.Windows.Forms.Label lblIncorrectPassword;
         private System.Windows.Forms.LinkLabel llForgotPassword;
+        private System.Windows.Forms.Label lblTotalOrders;
     }
 }
 

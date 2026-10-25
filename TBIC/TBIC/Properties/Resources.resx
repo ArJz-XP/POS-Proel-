@@ -310,6 +310,9 @@
   <data name="TransactionHistoryBtnUI" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TransactionHistoryBtnUI.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="inventorybg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\inventorybg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="PROEL2D UI (4)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PROEL2D UI (4)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -346,6 +349,9 @@
   <data name="hersheysbutnui" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hersheysbutnui.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Inventorybg(Updated)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Inventorybg(Updated).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ube" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ube.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -361,7 +367,7 @@
   <data name="PROEL2D UI (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PROEL2D UI (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="inventorybg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\inventorybg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ADMINDashboard(UPDATEi3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ADMINDashboard(UPDATEi3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
